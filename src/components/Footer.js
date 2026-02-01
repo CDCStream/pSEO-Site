@@ -35,17 +35,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8">
+<Link href="/" className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10">
                 <Image 
                   src="/logo.png" 
                   alt="MakerSilo Logo" 
-                  width={32} 
-                  height={32}
+                  width={40} 
+                  height={40}
                   className="object-contain"
                 />
               </div>
-              <span className="text-lg font-bold text-white">MakerSilo</span>
+              <span className="text-xl font-bold text-white">MakerSilo</span>
             </Link>
             <p className="text-sm text-gray-400 mb-4">
               Free online tools for creators. Transform text, make memes, and create beautiful content.

@@ -79,18 +79,18 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 bg-glass-dark">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-10 h-10 transform group-hover:scale-105 transition-transform">
+{/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 transform group-hover:scale-105 transition-transform">
               <NextImage 
                 src="/logo.png" 
                 alt="MakerSilo Logo" 
-                width={40} 
-                height={40}
+                width={48} 
+                height={48}
                 className="object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-white tracking-tight">
+            <span className="text-2xl font-bold text-white tracking-tight">
               Maker<span className="text-gradient">Silo</span>
             </span>
           </Link>
