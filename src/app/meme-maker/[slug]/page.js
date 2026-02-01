@@ -14,8 +14,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const config = memeMakerConfig[params.slug];
-
+  const { slug } = await params;
+  const config = memeMakerConfig[slug];
+  
   if (!config) {
     return { title: 'Meme Not Found' };
   }
@@ -55,8 +56,9 @@ const memeSteps = [
   },
 ];
 
-export default function MemePage({ params }) {
-  const config = memeMakerConfig[params.slug];
+export default async function MemePage({ params }) {
+  const { slug } = await params;
+  const config = memeMakerConfig[slug];
 
   if (!config) {
     notFound();
@@ -68,14 +70,14 @@ export default function MemePage({ params }) {
         name={config.name}
         description={config.description}
         category="meme-maker"
-        url={`https://textforge.tools/meme-maker/${params.slug}`}
+        url={`https://textforge.tools/meme-maker/${slug}`}
       />
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 pattern-dots opacity-20" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl" />
-
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -94,7 +96,7 @@ export default function MemePage({ params }) {
           <div className="flex-1 min-w-0">
             <AdSlot position="above-tool" />
 
-            <MemeClient config={config} slug={params.slug} />
+            <MemeClient config={config} slug={slug} />
 
             <HowToUse keyword={config.keyword} steps={memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
@@ -113,4 +115,3 @@ export default function MemePage({ params }) {
     </div>
   );
 }
-

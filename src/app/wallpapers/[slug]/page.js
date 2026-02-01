@@ -14,8 +14,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const config = wallpapersConfig[params.slug];
-
+  const { slug } = await params;
+  const config = wallpapersConfig[slug];
+  
   if (!config) {
     return { title: 'Wallpaper Not Found' };
   }
@@ -55,8 +56,9 @@ const wallpaperSteps = [
   },
 ];
 
-export default function WallpaperPage({ params }) {
-  const config = wallpapersConfig[params.slug];
+export default async function WallpaperPage({ params }) {
+  const { slug } = await params;
+  const config = wallpapersConfig[slug];
 
   if (!config) {
     notFound();
@@ -74,7 +76,7 @@ export default function WallpaperPage({ params }) {
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 pattern-dots opacity-20" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -93,7 +95,7 @@ export default function WallpaperPage({ params }) {
           <div className="flex-1 min-w-0">
             <AdSlot position="above-tool" />
 
-            <WallpaperClient config={config} slug={params.slug} />
+            <WallpaperClient config={config} slug={slug} />
 
             <HowToUse keyword={config.keyword} steps={wallpaperSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
@@ -112,4 +114,3 @@ export default function WallpaperPage({ params }) {
     </div>
   );
 }
-
