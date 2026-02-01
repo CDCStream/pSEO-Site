@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'display': ['Clash Display', 'system-ui', 'sans-serif'],
-        'body': ['Satoshi', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'monospace'],
+        'sans': ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        'display': ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        'body': ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        'mono': ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
       },
       colors: {
         'brand': {
@@ -72,6 +73,8 @@ module.exports = {
     },
   },
   plugins: [],
+  // Performance: Only generate used styles
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };
-
-

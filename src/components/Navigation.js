@@ -10,11 +10,7 @@ import {
   Palette,
   Menu,
   X,
-  ChevronDown,
-  Music,
-  Heart,
-  Gamepad2,
-  Snowflake
+  ChevronDown
 } from 'lucide-react';
 
 const navItems = [
@@ -82,12 +78,14 @@ export default function Navigation() {
 {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-14 h-14 transform group-hover:scale-105 transition-transform">
-              <NextImage 
-                src="/logo.png" 
-                alt="MakerSilo Logo" 
-                width={56} 
+              <NextImage
+                src="/logo.png"
+                alt="MakerSilo Logo"
+                width={56}
                 height={56}
                 className="object-contain"
+                priority
+                loading="eager"
               />
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">
