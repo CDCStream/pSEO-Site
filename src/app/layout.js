@@ -33,12 +33,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#0a0a0b" />
       </head>
-      <body className="antialiased min-h-screen flex flex-col">
+      <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         <ToastProvider>
           <Navigation />
           <main className="flex-1">
@@ -50,4 +50,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
