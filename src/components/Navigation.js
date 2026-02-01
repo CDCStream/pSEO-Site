@@ -85,7 +85,6 @@ export default function Navigation() {
                 height={56}
                 className="object-contain"
                 priority
-                loading="eager"
               />
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">
