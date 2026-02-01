@@ -81,12 +81,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 transform group-hover:scale-105 transition-transform">
+            <div className="relative w-14 h-14 transform group-hover:scale-105 transition-transform">
               <NextImage 
                 src="/logo.png" 
                 alt="MakerSilo Logo" 
-                width={48} 
-                height={48}
+                width={56} 
+                height={56}
                 className="object-contain"
               />
             </div>
