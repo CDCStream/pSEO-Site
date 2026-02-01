@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Terms of Service - TextForge',
-  description: 'TextForge terms of service. Read our usage guidelines.',
+  title: 'Terms of Service - MakerSilo',
+  description: 'MakerSilo terms of service. Read our usage guidelines.',
 };
 
 export default function TermsPage() {
@@ -16,7 +16,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">1. Acceptance of Terms</h2>
           <p className="text-gray-400">
-            By accessing and using TextForge, you agree to be bound by these Terms of Service.
+            By accessing and using MakerSilo, you agree to be bound by these Terms of Service.
             If you do not agree to these terms, please do not use our services.
           </p>
         </section>
@@ -24,7 +24,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">2. Use of Service</h2>
           <p className="text-gray-400">
-            TextForge provides free online tools for text transformation, symbol copying,
+            MakerSilo provides free online tools for text transformation, symbol copying,
             meme creation, and wallpaper generation. These tools are provided "as is" without
             warranties of any kind.
           </p>
@@ -42,7 +42,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">4. Intellectual Property</h2>
           <p className="text-gray-400">
-            Content you create using our tools belongs to you. The TextForge platform,
+            Content you create using our tools belongs to you. The MakerSilo platform,
             including its design, code, and branding, remains our intellectual property.
           </p>
         </section>
@@ -50,7 +50,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">5. Limitation of Liability</h2>
           <p className="text-gray-400">
-            TextForge shall not be liable for any indirect, incidental, special, consequential,
+            MakerSilo shall not be liable for any indirect, incidental, special, consequential,
             or punitive damages resulting from your use of or inability to use the service.
           </p>
         </section>

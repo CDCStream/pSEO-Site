@@ -54,7 +54,7 @@ export default async function ToolPage({ params }) {
         name={config.name}
         description={config.description}
         category="tools"
-        url={`https://textforge.tools/tools/${slug}`}
+        url={`https://makersilo.com/tools/${slug}`}
       />
 
       {/* Hero Section */}

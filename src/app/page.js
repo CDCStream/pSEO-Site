@@ -180,7 +180,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose TextForge?
+              Why Choose MakerSilo?
             </h2>
             <p className="text-gray-400 text-lg">
               Built for speed, simplicity, and creative freedom
@@ -247,7 +247,7 @@ export default function HomePage() {
               Ready to Create Something Amazing?
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of creators using TextForge every day.
+              Join thousands of creators using MakerSilo every day.
               No sign-up required — just start creating.
             </p>
             <Link

@@ -3,7 +3,7 @@ export const dynamic = 'force-static';
 import { getAllPages } from '@/config/pSEO-data';
 
 export default function sitemap() {
-  const baseUrl = 'https://textforge.tools';
+  const baseUrl = 'https://makersilo.com';
   const allPages = getAllPages();
 
   // Static pages

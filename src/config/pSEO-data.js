@@ -1,10 +1,10 @@
 // Complete pSEO Configuration for All Dynamic Pages
 
 export const siteConfig = {
-  name: 'TextForge',
+  name: 'MakerSilo',
   tagline: 'Free Online Tools for Creators',
   description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers - all in one place.',
-  url: 'https://textforge.tools',
+  url: 'https://makersilo.com',
 };
 
 // Unicode mappings for text generators

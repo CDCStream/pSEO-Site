@@ -4,21 +4,21 @@ import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
 
 export const metadata = {
-  title: 'TextForge - Free Online Tools for Creators',
+  title: 'MakerSilo - Free Online Tools for Creators',
   description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers. Free online tools with instant copy-paste functionality.',
   keywords: 'text generator, meme maker, symbols copy paste, wallpaper generator, online tools',
-  authors: [{ name: 'TextForge' }],
-  creator: 'TextForge',
+  authors: [{ name: 'MakerSilo' }],
+  creator: 'MakerSilo',
   openGraph: {
-    title: 'TextForge - Free Online Tools for Creators',
+    title: 'MakerSilo - Free Online Tools for Creators',
     description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers.',
-    url: 'https://textforge.tools',
-    siteName: 'TextForge',
+    url: 'https://makersilo.com',
+    siteName: 'MakerSilo',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TextForge - Free Online Tools for Creators',
+    title: 'MakerSilo - Free Online Tools for Creators',
     description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers.',
   },
   robots: {

@@ -74,7 +74,7 @@ export default async function SymbolsPage({ params }) {
         name={config.name}
         description={config.description}
         category="symbols"
-        url={`https://textforge.tools/symbols/${slug}`}
+        url={`https://makersilo.com/symbols/${slug}`}
       />
 
       {/* Hero */}

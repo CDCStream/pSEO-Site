@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import {
   Type,
   Sparkles,
@@ -10,7 +11,6 @@ import {
   Menu,
   X,
   ChevronDown,
-  Zap,
   Music,
   Heart,
   Gamepad2,
@@ -81,12 +81,17 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center transform group-hover:scale-105 transition-transform">
-              <Zap className="w-6 h-6 text-white" />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 blur-lg opacity-50 group-hover:opacity-70 transition-opacity" />
+            <div className="relative w-10 h-10 transform group-hover:scale-105 transition-transform">
+              <NextImage 
+                src="/logo.png" 
+                alt="MakerSilo Logo" 
+                width={40} 
+                height={40}
+                className="object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-white tracking-tight">
-              Text<span className="text-gradient">Forge</span>
+              Maker<span className="text-gradient">Silo</span>
             </span>
           </Link>
 

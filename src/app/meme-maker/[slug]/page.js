@@ -70,7 +70,7 @@ export default async function MemePage({ params }) {
         name={config.name}
         description={config.description}
         category="meme-maker"
-        url={`https://textforge.tools/meme-maker/${slug}`}
+        url={`https://makersilo.com/meme-maker/${slug}`}
       />
 
       {/* Hero */}

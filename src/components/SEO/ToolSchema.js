@@ -52,8 +52,8 @@ export function WebPageSchema({ title, description, url }) {
     'url': url,
     'isPartOf': {
       '@type': 'WebSite',
-      'name': 'TextForge',
-      'url': 'https://textforge.tools',
+      'name': 'MakerSilo',
+      'url': 'https://makersilo.com',
     },
   };
 

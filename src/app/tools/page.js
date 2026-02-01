@@ -15,7 +15,7 @@ const iconMap = {
 };
 
 export const metadata = {
-  title: 'Free Text Tools - Transform Your Text Online | TextForge',
+  title: 'Free Text Tools - Transform Your Text Online | MakerSilo',
   description: 'Explore our collection of free text transformation tools. Generate small text, glitch text, gothic fonts, morse code, and more.',
 };
 

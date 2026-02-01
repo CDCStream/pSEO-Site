@@ -9,6 +9,6 @@ export default function robots() {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://textforge.tools/sitemap.xml',
+    sitemap: 'https://makersilo.com/sitemap.xml',
   };
 }

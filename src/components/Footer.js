@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Zap, Github, Twitter, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { Github, Twitter, Mail } from 'lucide-react';
 
 const footerLinks = {
   tools: [
@@ -35,10 +36,16 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-8 h-8">
+                <Image 
+                  src="/logo.png" 
+                  alt="MakerSilo Logo" 
+                  width={32} 
+                  height={32}
+                  className="object-contain"
+                />
               </div>
-              <span className="text-lg font-bold text-white">TextForge</span>
+              <span className="text-lg font-bold text-white">MakerSilo</span>
             </Link>
             <p className="text-sm text-gray-400 mb-4">
               Free online tools for creators. Transform text, make memes, and create beautiful content.
@@ -112,7 +119,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} TextForge. All rights reserved.
+            © {new Date().getFullYear()} MakerSilo. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
@@ -124,5 +131,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-

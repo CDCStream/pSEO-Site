@@ -1,4 +1,4 @@
-# TextForge - Programmatic SEO Utility Website
+# MakerSilo - Programmatic SEO Utility Website
 
 A high-performance Programmatic SEO (pSEO) utility website built with Next.js 14 (App Router), Tailwind CSS, and Lucide React. Optimized for GitHub-to-Vercel deployment and 100% Google AdSense compliance.
 

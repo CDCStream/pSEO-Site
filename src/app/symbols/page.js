@@ -12,7 +12,7 @@ const iconMap = {
 };
 
 export const metadata = {
-  title: 'Copy and Paste Symbols - Free Symbol Collections | TextForge',
+  title: 'Copy and Paste Symbols - Free Symbol Collections | MakerSilo',
   description: 'Copy and paste symbols for social media. Find music symbols, hearts, kaomoji, Japanese characters, and more.',
 };
 

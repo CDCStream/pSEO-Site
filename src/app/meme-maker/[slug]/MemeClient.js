@@ -163,7 +163,7 @@ export default function MemeClient({ config, slug }) {
     ctx.fillStyle = 'rgba(255,255,255,0.2)';
     ctx.font = '14px Arial';
     ctx.textAlign = 'right';
-    ctx.fillText('TextForge.tools', template.width - 10, template.height - 10);
+    ctx.fillText('MakerSilo.com', template.width - 10, template.height - 10);
   };
 
   const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {

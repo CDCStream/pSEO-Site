@@ -12,7 +12,7 @@ const iconMap = {
 };
 
 export const metadata = {
-  title: 'Free Wallpaper Generator - Create Beautiful Backgrounds | TextForge',
+  title: 'Free Wallpaper Generator - Create Beautiful Backgrounds | MakerSilo',
   description: 'Generate stunning wallpapers for your devices. Solid colors, gradients, aesthetics, and more - all free.',
 };
 

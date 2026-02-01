@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Privacy Policy - TextForge',
-  description: 'TextForge privacy policy. Learn how we handle your data.',
+  title: 'Privacy Policy - MakerSilo',
+  description: 'MakerSilo privacy policy. Learn how we handle your data.',
 };
 
 export default function PrivacyPage() {
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">1. Introduction</h2>
           <p className="text-gray-400">
-            TextForge ("we", "our", or "us") is committed to protecting your privacy.
+            MakerSilo ("we", "our", or "us") is committed to protecting your privacy.
             This Privacy Policy explains how we collect, use, and safeguard your information
             when you use our website.
           </p>
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">2. Information We Collect</h2>
           <p className="text-gray-400">
-            TextForge operates entirely in your browser. We do not collect, store, or transmit
+            MakerSilo operates entirely in your browser. We do not collect, store, or transmit
             any personal information you enter into our tools. All text transformations,
             meme creations, and wallpaper generations happen locally on your device.
           </p>

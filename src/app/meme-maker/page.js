@@ -10,7 +10,7 @@ const iconMap = {
 };
 
 export const metadata = {
-  title: 'Free Meme Generator - Create Viral Memes Online | TextForge',
+  title: 'Free Meme Generator - Create Viral Memes Online | MakerSilo',
   description: 'Create viral memes instantly with our free meme generator. Drake meme, speech bubbles, Bernie Sanders, and more templates.',
 };
 
