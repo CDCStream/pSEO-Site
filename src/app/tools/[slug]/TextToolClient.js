@@ -212,7 +212,7 @@ export default function TextToolClient({ config, slug }) {
                 <CopyButton text={result.text} size="sm" />
               </div>
               <div className="p-4">
-                <p className="text-white text-lg break-all font-mono leading-relaxed">
+                <p className="text-white text-xl break-all leading-relaxed select-all" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
                   {result.text}
                 </p>
               </div>

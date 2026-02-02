@@ -23,10 +23,17 @@ export const unicodeMaps = {
     '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
   },
   subscript: {
+    // Standard subscript Unicode characters
     'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ', 'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ',
     'n': 'ₙ', 'o': 'ₒ', 'p': 'ₚ', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ', 'v': 'ᵥ',
-    'x': 'ₓ', '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆',
-    '7': '₇', '8': '₈', '9': '₉',
+    'x': 'ₓ',
+    // Greek subscript approximations for missing letters
+    'b': 'ᵦ', 'g': 'ᵧ', 'y': 'ᵧ', 'q': 'ᵩ', 'z': 'ᵦ',
+    // Fallback to small characters for others (c, d, f, w have no good subscript alternatives)
+    'c': 'c', 'd': 'd', 'f': 'f', 'w': 'w',
+    // Numbers
+    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅',
+    '6': '₆', '7': '₇', '8': '₈', '9': '₉',
   },
   bubble: {
     'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ',
