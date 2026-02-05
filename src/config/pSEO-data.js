@@ -10,30 +10,30 @@ export const siteConfig = {
 // Unicode mappings for text generators
 export const unicodeMaps = {
   smallCaps: {
-    'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 'f': 'ꜰ', 'g': 'ɢ', 'h': 'ʜ',
-    'i': 'ɪ', 'j': 'ᴊ', 'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': 'ᴏ', 'p': 'ᴘ',
-    'q': 'ǫ', 'r': 'ʀ', 's': 's', 't': 'ᴛ', 'u': 'ᴜ', 'v': 'ᴠ', 'w': 'ᴡ', 'x': 'x',
-    'y': 'ʏ', 'z': 'ᴢ',
+    'a': '\u1D00', 'b': '\u0299', 'c': '\u1D04', 'd': '\u1D05', 'e': '\u1D07', 'f': '\uA730', 'g': '\u0262', 'h': '\u029C',
+    'i': '\u026A', 'j': '\u1D0A', 'k': '\u1D0B', 'l': '\u029F', 'm': '\u1D0D', 'n': '\u0274', 'o': '\u1D0F', 'p': '\u1D18',
+    'q': '\u01EB', 'r': '\u0280', 's': '\u0073', 't': '\u1D1B', 'u': '\u1D1C', 'v': '\u1D20', 'w': '\u1D21', 'x': '\u0078',
+    'y': '\u028F', 'z': '\u1D22',
   },
   superscript: {
-    'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ', 'd': 'ᵈ', 'e': 'ᵉ', 'f': 'ᶠ', 'g': 'ᵍ', 'h': 'ʰ',
-    'i': 'ⁱ', 'j': 'ʲ', 'k': 'ᵏ', 'l': 'ˡ', 'm': 'ᵐ', 'n': 'ⁿ', 'o': 'ᵒ', 'p': 'ᵖ',
-    'q': 'q', 'r': 'ʳ', 's': 'ˢ', 't': 'ᵗ', 'u': 'ᵘ', 'v': 'ᵛ', 'w': 'ʷ', 'x': 'ˣ',
-    'y': 'ʸ', 'z': 'ᶻ', '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵',
-    '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+    'a': '\u1D43', 'b': '\u1D47', 'c': '\u1D9C', 'd': '\u1D48', 'e': '\u1D49', 'f': '\u1DA0', 'g': '\u1D4D', 'h': '\u02B0',
+    'i': '\u2071', 'j': '\u02B2', 'k': '\u1D4F', 'l': '\u02E1', 'm': '\u1D50', 'n': '\u207F', 'o': '\u1D52', 'p': '\u1D56',
+    'q': '\u146B', 'r': '\u02B3', 's': '\u02E2', 't': '\u1D57', 'u': '\u1D58', 'v': '\u1D5B', 'w': '\u02B7', 'x': '\u02E3',
+    'y': '\u02B8', 'z': '\u1DBB', '0': '\u2070', '1': '\u00B9', '2': '\u00B2', '3': '\u00B3', '4': '\u2074', '5': '\u2075',
+    '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079',
   },
   subscript: {
     // Standard subscript Unicode characters
-    'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ', 'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ',
-    'n': 'ₙ', 'o': 'ₒ', 'p': 'ₚ', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ', 'v': 'ᵥ',
-    'x': 'ₓ',
+    'a': '\u2090', 'e': '\u2091', 'h': '\u2095', 'i': '\u1D62', 'j': '\u2C7C', 'k': '\u2096', 'l': '\u2097', 'm': '\u2098',
+    'n': '\u2099', 'o': '\u2092', 'p': '\u209A', 'r': '\u1D63', 's': '\u209B', 't': '\u209C', 'u': '\u1D64', 'v': '\u1D65',
+    'x': '\u2093',
     // Greek subscript approximations for missing letters
-    'b': 'ᵦ', 'g': 'ᵧ', 'y': 'ᵧ', 'q': 'ᵩ', 'z': 'ᵦ',
-    // Fallback to small characters for others (c, d, f, w have no good subscript alternatives)
+    'b': '\u1D66', 'g': '\u1D67', 'y': '\u1D67', 'q': '\u1D69', 'z': '\u1D66',
+    // Fallback to small characters for others
     'c': 'c', 'd': 'd', 'f': 'f', 'w': 'w',
     // Numbers
-    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅',
-    '6': '₆', '7': '₇', '8': '₈', '9': '₉',
+    '0': '\u2080', '1': '\u2081', '2': '\u2082', '3': '\u2083', '4': '\u2084', '5': '\u2085',
+    '6': '\u2086', '7': '\u2087', '8': '\u2088', '9': '\u2089',
   },
   bubble: {
     'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ',
@@ -123,15 +123,15 @@ export const toolsConfig = {
       { q: 'Is small text the same as superscript?', a: 'Small text includes multiple styles: superscript (ᵗⁱⁿʸ), subscript (ₜᵢₙᵧ), and small caps (ᴛɪɴʏ). Each serves different purposes.' },
       { q: 'Does small text work on Twitter/X?', a: 'Yes! Twitter/X supports Unicode characters, making small text perfect for unique tweets and bios.' },
     ],
-    longContent: `The Small Text Generator is a powerful online tool that transforms ordinary text into eye-catching miniature characters. Whether you're looking to create unique social media bios, distinctive usernames, or add creative flair to your messages, this tool makes it effortless.
+    longContent: `The Small Text Generator is a powerful online tool that transforms ordinary text into eye-catching miniature characters. Whether you're looking to create unique social media bios, distinctive usernames, or add creative flair to your messages, this tool makes it effortless. Our implementation is inspired by [smalltext.io](https://smalltext.io/), one of the pioneering small text generators on the web.
 
-Our generator offers three distinct small text styles: superscript characters that appear slightly above the baseline, subscript characters that sit below, and small caps that maintain the structure of capital letters but in a compact form. Each style uses Unicode characters that are universally supported across modern platforms.
+Our generator offers three distinct small text styles: superscript characters (ᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻ) that appear slightly above the baseline, subscript characters (ₐᵦ𝒸𝒹ₑ𝒻𝓰ₕᵢⱼₖₗₘₙₒₚᵩᵣₛₜᵤᵥ𝓌ₓᵧ𝓏) that sit below, and small caps (ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ) that maintain the structure of capital letters but in a compact form. Each style uses Unicode characters that are universally supported across modern platforms.
 
 What makes our Small Text Generator stand out is its instant conversion technology. As you type, the text transforms in real-time, allowing you to see exactly how your message will appear. The one-click copy feature ensures you can quickly grab your converted text and paste it anywhere – from Instagram captions to Discord servers, from Twitter bios to text messages.
 
-Small text has become increasingly popular for creating aesthetic usernames that stand out from the crowd. Gamers, content creators, and social media enthusiasts use tiny text to add a unique touch to their online presence. The subtle yet distinctive appearance catches the eye without being overwhelming.
+Small text has become increasingly popular for creating aesthetic usernames that stand out from the crowd. Gamers, content creators, and social media enthusiasts use tiny text to add a unique touch to their online presence. The subtle yet distinctive appearance catches the eye without being overwhelming. As noted on [smalltext.io](https://smalltext.io/), these aren't actually fonts but rather special Unicode characters that can be copied and pasted anywhere.
 
-Beyond social media, small text serves practical purposes in mathematical notation, footnotes, and scientific writing. Superscript and subscript characters are essential for chemical formulas, mathematical expressions, and academic citations. Our generator makes accessing these special characters simple and fast.`,
+Beyond social media, small text serves practical purposes in mathematical notation, footnotes, and scientific writing. Superscript and subscript characters are essential for chemical formulas, mathematical expressions, and academic citations. Unicode originally introduced only ¹²³ for superscripts, but now includes most of the alphabet except "q" which we substitute with ᵠ. Our generator makes accessing these special characters simple and fast.`,
   },
   'glitch-text-generator': {
     category: 'tools',
@@ -150,7 +150,7 @@ Beyond social media, small text serves practical purposes in mathematical notati
       { q: 'Can I adjust how crazy the glitch looks?', a: 'Yes! Our generator offers intensity controls from subtle to extreme, letting you create the perfect glitch effect.' },
       { q: 'Does glitch text work on Discord?', a: 'Discord fully supports zalgo text, making it perfect for spooky server themes and horror-themed messages.' },
     ],
-    longContent: `The Glitch Text Generator, also known as a Zalgo text creator, produces eerily distorted text that appears corrupted or haunted. This effect is achieved by stacking multiple Unicode combining characters above and below standard letters, creating a chaotic visual that has become iconic in internet culture.
+    longContent: `The Glitch Text Generator, also known as a Zalgo text creator, produces eerily distorted text that appears corrupted or haunted. This effect is achieved by stacking multiple Unicode combining characters called [diacritics](https://en.wikipedia.org/wiki/Diacritic) above and below standard letters, creating a chaotic visual that has become iconic in internet culture.
 
 Our Glitch Text Generator offers unprecedented control over the chaos intensity. Whether you want subtle corruption for an artistic touch or extreme zalgo for maximum impact, the adjustable sliders let you fine-tune the effect. You can control the density of marks above, below, and through the text independently.
 
@@ -324,30 +324,30 @@ The technical simplicity of our generator ensures instant results. Type your tex
   },
   'minecraft-font': {
     category: 'tools',
-    name: 'Minecraft Font',
-    keyword: 'Minecraft Enchanting Table Font',
-    title: 'Best Minecraft Font Generator - Free Online Tool',
-    description: 'Use our free Minecraft Font Generator to create Standard Galactic Alphabet text instantly. Perfect for gamers, memes, and mysterious messages.',
-    h1: 'Minecraft Font Generator',
-    subtitle: 'Convert text to Minecraft Enchanting Table language.',
+    name: 'Minecraft Text Generator',
+    keyword: 'Minecraft Text Generator',
+    title: 'Best Minecraft Text Generator - Free 3D Block Font Maker',
+    description: 'Create stunning 3D Minecraft-style block text with our free generator. Choose block colors, backgrounds, and download as PNG. Perfect for thumbnails, banners, and gaming content.',
+    h1: 'Minecraft Text Generator',
+    subtitle: 'Create 3D block-style text like the Minecraft title screen.',
     icon: 'gamepad-2',
     transformType: 'minecraft',
     faq: [
-      { q: 'Is Minecraft Font the same as Enchanting Table language?', a: 'Yes! The symbols used in Minecraft\'s enchanting table are based on the Standard Galactic Alphabet from Commander Keen games.' },
-      { q: 'Can I read Minecraft enchanting text?', a: 'In the game, the symbols are random gibberish. Our generator creates actual translatable text using SGA characters.' },
-      { q: 'Does Minecraft font work on Discord?', a: 'Yes! Discord supports the Unicode characters we use, making it perfect for Minecraft server communities.' },
-      { q: 'Why do some letters look incomplete?', a: 'Unicode doesn\'t have official SGA characters, so we use the closest visual approximations from available symbols.' },
-      { q: 'Can I use this for Minecraft server names?', a: 'While the look is authentic, some hosting platforms may not support all Unicode characters. Test before committing.' },
+      { q: 'How do I create Minecraft-style text?', a: 'Simply type your text, choose a block color (stone, diamond, gold, etc.), select a background theme, and adjust the 3D depth. Then download your creation as PNG!' },
+      { q: 'Can I use the generated images commercially?', a: 'Yes! The images you create are yours to use for YouTube thumbnails, Twitch banners, social media posts, and more.' },
+      { q: 'What backgrounds are available?', a: 'We offer Grass & Dirt, Night Sky, Nether, The End, Ocean, and Desert themes - all inspired by Minecraft biomes.' },
+      { q: 'Can I adjust the 3D effect?', a: 'Absolutely! Use the depth slider to control how pronounced the 3D block effect appears, from flat to deep perspective.' },
+      { q: 'What file format is the download?', a: 'All downloads are high-quality PNG files with transparency support where applicable.' },
     ],
-    longContent: `The Minecraft Font Generator transforms your text into the mysterious symbols seen on enchanting tables throughout the Minecraft universe. These cryptic characters, known as the Standard Galactic Alphabet, add an air of ancient magic to any message.
+    longContent: `The Minecraft Text Generator creates stunning 3D block-style text that captures the iconic look of Minecraft's title screen. Whether you're making YouTube thumbnails, Twitch stream overlays, or social media graphics, this tool delivers professional-quality Minecraft typography in seconds.
 
-The Standard Galactic Alphabet (SGA) originally appeared in the Commander Keen game series from the early 1990s. Minecraft's developers adopted this alphabet for the enchanting table interface, making it iconic among millions of players. Though the in-game text is decorative gibberish, our generator creates actual readable translations.
+Our generator renders text using a pixel-perfect block font reminiscent of the classic Minecraft aesthetic. Each letter is constructed from individual blocks with realistic 3D depth, complete with highlights and shadows that give the text a genuine blocky appearance.
 
-Our generator uses carefully selected Unicode symbols that closely match the SGA letterforms. While no official Unicode standard exists for SGA, we've assembled the best visual approximations to recreate the enchanting table aesthetic. The result is mysterious-looking text that can be decoded by those who know the alphabet.
+Choose from multiple block materials to match your content's theme. Stone blocks provide a classic, neutral look. Diamond and emerald add vibrant color for eye-catching titles. Gold and iron bring metallic elegance. Redstone and lapis offer bold, distinctive options. Obsidian creates a dark, mysterious atmosphere.
 
-Minecraft communities embrace this font for Discord servers, social media, and fan content. Server announcements gain mystical flair, usernames stand out in lobbies, and memes tap into shared gaming culture. The distinctive symbols immediately signal belonging to the Minecraft community.
+The background themes transport your text into authentic Minecraft environments. The iconic Grass & Dirt combination evokes the overworld. Night Sky is perfect for survival content. Nether and End themes set the stage for adventure and boss fights. Ocean and Desert backgrounds add variety for biome-specific content.
 
-Beyond gaming, the Minecraft font appeals to anyone wanting an arcane, mysterious look. Fantasy writers, tabletop gamers, and cryptography enthusiasts all find uses for these otherworldly characters. The blend of familiar gaming nostalgia and ancient-looking symbols creates universal appeal.`,
+Customization options let you fine-tune every aspect. Adjust zoom for the perfect text size. Modify character spacing for readability. Control the 3D depth for dramatic or subtle effects. Once you're satisfied, download your creation as a high-quality PNG ready for immediate use in your projects.`,
   },
 };
 
@@ -631,33 +631,6 @@ Best practices for Change My Mind memes include keeping text concise (it needs t
 
 // Wallpapers configuration
 export const wallpapersConfig = {
-  'christmas-wallpaper': {
-    category: 'wallpapers',
-    name: 'Christmas Wallpaper',
-    keyword: 'Christmas Wallpaper Generator',
-    title: 'Best Christmas Wallpaper Generator - Free Online Tool',
-    description: 'Generate beautiful Christmas wallpapers instantly. Create festive backgrounds with snow, ornaments, and holiday themes.',
-    h1: 'Christmas Wallpaper Generator',
-    subtitle: 'Create festive holiday backgrounds with customizable themes.',
-    icon: 'snowflake',
-    generatorType: 'christmas',
-    faq: [
-      { q: 'Is the Christmas Wallpaper Generator free?', a: 'Yes! Generate unlimited Christmas wallpapers completely free.' },
-      { q: 'What sizes are available?', a: 'Download wallpapers in phone (1080x1920), desktop (1920x1080), and social media sizes.' },
-      { q: 'Can I customize colors and elements?', a: 'Yes! Choose color schemes, toggle snow effects, and select from various Christmas elements.' },
-      { q: 'Are these wallpapers copyrighted?', a: 'Wallpapers you generate are yours to use freely for personal purposes.' },
-      { q: 'Can I use these commercially?', a: 'Generated wallpapers can be used for personal projects. Commercial use is permitted with attribution.' },
-    ],
-    longContent: `The Christmas Wallpaper Generator brings holiday cheer to your devices with custom-generated festive backgrounds. Create beautiful seasonal wallpapers featuring snow, ornaments, Christmas trees, and cozy holiday aesthetics.
-
-Transform your phone, tablet, or computer into a winter wonderland with our easy-to-use generator. Select from various Christmas themes – from elegant winter minimalism to colorful festive abundance. Each generation creates a unique background just for you.
-
-Our Christmas wallpapers feature classic holiday elements: gentle snowfall animations, twinkling lights, evergreen branches, candy canes, and ornamental decorations. Layer these elements to match your preferred aesthetic, from subtle sophistication to joyful maximalism.
-
-Color customization lets you match wallpapers to your personal style. Choose traditional red and green, icy blue and silver, warm gold and cream, or create custom palettes. Multiple size options ensure perfect fit for any device.
-
-Celebrate the season with backgrounds that spread holiday joy every time you unlock your device. Download unlimited wallpapers throughout the season, creating fresh looks for the countdown to Christmas, Christmas Day, and the New Year celebrations ahead.`,
-  },
   'preppy-wallpaper': {
     category: 'wallpapers',
     name: 'Preppy Wallpaper',
@@ -684,33 +657,6 @@ Customization options let you craft the exact preppy vibe you're seeking. Select
 The preppy trend appeals to those seeking positive, polished, and playful device aesthetics. Whether you're a student embracing the academic year with style or anyone attracted to cheerful, put-together visuals, preppy wallpapers deliver the vibe.
 
 Generate matching wallpapers for all your devices – coordinate your phone, tablet, and laptop for the complete preppy experience. New pattern combinations and seasonal elements keep your aesthetic fresh throughout the year.`,
-  },
-  'hello-kitty-wallpaper': {
-    category: 'wallpapers',
-    name: 'Hello Kitty Wallpaper',
-    keyword: 'Hello Kitty Wallpaper Generator',
-    title: 'Best Hello Kitty Style Wallpaper Generator - Free Online Tool',
-    description: 'Generate kawaii wallpapers in Hello Kitty style instantly. Create cute backgrounds with bows, hearts, and Sanrio-inspired aesthetics.',
-    h1: 'Kawaii Kitty Wallpaper Generator',
-    subtitle: 'Create adorable kawaii backgrounds with cute cat aesthetics.',
-    icon: 'cat',
-    generatorType: 'helloKitty',
-    faq: [
-      { q: 'Is this an official Sanrio product?', a: 'No, this is an independent kawaii generator inspired by cute Japanese aesthetics. Hello Kitty is a trademark of Sanrio.' },
-      { q: 'What kawaii elements are included?', a: 'Our generator features bows, hearts, stars, cute expressions, and pastel patterns inspired by Japanese kawaii culture.' },
-      { q: 'Can I customize the colors?', a: 'Yes! Choose from pink, lavender, mint, and custom pastel palettes.' },
-      { q: 'What sizes are available?', a: 'Download in phone, tablet, desktop, and social media dimensions.' },
-      { q: 'Are these wallpapers free?', a: 'Yes! Generate unlimited kawaii wallpapers completely free.' },
-    ],
-    longContent: `The Kawaii Kitty Wallpaper Generator creates adorable backgrounds inspired by Japanese cute culture. Generate sweet, colorful wallpapers featuring bows, hearts, stars, and charming patterns that bring kawaii aesthetics to your devices.
-
-Kawaii (可愛い) means "cute" in Japanese and describes an entire aesthetic movement. Characterized by pastel colors, rounded shapes, cheerful expressions, and decorative elements like bows and hearts, kawaii style has charmed fans worldwide for decades.
-
-Our generator captures essential kawaii elements while letting you customize the look. Choose between pink palettes, lavender dreams, mint freshness, or create custom color combinations. Layer cute decorations to achieve your perfect level of adorability.
-
-The appeal of kawaii aesthetics lies in their ability to bring joy and comfort. Cute visuals have been shown to boost mood and reduce stress. Transform your device into a source of daily happiness with backgrounds that make you smile.
-
-Create matching wallpapers for a coordinated kawaii experience across devices. Our generator produces high-quality images suitable for phones, tablets, and desktops. Embrace the cute life with unlimited adorable wallpaper creation.`,
   },
   'aesthetic-wallpaper': {
     category: 'wallpapers',

@@ -29,6 +29,7 @@ const sizes = [
   { name: 'Phone', icon: Smartphone, width: 1080, height: 1920 },
   { name: 'Tablet', icon: Tablet, width: 2048, height: 2732 },
   { name: 'Desktop', icon: Monitor, width: 1920, height: 1080 },
+  { name: 'Custom', icon: null, width: 1920, height: 1080 },
 ];
 
 export default function WallpaperClient({ config, slug }) {
@@ -37,7 +38,13 @@ export default function WallpaperClient({ config, slug }) {
   const [gradientColors, setGradientColors] = useState(['#667EEA', '#764BA2']);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [gradientAngle, setGradientAngle] = useState(135);
+  const [customWidth, setCustomWidth] = useState(1920);
+  const [customHeight, setCustomHeight] = useState(1080);
   const { addToast } = useToast();
+
+  // Get actual dimensions (always use custom values)
+  const actualWidth = customWidth;
+  const actualHeight = customHeight;
 
   const isGradient = config.generatorType === 'gradient';
   const isSolidColor = config.generatorType === 'solidColor';
@@ -49,7 +56,7 @@ export default function WallpaperClient({ config, slug }) {
 
     const ctx = canvas.getContext('2d');
     const displayWidth = 400;
-    const aspectRatio = selectedSize.height / selectedSize.width;
+    const aspectRatio = actualHeight / actualWidth;
     const displayHeight = displayWidth * aspectRatio;
 
     canvas.width = displayWidth;
@@ -75,7 +82,7 @@ export default function WallpaperClient({ config, slug }) {
       // Other wallpaper types - create abstract patterns
       drawPatternBackground(ctx, config.generatorType, displayWidth, displayHeight);
     }
-  }, [color, gradientColors, selectedSize, gradientAngle, config.generatorType, isSolidColor, isGradient]);
+  }, [color, gradientColors, selectedSize, gradientAngle, config.generatorType, isSolidColor, isGradient, actualWidth, actualHeight]);
 
   const drawPatternBackground = (ctx, type, width, height) => {
     // Base gradient
@@ -146,16 +153,16 @@ export default function WallpaperClient({ config, slug }) {
     // Create full-size canvas for download
     const downloadCanvas = document.createElement('canvas');
     const ctx = downloadCanvas.getContext('2d');
-    downloadCanvas.width = selectedSize.width;
-    downloadCanvas.height = selectedSize.height;
+    downloadCanvas.width = actualWidth;
+    downloadCanvas.height = actualHeight;
 
     if (isSolidColor) {
       ctx.fillStyle = color;
-      ctx.fillRect(0, 0, selectedSize.width, selectedSize.height);
+      ctx.fillRect(0, 0, actualWidth, actualHeight);
     } else if (isGradient) {
       const angleRad = (gradientAngle * Math.PI) / 180;
-      const w = selectedSize.width;
-      const h = selectedSize.height;
+      const w = actualWidth;
+      const h = actualHeight;
       const x1 = w / 2 - Math.cos(angleRad) * w;
       const y1 = h / 2 - Math.sin(angleRad) * h;
       const x2 = w / 2 + Math.cos(angleRad) * w;
@@ -168,15 +175,15 @@ export default function WallpaperClient({ config, slug }) {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, w, h);
     } else {
-      drawPatternBackground(ctx, config.generatorType, selectedSize.width, selectedSize.height);
+      drawPatternBackground(ctx, config.generatorType, actualWidth, actualHeight);
     }
 
     const link = document.createElement('a');
-    link.download = `${slug}-${selectedSize.width}x${selectedSize.height}.png`;
+    link.download = `${slug}-${actualWidth}x${actualHeight}.png`;
     link.href = downloadCanvas.toDataURL('image/png');
     link.click();
 
-    addToast(`Wallpaper downloaded (${selectedSize.width}x${selectedSize.height})`, 'success');
+    addToast(`Wallpaper downloaded (${actualWidth}x${actualHeight})`, 'success');
   };
 
   return (
@@ -200,13 +207,17 @@ export default function WallpaperClient({ config, slug }) {
           {/* Size Selection */}
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-3">
-              Size
+              Size Presets
             </label>
-            <div className="flex gap-3">
-              {sizes.map((size) => (
+            <div className="flex gap-3 mb-4">
+              {sizes.filter(s => s.name !== 'Custom').map((size) => (
                 <button
                   key={size.name}
-                  onClick={() => setSelectedSize(size)}
+                  onClick={() => {
+                    setSelectedSize(size);
+                    setCustomWidth(size.width);
+                    setCustomHeight(size.height);
+                  }}
                   className={`flex-1 py-3 px-4 rounded-xl flex flex-col items-center gap-2 transition-all ${
                     selectedSize.name === size.name
                       ? 'bg-blue-500/20 border-2 border-blue-500 text-blue-400'
@@ -217,6 +228,42 @@ export default function WallpaperClient({ config, slug }) {
                   <span className="text-sm font-medium">{size.name}</span>
                 </button>
               ))}
+            </div>
+
+            {/* Image Dimensions Input - Always visible */}
+            <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+              <p className="text-sm text-gray-400 mb-3">Image Dimensions (in pixels)</p>
+              <div className="flex gap-4 items-center">
+                <div className="flex-1">
+                  <input
+                    type="number"
+                    value={customWidth}
+                    onChange={(e) => {
+                      setCustomWidth(Math.max(1, parseInt(e.target.value) || 1));
+                      setSelectedSize(sizes.find(s => s.name === 'Custom'));
+                    }}
+                    className="w-full px-4 py-3 bg-black/30 rounded-xl border border-white/10 text-white font-mono text-center focus:outline-none focus:border-blue-500/50"
+                    min="1"
+                    max="8000"
+                  />
+                  <span className="text-xs text-gray-500 mt-1 block text-center">Width</span>
+                </div>
+                <span className="text-gray-500 text-xl">×</span>
+                <div className="flex-1">
+                  <input
+                    type="number"
+                    value={customHeight}
+                    onChange={(e) => {
+                      setCustomHeight(Math.max(1, parseInt(e.target.value) || 1));
+                      setSelectedSize(sizes.find(s => s.name === 'Custom'));
+                    }}
+                    className="w-full px-4 py-3 bg-black/30 rounded-xl border border-white/10 text-white font-mono text-center focus:outline-none focus:border-blue-500/50"
+                    min="1"
+                    max="8000"
+                  />
+                  <span className="text-xs text-gray-500 mt-1 block text-center">Height</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -319,7 +366,7 @@ export default function WallpaperClient({ config, slug }) {
               className="w-full px-6 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 text-lg"
             >
               <Download className="w-5 h-5" />
-              Download {selectedSize.width}x{selectedSize.height}
+              Download {actualWidth}x{actualHeight}
             </button>
           </div>
         </div>

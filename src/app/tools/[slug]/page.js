@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { toolsConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import TextToolClient from './TextToolClient';
+import MinecraftTextClient from './MinecraftTextClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -83,7 +84,11 @@ export default async function ToolPage({ params }) {
             <AdSlot position="above-tool" />
 
             {/* Tool Interface */}
-            <TextToolClient config={config} slug={slug} />
+            {slug === 'minecraft-font' ? (
+              <MinecraftTextClient config={config} />
+            ) : (
+              <TextToolClient config={config} slug={slug} />
+            )}
 
             {/* How to Use */}
             <HowToUse keyword={config.keyword} />

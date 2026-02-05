@@ -62,7 +62,6 @@ const navItems = [
       { label: 'Solid Color Backgrounds', href: '/wallpapers/solid-color-backgrounds' },
       { label: 'Gradient Wallpaper', href: '/wallpapers/gradient-wallpaper-generator' },
       { label: 'Aesthetic Wallpaper', href: '/wallpapers/aesthetic-wallpaper' },
-      { label: 'Christmas Wallpaper', href: '/wallpapers/christmas-wallpaper' },
     ],
   },
 ];

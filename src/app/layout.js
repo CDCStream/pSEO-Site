@@ -1,8 +1,11 @@
 import './globals.css';
-import { Outfit, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
+import { Outfit, JetBrains_Mono, Press_Start_2P } from 'next/font/google';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
+
+const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
 
 // Optimized font loading with next/font
 const outfit = Outfit({
@@ -21,6 +24,14 @@ const jetbrainsMono = JetBrains_Mono({
   preload: true,
 });
 
+const pressStart2P = Press_Start_2P({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-minecraft',
+  weight: '400',
+  preload: false,
+});
+
 export const metadata = {
   title: 'MakerSilo - Free Online Tools for Creators',
   description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers. Free online tools with instant copy-paste functionality.',
@@ -35,11 +46,21 @@ export const metadata = {
     siteName: 'MakerSilo',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MakerSilo - Free Online Tools for Creators',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MakerSilo - Free Online Tools for Creators',
     description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers.',
+    images: ['/og-image.png'],
+    creator: '@makersilo',
   },
   robots: {
     index: true,
@@ -71,7 +92,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${jetbrainsMono.variable}`}
+      className={`${outfit.variable} ${jetbrainsMono.variable} ${pressStart2P.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -85,6 +106,20 @@ export default function RootLayout({ children }) {
         {/* Preconnect to critical origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
