@@ -213,3 +213,78 @@ body {
 .animate-slide-up {
   animation: slide-up 0.4s ease-out forwards;
 }
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Disable heavy animations on mobile */
+@media (max-width: 768px) {
+  .animate-glow {
+    animation: none;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+  }
+
+  .card-glow,
+  .card-glow:hover {
+    box-shadow: none;
+  }
+
+  /* Simplify gradients on mobile */
+  .text-gradient {
+    background: #ff6b35;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  /* Reduce pattern complexity */
+  .pattern-dots {
+    background-size: 32px 32px;
+  }
+
+  .pattern-grid {
+    background-size: 60px 60px;
+  }
+}
+
+/* Touch optimization */
+@media (pointer: coarse) {
+  /* Larger touch targets */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .btn-primary:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-glow:hover {
+    box-shadow: none;
+  }
+}
+
+/* Content visibility for below-fold content */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* GPU layer optimization - only when needed */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
