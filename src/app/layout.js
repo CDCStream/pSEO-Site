@@ -7,29 +7,34 @@ import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
 
-// Optimized font loading with next/font - reduced weights for performance
+// Optimized font loading - only essential weights
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
-  weight: ['400', '500', '600', '700'], // Reduced from 6 to 4 weights
+  weight: ['400', '600', '700'], // Only 3 weights for better performance
   preload: true,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
+// Mono font - lazy loaded, not critical for initial render
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
-  weight: ['400', '500'], // Reduced from 3 to 2 weights
-  preload: false, // Don't preload mono font - not critical
+  weight: ['400'],
+  preload: false,
+  fallback: ['monospace'],
 });
 
+// Minecraft font - lazy loaded, only used on specific pages
 const pressStart2P = Press_Start_2P({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-minecraft',
   weight: '400',
   preload: false,
+  fallback: ['monospace'],
 });
 
 export const metadata = {
@@ -107,12 +112,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 - lazyOnload for better performance */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
