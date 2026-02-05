@@ -82,7 +82,7 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" prefetch={false} className="flex items-center gap-3">
             <NextImage
               src="/logo.png"
               alt="MakerSilo Logo"
@@ -107,6 +107,7 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href}
+                  prefetch={false}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
                 >
                   <item.icon className="w-4 h-4" />
@@ -121,6 +122,7 @@ export default function Navigation() {
                       <Link
                         key={subItem.href}
                         href={subItem.href}
+                        prefetch={false}
                         className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
                       >
                         {subItem.label}
@@ -129,6 +131,7 @@ export default function Navigation() {
                     <div className="border-t border-white/10 mt-2 pt-2 px-4">
                       <Link
                         href={item.href}
+                        prefetch={false}
                         className="text-xs text-gray-500 hover:text-orange-400 transition-colors"
                       >
                         View all →
@@ -156,6 +159,7 @@ export default function Navigation() {
               <div key={item.label} className="py-2">
                 <Link
                   href={item.href}
+                  prefetch={false}
                   className="flex items-center gap-3 px-4 py-2 text-base font-medium text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -169,6 +173,7 @@ export default function Navigation() {
                     <Link
                       key={subItem.href}
                       href={subItem.href}
+                      prefetch={false}
                       className="block py-1 text-sm text-gray-400 hover:text-white transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >

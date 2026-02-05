@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+// Disable prefetching to reduce initial load
+const linkProps = { prefetch: false };
+
 // Inline SVG icons for better performance - no external library needed
 const TypeIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg>
@@ -123,6 +126,7 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-4 animate-slide-up delay-200">
               <Link
                 href="/tools"
+                prefetch={false}
                 className="btn-primary px-8 py-4 rounded-xl text-lg inline-flex items-center gap-2"
               >
                 Start Creating
@@ -130,6 +134,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/symbols"
+                prefetch={false}
                 className="btn-secondary px-8 py-4 rounded-xl text-lg"
               >
                 Browse Symbols
@@ -155,6 +160,7 @@ export default function HomePage() {
             <Link
               key={category.title}
               href={category.href}
+              prefetch={false}
               className="group relative bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-orange-500/30 transition-all duration-300 card-glow overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -246,6 +252,7 @@ export default function HomePage() {
             <Link
               key={tool.href}
               href={tool.href}
+              prefetch={false}
               className="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-center text-sm text-gray-300 hover:text-white hover:border-orange-500/30 hover:bg-white/10 transition-all"
             >
               {tool.label}
@@ -270,6 +277,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/tools/small-text-generator"
+              prefetch={false}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-100 transition-colors"
             >
               Try Small Text Generator

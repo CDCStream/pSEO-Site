@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-<Link href="/" className="flex items-center gap-3 mb-4">
+<Link href="/" prefetch={false} className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10">
                 <Image
                   src="/logo.png"
@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.tools.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                  <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.symbols.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                  <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -106,7 +106,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.wallpapers.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                  <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -119,7 +119,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.memes.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                  <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -133,9 +133,9 @@ export default function Footer() {
             © {new Date().getFullYear()} MakerSilo. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link>
+            <Link href="/privacy" prefetch={false} className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" prefetch={false} className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/sitemap.xml" prefetch={false} className="hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
