@@ -104,20 +104,45 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
 
-        {/* Preconnect to Google Analytics - but lazy loaded */}
+{/* Preconnect to Google Analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
-        {/* Google Analytics 4 - lazyOnload for better performance */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="lazyOnload"
+        
+        {/* Preload critical font for faster LCP */}
+        <link
+          rel="preload"
+          href="/_next/static/media/1b99372b3eaef0c8.p.758e15a8.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
+
+        {/* Google Analytics 4 - Load after user interaction for better mobile performance */}
         <Script id="google-analytics" strategy="lazyOnload">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            // Delay GA until user interacts or after 5 seconds
+            function loadGA() {
+              if (window.gaLoaded) return;
+              window.gaLoaded = true;
+              
+              var script = document.createElement('script');
+              script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+              script.async = true;
+              document.head.appendChild(script);
+              
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            }
+            
+            // Load on first interaction
+            ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
+              window.addEventListener(event, loadGA, { once: true, passive: true });
+            });
+            
+            // Fallback: load after 5 seconds
+            setTimeout(loadGA, 5000);
           `}
         </Script>
       </head>
