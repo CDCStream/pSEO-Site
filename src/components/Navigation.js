@@ -78,22 +78,20 @@ export default function Navigation() {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <header className="sticky top-0 z-50 bg-glass-dark gpu-accelerated">
+    <header className="sticky top-0 z-50 bg-glass-dark">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 transform group-hover:scale-105 transition-transform">
-              <NextImage
-                src="/logo.png"
-                alt="MakerSilo Logo"
-                width={56}
-                height={56}
-                className="object-contain"
-                priority
-              />
-            </div>
-            <span className="text-2xl font-bold text-white tracking-tight">
+          <Link href="/" className="flex items-center gap-3">
+            <NextImage
+              src="/logo.png"
+              alt="MakerSilo Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+              priority
+            />
+            <span className="text-xl font-bold text-white tracking-tight">
               Maker<span className="text-gradient">Silo</span>
             </span>
           </Link>

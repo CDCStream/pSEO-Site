@@ -100,10 +100,8 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Background effects - hidden on mobile for performance */}
-        <div className="absolute inset-0 pattern-dots opacity-30" />
-        <div className="hidden sm:block absolute top-0 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl" />
-        <div className="hidden sm:block absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
+        {/* Simple background - no blur effects for performance */}
+        <div className="absolute inset-0 pattern-dots opacity-20" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center max-w-4xl mx-auto">
