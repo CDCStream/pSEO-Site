@@ -7,12 +7,12 @@ import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
 
-// Optimized font loading with next/font
+// Optimized font loading with next/font - reduced weights for performance
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'], // Reduced from 6 to 4 weights
   preload: true,
 });
 
@@ -20,8 +20,8 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
-  weight: ['400', '500', '600'],
-  preload: true,
+  weight: ['400', '500'], // Reduced from 3 to 2 weights
+  preload: false, // Don't preload mono font - not critical
 });
 
 const pressStart2P = Press_Start_2P({
