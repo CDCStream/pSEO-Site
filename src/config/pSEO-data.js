@@ -551,7 +551,7 @@ The technical implementation ensures good distribution across the alphabet. Each
     h1: 'YouTube Channel Idea Generator',
     subtitle: 'Discover unique channel ideas and content niches.',
     icon: 'lightbulb',
-    transformType: 'youtubeIdea',
+    generatorType: 'youtubeIdea',
     faq: [
       { q: 'How does this help new YouTubers?', a: 'We combine trending topics with unique angles to suggest channel concepts you might not have considered.' },
       { q: 'Are these ideas profitable?', a: 'We suggest ideas with audience potential. Profitability depends on execution and monetization strategy.' },

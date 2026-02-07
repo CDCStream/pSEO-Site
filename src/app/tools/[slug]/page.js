@@ -5,6 +5,7 @@ import MinecraftTextClient from './MinecraftTextClient';
 import QRCodeClient from './QRCodeClient';
 import DissTrackClient from './DissTrackClient';
 import TierListClient from './TierListClient';
+import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -95,6 +96,8 @@ export default async function ToolPage({ params }) {
               <DissTrackClient config={config} slug={slug} />
             ) : config.generatorType === 'tierList' ? (
               <TierListClient config={config} slug={slug} />
+            ) : config.generatorType === 'youtubeIdea' ? (
+              <YouTubeChannelIdeaClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}
