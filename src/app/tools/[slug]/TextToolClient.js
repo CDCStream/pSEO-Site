@@ -383,27 +383,6 @@ const transformers = {
     ];
   },
 
-  // YouTube Handle Generator
-  youtubeHandle: (text) => {
-    const name = text.trim() || 'Creator';
-    const cleanName = name.replace(/[^a-zA-Z0-9]/g, '');
-    const words = ['Gaming', 'Plays', 'TV', 'HD', 'Official', 'Clips', 'Studio', 'World', 'Hub', 'Zone'];
-    const numbers = ['', '1', '2', '24', '365', '101', ''];
-
-    const handles = [
-      `@${cleanName}`,
-      `@${cleanName}${words[Math.floor(Math.random() * words.length)]}`,
-      `@The${cleanName}`,
-      `@${cleanName}${numbers[Math.floor(Math.random() * numbers.length)]}`,
-      `@Real${cleanName}`,
-      `@${cleanName}Official`,
-      `@${cleanName.toLowerCase()}_`,
-      `@itsthe${cleanName.toLowerCase()}`,
-    ].filter((h, i, arr) => arr.indexOf(h) === i); // Remove duplicates
-
-    return handles.slice(0, 6).map(h => ({ name: 'Handle', text: h }));
-  },
-
   // YouTube Channel Idea Generator
   youtubeIdea: (text) => {
     const niches = ['Gaming', 'Tech', 'Lifestyle', 'Education', 'Finance', 'Fitness', 'Food', 'Travel', 'Art', 'Music'];

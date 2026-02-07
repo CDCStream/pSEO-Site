@@ -542,33 +542,6 @@ The technical implementation ensures good distribution across the alphabet. Each
   },
 
   // YouTube Tools
-  'youtube-handle-generator': {
-    category: 'tools',
-    name: 'YouTube Handle Generator',
-    keyword: 'YouTube Handle Generator',
-    title: 'Best YouTube Handle Generator - Create @Handles Free',
-    description: 'Generate unique YouTube handles (@username) for your channel. Create memorable, available-looking handles instantly.',
-    h1: 'YouTube Handle Generator',
-    subtitle: 'Create unique @handles for your YouTube channel.',
-    icon: 'at-sign',
-    transformType: 'youtubeHandle',
-    faq: [
-      { q: 'What is a YouTube handle?', a: 'YouTube handles are unique @usernames that identify your channel and appear in your channel URL.' },
-      { q: 'How do handles differ from channel names?', a: 'Handles are unique identifiers (@CoolCreator), while channel names can be shared by multiple channels.' },
-      { q: 'Are generated handles available?', a: 'We generate creative combinations. Always verify availability in YouTube Studio.' },
-      { q: 'How long can handles be?', a: 'YouTube handles must be 3-30 characters with only letters, numbers, underscores, and periods.' },
-      { q: 'Can I change my handle later?', a: 'Yes, but changes have cooldown periods. Choose carefully from the start.' },
-    ],
-    longContent: `The YouTube Handle Generator helps creators find unique @handles for their channels. YouTube handles are crucial for channel identity, appearing in URLs and making your channel easier to find and share.
-
-Unlike channel names, handles must be unique across all of YouTube. This makes finding an available handle increasingly challenging as the platform grows. Our generator creates creative combinations likely to be available.
-
-Handles follow specific rules: 3-30 characters, letters, numbers, underscores, and periods only. Our generator respects these constraints while maximizing creativity and memorability.
-
-Your handle becomes part of your channel URL (youtube.com/@YourHandle), making it important for branding and shareability. Choose a handle that's easy to type, remember, and communicate verbally.
-
-Generate multiple options and verify availability immediately. Good handles get claimed quickly, so have backup options ready when you find ones you like.`,
-  },
   'youtube-channel-idea-generator': {
     category: 'tools',
     name: 'YouTube Channel Idea Generator',
