@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { RefreshCw } from 'lucide-react';
+import { useState } from 'react';
 import CopyButton from '@/components/CopyButton';
 
 const ACCOUNT_TYPES = [
@@ -39,99 +38,65 @@ const CATEGORIES = [
   { value: 'automotive', label: 'Automotive' },
 ];
 
-const CATEGORY_WORDS = {
-  education: ['Academy', 'Learn', 'Teach', 'Edu', 'Study', 'Class', 'Tutor', 'Prof'],
-  gaming: ['Gaming', 'Plays', 'Gamer', 'Games', 'GG', 'Pro', 'Streamer', 'Arcade'],
-  tech: ['Tech', 'Digital', 'Geek', 'Byte', 'Code', 'Dev', 'Gadget', 'Pixel'],
-  beauty: ['Beauty', 'Glam', 'Glow', 'Makeup', 'Style', 'Pretty', 'Cosmetics'],
-  fitness: ['Fit', 'Gym', 'Strong', 'Muscle', 'Workout', 'Train', 'Active', 'Gains'],
-  foodie: ['Food', 'Chef', 'Cook', 'Kitchen', 'Eats', 'Taste', 'Recipe', 'Yummy'],
-  lifestyle: ['Life', 'Vibes', 'Daily', 'Living', 'Moments', 'Days', 'Journal'],
-  travel: ['Travel', 'Wander', 'Explore', 'Nomad', 'Journey', 'Adventures', 'Trips'],
-  family: ['Family', 'Home', 'Kids', 'Parents', 'Together', 'Memories', 'Moments'],
-  comedy: ['Comedy', 'Funny', 'LOL', 'Jokes', 'Humor', 'Laugh', 'Hilarious'],
-  music: ['Music', 'Beats', 'Sound', 'Audio', 'Melody', 'Tunes', 'Songs', 'Vibe'],
-  art: ['Art', 'Creative', 'Design', 'Draw', 'Paint', 'Artist', 'Sketch', 'Studio'],
-  finance: ['Finance', 'Money', 'Invest', 'Wealth', 'Rich', 'Budget', 'Crypto'],
-  fashion: ['Fashion', 'Style', 'Trend', 'OOTD', 'Chic', 'Vogue', 'Wardrobe'],
-  sports: ['Sports', 'Athlete', 'Pro', 'Champion', 'Win', 'Game', 'Team', 'MVP'],
-  reviews: ['Reviews', 'Honest', 'Unbox', 'Test', 'Opinion', 'Rate', 'Compare'],
-  health: ['Health', 'Wellness', 'Heal', 'Care', 'Vitality', 'Life', 'Healthy'],
-  wellness: ['Zen', 'Calm', 'Mind', 'Soul', 'Peace', 'Balance', 'Mindful'],
-  coaching: ['Coach', 'Mentor', 'Guide', 'Success', 'Grow', 'Motivate', 'Inspire'],
-  nonprofit: ['Cause', 'Impact', 'Change', 'Help', 'Give', 'Support', 'Community'],
-  realestate: ['Realty', 'Homes', 'Property', 'Estate', 'Houses', 'Living'],
-  pet: ['Pet', 'Paw', 'Furry', 'Cute', 'Animals', 'Fluffy', 'Buddy', 'Companion'],
-  diy: ['DIY', 'Craft', 'Make', 'Create', 'Build', 'Handmade', 'Projects'],
-  photography: ['Photo', 'Lens', 'Capture', 'Shot', 'Clicks', 'Visual', 'Focus'],
-  automotive: ['Auto', 'Cars', 'Drive', 'Motor', 'Speed', 'Wheels', 'Garage'],
-};
+// Inline SVG for refresh icon
+const RefreshIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+  </svg>
+);
+
+// Loading spinner
+const Spinner = () => (
+  <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+);
 
 export default function YouTubeNameClient({ config }) {
   const [accountType, setAccountType] = useState('');
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
-  const [regenerateKey, setRegenerateKey] = useState(0);
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [hasGenerated, setHasGenerated] = useState(false);
 
-  const generateNames = () => {
-    if (!accountType || !category) return [];
-
-    const descWords = description.trim().split(/\s+/).filter(w => w.length > 0);
-    const mainWord = descWords[0] || category;
-    const cleanWord = mainWord.replace(/[^a-zA-Z0-9]/g, '');
-    const categoryWords = CATEGORY_WORDS[category] || ['Official', 'HQ', 'Hub'];
-
-    const prefixes = accountType === 'business'
-      ? ['Official', 'The', 'Real', 'Get', 'Try', 'Join', 'Visit', 'Go']
-      : ['Its', 'The', 'Hey', 'Just', 'Im', 'Hi', 'Meet', 'Call'];
-
-    const suffixes = accountType === 'business'
-      ? ['HQ', 'Co', 'Inc', 'Official', 'Global', 'Media', 'Studio', 'Brand']
-      : ['TV', 'Tube', 'Daily', 'Weekly', 'Show', 'Live', 'Vids', ''];
-
-    const names = new Set();
-
-    // Generate various name patterns
-    const catWord = categoryWords[Math.floor(Math.random() * categoryWords.length)];
-    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-    const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
-    const year = ['24', '25', '2024', '2025', ''][Math.floor(Math.random() * 5)];
-
-    // Pattern variations
-    names.add(`${cleanWord} ${catWord}`);
-    names.add(`${prefix} ${cleanWord}`);
-    names.add(`${cleanWord} ${suffix}`);
-    names.add(`${cleanWord} ${category.charAt(0).toUpperCase() + category.slice(1)}`);
-    names.add(`${catWord} ${cleanWord}`);
-    names.add(`${cleanWord}${year}`);
-    names.add(`${cleanWord} Official`);
-    names.add(`The ${cleanWord}`);
-    names.add(`${cleanWord} ${categoryWords[Math.floor(Math.random() * categoryWords.length)]}`);
-    names.add(`${prefix} ${cleanWord} ${suffix}`);
-
-    // If description has multiple words, create combinations
-    if (descWords.length >= 2) {
-      const combo = descWords.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-      names.add(combo);
-      names.add(`${combo} ${catWord}`);
-    }
-
-    return Array.from(names)
-      .filter(n => n.trim().length >= 3 && n.trim().length <= 50)
-      .slice(0, 8)
-      .map(name => ({ name: 'YouTube Name', text: name.trim() }));
-  };
-
-  const results = useMemo(() => {
-    if (!hasGenerated) return [];
-    return generateNames();
-  }, [accountType, category, description, regenerateKey, hasGenerated]);
-
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     if (!accountType || !category) return;
+
+    setLoading(true);
+    setError('');
     setHasGenerated(true);
-    setRegenerateKey(k => k + 1);
+
+    try {
+      const response = await fetch('/api/youtube-names', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          accountType: ACCOUNT_TYPES.find(t => t.value === accountType)?.label || accountType,
+          category: CATEGORIES.find(c => c.value === category)?.label || category,
+          description,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success && data.names) {
+        setResults(data.names.map(name => ({ name: 'YouTube Name', text: name })));
+      } else {
+        setError('Failed to generate names. Please try again.');
+        setResults([]);
+      }
+    } catch (err) {
+      console.error('Error generating names:', err);
+      setError('Something went wrong. Please try again.');
+      setResults([]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const selectClass = "w-full px-4 py-3 bg-black/30 rounded-xl border border-white/10 text-white focus:outline-none focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 transition-all appearance-none cursor-pointer";
@@ -194,35 +159,66 @@ export default function YouTubeNameClient({ config }) {
       <div className="mb-8 flex gap-3">
         <button
           onClick={handleGenerate}
-          disabled={!accountType || !category}
-          className={`flex-1 py-3 px-6 rounded-xl font-semibold text-white transition-all ${
-            accountType && category
+          disabled={!accountType || !category || loading}
+          className={`flex-1 py-3 px-6 rounded-xl font-semibold text-white transition-all flex items-center justify-center gap-2 ${
+            accountType && category && !loading
               ? 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 shadow-lg shadow-orange-500/25'
               : 'bg-gray-700 cursor-not-allowed opacity-50'
           }`}
         >
-          Generate Names
+          {loading ? (
+            <>
+              <Spinner />
+              <span>Generating with AI...</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Generate with AI</span>
+            </>
+          )}
         </button>
-        {hasGenerated && (
+        {hasGenerated && !loading && results.length > 0 && (
           <button
-            onClick={() => setRegenerateKey(k => k + 1)}
+            onClick={handleGenerate}
             className="px-4 py-3 bg-green-500/20 text-green-400 rounded-xl hover:bg-green-500/30 transition-all flex items-center gap-2"
+            title="Regenerate"
           >
-            <RefreshCw className="w-5 h-5" />
+            <RefreshIcon />
           </button>
         )}
       </div>
 
+      {/* Error Message */}
+      {error && (
+        <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-400 text-center">
+          {error}
+        </div>
+      )}
+
       {/* Results */}
       {!hasGenerated ? (
         <div className="text-center py-12 text-gray-500">
-          <p>Select account type and category, then click Generate</p>
+          <div className="mb-4">
+            <svg className="w-16 h-16 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <p className="text-lg">Powered by Claude AI</p>
+          <p className="text-sm mt-1">Select account type and category, then click Generate</p>
         </div>
-      ) : results.length === 0 ? (
+      ) : loading ? (
+        <div className="text-center py-12">
+          <Spinner />
+          <p className="text-gray-400 mt-4">AI is generating creative names...</p>
+        </div>
+      ) : results.length === 0 && !error ? (
         <div className="text-center py-12 text-gray-500">
           <p>Please select Account Type and Category</p>
         </div>
-      ) : (
+      ) : results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {results.map((result, index) => (
             <div
@@ -236,15 +232,22 @@ export default function YouTubeNameClient({ config }) {
             </div>
           ))}
         </div>
-      )}
+      ) : null}
 
-      {/* Disclaimer */}
+      {/* AI Badge & Disclaimer */}
       {hasGenerated && results.length > 0 && (
-        <p className="text-xs text-gray-500 text-center mt-6 italic">
-          Please note: Check name availability on YouTube before using. Some names may already be taken.
-        </p>
+        <div className="mt-6 space-y-3">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+            <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span>Generated by Claude AI</span>
+          </div>
+          <p className="text-xs text-gray-500 text-center italic">
+            Please note: Check name availability on YouTube before using. Some names may already be taken.
+          </p>
+        </div>
       )}
     </div>
   );
 }
-

@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Note: Removed 'output: export' to enable API routes for AI features
+  // Vercel will use serverless functions instead of static export
 
   // Image optimization
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
 
   trailingSlash: true,
