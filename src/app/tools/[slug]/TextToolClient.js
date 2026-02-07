@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useMemo } from 'react';
 import { RefreshCw, Trash2 } from 'lucide-react';
 import CopyButton from '@/components/CopyButton';
 import { unicodeMaps, glitchChars } from '@/config/pSEO-data';
@@ -461,7 +461,8 @@ export default function TextToolClient({ config, slug }) {
   const [inputText, setInputText] = useState('');
   const [intensity, setIntensity] = useState(5);
 
-  const getTransformedText = useCallback(() => {
+  // useMemo ensures Zalgo/random text is NOT regenerated on every render
+  const results = useMemo(() => {
     if (!inputText.trim()) return [];
 
     const transformerKey = config.transformType;
@@ -475,8 +476,6 @@ export default function TextToolClient({ config, slug }) {
 
     return transformer(inputText);
   }, [inputText, config.transformType, intensity]);
-
-  const results = getTransformedText();
 
   return (
     <div className="bg-white/5 rounded-2xl border border-white/10 p-6 sm:p-8">
