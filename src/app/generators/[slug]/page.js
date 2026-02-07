@@ -3,6 +3,7 @@ import { generatorsConfig, siteConfig } from '@/config/pSEO-data';
 import NameGeneratorClient from './NameGeneratorClient';
 import YouTubeNameClient from './YouTubeNameClient';
 import PodcastNameClient from './PodcastNameClient';
+import BandNameClient from './BandNameClient';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -81,6 +82,8 @@ export default async function GeneratorPage({ params }) {
               <YouTubeNameClient config={config} />
             ) : slug === 'podcast-name-generator' ? (
               <PodcastNameClient config={config} />
+            ) : slug === 'band-name-generator' ? (
+              <BandNameClient config={config} />
             ) : (
               <NameGeneratorClient config={config} slug={slug} />
             )}
