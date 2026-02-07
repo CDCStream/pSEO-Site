@@ -5,6 +5,7 @@ import YouTubeNameClient from './YouTubeNameClient';
 import PodcastNameClient from './PodcastNameClient';
 import BandNameClient from './BandNameClient';
 import AnimeNameClient from './AnimeNameClient';
+import CoupleNameClient from './CoupleNameClient';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -87,6 +88,8 @@ export default async function GeneratorPage({ params }) {
               <BandNameClient config={config} />
             ) : slug === 'anime-name-generator' ? (
               <AnimeNameClient config={config} />
+            ) : slug === 'couple-name-generator' ? (
+              <CoupleNameClient config={config} />
             ) : (
               <NameGeneratorClient config={config} slug={slug} />
             )}
