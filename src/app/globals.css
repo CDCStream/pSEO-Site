@@ -178,11 +178,13 @@ body {
 
 /* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
 
-/* Disable heavy animations on mobile */
+/* Disable ALL animations on mobile for better LCP */
 @media (max-width: 768px) {
-  .animate-glow {
-    animation: none;
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+  .animate-glow,
+  .animate-fade-in,
+  .animate-slide-up {
+    animation: none !important;
+    opacity: 1 !important;
   }
 
   .card-glow,
@@ -192,18 +194,20 @@ body {
 
   /* Simplify gradients on mobile */
   .text-gradient {
-    background: #ff6b35;
-    -webkit-background-clip: text;
-    background-clip: text;
+    background: none;
+    -webkit-text-fill-color: #ff6b35;
+    color: #ff6b35;
   }
 
-  /* Reduce pattern complexity */
-  .pattern-dots {
-    background-size: 32px 32px;
-  }
-
+  /* Remove patterns on mobile */
+  .pattern-dots,
   .pattern-grid {
-    background-size: 60px 60px;
+    background: none !important;
+  }
+
+  /* Simplify transitions */
+  * {
+    transition-duration: 0.1s !important;
   }
 }
 

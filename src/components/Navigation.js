@@ -1,12 +1,21 @@
 'use client';
 
-import { useState, memo } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import NextImage from 'next/image';
-// Only import icons that are always visible
-import { Menu, X, ChevronDown } from 'lucide-react';
 
-// Simple inline SVG icons to avoid loading full lucide bundle
+// ALL inline SVG icons - no lucide-react import
+const MenuIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+);
+const XIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+);
+const ChevronDownIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+);
+
+// Simple inline SVG icons
 const TypeIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg>
 );
@@ -144,7 +153,7 @@ export default function Navigation() {
                 >
                   <item.icon className="w-4 h-4" />
                   {item.label}
-                  <ChevronDown className={`w-3 h-3 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
+                  <ChevronDownIcon className={`w-3 h-3 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
                 </Link>
 
                 {/* Dropdown */}
@@ -180,7 +189,7 @@ export default function Navigation() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
           </button>
         </div>
 
