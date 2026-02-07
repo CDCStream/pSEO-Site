@@ -11,7 +11,7 @@ export async function POST(request) {
 
     // Extract video ID from URL
     const videoId = extractVideoId(videoUrl);
-    
+
     if (!videoId) {
       return Response.json(
         { error: 'Invalid YouTube URL. Please provide a valid video link.' },
@@ -20,7 +20,7 @@ export async function POST(request) {
     }
 
     const apiKey = process.env.YOUTUBE_API_KEY;
-    
+
     if (!apiKey) {
       return Response.json(
         { error: 'YouTube API not configured' },
@@ -38,10 +38,10 @@ export async function POST(request) {
       );
     }
 
-    return Response.json({ 
+    return Response.json({
       comments,
       totalCount: comments.length,
-      videoId 
+      videoId
     });
 
   } catch (error) {
@@ -78,7 +78,7 @@ async function fetchAllComments(videoId, apiKey, maxComments = 500) {
     url.searchParams.set('maxResults', '100');
     url.searchParams.set('order', 'relevance');
     url.searchParams.set('key', apiKey);
-    
+
     if (nextPageToken) {
       url.searchParams.set('pageToken', nextPageToken);
     }
@@ -108,7 +108,7 @@ async function fetchAllComments(videoId, apiKey, maxComments = 500) {
     }
 
     nextPageToken = data.nextPageToken;
-    
+
     if (!nextPageToken) {
       break;
     }

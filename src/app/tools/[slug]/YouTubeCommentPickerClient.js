@@ -194,7 +194,7 @@ export default function YouTubeCommentPickerClient({ config }) {
                     className="w-16 h-16 rounded-full border-2 border-yellow-500"
                   />
                   <div className="flex-1">
-                    <a 
+                    <a
                       href={winner.authorChannel}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -234,11 +234,11 @@ export default function YouTubeCommentPickerClient({ config }) {
             <h4 className="text-lg font-semibold text-white">All Comments ({comments.length})</h4>
             <div className="max-h-64 overflow-y-auto space-y-2 pr-2">
               {comments.slice(0, 50).map((comment, index) => (
-                <div 
-                  key={comment.id} 
+                <div
+                  key={comment.id}
                   className={`p-3 rounded-lg border transition-colors ${
-                    winner?.id === comment.id 
-                      ? 'bg-yellow-500/20 border-yellow-500/50' 
+                    winner?.id === comment.id
+                      ? 'bg-yellow-500/20 border-yellow-500/50'
                       : 'bg-white/5 border-white/10 hover:bg-white/10'
                   }`}
                 >
