@@ -34,6 +34,9 @@ const DiceIcon = ({ className }) => (
 const UserIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 );
+const BookIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+);
 
 const navItems = [
   {
@@ -182,6 +185,17 @@ export default function Navigation() {
                 )}
               </div>
             ))}
+
+            {/* Blog Link */}
+            <a
+              href="https://blog.makersilo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+            >
+              <BookIcon className="w-4 h-4" />
+              Blog
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -224,6 +238,22 @@ export default function Navigation() {
                 </div>
               </div>
             ))}
+
+            {/* Blog Link - Mobile */}
+            <div className="py-2">
+              <a
+                href="https://blog.makersilo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 py-2 text-base font-medium text-white"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                  <BookIcon className="w-4 h-4 text-white" />
+                </div>
+                Blog
+              </a>
+            </div>
           </div>
         )}
       </nav>
