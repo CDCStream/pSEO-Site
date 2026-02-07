@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
 
 {/* Preconnect to Google Analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        
+
         {/* Preload critical font for faster LCP */}
         <link
           rel="preload"
@@ -123,24 +123,24 @@ export default function RootLayout({ children }) {
             function loadGA() {
               if (window.gaLoaded) return;
               window.gaLoaded = true;
-              
+
               var script = document.createElement('script');
               script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
               script.async = true;
               document.head.appendChild(script);
-              
+
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               window.gtag = gtag;
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}');
             }
-            
+
             // Load on first interaction
             ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
               window.addEventListener(event, loadGA, { once: true, passive: true });
             });
-            
+
             // Fallback: load after 5 seconds
             setTimeout(loadGA, 5000);
           `}

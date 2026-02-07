@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { toolsConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import TextToolClient from './TextToolClient';
 import MinecraftTextClient from './MinecraftTextClient';
+import QRCodeClient from './QRCodeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -86,6 +87,8 @@ export default async function ToolPage({ params }) {
             {/* Tool Interface */}
             {slug === 'minecraft-font' ? (
               <MinecraftTextClient config={config} />
+            ) : config.generatorType === 'qr' || config.generatorType === 'wifiQr' || config.generatorType === 'barcode' ? (
+              <QRCodeClient config={config} slug={slug} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

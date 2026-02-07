@@ -5,6 +5,74 @@ import { RefreshCw, Trash2 } from 'lucide-react';
 import CopyButton from '@/components/CopyButton';
 import { unicodeMaps, glitchChars } from '@/config/pSEO-data';
 
+// Upside down text mapping
+const UPSIDE_DOWN_MAP = {
+  'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ',
+  'i': 'ᴉ', 'j': 'ɾ', 'k': 'ʞ', 'l': 'l', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
+  'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x',
+  'y': 'ʎ', 'z': 'z',
+  'A': '∀', 'B': 'q', 'C': 'Ɔ', 'D': 'p', 'E': 'Ǝ', 'F': 'Ⅎ', 'G': 'פ', 'H': 'H',
+  'I': 'I', 'J': 'ſ', 'K': 'ʞ', 'L': '˥', 'M': 'W', 'N': 'N', 'O': 'O', 'P': 'Ԁ',
+  'Q': 'Q', 'R': 'ɹ', 'S': 'S', 'T': '┴', 'U': '∩', 'V': 'Λ', 'W': 'M', 'X': 'X',
+  'Y': '⅄', 'Z': 'Z',
+  '0': '0', '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ', '6': '9', '7': 'ㄥ',
+  '8': '8', '9': '6', '.': '˙', ',': "'", "'": ',', '"': ',,', '!': '¡', '?': '¿',
+  '(': ')', ')': '(', '[': ']', ']': '[', '{': '}', '}': '{', '<': '>', '>': '<',
+  '_': '‾', ' ': ' '
+};
+
+// Italic Unicode mapping (Mathematical Italic)
+const ITALIC_MAP = {
+  'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩',
+  'i': '𝘪', 'j': '𝘫', 'k': '𝘬', 'l': '𝘭', 'm': '𝘮', 'n': '𝘯', 'o': '𝘰', 'p': '𝘱',
+  'q': '𝘲', 'r': '𝘳', 's': '𝘴', 't': '𝘵', 'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹',
+  'y': '𝘺', 'z': '𝘻',
+  'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍', 'G': '𝘎', 'H': '𝘏',
+  'I': '𝘐', 'J': '𝘑', 'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'O': '𝘖', 'P': '𝘗',
+  'Q': '𝘘', 'R': '𝘙', 'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟',
+  'Y': '𝘠', 'Z': '𝘡', ' ': ' '
+};
+
+// Bold Italic Unicode mapping
+const BOLD_ITALIC_MAP = {
+  'a': '𝙖', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': '𝙚', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝',
+  'i': '𝙞', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝙤', 'p': '𝙥',
+  'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': '𝙪', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭',
+  'y': '𝙮', 'z': '𝙯',
+  'A': '𝘼', 'B': '𝘽', 'C': '𝘾', 'D': '𝘿', 'E': '𝙀', 'F': '𝙁', 'G': '𝙂', 'H': '𝙃',
+  'I': '𝙄', 'J': '𝙅', 'K': '𝙆', 'L': '𝙇', 'M': '𝙈', 'N': '𝙉', 'O': '𝙊', 'P': '𝙋',
+  'Q': '𝙌', 'R': '𝙍', 'S': '𝙎', 'T': '𝙏', 'U': '𝙐', 'V': '𝙑', 'W': '𝙒', 'X': '𝙓',
+  'Y': '𝙔', 'Z': '𝙕', ' ': ' '
+};
+
+// Weird text mappings (various weird styles)
+const WEIRD_MAPS = {
+  squares: {
+    'a': '🄰', 'b': '🄱', 'c': '🄲', 'd': '🄳', 'e': '🄴', 'f': '🄵', 'g': '🄶', 'h': '🄷',
+    'i': '🄸', 'j': '🄹', 'k': '🄺', 'l': '🄻', 'm': '🄼', 'n': '🄽', 'o': '🄾', 'p': '🄿',
+    'q': '🅀', 'r': '🅁', 's': '🅂', 't': '🅃', 'u': '🅄', 'v': '🅅', 'w': '🅆', 'x': '🅇',
+    'y': '🅈', 'z': '🅉', ' ': ' '
+  },
+  negative: {
+    'a': '🅰', 'b': '🅱', 'c': '🅲', 'd': '🅳', 'e': '🅴', 'f': '🅵', 'g': '🅶', 'h': '🅷',
+    'i': '🅸', 'j': '🅹', 'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾', 'p': '🅿',
+    'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃', 'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇',
+    'y': '🆈', 'z': '🆉', ' ': ' '
+  },
+  medieval: {
+    'a': 'ค', 'b': '๒', 'c': 'ς', 'd': '๔', 'e': 'є', 'f': 'Ŧ', 'g': 'ﻮ', 'h': 'ђ',
+    'i': 'เ', 'j': 'ן', 'k': 'к', 'l': 'ɭ', 'm': '๓', 'n': 'ภ', 'o': '๏', 'p': 'ק',
+    'q': 'ợ', 'r': 'г', 's': 'ร', 't': 'Շ', 'u': 'ย', 'v': 'ש', 'w': 'ฬ', 'x': 'א',
+    'y': 'ץ', 'z': 'ž', ' ': ' '
+  },
+  currency: {
+    'a': '₳', 'b': '฿', 'c': '₵', 'd': 'Đ', 'e': 'Ɇ', 'f': '₣', 'g': '₲', 'h': 'Ⱨ',
+    'i': 'ł', 'j': 'J', 'k': '₭', 'l': 'Ⱡ', 'm': '₥', 'n': '₦', 'o': 'Ø', 'p': '₱',
+    'q': 'Q', 'r': 'Ɽ', 's': '₴', 't': '₮', 'u': 'Ʉ', 'v': 'V', 'w': '₩', 'x': 'Ӿ',
+    'y': 'Ɏ', 'z': 'Ⱬ', ' ': ' '
+  }
+};
+
 // Unicode mappings using escape sequences for encoding safety
 const SUPERSCRIPT_MAP = {
   // Lowercase
@@ -173,6 +241,218 @@ const transformers = {
 
     return [
       { name: 'Minecraft Enchanting', text: result },
+    ];
+  },
+
+  // Upside down text transformer
+  upsideDown: (text) => {
+    const flipped = text.split('').map(char => UPSIDE_DOWN_MAP[char] || char).reverse().join('');
+    return [
+      { name: 'Upside Down', text: flipped },
+    ];
+  },
+
+  // Zalgo text transformer (more intense version)
+  zalgo: (text, intensity = 8) => {
+    const { above, below, middle } = glitchChars;
+    
+    const getRandomChars = (arr, count) => {
+      let result = '';
+      for (let i = 0; i < count; i++) {
+        result += arr[Math.floor(Math.random() * arr.length)];
+      }
+      return result;
+    };
+
+    const zalgoLight = text.split('').map(char => {
+      if (char === ' ') return ' ';
+      return char + getRandomChars(above, 2) + getRandomChars(below, 1);
+    }).join('');
+
+    const zalgoMedium = text.split('').map(char => {
+      if (char === ' ') return ' ';
+      return char + getRandomChars(above, 4) + getRandomChars(below, 3) + getRandomChars(middle, 1);
+    }).join('');
+
+    const zalgoHeavy = text.split('').map(char => {
+      if (char === ' ') return ' ';
+      return char + getRandomChars(above, 8) + getRandomChars(below, 6) + getRandomChars(middle, 3);
+    }).join('');
+
+    return [
+      { name: 'Zalgo Light', text: zalgoLight },
+      { name: 'Zalgo Medium', text: zalgoMedium },
+      { name: 'Zalgo Heavy', text: zalgoHeavy },
+    ];
+  },
+
+  // Cursed text (extreme zalgo)
+  cursed: (text) => {
+    const { above, below, middle } = glitchChars;
+    
+    const getRandomChars = (arr, count) => {
+      let result = '';
+      for (let i = 0; i < count; i++) {
+        result += arr[Math.floor(Math.random() * arr.length)];
+      }
+      return result;
+    };
+
+    const cursedText = text.split('').map(char => {
+      if (char === ' ') return ' ';
+      return char + 
+        getRandomChars(above, 10 + Math.floor(Math.random() * 5)) + 
+        getRandomChars(below, 8 + Math.floor(Math.random() * 4)) + 
+        getRandomChars(middle, 4 + Math.floor(Math.random() * 3));
+    }).join('');
+
+    return [
+      { name: 'Cursed Text', text: cursedText },
+    ];
+  },
+
+  // Weird text transformer
+  weird: (text) => {
+    const lowerText = text.toLowerCase();
+    
+    const squares = lowerText.split('').map(char => WEIRD_MAPS.squares[char] || char).join('');
+    const negative = lowerText.split('').map(char => WEIRD_MAPS.negative[char] || char).join('');
+    const medieval = lowerText.split('').map(char => WEIRD_MAPS.medieval[char] || char).join('');
+    const currency = lowerText.split('').map(char => WEIRD_MAPS.currency[char] || char).join('');
+
+    return [
+      { name: 'Square Style', text: squares },
+      { name: 'Negative Squares', text: negative },
+      { name: 'Medieval', text: medieval },
+      { name: 'Currency Style', text: currency },
+    ];
+  },
+
+  // Italic text transformer
+  italics: (text) => {
+    const italic = text.split('').map(char => ITALIC_MAP[char] || char).join('');
+    const boldItalic = text.split('').map(char => BOLD_ITALIC_MAP[char] || char).join('');
+
+    return [
+      { name: 'Italic', text: italic },
+      { name: 'Bold Italic', text: boldItalic },
+    ];
+  },
+
+  // Brat text (social media trend - alternating case + special chars)
+  brat: (text) => {
+    // Brat style: alternating caps, lowercase alternating
+    const bratAlternating = text.split('').map((char, i) => 
+      i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
+    ).join('');
+
+    // Spaced out
+    const bratSpaced = text.split('').join(' ');
+
+    // With aesthetic dots
+    const bratDots = '·˚ ' + text.toLowerCase() + ' ˚·';
+
+    // Sarcastic
+    const bratSarcastic = text.split('').map((char, i) => 
+      i % 2 === 0 ? char.toUpperCase() : char.toLowerCase()
+    ).join('');
+
+    return [
+      { name: 'Alternating', text: bratAlternating },
+      { name: 'Spaced Out', text: bratSpaced },
+      { name: 'Aesthetic', text: bratDots },
+      { name: 'Sarcastic', text: bratSarcastic },
+    ];
+  },
+
+  // Random letter generator
+  randomLetter: (text) => {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const upperAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const consonants = 'bcdfghjklmnpqrstvwxyz';
+    const vowels = 'aeiou';
+    
+    // Parse count from text or default to 1
+    const count = parseInt(text) || 1;
+    const clampedCount = Math.min(Math.max(count, 1), 100);
+    
+    const randomLetters = Array(clampedCount).fill(0).map(() => 
+      alphabet[Math.floor(Math.random() * alphabet.length)]
+    ).join(' ');
+
+    const randomUppercase = Array(clampedCount).fill(0).map(() => 
+      upperAlphabet[Math.floor(Math.random() * upperAlphabet.length)]
+    ).join(' ');
+
+    const randomConsonants = Array(clampedCount).fill(0).map(() => 
+      consonants[Math.floor(Math.random() * consonants.length)]
+    ).join(' ');
+
+    const randomVowels = Array(clampedCount).fill(0).map(() => 
+      vowels[Math.floor(Math.random() * vowels.length)]
+    ).join(' ');
+
+    return [
+      { name: `Random Lowercase (${clampedCount})`, text: randomLetters },
+      { name: `Random Uppercase (${clampedCount})`, text: randomUppercase },
+      { name: `Random Consonants (${clampedCount})`, text: randomConsonants },
+      { name: `Random Vowels (${clampedCount})`, text: randomVowels },
+    ];
+  },
+
+  // YouTube Handle Generator
+  youtubeHandle: (text) => {
+    const name = text.trim() || 'Creator';
+    const cleanName = name.replace(/[^a-zA-Z0-9]/g, '');
+    const words = ['Gaming', 'Plays', 'TV', 'HD', 'Official', 'Clips', 'Studio', 'World', 'Hub', 'Zone'];
+    const numbers = ['', '1', '2', '24', '365', '101', ''];
+
+    const handles = [
+      `@${cleanName}`,
+      `@${cleanName}${words[Math.floor(Math.random() * words.length)]}`,
+      `@The${cleanName}`,
+      `@${cleanName}${numbers[Math.floor(Math.random() * numbers.length)]}`,
+      `@Real${cleanName}`,
+      `@${cleanName}Official`,
+      `@${cleanName.toLowerCase()}_`,
+      `@itsthe${cleanName.toLowerCase()}`,
+    ].filter((h, i, arr) => arr.indexOf(h) === i); // Remove duplicates
+
+    return handles.slice(0, 6).map(h => ({ name: 'Handle', text: h }));
+  },
+
+  // YouTube Channel Idea Generator
+  youtubeIdea: (text) => {
+    const niches = ['Gaming', 'Tech', 'Lifestyle', 'Education', 'Finance', 'Fitness', 'Food', 'Travel', 'Art', 'Music'];
+    const formats = ['Tutorials', 'Reviews', 'Vlogs', 'Commentary', 'How-to', 'Top 10', 'Reactions', 'Challenges', 'Stories', 'Tips'];
+    const angles = ['for Beginners', 'on a Budget', 'in 2025', 'Nobody Talks About', 'Secrets', 'Mistakes', 'Hacks', 'Deep Dives', 'Explained', 'Daily'];
+
+    const ideas = [];
+    for (let i = 0; i < 5; i++) {
+      const niche = niches[Math.floor(Math.random() * niches.length)];
+      const format = formats[Math.floor(Math.random() * formats.length)];
+      const angle = angles[Math.floor(Math.random() * angles.length)];
+      ideas.push({ name: 'Channel Idea', text: `${niche} ${format} ${angle}` });
+    }
+
+    return ideas;
+  },
+
+  // YouTube Comment Picker
+  commentPicker: (text) => {
+    const comments = text.split('\n').filter(c => c.trim().length > 0);
+    
+    if (comments.length === 0) {
+      return [{ name: 'Instructions', text: 'Paste commenter names (one per line) to pick random winners!' }];
+    }
+
+    // Pick up to 3 random winners
+    const shuffled = [...comments].sort(() => 0.5 - Math.random());
+    const winners = shuffled.slice(0, Math.min(3, comments.length));
+
+    return [
+      { name: 'Total Entries', text: `${comments.length} comments entered` },
+      ...winners.map((w, i) => ({ name: `🎉 Winner #${i + 1}`, text: w.trim() }))
     ];
   },
 };
