@@ -11,9 +11,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const config = generatorsConfig[slug];
-  
+
   if (!config) return {};
-  
+
   return {
     title: config.title,
     description: config.description,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
 export default async function GeneratorPage({ params }) {
   const { slug } = await params;
   const config = generatorsConfig[slug];
-  
+
   if (!config) {
     notFound();
   }

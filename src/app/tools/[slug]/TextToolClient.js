@@ -255,7 +255,7 @@ const transformers = {
   // Zalgo text transformer (more intense version)
   zalgo: (text, intensity = 8) => {
     const { above, below, middle } = glitchChars;
-    
+
     const getRandomChars = (arr, count) => {
       let result = '';
       for (let i = 0; i < count; i++) {
@@ -289,7 +289,7 @@ const transformers = {
   // Cursed text (extreme zalgo)
   cursed: (text) => {
     const { above, below, middle } = glitchChars;
-    
+
     const getRandomChars = (arr, count) => {
       let result = '';
       for (let i = 0; i < count; i++) {
@@ -300,9 +300,9 @@ const transformers = {
 
     const cursedText = text.split('').map(char => {
       if (char === ' ') return ' ';
-      return char + 
-        getRandomChars(above, 10 + Math.floor(Math.random() * 5)) + 
-        getRandomChars(below, 8 + Math.floor(Math.random() * 4)) + 
+      return char +
+        getRandomChars(above, 10 + Math.floor(Math.random() * 5)) +
+        getRandomChars(below, 8 + Math.floor(Math.random() * 4)) +
         getRandomChars(middle, 4 + Math.floor(Math.random() * 3));
     }).join('');
 
@@ -314,7 +314,7 @@ const transformers = {
   // Weird text transformer
   weird: (text) => {
     const lowerText = text.toLowerCase();
-    
+
     const squares = lowerText.split('').map(char => WEIRD_MAPS.squares[char] || char).join('');
     const negative = lowerText.split('').map(char => WEIRD_MAPS.negative[char] || char).join('');
     const medieval = lowerText.split('').map(char => WEIRD_MAPS.medieval[char] || char).join('');
@@ -342,7 +342,7 @@ const transformers = {
   // Brat text (social media trend - alternating case + special chars)
   brat: (text) => {
     // Brat style: alternating caps, lowercase alternating
-    const bratAlternating = text.split('').map((char, i) => 
+    const bratAlternating = text.split('').map((char, i) =>
       i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
     ).join('');
 
@@ -353,7 +353,7 @@ const transformers = {
     const bratDots = '·˚ ' + text.toLowerCase() + ' ˚·';
 
     // Sarcastic
-    const bratSarcastic = text.split('').map((char, i) => 
+    const bratSarcastic = text.split('').map((char, i) =>
       i % 2 === 0 ? char.toUpperCase() : char.toLowerCase()
     ).join('');
 
@@ -371,24 +371,24 @@ const transformers = {
     const upperAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const consonants = 'bcdfghjklmnpqrstvwxyz';
     const vowels = 'aeiou';
-    
+
     // Parse count from text or default to 1
     const count = parseInt(text) || 1;
     const clampedCount = Math.min(Math.max(count, 1), 100);
-    
-    const randomLetters = Array(clampedCount).fill(0).map(() => 
+
+    const randomLetters = Array(clampedCount).fill(0).map(() =>
       alphabet[Math.floor(Math.random() * alphabet.length)]
     ).join(' ');
 
-    const randomUppercase = Array(clampedCount).fill(0).map(() => 
+    const randomUppercase = Array(clampedCount).fill(0).map(() =>
       upperAlphabet[Math.floor(Math.random() * upperAlphabet.length)]
     ).join(' ');
 
-    const randomConsonants = Array(clampedCount).fill(0).map(() => 
+    const randomConsonants = Array(clampedCount).fill(0).map(() =>
       consonants[Math.floor(Math.random() * consonants.length)]
     ).join(' ');
 
-    const randomVowels = Array(clampedCount).fill(0).map(() => 
+    const randomVowels = Array(clampedCount).fill(0).map(() =>
       vowels[Math.floor(Math.random() * vowels.length)]
     ).join(' ');
 
@@ -441,7 +441,7 @@ const transformers = {
   // YouTube Comment Picker
   commentPicker: (text) => {
     const comments = text.split('\n').filter(c => c.trim().length > 0);
-    
+
     if (comments.length === 0) {
       return [{ name: 'Instructions', text: 'Paste commenter names (one per line) to pick random winners!' }];
     }

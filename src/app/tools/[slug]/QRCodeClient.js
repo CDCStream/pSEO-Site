@@ -82,12 +82,12 @@ export default function QRCodeClient({ config, slug }) {
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    
+
     // Simple Code128 barcode (subset B for alphanumeric)
     const width = 300;
     const height = 100;
     const barWidth = 2;
-    
+
     canvas.width = width;
     canvas.height = height;
 
@@ -98,7 +98,7 @@ export default function QRCodeClient({ config, slug }) {
     // Draw simple barcode representation
     ctx.fillStyle = qrColor;
     let x = 10;
-    
+
     // Start pattern
     ctx.fillRect(x, 10, barWidth, 60);
     x += barWidth * 2;

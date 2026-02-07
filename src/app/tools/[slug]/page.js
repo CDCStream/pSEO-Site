@@ -3,6 +3,8 @@ import { toolsConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import TextToolClient from './TextToolClient';
 import MinecraftTextClient from './MinecraftTextClient';
 import QRCodeClient from './QRCodeClient';
+import DissTrackClient from './DissTrackClient';
+import TierListClient from './TierListClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -89,6 +91,10 @@ export default async function ToolPage({ params }) {
               <MinecraftTextClient config={config} />
             ) : config.generatorType === 'qr' || config.generatorType === 'wifiQr' || config.generatorType === 'barcode' ? (
               <QRCodeClient config={config} slug={slug} />
+            ) : config.generatorType === 'dissTrack' ? (
+              <DissTrackClient config={config} slug={slug} />
+            ) : config.generatorType === 'tierList' ? (
+              <TierListClient config={config} slug={slug} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

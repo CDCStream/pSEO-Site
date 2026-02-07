@@ -256,7 +256,7 @@ export default function NameGeneratorClient({ config, slug }) {
   const generate = useCallback(() => {
     setIsAnimating(true);
     const generator = generators[config.generatorType] || generators.gamertag;
-    
+
     let newResults;
     if (isShipOrCouple) {
       const name1 = input1.trim() || 'Romeo';
@@ -267,7 +267,7 @@ export default function NameGeneratorClient({ config, slug }) {
     } else {
       newResults = Array(count).fill(0).map(() => generator());
     }
-    
+
     setTimeout(() => {
       setResults(Array.isArray(newResults) ? newResults : [newResults]);
       setIsAnimating(false);

@@ -95,12 +95,12 @@ export default function GeneratorsPage() {
             <h2 className="text-2xl font-bold text-white mb-4">About Name Generators</h2>
             <div className="prose prose-invert prose-orange max-w-none">
               <p className="text-gray-300">
-                Our name generators help you find the perfect names for characters, projects, and online identities. 
-                Whether you need a fantasy name for roleplay, a gamertag for gaming, or a creative name for any purpose, 
+                Our name generators help you find the perfect names for characters, projects, and online identities.
+                Whether you need a fantasy name for roleplay, a gamertag for gaming, or a creative name for any purpose,
                 our generators deliver instant inspiration.
               </p>
               <p className="text-gray-300 mt-4">
-                Each generator uses curated databases and intelligent combination algorithms to create authentic-feeling 
+                Each generator uses curated databases and intelligent combination algorithms to create authentic-feeling
                 names. Generate multiple options instantly and find the perfect name for any creative endeavor.
               </p>
             </div>

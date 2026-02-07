@@ -85,12 +85,12 @@ export default function RandomizersPage() {
             <h2 className="text-2xl font-bold text-white mb-4">About Random Generators</h2>
             <div className="prose prose-invert prose-orange max-w-none">
               <p className="text-gray-300">
-                Our collection of random generators helps with decisions, games, education, and entertainment. 
-                Whether you need a random animal for a story, a Pokémon for a challenge run, or just want to 
+                Our collection of random generators helps with decisions, games, education, and entertainment.
+                Whether you need a random animal for a story, a Pokémon for a challenge run, or just want to
                 add some randomness to your day, our generators deliver instant results.
               </p>
               <p className="text-gray-300 mt-4">
-                All generators use fair random algorithms to ensure truly unpredictable results. Perfect for 
+                All generators use fair random algorithms to ensure truly unpredictable results. Perfect for
                 teachers, game masters, content creators, and anyone who needs a touch of randomness.
               </p>
             </div>

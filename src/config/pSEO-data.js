@@ -706,6 +706,62 @@ No specialized software needed – generate barcodes directly in your browser an
 
 For reliable scanning, maintain adequate size and print quality. Avoid shrinking barcodes too small, ensure good contrast between bars and background, and test scan before large print runs.`,
   },
+
+  // Trending Tools
+  'ai-diss-track-generator': {
+    category: 'tools',
+    name: 'AI Diss Track Generator',
+    keyword: 'AI Diss Track Generator',
+    title: 'AI Diss Track Generator - Create Rap Diss Lyrics Free',
+    description: 'Generate hilarious AI diss track lyrics instantly. Create custom rap roasts and diss verses for fun and entertainment.',
+    h1: 'AI Diss Track Generator',
+    subtitle: 'Generate custom diss track lyrics to roast your friends (for fun!).',
+    icon: 'mic',
+    generatorType: 'dissTrack',
+    faq: [
+      { q: 'Is this really AI?', a: 'We use smart templates and randomization to create unique diss tracks. It\'s AI-inspired entertainment!' },
+      { q: 'Can I use these lyrics?', a: 'Yes! Use generated lyrics for fun, social media content, or creative projects.' },
+      { q: 'Is it appropriate?', a: 'Our generator creates fun roasts, not offensive content. Keep it playful!' },
+      { q: 'Can I customize the target?', a: 'Enter any name and the diss track will be personalized for that target.' },
+      { q: 'Will it generate the same thing twice?', a: 'Each generation is randomized, so you\'ll get unique lyrics every time.' },
+    ],
+    longContent: `The AI Diss Track Generator creates hilarious, personalized diss track lyrics for entertainment and fun. Enter a name, hit generate, and get complete verses with hooks, adlibs, and sick burns.
+
+Diss tracks have been a staple of hip-hop culture, and now you can create your own without any rap skills. Our generator combines clever wordplay, classic diss structures, and your custom target to produce shareable results.
+
+Perfect for roasting friends (in good fun), creating content for social media, or just having a laugh. The generated tracks follow authentic diss song structures with verses, hooks, and satisfying conclusions.
+
+Share your creations on TikTok, Instagram, or among friends. The entertainment value comes from the unexpected combinations and personalized burns. Each generation is unique thanks to our randomization system.
+
+Remember: keep it fun and friendly! Our generator is designed for entertainment, not genuine attacks. Use responsibly and spread laughter, not hate.`,
+  },
+  'tier-list-maker': {
+    category: 'tools',
+    name: 'Tier List Maker',
+    keyword: 'Tier List Maker Free',
+    title: 'Free Tier List Maker - Create Custom Tier Lists Online',
+    description: 'Create tier lists for any topic with our free maker. Drag and drop items into S, A, B, C, D, F tiers and download as image.',
+    h1: 'Tier List Maker',
+    subtitle: 'Create and share custom tier lists for anything.',
+    icon: 'layout-grid',
+    generatorType: 'tierList',
+    faq: [
+      { q: 'Is this tier list maker free?', a: 'Yes! Create unlimited tier lists completely free with no watermarks.' },
+      { q: 'Can I add images?', a: 'Absolutely! Add text items or upload images to rank in your tier list.' },
+      { q: 'How do I rank items?', a: 'Drag and drop items from the unranked pool into your desired tier row.' },
+      { q: 'Can I download my tier list?', a: 'Yes! Download your finished tier list as a PNG image to share anywhere.' },
+      { q: 'What are tier lists used for?', a: 'Rank anything! Games, movies, food, music, characters - whatever you want to rate.' },
+    ],
+    longContent: `The Tier List Maker lets you create custom ranking graphics for any topic. From video games to movies, food to music, rank anything using the classic S-F tier system made famous by gaming communities.
+
+Tier lists have exploded in popularity on YouTube, Twitter, and TikTok. Content creators use them to share opinions and spark debates. Our maker gives you the tools to create your own professional-looking tier lists.
+
+The interface is simple: add items (text or images), drag them into tiers from S (best) to F (worst), and download your creation. No account needed, no watermarks, just pure tier list creation.
+
+Our tier system uses the standard gaming convention: S tier for the absolute best, then A through F for decreasing quality. The color-coded rows make rankings instantly recognizable to anyone familiar with the format.
+
+Share your tier lists on social media to show your opinions and invite discussion. The visual format is perfect for sparking friendly debates about rankings and preferences.`,
+  },
 };
 
 // Symbols configuration

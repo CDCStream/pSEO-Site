@@ -109,7 +109,7 @@ export default function RandomizerClient({ config, slug }) {
     setIsAnimating(true);
     const data = getDataSet();
     const newResults = getRandomItems(data, Math.min(count, data.length));
-    
+
     // Brief animation delay
     setTimeout(() => {
       setResults(newResults);
