@@ -67,65 +67,65 @@ const CATEGORY_WORDS = {
   automotive: ['Auto', 'Cars', 'Drive', 'Motor', 'Speed', 'Wheels', 'Garage'],
 };
 
-export default function YouTubeHandleClient({ config }) {
+export default function YouTubeNameClient({ config }) {
   const [accountType, setAccountType] = useState('');
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
   const [regenerateKey, setRegenerateKey] = useState(0);
   const [hasGenerated, setHasGenerated] = useState(false);
 
-  const generateHandles = () => {
+  const generateNames = () => {
     if (!accountType || !category) return [];
 
     const descWords = description.trim().split(/\s+/).filter(w => w.length > 0);
     const mainWord = descWords[0] || category;
     const cleanWord = mainWord.replace(/[^a-zA-Z0-9]/g, '');
     const categoryWords = CATEGORY_WORDS[category] || ['Official', 'HQ', 'Hub'];
-    
-    const prefixes = accountType === 'business' 
+
+    const prefixes = accountType === 'business'
       ? ['Official', 'The', 'Real', 'Get', 'Try', 'Join', 'Visit', 'Go']
       : ['Its', 'The', 'Hey', 'Just', 'Im', 'Hi', 'Meet', 'Call'];
-    
+
     const suffixes = accountType === 'business'
       ? ['HQ', 'Co', 'Inc', 'Official', 'Global', 'Media', 'Studio', 'Brand']
       : ['TV', 'Tube', 'Daily', 'Weekly', 'Show', 'Live', 'Vids', ''];
 
-    const handles = new Set();
-    
-    // Generate various handle patterns
+    const names = new Set();
+
+    // Generate various name patterns
     const catWord = categoryWords[Math.floor(Math.random() * categoryWords.length)];
     const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
     const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
     const year = ['24', '25', '2024', '2025', ''][Math.floor(Math.random() * 5)];
-    
+
     // Pattern variations
-    handles.add(`@${cleanWord}${catWord}`);
-    handles.add(`@${prefix}${cleanWord}`);
-    handles.add(`@${cleanWord}${suffix}`);
-    handles.add(`@${cleanWord}_${category}`);
-    handles.add(`@${catWord}${cleanWord}`);
-    handles.add(`@${cleanWord}${year}`);
-    handles.add(`@${cleanWord.toLowerCase()}_official`);
-    handles.add(`@the${cleanWord.toLowerCase()}`);
-    handles.add(`@${cleanWord}${categoryWords[Math.floor(Math.random() * categoryWords.length)]}`);
-    handles.add(`@${prefix.toLowerCase()}${cleanWord}`);
+    names.add(`${cleanWord} ${catWord}`);
+    names.add(`${prefix} ${cleanWord}`);
+    names.add(`${cleanWord} ${suffix}`);
+    names.add(`${cleanWord} ${category.charAt(0).toUpperCase() + category.slice(1)}`);
+    names.add(`${catWord} ${cleanWord}`);
+    names.add(`${cleanWord}${year}`);
+    names.add(`${cleanWord} Official`);
+    names.add(`The ${cleanWord}`);
+    names.add(`${cleanWord} ${categoryWords[Math.floor(Math.random() * categoryWords.length)]}`);
+    names.add(`${prefix} ${cleanWord} ${suffix}`);
 
     // If description has multiple words, create combinations
     if (descWords.length >= 2) {
-      const combo = descWords.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('');
-      handles.add(`@${combo}`);
-      handles.add(`@${combo}${catWord}`);
+      const combo = descWords.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+      names.add(combo);
+      names.add(`${combo} ${catWord}`);
     }
 
-    return Array.from(handles)
-      .filter(h => h.length <= 30 && h.length >= 4)
+    return Array.from(names)
+      .filter(n => n.trim().length >= 3 && n.trim().length <= 50)
       .slice(0, 8)
-      .map(handle => ({ name: 'YouTube Handle', text: handle }));
+      .map(name => ({ name: 'YouTube Name', text: name.trim() }));
   };
 
   const results = useMemo(() => {
     if (!hasGenerated) return [];
-    return generateHandles();
+    return generateNames();
   }, [accountType, category, description, regenerateKey, hasGenerated]);
 
   const handleGenerate = () => {
@@ -201,7 +201,7 @@ export default function YouTubeHandleClient({ config }) {
               : 'bg-gray-700 cursor-not-allowed opacity-50'
           }`}
         >
-          Generate Handles
+          Generate Names
         </button>
         {hasGenerated && (
           <button
@@ -229,7 +229,7 @@ export default function YouTubeHandleClient({ config }) {
               key={index}
               className="bg-black/30 rounded-xl border border-white/10 p-4 flex items-center justify-between group hover:border-orange-500/30 transition-all"
             >
-              <span className="text-white text-lg font-mono select-all">
+              <span className="text-white text-lg font-medium select-all">
                 {result.text}
               </span>
               <CopyButton text={result.text} size="sm" showLabel={false} />
@@ -241,7 +241,7 @@ export default function YouTubeHandleClient({ config }) {
       {/* Disclaimer */}
       {hasGenerated && results.length > 0 && (
         <p className="text-xs text-gray-500 text-center mt-6 italic">
-          Please note: Check handle availability on YouTube before using. Some handles may already be taken.
+          Please note: Check name availability on YouTube before using. Some names may already be taken.
         </p>
       )}
     </div>

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { generatorsConfig, siteConfig } from '@/config/pSEO-data';
 import NameGeneratorClient from './NameGeneratorClient';
+import YouTubeNameClient from './YouTubeNameClient';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -75,7 +76,11 @@ export default async function GeneratorPage({ params }) {
 
           {/* Tool Interface */}
           <div className="max-w-4xl mx-auto mb-12">
-            <NameGeneratorClient config={config} slug={slug} />
+            {slug === 'youtube-name-generator' ? (
+              <YouTubeNameClient config={config} />
+            ) : (
+              <NameGeneratorClient config={config} slug={slug} />
+            )}
           </div>
 
           {/* FAQ Section */}
