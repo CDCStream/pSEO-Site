@@ -19,7 +19,7 @@ export async function POST(request) {
     const beefInfo = beef ? `The specific beef/reason: ${beef}.` : '';
     const toneInfo = tone || 'aggressive but playful';
 
-    const prompt = `Write an original, creative diss track/rap ${styleInfo} targeting someone named "${target}". 
+    const prompt = `Write an original, creative diss track/rap ${styleInfo} targeting someone named "${target}".
 
 ${beefInfo}
 

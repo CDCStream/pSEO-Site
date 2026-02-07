@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
-import { Plus, Trash2, Download, Image as ImageIcon } from 'lucide-react';
 
 const DEFAULT_TIERS = [
   { id: 'S', label: 'S', color: '#ff7f7f', items: [] },
@@ -19,6 +18,8 @@ export default function TierListClient({ config, slug }) {
   const [newItemText, setNewItemText] = useState('');
   const [draggedItem, setDraggedItem] = useState(null);
   const [dragSource, setDragSource] = useState(null);
+  const [editingItem, setEditingItem] = useState(null);
+  const [editText, setEditText] = useState('');
   const canvasRef = useRef(null);
   const fileInputRef = useRef(null);
 
@@ -96,6 +97,37 @@ export default function TierListClient({ config, slug }) {
     }
   };
 
+  // Edit item
+  const startEditItem = (item, source) => {
+    if (item.type !== 'text') return;
+    setEditingItem({ item, source });
+    setEditText(item.content);
+  };
+
+  const saveEditItem = () => {
+    if (!editingItem || !editText.trim()) {
+      setEditingItem(null);
+      return;
+    }
+
+    const updateItem = (items) => items.map(i => 
+      i.id === editingItem.item.id ? { ...i, content: editText.trim() } : i
+    );
+
+    if (editingItem.source === 'unranked') {
+      setUnranked(updateItem);
+    } else {
+      setTiers(prev => prev.map(tier =>
+        tier.id === editingItem.source
+          ? { ...tier, items: updateItem(tier.items) }
+          : tier
+      ));
+    }
+
+    setEditingItem(null);
+    setEditText('');
+  };
+
   // Download as image
   const downloadTierList = useCallback(() => {
     const canvas = canvasRef.current;
@@ -148,14 +180,12 @@ export default function TierListClient({ config, slug }) {
         const x = labelWidth + padding + itemIndex * (itemSize + padding);
 
         if (item.type === 'image') {
-          // Draw image placeholder
           ctx.fillStyle = '#3a3a4e';
           ctx.fillRect(x, y + padding, itemSize, itemSize);
           ctx.fillStyle = '#888';
           ctx.font = '10px Arial';
           ctx.fillText('IMG', x + itemSize/2, y + itemSize/2);
         } else {
-          // Draw text item
           ctx.fillStyle = '#4a4a5e';
           ctx.fillRect(x, y + padding, itemSize, itemSize);
           ctx.fillStyle = '#ffffff';
@@ -185,7 +215,9 @@ export default function TierListClient({ config, slug }) {
     <div
       draggable
       onDragStart={() => handleDragStart(item, source)}
+      onDoubleClick={() => startEditItem(item, source)}
       className="relative w-16 h-16 bg-gray-700 rounded-lg cursor-move flex items-center justify-center overflow-hidden group border-2 border-transparent hover:border-orange-500 transition-all"
+      title={item.type === 'text' ? 'Double-click to edit' : ''}
     >
       {item.type === 'image' ? (
         <img src={item.content} alt="" className="w-full h-full object-cover" />
@@ -193,7 +225,7 @@ export default function TierListClient({ config, slug }) {
         <span className="text-xs text-white text-center p-1 break-words">{item.content}</span>
       )}
       <button
-        onClick={() => deleteItem(item.id, source)}
+        onClick={(e) => { e.stopPropagation(); deleteItem(item.id, source); }}
         className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full items-center justify-center text-white text-xs hidden group-hover:flex"
       >
         ×
@@ -203,6 +235,81 @@ export default function TierListClient({ config, slug }) {
 
   return (
     <div className="bg-white/5 rounded-2xl border border-white/10 p-6 sm:p-8">
+      {/* Edit Modal */}
+      {editingItem && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-800 rounded-xl p-6 w-full max-w-md">
+            <h3 className="text-xl font-bold text-white mb-4">Edit Item</h3>
+            <input
+              type="text"
+              value={editText}
+              onChange={(e) => setEditText(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && saveEditItem()}
+              className="w-full px-4 py-3 bg-black/30 rounded-lg border border-white/10 text-white focus:outline-none focus:border-orange-500 mb-4"
+              autoFocus
+            />
+            <div className="flex gap-3">
+              <button
+                onClick={saveEditItem}
+                className="flex-1 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => setEditingItem(null)}
+                className="flex-1 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Add Items First */}
+      <div className="grid sm:grid-cols-2 gap-4 mb-6">
+        <div className="flex gap-2">
+          <input
+            type="text"
+            value={newItemText}
+            onChange={(e) => setNewItemText(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && addTextItem()}
+            placeholder="Add text item..."
+            className="flex-1 px-4 py-2 bg-black/30 rounded-lg border border-white/10 text-white text-sm focus:outline-none focus:border-orange-500/50"
+          />
+          <button
+            onClick={addTextItem}
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+        </div>
+        <div>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={handleImageUpload}
+            className="hidden"
+          />
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Add Images
+          </button>
+        </div>
+      </div>
+
       {/* Title Input */}
       <div className="mb-6">
         <input
@@ -252,45 +359,8 @@ export default function TierListClient({ config, slug }) {
             <ItemCard key={item.id} item={item} source="unranked" />
           ))}
           {unranked.length === 0 && (
-            <p className="text-gray-500 text-sm">Add items below and drag them to tiers</p>
+            <p className="text-gray-500 text-sm">Add items below and drag them to tiers (double-click text items to edit)</p>
           )}
-        </div>
-      </div>
-
-      {/* Add Items */}
-      <div className="grid sm:grid-cols-2 gap-4 mb-6">
-        <div className="flex gap-2">
-          <input
-            type="text"
-            value={newItemText}
-            onChange={(e) => setNewItemText(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && addTextItem()}
-            placeholder="Add text item..."
-            className="flex-1 px-4 py-2 bg-black/30 rounded-lg border border-white/10 text-white text-sm focus:outline-none focus:border-orange-500/50"
-          />
-          <button
-            onClick={addTextItem}
-            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
-          >
-            <Plus className="w-5 h-5" />
-          </button>
-        </div>
-        <div>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            multiple
-            onChange={handleImageUpload}
-            className="hidden"
-          />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
-          >
-            <ImageIcon className="w-5 h-5" />
-            Add Images
-          </button>
         </div>
       </div>
 
@@ -300,14 +370,21 @@ export default function TierListClient({ config, slug }) {
           onClick={downloadTierList}
           className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition-all"
         >
-          <Download className="w-5 h-5" />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
           Download as Image
         </button>
         <button
           onClick={resetTierList}
           className="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl hover:bg-white/20 transition-colors"
         >
-          <Trash2 className="w-5 h-5" />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          </svg>
           Reset
         </button>
       </div>
@@ -317,4 +394,3 @@ export default function TierListClient({ config, slug }) {
     </div>
   );
 }
-
