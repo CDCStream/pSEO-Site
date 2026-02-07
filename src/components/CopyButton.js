@@ -18,7 +18,22 @@ export default function CopyButton({
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(text);
+      // Try modern clipboard API first
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        // Fallback for older browsers or when clipboard API fails
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        textArea.style.top = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
       setCopied(true);
       addToast('Copied to clipboard!', 'success');
 
@@ -26,7 +41,22 @@ export default function CopyButton({
         setCopied(false);
       }, 2000);
     } catch (err) {
-      addToast('Failed to copy', 'error');
+      // Last resort fallback
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setCopied(true);
+        addToast('Copied to clipboard!', 'success');
+        setTimeout(() => setCopied(false), 2000);
+      } catch (e) {
+        addToast('Failed to copy', 'error');
+      }
     }
   };
 
@@ -95,8 +125,19 @@ export function QuickCopy({ children, text, className = '' }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(text);
-      addToast(`Copied: ${text}`, 'success');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
+      addToast(`Copied: ${text.length > 20 ? text.slice(0, 20) + '...' : text}`, 'success');
     } catch (err) {
       addToast('Failed to copy', 'error');
     }
