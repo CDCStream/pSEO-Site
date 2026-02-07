@@ -369,7 +369,7 @@ const transformers = {
   randomLetter: (text) => {
     // Get letters from input (filter only letters)
     const letters = text.replace(/[^a-zA-Z]/g, '').split('');
-    
+
     if (letters.length === 0) {
       return [{ name: 'Random Letter', text: 'Enter letters to pick from (e.g. abcdefghijklmnopqrstuvwxyz)' }];
     }

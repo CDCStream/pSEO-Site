@@ -5,6 +5,7 @@ import MinecraftTextClient from './MinecraftTextClient';
 import QRCodeClient from './QRCodeClient';
 import DissTrackClient from './DissTrackClient';
 import TierListClient from './TierListClient';
+import YouTubeHandleClient from './YouTubeHandleClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -89,6 +90,8 @@ export default async function ToolPage({ params }) {
             {/* Tool Interface */}
             {slug === 'minecraft-font' ? (
               <MinecraftTextClient config={config} />
+            ) : slug === 'youtube-handle-generator' ? (
+              <YouTubeHandleClient config={config} />
             ) : config.generatorType === 'qr' || config.generatorType === 'wifiQr' || config.generatorType === 'barcode' ? (
               <QRCodeClient config={config} slug={slug} />
             ) : config.generatorType === 'dissTrack' ? (
