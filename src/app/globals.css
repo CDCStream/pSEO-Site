@@ -205,9 +205,18 @@ body {
     background: none !important;
   }
 
-  /* Simplify transitions */
-  * {
-    transition-duration: 0.1s !important;
+  /* Disable all transitions on mobile */
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+
+  /* Disable hover effects completely */
+  .hover\:bg-white\/5:hover,
+  .hover\:bg-white\/10:hover,
+  .hover\:bg-white\/20:hover {
+    background: inherit;
   }
 }
 

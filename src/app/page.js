@@ -101,38 +101,36 @@ const features = [
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section - No animations for better LCP */}
+      {/* Hero Section - Optimized for LCP */}
       <section className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
-              <ZapIcon className="w-4 h-4" />
-              Free Online Tools for Creators
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-orange-400 text-sm font-medium mb-4">
+              ⚡ Free Online Tools for Creators
+            </p>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-5">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Create. Transform.
               <span className="block text-orange-400">Share Instantly.</span>
             </h1>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Transform text into unique fonts, create viral memes, copy rare symbols,
-              and generate stunning wallpapers — all in one place, completely free.
+            <p className="text-base text-gray-400 mb-6 max-w-xl mx-auto">
+              Transform text, create memes, copy symbols, and generate wallpapers — completely free.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/tools"
                 prefetch={false}
-                className="btn-primary px-8 py-4 rounded-xl text-lg inline-flex items-center gap-2"
+                className="btn-primary px-6 py-3 rounded-xl inline-flex items-center gap-2"
               >
                 Start Creating
-                <ArrowRightIcon className="w-5 h-5" />
+                <ArrowRightIcon className="w-4 h-4" />
               </Link>
               <Link
                 href="/symbols"
                 prefetch={false}
-                className="btn-secondary px-8 py-4 rounded-xl text-lg"
+                className="btn-secondary px-6 py-3 rounded-xl"
               >
                 Browse Symbols
               </Link>
@@ -142,100 +140,75 @@ export default function HomePage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Everything You Need
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Four powerful tool categories, endless creative possibilities
-          </p>
-        </div>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
+          Everything You Need
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {categories.map((category) => (
             <Link
               key={category.title}
               href={category.href}
               prefetch={false}
-              className="bg-white/5 rounded-2xl border border-white/10 p-6 sm:p-8 hover:border-orange-500/30 transition-colors"
+              className="bg-white/5 rounded-xl border border-white/10 p-4"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4`}>
-                <category.icon className="w-6 h-6 text-white" />
+              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center mb-3`}>
+                <category.icon className="w-5 h-5 text-white" />
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 {category.title}
               </h3>
-              <p className="text-gray-400 mb-4 text-sm">
+              <p className="text-gray-400 text-xs line-clamp-2">
                 {category.description}
               </p>
-
-              <div className="flex flex-wrap gap-2">
-                {category.tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-2 py-1 rounded-full bg-white/5 text-xs text-gray-300"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Features - Lazy loaded */}
-      <section className="border-y border-white/10 lazy-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">
-            Why Choose MakerSilo?
+      {/* Features - Lazy loaded, hidden on mobile */}
+      <section className="border-y border-white/10 lazy-section hidden sm:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
+            Why MakerSilo?
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 lg:grid-cols-5 gap-3">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="text-center p-4 rounded-xl bg-white/5"
+                className="text-center p-3 rounded-lg bg-white/5"
               >
-                <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center mx-auto mb-3">
-                  <feature.icon className="w-5 h-5 text-orange-400" />
-                </div>
-                <h3 className="text-white font-semibold text-sm mb-1">{feature.title}</h3>
-                <p className="text-xs text-gray-400">{feature.description}</p>
+                <feature.icon className="w-5 h-5 text-orange-400 mx-auto mb-2" />
+                <h3 className="text-white font-medium text-xs">{feature.title}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quick Links */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lazy-section">
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">
+      {/* Quick Links - Fewer on mobile */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lazy-section">
+        <h2 className="text-xl font-bold text-white mb-6 text-center">
           Popular Tools
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
           {[
             { label: 'Small Text ᵗⁱⁿʸ', href: '/tools/small-text-generator' },
-            { label: 'Gothic 𝔉𝔬𝔫𝔱', href: '/tools/gothic-font' },
-            { label: 'Glitch T̷̙̓e̴̢͠x̵̣̆t̵͇̐', href: '/tools/glitch-text-generator' },
+            { label: 'Glitch Text', href: '/tools/glitch-text-generator' },
             { label: 'Hearts ❤', href: '/symbols/heart-symbol-copy-paste' },
-            { label: 'Kaomoji (◕‿◕)', href: '/symbols/kaomoji-list' },
             { label: 'Drake Meme', href: '/meme-maker/drake-meme' },
             { label: 'Music ♪♫', href: '/symbols/music-symbols' },
-            { label: 'Solid Colors', href: '/wallpapers/solid-color-backgrounds' },
             { label: 'Gradients', href: '/wallpapers/gradient-wallpaper-generator' },
-            { label: 'Morse ·-·', href: '/tools/morse-code-generator' },
-            { label: 'Binary 01', href: '/tools/text-to-binary' },
-            { label: 'Bubbles ⓑ', href: '/tools/bubble-font' },
           ].map((tool) => (
             <Link
               key={tool.href}
               href={tool.href}
               prefetch={false}
-              className="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-center text-sm text-gray-300 hover:text-white hover:border-orange-500/30 hover:bg-white/10 transition-all"
+              className="px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-center text-sm text-gray-300"
             >
               {tool.label}
             </Link>
@@ -243,22 +216,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA - Simplified */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lazy-section">
-        <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-10 sm:px-10 sm:py-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-            Ready to Create Something Amazing?
+      {/* CTA - Minimal */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lazy-section">
+        <div className="rounded-xl bg-orange-500 px-5 py-8 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+            Start Creating Now
           </h2>
-          <p className="text-white/90 mb-6 max-w-lg mx-auto">
-            Join thousands of creators using MakerSilo every day.
+          <p className="text-white/90 text-sm mb-4">
+            100% free, no signup required.
           </p>
           <Link
             href="/tools/small-text-generator"
             prefetch={false}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-gray-900 font-semibold"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-white text-gray-900 font-medium text-sm"
           >
-            Try Small Text Generator
-            <ArrowRightIcon className="w-5 h-5" />
+            Try Small Text
+            <ArrowRightIcon className="w-4 h-4" />
           </Link>
         </div>
       </section>

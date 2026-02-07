@@ -126,17 +126,18 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
-          <Link href="/" prefetch={false} className="flex items-center gap-3">
+          <Link href="/" prefetch={false} className="flex items-center gap-2">
             <NextImage
               src="/logo.png"
-              alt="MakerSilo Logo"
-              width={40}
-              height={40}
-              className="object-contain"
-              priority
+              alt="MakerSilo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+              loading="eager"
+              fetchPriority="high"
             />
-            <span className="text-xl font-bold text-white tracking-tight">
-              Maker<span className="text-gradient">Silo</span>
+            <span className="text-lg font-bold text-white">
+              Maker<span className="text-orange-400">Silo</span>
             </span>
           </Link>
 

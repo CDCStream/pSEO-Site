@@ -7,14 +7,14 @@ import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
 
-// Only load the primary font - others loaded on demand
+// Minimal font loading for better performance
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
-  weight: ['400', '600', '700'],
-  preload: true,
-  fallback: ['system-ui', 'sans-serif'],
+  weight: ['400', '700'],
+  preload: false,
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
 });
 
 export const metadata = {
