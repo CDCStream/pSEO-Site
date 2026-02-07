@@ -7,6 +7,7 @@ import BandNameClient from './BandNameClient';
 import AnimeNameClient from './AnimeNameClient';
 import CoupleNameClient from './CoupleNameClient';
 import RobloxNameClient from './RobloxNameClient';
+import GamingNameClient from './GamingNameClient';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -93,6 +94,8 @@ export default async function GeneratorPage({ params }) {
               <CoupleNameClient config={config} />
             ) : slug === 'roblox-username-generator' ? (
               <RobloxNameClient config={config} />
+            ) : slug === 'gaming-name-generator' ? (
+              <GamingNameClient config={config} />
             ) : (
               <NameGeneratorClient config={config} slug={slug} />
             )}
