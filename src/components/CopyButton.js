@@ -21,31 +21,30 @@ export default function CopyButton({
     const textToCopy = String(text);
     
     try {
-      // Use textarea method for better Unicode support (combining characters like Zalgo)
-      const textArea = document.createElement('textarea');
-      textArea.value = textToCopy;
-      textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
-      textArea.setAttribute('readonly', '');
-      document.body.appendChild(textArea);
-      
-      // Select the text
-      textArea.select();
-      textArea.setSelectionRange(0, textToCopy.length);
-      
-      // Copy using execCommand (more reliable for Unicode)
-      const success = document.execCommand('copy');
-      document.body.removeChild(textArea);
-      
-      if (!success) {
-        // Fallback to clipboard API
-        await navigator.clipboard.writeText(textToCopy);
+      // Try ClipboardItem with Blob for best Unicode/combining character support
+      if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+        const blob = new Blob([textToCopy], { type: 'text/plain;charset=utf-8' });
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'text/plain': blob })
+        ]);
+      } else {
+        // Fallback: textarea method
+        const textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;white-space:pre;';
+        textArea.setAttribute('readonly', '');
+        document.body.appendChild(textArea);
+        textArea.select();
+        textArea.setSelectionRange(0, textToCopy.length);
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
       }
       
       setCopied(true);
       addToast('Copied to clipboard!', 'success');
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      // Final fallback attempt
+      // Final fallback
       try {
         await navigator.clipboard.writeText(textToCopy);
         setCopied(true);
@@ -123,16 +122,21 @@ export function QuickCopy({ children, text, className = '' }) {
   const handleCopy = async () => {
     const textToCopy = String(text);
     try {
-      const textArea = document.createElement('textarea');
-      textArea.value = textToCopy;
-      textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
-      textArea.setAttribute('readonly', '');
-      document.body.appendChild(textArea);
-      textArea.select();
-      textArea.setSelectionRange(0, textToCopy.length);
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      addToast(`Copied: ${textToCopy.length > 20 ? textToCopy.slice(0, 20) + '...' : textToCopy}`, 'success');
+      if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+        const blob = new Blob([textToCopy], { type: 'text/plain;charset=utf-8' });
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'text/plain': blob })
+        ]);
+      } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;white-space:pre;';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
+      addToast(`Copied!`, 'success');
     } catch (err) {
       try {
         await navigator.clipboard.writeText(textToCopy);
