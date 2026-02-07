@@ -35,10 +35,10 @@ export default function TierListClient({ config, slug }) {
     files.forEach(file => {
       const reader = new FileReader();
       reader.onload = (event) => {
-        setUnranked(prev => [...prev, { 
-          id: Date.now() + Math.random(), 
-          type: 'image', 
-          content: event.target.result 
+        setUnranked(prev => [...prev, {
+          id: Date.now() + Math.random(),
+          type: 'image',
+          content: event.target.result
         }]);
       };
       reader.readAsDataURL(file);
@@ -73,8 +73,8 @@ export default function TierListClient({ config, slug }) {
     if (targetTierId === 'unranked') {
       setUnranked(prev => [...prev, draggedItem]);
     } else {
-      setTiers(prev => prev.map(tier => 
-        tier.id === targetTierId 
+      setTiers(prev => prev.map(tier =>
+        tier.id === targetTierId
           ? { ...tier, items: [...tier.items, draggedItem] }
           : tier
       ));
@@ -106,7 +106,7 @@ export default function TierListClient({ config, slug }) {
     const labelWidth = 80;
     const itemSize = 70;
     const padding = 5;
-    
+
     // Calculate canvas size
     const maxItems = Math.max(...tiers.map(t => t.items.length), 1);
     const width = labelWidth + (maxItems * (itemSize + padding)) + padding + 100;
@@ -132,7 +132,7 @@ export default function TierListClient({ config, slug }) {
       // Tier label
       ctx.fillStyle = tier.color;
       ctx.fillRect(padding, y, labelWidth - padding, tierHeight);
-      
+
       ctx.fillStyle = '#000000';
       ctx.font = 'bold 32px Arial';
       ctx.textAlign = 'center';
@@ -146,7 +146,7 @@ export default function TierListClient({ config, slug }) {
       // Items
       tier.items.forEach((item, itemIndex) => {
         const x = labelWidth + padding + itemIndex * (itemSize + padding);
-        
+
         if (item.type === 'image') {
           // Draw image placeholder
           ctx.fillStyle = '#3a3a4e';
@@ -219,13 +219,13 @@ export default function TierListClient({ config, slug }) {
         {tiers.map(tier => (
           <div key={tier.id} className="flex">
             {/* Tier Label */}
-            <div 
+            <div
               className="w-16 h-16 flex items-center justify-center text-2xl font-bold text-black shrink-0 rounded-l-lg"
               style={{ backgroundColor: tier.color }}
             >
               {tier.label}
             </div>
-            
+
             {/* Tier Items */}
             <div
               onDragOver={handleDragOver}

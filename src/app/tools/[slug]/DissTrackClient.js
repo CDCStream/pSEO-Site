@@ -64,14 +64,14 @@ export default function DissTrackClient({ config, slug }) {
     setTimeout(() => {
       // Build the diss track
       let verses = [];
-      
+
       // Verse 1
       verses.push(`[Verse 1]`);
       verses.push(getRandom(DISS_DATA.openers).replace(/{name}/g, name) + ' ' + getRandom(DISS_DATA.adlibs));
       verses.push(getRandom(DISS_DATA.roasts));
       verses.push(getRandom(DISS_DATA.middles) + ' ' + getRandom(DISS_DATA.adlibs));
       verses.push(getRandom(DISS_DATA.roasts));
-      
+
       // Hook
       verses.push('');
       verses.push(`[Hook]`);
@@ -79,7 +79,7 @@ export default function DissTrackClient({ config, slug }) {
       verses.push(`${name}, ${name}, you can't match that`);
       verses.push(`${name}, ${name}, that's a fact ${getRandom(DISS_DATA.adlibs)}`);
       verses.push(`${name}, ${name}, no coming back`);
-      
+
       // Verse 2
       verses.push('');
       verses.push(`[Verse 2]`);
@@ -87,12 +87,12 @@ export default function DissTrackClient({ config, slug }) {
       verses.push(getRandom(DISS_DATA.roasts));
       verses.push(getRandom(DISS_DATA.roasts) + ' ' + getRandom(DISS_DATA.adlibs));
       verses.push(getRandom(DISS_DATA.closers).replace(/{name}/g, name));
-      
+
       // Outro
       verses.push('');
       verses.push(`[Outro]`);
       verses.push(getRandom(DISS_DATA.closers).replace(/{name}/g, name) + ' ' + getRandom(DISS_DATA.adlibs));
-      
+
       setLyrics(verses.join('\n'));
       setIsGenerating(false);
     }, 800);

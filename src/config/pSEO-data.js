@@ -735,7 +735,7 @@ Share your creations on TikTok, Instagram, or among friends. The entertainment v
 
 Remember: keep it fun and friendly! Our generator is designed for entertainment, not genuine attacks. Use responsibly and spread laughter, not hate.`,
   },
-  'tier-list-maker': {
+  'tier-list-maker-free': {
     category: 'tools',
     name: 'Tier List Maker',
     keyword: 'Tier List Maker Free',
