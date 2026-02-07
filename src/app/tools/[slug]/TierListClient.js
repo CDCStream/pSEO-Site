@@ -110,7 +110,7 @@ export default function TierListClient({ config, slug }) {
       return;
     }
 
-    const updateItem = (items) => items.map(i => 
+    const updateItem = (items) => items.map(i =>
       i.id === editingItem.item.id ? { ...i, content: editText.trim() } : i
     );
 
@@ -129,7 +129,7 @@ export default function TierListClient({ config, slug }) {
   };
 
   // Download as image
-  const downloadTierList = useCallback(() => {
+  const downloadTierList = useCallback(async () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -147,6 +147,40 @@ export default function TierListClient({ config, slug }) {
     canvas.width = width;
     canvas.height = height;
 
+    // Collect all images to preload
+    const imageItems = [];
+    tiers.forEach((tier, tierIndex) => {
+      tier.items.forEach((item, itemIndex) => {
+        if (item.type === 'image') {
+          imageItems.push({
+            src: item.content,
+            tierIndex,
+            itemIndex
+          });
+        }
+      });
+    });
+
+    // Preload all images
+    const loadedImages = await Promise.all(
+      imageItems.map(imgItem => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve({ ...imgItem, img });
+          img.onerror = () => resolve({ ...imgItem, img: null });
+          img.src = imgItem.src;
+        });
+      })
+    );
+
+    // Create a map for quick lookup
+    const imageMap = {};
+    loadedImages.forEach(item => {
+      if (item.img) {
+        imageMap[`${item.tierIndex}-${item.itemIndex}`] = item.img;
+      }
+    });
+
     // Background
     ctx.fillStyle = '#1a1a2e';
     ctx.fillRect(0, 0, width, height);
@@ -158,8 +192,8 @@ export default function TierListClient({ config, slug }) {
     ctx.fillText(title, width / 2, 40);
 
     // Draw tiers
-    tiers.forEach((tier, index) => {
-      const y = 60 + index * (tierHeight + padding);
+    tiers.forEach((tier, tierIndex) => {
+      const y = 60 + tierIndex * (tierHeight + padding);
 
       // Tier label
       ctx.fillStyle = tier.color;
@@ -180,11 +214,18 @@ export default function TierListClient({ config, slug }) {
         const x = labelWidth + padding + itemIndex * (itemSize + padding);
 
         if (item.type === 'image') {
-          ctx.fillStyle = '#3a3a4e';
-          ctx.fillRect(x, y + padding, itemSize, itemSize);
-          ctx.fillStyle = '#888';
-          ctx.font = '10px Arial';
-          ctx.fillText('IMG', x + itemSize/2, y + itemSize/2);
+          const loadedImg = imageMap[`${tierIndex}-${itemIndex}`];
+          if (loadedImg) {
+            // Draw the actual image
+            ctx.drawImage(loadedImg, x, y + padding, itemSize, itemSize);
+          } else {
+            // Fallback if image failed to load
+            ctx.fillStyle = '#3a3a4e';
+            ctx.fillRect(x, y + padding, itemSize, itemSize);
+            ctx.fillStyle = '#888';
+            ctx.font = '10px Arial';
+            ctx.fillText('IMG', x + itemSize/2, y + itemSize/2);
+          }
         } else {
           ctx.fillStyle = '#4a4a5e';
           ctx.fillRect(x, y + padding, itemSize, itemSize);
