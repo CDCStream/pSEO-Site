@@ -18,7 +18,7 @@ const GAME_TYPES = [
 
 const STYLES = [
   'Aggressive',
-  'Tactical', 
+  'Tactical',
   'Mysterious',
   'Funny',
   'Pro/Competitive',

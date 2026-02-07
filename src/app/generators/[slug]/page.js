@@ -8,6 +8,7 @@ import AnimeNameClient from './AnimeNameClient';
 import CoupleNameClient from './CoupleNameClient';
 import RobloxNameClient from './RobloxNameClient';
 import GamingNameClient from './GamingNameClient';
+import AestheticYouTubeNameClient from './AestheticYouTubeNameClient';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -96,6 +97,8 @@ export default async function GeneratorPage({ params }) {
               <RobloxNameClient config={config} />
             ) : slug === 'gaming-name-generator' ? (
               <GamingNameClient config={config} />
+            ) : slug === 'aesthetic-youtube-name-generator' ? (
+              <AestheticYouTubeNameClient config={config} />
             ) : (
               <NameGeneratorClient config={config} slug={slug} />
             )}

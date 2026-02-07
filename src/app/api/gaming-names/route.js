@@ -59,7 +59,7 @@ xX_Phantom_Xx|Mysterious`;
       .map(line => {
         const trimmed = line.trim();
         if (!trimmed || trimmed.match(/^\d+[\.\)]/)) return null;
-        
+
         const parts = trimmed.split('|');
         if (parts.length >= 2) {
           return {
