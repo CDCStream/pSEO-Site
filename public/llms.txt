@@ -1,0 +1,75 @@
+# MakerSilo - Free Online Tools for Creators
+
+> MakerSilo provides free online tools including text generators, meme makers, wallpaper creators, and name generators. All tools are free, no signup required.
+
+## Text Tools
+
+- [Small Text Generator](https://makersilo.com/tools/small-text-generator): Convert text to small subscript and superscript characters
+- [Glitch Text Generator](https://makersilo.com/tools/glitch-text-generator): Create zalgo-style glitchy text effects
+- [Gothic Font Generator](https://makersilo.com/tools/gothic-font): Transform text into gothic/blackletter style
+- [Morse Code Translator](https://makersilo.com/tools/morse-code-generator): Convert text to morse code and back
+- [Text to Binary](https://makersilo.com/tools/text-to-binary): Convert text to binary code
+- [Zalgo Text Generator](https://makersilo.com/tools/zalgo-text-generator): Create cursed/corrupted text
+- [Cursed Text Generator](https://makersilo.com/tools/cursed-text-generator): Generate spooky text effects
+- [Upside Down Text](https://makersilo.com/tools/upside-down-text-generator): Flip text upside down
+- [Weird Text Generator](https://makersilo.com/tools/weird-text-generator): Create strange text styles
+- [Italics Generator](https://makersilo.com/tools/italics-generator): Convert to italic unicode text
+- [Brat Text Generator](https://makersilo.com/tools/brat-text-generator): Charli XCX brat style text
+
+## Name Generators (AI-Powered)
+
+- [YouTube Name Generator](https://makersilo.com/generators/youtube-name-generator): AI-generated YouTube channel names
+- [Podcast Name Generator](https://makersilo.com/generators/podcast-name-generator): Creative podcast name ideas
+- [Band Name Generator](https://makersilo.com/generators/band-name-generator): Music group name suggestions by genre
+- [Anime Name Generator](https://makersilo.com/generators/anime-name-generator): Japanese anime character names by gender
+- [Couple Name Generator](https://makersilo.com/generators/couple-name-generator): Ship name combinations for couples
+- [Roblox Username Generator](https://makersilo.com/generators/roblox-username-generator): Creative Roblox usernames
+- [Gaming Name Generator](https://makersilo.com/generators/gaming-name-generator): Gamertags by game type
+- [Aesthetic YouTube Name Generator](https://makersilo.com/generators/aesthetic-youtube-name-generator): Aesthetic channel names
+
+## Meme Makers
+
+- [Drake Meme Generator](https://makersilo.com/meme-maker/drake-meme): Create Drake hotline bling memes
+- [Speech Bubble Meme](https://makersilo.com/meme-maker/speech-bubble-meme): Add speech bubbles to images
+- [Change My Mind Meme](https://makersilo.com/meme-maker/change-my-mind-meme): Steven Crowder meme template
+- [Bernie Sanders Meme](https://makersilo.com/meme-maker/bernie-sanders-meme): Bernie mittens meme maker
+
+## Wallpaper Generators
+
+- [Solid Color Backgrounds](https://makersilo.com/wallpapers/solid-color-backgrounds): Simple solid color wallpapers
+- [Gradient Wallpaper Generator](https://makersilo.com/wallpapers/gradient-wallpaper-generator): Beautiful gradient backgrounds
+- [Aesthetic Wallpaper](https://makersilo.com/wallpapers/aesthetic-wallpaper): Aesthetic style wallpapers
+
+## Symbol Collections
+
+- [Music Symbols](https://makersilo.com/symbols/music-symbols): Musical notes and symbols to copy
+- [Heart Symbols](https://makersilo.com/symbols/heart-symbol-copy-paste): Heart emojis and symbols
+- [Japanese Symbols](https://makersilo.com/symbols/japanese-symbols): Japanese characters and kanji
+- [Kaomoji](https://makersilo.com/symbols/kaomoji-list): Japanese emoticons collection
+
+## Other Tools
+
+- [Tier List Maker](https://makersilo.com/tools/tier-list-maker-free): Create custom tier lists with drag and drop
+- [AI Diss Track Generator](https://makersilo.com/tools/ai-diss-track-generator): Generate rap diss tracks with AI
+- [QR Code Generator](https://makersilo.com/tools/qr-code-generator): Create QR codes instantly
+- [Random Letter Generator](https://makersilo.com/tools/random-letter-generator): Generate random letters
+
+## Key Features
+
+- 100% Free to use
+- No signup or account required
+- Instant results
+- One-click copy functionality
+- AI-powered generators using Claude
+- Mobile-friendly responsive design
+- No watermarks on downloads
+
+## About
+
+MakerSilo is a collection of free online tools designed for content creators, social media users, gamers, and anyone who needs quick text transformations, name ideas, or creative assets. Built with Next.js and hosted on Vercel.
+
+## Contact
+
+- Website: https://makersilo.com
+- Blog: https://blog.makersilo.com
+
