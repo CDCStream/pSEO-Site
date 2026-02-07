@@ -540,8 +540,8 @@ export default function TextToolClient({ config, slug }) {
                 <span className="text-sm font-medium text-gray-300">{result.name}</span>
                 <CopyButton text={result.text} size="sm" />
               </div>
-              <div className="p-4">
-                <p className="text-white text-xl break-all leading-relaxed select-all" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+              <div className="p-6 overflow-x-auto">
+                <p className="text-white text-lg break-all select-all whitespace-pre-wrap" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', lineHeight: '2.5', wordBreak: 'break-word' }}>
                   {result.text}
                 </p>
               </div>
