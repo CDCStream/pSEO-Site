@@ -6,6 +6,7 @@ import QRCodeClient from './QRCodeClient';
 import DissTrackClient from './DissTrackClient';
 import TierListClient from './TierListClient';
 import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
+import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -98,6 +99,8 @@ export default async function ToolPage({ params }) {
               <TierListClient config={config} slug={slug} />
             ) : config.generatorType === 'youtubeIdea' ? (
               <YouTubeChannelIdeaClient config={config} />
+            ) : config.generatorType === 'youtubeCommentPicker' ? (
+              <YouTubeCommentPickerClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

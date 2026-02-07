@@ -46,7 +46,7 @@ Be creative and think of unique angles that haven't been overdone. Focus on tren
     });
 
     const responseText = message.content[0].text;
-    
+
     // Parse the response into structured ideas
     const ideas = parseChannelIdeas(responseText);
 
@@ -63,14 +63,14 @@ Be creative and think of unique angles that haven't been overdone. Focus on tren
 function parseChannelIdeas(text) {
   const ideas = [];
   const ideaBlocks = text.split(/IDEA \d+/i).filter(block => block.trim());
-  
+
   for (const block of ideaBlocks) {
     const nameMatch = block.match(/Name:\s*(.+)/i);
     const nicheMatch = block.match(/Niche:\s*(.+)/i);
     const contentMatch = block.match(/Content:\s*(.+)/i);
     const audienceMatch = block.match(/Audience:\s*(.+)/i);
     const potentialMatch = block.match(/Potential:\s*(.+)/i);
-    
+
     if (nameMatch) {
       ideas.push({
         name: nameMatch[1].trim(),
@@ -81,7 +81,7 @@ function parseChannelIdeas(text) {
       });
     }
   }
-  
+
   return ideas;
 }
 

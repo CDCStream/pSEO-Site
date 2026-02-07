@@ -578,7 +578,7 @@ Generate multiple ideas and note which ones excite you most. Your enthusiasm for
     h1: 'YouTube Comment Picker',
     subtitle: 'Pick random winners from YouTube comments for giveaways.',
     icon: 'gift',
-    transformType: 'commentPicker',
+    generatorType: 'youtubeCommentPicker',
     faq: [
       { q: 'How does this work?', a: 'Paste your list of commenters and we randomly select winner(s) using fair random algorithms.' },
       { q: 'Is the selection truly random?', a: 'Yes! Each commenter has an equal chance of winning, ensuring fair giveaways.' },

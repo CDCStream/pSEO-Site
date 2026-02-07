@@ -60,7 +60,7 @@ export default function YouTubeChannelIdeaClient({ config }) {
           placeholder="e.g., I want to make videos about cooking healthy meals for busy professionals, or gaming tutorials for indie games, or tech reviews for budget smartphones..."
           className="w-full h-32 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
         />
-        
+
         <button
           onClick={generateIdeas}
           disabled={loading || !description.trim()}
@@ -97,7 +97,7 @@ export default function YouTubeChannelIdeaClient({ config }) {
           <h3 className="text-lg font-semibold text-white">
             Generated Channel Ideas
           </h3>
-          
+
           <div className="grid gap-4">
             {ideas.map((idea, index) => (
               <div
@@ -112,18 +112,18 @@ export default function YouTubeChannelIdeaClient({ config }) {
                     {idea.potential}
                   </span>
                 </div>
-                
+
                 <div className="space-y-2 text-sm">
                   <div className="flex gap-2">
                     <span className="text-gray-500 w-20 shrink-0">Niche:</span>
                     <span className="text-blue-400">{idea.niche}</span>
                   </div>
-                  
+
                   <div className="flex gap-2">
                     <span className="text-gray-500 w-20 shrink-0">Audience:</span>
                     <span className="text-gray-300">{idea.audience}</span>
                   </div>
-                  
+
                   <div className="flex gap-2">
                     <span className="text-gray-500 w-20 shrink-0">Content:</span>
                     <span className="text-gray-300">{idea.content}</span>
@@ -132,7 +132,7 @@ export default function YouTubeChannelIdeaClient({ config }) {
               </div>
             ))}
           </div>
-          
+
           <button
             onClick={generateIdeas}
             disabled={loading}
