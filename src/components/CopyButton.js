@@ -17,40 +17,37 @@ export default function CopyButton({
   const { addToast } = useToast();
 
   const handleCopy = async () => {
+    // Ensure we have the raw string without any modifications
+    const textToCopy = String(text);
+    
     try {
-      // Try modern clipboard API first
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        // Fallback for older browsers or when clipboard API fails
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-9999px';
-        textArea.style.top = '-9999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
+      // Use textarea method for better Unicode support (combining characters like Zalgo)
+      const textArea = document.createElement('textarea');
+      textArea.value = textToCopy;
+      textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
+      textArea.setAttribute('readonly', '');
+      document.body.appendChild(textArea);
+      
+      // Select the text
+      textArea.select();
+      textArea.setSelectionRange(0, textToCopy.length);
+      
+      // Copy using execCommand (more reliable for Unicode)
+      const success = document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      if (!success) {
+        // Fallback to clipboard API
+        await navigator.clipboard.writeText(textToCopy);
       }
+      
       setCopied(true);
       addToast('Copied to clipboard!', 'success');
-
-      setTimeout(() => {
-        setCopied(false);
-      }, 2000);
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      // Last resort fallback
+      // Final fallback attempt
       try {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-9999px';
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
+        await navigator.clipboard.writeText(textToCopy);
         setCopied(true);
         addToast('Copied to clipboard!', 'success');
         setTimeout(() => setCopied(false), 2000);
@@ -124,22 +121,25 @@ export function QuickCopy({ children, text, className = '' }) {
   const { addToast } = useToast();
 
   const handleCopy = async () => {
+    const textToCopy = String(text);
     try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-9999px';
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      }
-      addToast(`Copied: ${text.length > 20 ? text.slice(0, 20) + '...' : text}`, 'success');
+      const textArea = document.createElement('textarea');
+      textArea.value = textToCopy;
+      textArea.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
+      textArea.setAttribute('readonly', '');
+      document.body.appendChild(textArea);
+      textArea.select();
+      textArea.setSelectionRange(0, textToCopy.length);
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      addToast(`Copied: ${textToCopy.length > 20 ? textToCopy.slice(0, 20) + '...' : textToCopy}`, 'success');
     } catch (err) {
-      addToast('Failed to copy', 'error');
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        addToast(`Copied!`, 'success');
+      } catch (e) {
+        addToast('Failed to copy', 'error');
+      }
     }
   };
 
