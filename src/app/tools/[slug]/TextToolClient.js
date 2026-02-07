@@ -460,8 +460,10 @@ const transformers = {
 export default function TextToolClient({ config, slug }) {
   const [inputText, setInputText] = useState('');
   const [intensity, setIntensity] = useState(5);
+  const [regenerateKey, setRegenerateKey] = useState(0);
 
   // useMemo ensures Zalgo/random text is NOT regenerated on every render
+  // regenerateKey allows manual regeneration for random generators
   const results = useMemo(() => {
     if (!inputText.trim()) return [];
 
@@ -475,7 +477,7 @@ export default function TextToolClient({ config, slug }) {
     }
 
     return transformer(inputText);
-  }, [inputText, config.transformType, intensity]);
+  }, [inputText, config.transformType, intensity, regenerateKey]);
 
   return (
     <div className="bg-white/5 rounded-2xl border border-white/10 p-6 sm:p-8">
@@ -519,6 +521,50 @@ export default function TextToolClient({ config, slug }) {
           <div className="flex justify-between text-xs text-gray-500 mt-1">
             <span>Subtle</span>
             <span>Extreme</span>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Presets for Random Letter Generator */}
+      {config.transformType === 'randomLetter' && (
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Quick Presets
+          </label>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => setInputText('26')}
+              className="px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium rounded-lg hover:from-orange-400 hover:to-amber-400 transition-all"
+            >
+              A to Z (26)
+            </button>
+            <button
+              onClick={() => setInputText('10')}
+              className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
+            >
+              10 Letters
+            </button>
+            <button
+              onClick={() => setInputText('5')}
+              className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
+            >
+              5 Letters
+            </button>
+            <button
+              onClick={() => setInputText('1')}
+              className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
+            >
+              1 Letter
+            </button>
+            {inputText && (
+              <button
+                onClick={() => setRegenerateKey(k => k + 1)}
+                className="px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-lg hover:bg-green-500/30 transition-all flex items-center gap-2"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Regenerate
+              </button>
+            )}
           </div>
         </div>
       )}
