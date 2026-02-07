@@ -365,38 +365,21 @@ const transformers = {
     ];
   },
 
-  // Random letter generator
+  // Random letter generator - picks ONE random letter from input
   randomLetter: (text) => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const upperAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const consonants = 'bcdfghjklmnpqrstvwxyz';
-    const vowels = 'aeiou';
+    // Get letters from input (filter only letters)
+    const letters = text.replace(/[^a-zA-Z]/g, '').split('');
+    
+    if (letters.length === 0) {
+      return [{ name: 'Random Letter', text: 'Enter letters to pick from (e.g. abcdefghijklmnopqrstuvwxyz)' }];
+    }
 
-    // Parse count from text or default to 1
-    const count = parseInt(text) || 1;
-    const clampedCount = Math.min(Math.max(count, 1), 100);
-
-    const randomLetters = Array(clampedCount).fill(0).map(() =>
-      alphabet[Math.floor(Math.random() * alphabet.length)]
-    ).join(' ');
-
-    const randomUppercase = Array(clampedCount).fill(0).map(() =>
-      upperAlphabet[Math.floor(Math.random() * upperAlphabet.length)]
-    ).join(' ');
-
-    const randomConsonants = Array(clampedCount).fill(0).map(() =>
-      consonants[Math.floor(Math.random() * consonants.length)]
-    ).join(' ');
-
-    const randomVowels = Array(clampedCount).fill(0).map(() =>
-      vowels[Math.floor(Math.random() * vowels.length)]
-    ).join(' ');
+    // Pick one random letter
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    const pickedLetter = letters[randomIndex];
 
     return [
-      { name: `Random Lowercase (${clampedCount})`, text: randomLetters },
-      { name: `Random Uppercase (${clampedCount})`, text: randomUppercase },
-      { name: `Random Consonants (${clampedCount})`, text: randomConsonants },
-      { name: `Random Vowels (${clampedCount})`, text: randomVowels },
+      { name: '🎲 Random Letter', text: pickedLetter.toUpperCase() },
     ];
   },
 
@@ -533,28 +516,22 @@ export default function TextToolClient({ config, slug }) {
           </label>
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => setInputText('26')}
+              onClick={() => setInputText('abcdefghijklmnopqrstuvwxyz')}
               className="px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium rounded-lg hover:from-orange-400 hover:to-amber-400 transition-all"
             >
-              A to Z (26)
+              A to Z
             </button>
             <button
-              onClick={() => setInputText('10')}
+              onClick={() => setInputText('aeiou')}
               className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
             >
-              10 Letters
+              Vowels
             </button>
             <button
-              onClick={() => setInputText('5')}
+              onClick={() => setInputText('bcdfghjklmnpqrstvwxyz')}
               className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
             >
-              5 Letters
-            </button>
-            <button
-              onClick={() => setInputText('1')}
-              className="px-4 py-2 bg-white/10 text-white text-sm rounded-lg hover:bg-white/20 transition-all"
-            >
-              1 Letter
+              Consonants
             </button>
             {inputText && (
               <button
@@ -562,7 +539,7 @@ export default function TextToolClient({ config, slug }) {
                 className="px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-lg hover:bg-green-500/30 transition-all flex items-center gap-2"
               >
                 <RefreshCw className="w-4 h-4" />
-                Regenerate
+                Pick Again
               </button>
             )}
           </div>
