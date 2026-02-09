@@ -1,21 +1,34 @@
+/* ===== GEO: Enhanced Structured Data Schemas ===== */
+
+/**
+ * SoftwareApplication schema — enriched for AI search engines.
+ * Removed fake aggregateRating (Google penalty risk).
+ * Added: url, author, datePublished, browserRequirements, softwareVersion.
+ */
 export default function ToolSchema({ name, description, category, url }) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    'name': name,
-    'description': description,
-    'applicationCategory': 'UtilitiesApplication',
-    'operatingSystem': 'Web Browser',
-    'offers': {
+    name,
+    description,
+    url: url || 'https://makersilo.com',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Web Browser',
+    browserRequirements: 'Requires JavaScript. Works on Chrome, Firefox, Safari, Edge.',
+    softwareVersion: '1.0',
+    offers: {
       '@type': 'Offer',
-      'price': '0',
-      'priceCurrency': 'USD',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     },
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': '4.8',
-      'ratingCount': '1250',
+    author: {
+      '@type': 'Organization',
+      name: 'MakerSilo',
+      url: 'https://makersilo.com',
     },
+    datePublished: '2025-01-01',
+    inLanguage: 'en',
   };
 
   return (
@@ -26,34 +39,19 @@ export default function ToolSchema({ name, description, category, url }) {
   );
 }
 
+/**
+ * ImageGallery schema for wallpaper/meme pages.
+ */
 export function ImageGallerySchema({ name, description, images }) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
-    'name': name,
-    'description': description,
-    'image': images || [],
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
-export function WebPageSchema({ title, description, url }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    'name': title,
-    'description': description,
-    'url': url,
-    'isPartOf': {
-      '@type': 'WebSite',
-      'name': 'MakerSilo',
-      'url': 'https://makersilo.com',
+    name,
+    description,
+    image: images || [],
+    author: {
+      '@type': 'Organization',
+      name: 'MakerSilo',
     },
   };
 
@@ -65,4 +63,32 @@ export function WebPageSchema({ title, description, url }) {
   );
 }
 
+/**
+ * WebPage schema with breadcrumb-ready structure.
+ */
+export function WebPageSchema({ title, description, url }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'MakerSilo',
+      url: 'https://makersilo.com',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'MakerSilo',
+    },
+    inLanguage: 'en',
+  };
 
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

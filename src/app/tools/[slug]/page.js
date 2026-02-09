@@ -8,10 +8,13 @@ import TierListClient from './TierListClient';
 import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
 import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
 import AdSlot from '@/components/AdSlot';
+/* ===== GEO: SEO Components ===== */
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
 import LongContent from '@/components/SEO/LongContent';
 import ToolSchema from '@/components/SEO/ToolSchema';
+import KeyTakeaway from '@/components/SEO/KeyTakeaway';
+import TechnicalProcess from '@/components/SEO/TechnicalProcess';
 
 // Generate static paths for all tools
 export async function generateStaticParams() {
@@ -32,10 +35,15 @@ export async function generateMetadata({ params }) {
     title: config.title,
     description: config.description,
     keywords: `${config.keyword}, free ${config.keyword}, online ${config.keyword}, ${config.keyword} for Instagram, ${config.keyword} for Discord`,
+    alternates: {
+      canonical: `https://makersilo.com/tools/${slug}`,
+    },
     openGraph: {
       title: config.title,
       description: config.description,
       type: 'website',
+      url: `https://makersilo.com/tools/${slug}`,
+      siteName: 'MakerSilo',
     },
     twitter: {
       card: 'summary_large_image',
@@ -53,9 +61,12 @@ export default async function ToolPage({ params }) {
     notFound();
   }
 
+  /* GEO: Generate a concise summary from the description for featured snippets */
+  const keyTakeawaySummary = `${config.name} is a free online tool by MakerSilo. ${config.description} No signup required — works instantly in your browser.`;
+
   return (
     <div className="min-h-screen">
-      {/* Schema */}
+      {/* GEO: Enhanced SoftwareApplication Schema */}
       <ToolSchema
         name={config.name}
         description={config.description}
@@ -70,6 +81,7 @@ export default async function ToolPage({ params }) {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl">
+            {/* Semantic H1 — single, clear heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               {config.h1}
             </h1>
@@ -85,10 +97,13 @@ export default async function ToolPage({ params }) {
         <div className="flex gap-8">
           {/* Main Column */}
           <div className="flex-1 min-w-0">
+            {/* GEO: Key Takeaway — AI direct-answer box */}
+            <KeyTakeaway toolName={config.name} summary={keyTakeawaySummary} />
+
             {/* Ad Above Tool */}
             <AdSlot position="above-tool" />
 
-            {/* Tool Interface */}
+            {/* Tool Interface — UNTOUCHED */}
             {slug === 'minecraft-font' ? (
               <MinecraftTextClient config={config} />
             ) : config.generatorType === 'qr' || config.generatorType === 'wifiQr' || config.generatorType === 'barcode' ? (
@@ -105,13 +120,16 @@ export default async function ToolPage({ params }) {
               <TextToolClient config={config} slug={slug} />
             )}
 
-            {/* How to Use */}
+            {/* GEO: Technical Process — Trust & E-E-A-T */}
+            <TechnicalProcess toolName={config.name} />
+
+            {/* GEO: How to Use — Semantic <ol> + HowTo Schema */}
             <HowToUse keyword={config.keyword} />
 
-            {/* FAQ Section */}
+            {/* GEO: FAQ Section — Featured Snippet + FAQPage Schema */}
             <FAQSection faqs={config.faq} keyword={config.keyword} />
 
-            {/* Long Content */}
+            {/* GEO: Long Content — <article> + lead paragraph emphasis */}
             <LongContent content={config.longContent} keyword={config.keyword} />
 
             {/* Ad Below Content */}

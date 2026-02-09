@@ -184,3 +184,5 @@ export default function AnimeNameClient({ config }) {
   );
 }
 
+
+

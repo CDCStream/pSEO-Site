@@ -9,6 +9,11 @@ import CoupleNameClient from './CoupleNameClient';
 import RobloxNameClient from './RobloxNameClient';
 import GamingNameClient from './GamingNameClient';
 import AestheticYouTubeNameClient from './AestheticYouTubeNameClient';
+/* ===== GEO: SEO Components ===== */
+import KeyTakeaway from '@/components/SEO/KeyTakeaway';
+import TechnicalProcess from '@/components/SEO/TechnicalProcess';
+import FAQSection from '@/components/SEO/FAQSection';
+import LongContent from '@/components/SEO/LongContent';
 
 // Generate static params for all generator pages
 export async function generateStaticParams() {
@@ -25,7 +30,7 @@ export async function generateMetadata({ params }) {
   return {
     title: config.title,
     description: config.description,
-    keywords: [config.keyword, 'name generator', 'free online tool', 'random name'],
+    keywords: [config.keyword, 'name generator', 'free online tool', 'random name', 'AI generator'],
     alternates: {
       canonical: `${siteConfig.url}/generators/${slug}`,
     },
@@ -36,8 +41,22 @@ export async function generateMetadata({ params }) {
       siteName: siteConfig.name,
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: config.title,
+      description: config.description,
+    },
   };
 }
+
+/* GEO: AI-powered generator technical steps */
+const aiGeneratorSteps = [
+  'You fill in the input fields describing your preferences.',
+  'Your request is sent to our AI engine (powered by Claude) for processing.',
+  'The AI analyzes your input and generates creative, unique name suggestions.',
+  'Results are displayed instantly — pick your favorites.',
+  'Click to copy any name directly to your clipboard.',
+];
 
 export default async function GeneratorPage({ params }) {
   const { slug } = await params;
@@ -47,7 +66,7 @@ export default async function GeneratorPage({ params }) {
     notFound();
   }
 
-  // JSON-LD Schema
+  /* GEO: SoftwareApplication + WebApplication JSON-LD */
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -55,20 +74,34 @@ export default async function GeneratorPage({ params }) {
     description: config.description,
     url: `${siteConfig.url}/generators/${slug}`,
     applicationCategory: 'UtilityApplication',
-    operatingSystem: 'Any',
+    operatingSystem: 'Web Browser',
+    browserRequirements: 'Requires JavaScript',
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     },
+    author: {
+      '@type': 'Organization',
+      name: 'MakerSilo',
+      url: 'https://makersilo.com',
+    },
+    datePublished: '2025-01-01',
+    inLanguage: 'en',
   };
+
+  /* GEO: Key takeaway summary */
+  const keyTakeawaySummary = `${config.name} is a free AI-powered tool by MakerSilo. ${config.description} Powered by Claude AI — no signup required.`;
 
   return (
     <>
+      {/* GEO: WebApplication JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <main className="min-h-screen bg-gray-950 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
@@ -81,7 +114,12 @@ export default async function GeneratorPage({ params }) {
             </p>
           </div>
 
-          {/* Tool Interface */}
+          {/* GEO: Key Takeaway — AI featured snippet */}
+          <div className="max-w-4xl mx-auto mb-6">
+            <KeyTakeaway toolName={config.name} summary={keyTakeawaySummary} />
+          </div>
+
+          {/* Tool Interface — UNTOUCHED */}
           <div className="max-w-4xl mx-auto mb-12">
             {slug === 'youtube-name-generator' ? (
               <YouTubeNameClient config={config} />
@@ -104,42 +142,28 @@ export default async function GeneratorPage({ params }) {
             )}
           </div>
 
-          {/* FAQ Section */}
+          {/* GEO: Technical Process — Trust & E-E-A-T */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <TechnicalProcess toolName={config.name} steps={aiGeneratorSteps} />
+          </div>
+
+          {/* GEO: FAQ Section with FAQPage JSON-LD schema */}
           {config.faq && config.faq.length > 0 && (
-            <section className="max-w-4xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                {config.faq.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 border border-white/10 rounded-xl p-6"
-                  >
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.q}</h3>
-                    <p className="text-gray-400">{item.a}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+            <div className="max-w-4xl mx-auto mb-12">
+              <FAQSection faqs={config.faq} keyword={config.keyword} />
+            </div>
           )}
 
-          {/* Long Content */}
+          {/* GEO: Long Content — <article> with lead emphasis */}
           {config.longContent && (
-            <section className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">About {config.name}</h2>
-                <div className="prose prose-invert prose-orange max-w-none">
-                  {config.longContent.split('\n\n').map((paragraph, index) => (
-                    <p key={index} className="text-gray-300 mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
+                <LongContent content={config.longContent} keyword={config.name} />
               </div>
-            </section>
+            </div>
           )}
         </div>
       </main>
     </>
   );
 }
-

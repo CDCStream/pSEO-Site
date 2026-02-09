@@ -1,6 +1,11 @@
 import { notFound } from 'next/navigation';
 import { randomizersConfig, siteConfig } from '@/config/pSEO-data';
 import RandomizerClient from './RandomizerClient';
+/* ===== GEO: SEO Components ===== */
+import KeyTakeaway from '@/components/SEO/KeyTakeaway';
+import TechnicalProcess from '@/components/SEO/TechnicalProcess';
+import FAQSection from '@/components/SEO/FAQSection';
+import LongContent from '@/components/SEO/LongContent';
 
 // Generate static params for all randomizer pages
 export async function generateStaticParams() {
@@ -28,8 +33,22 @@ export async function generateMetadata({ params }) {
       siteName: siteConfig.name,
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: config.title,
+      description: config.description,
+    },
   };
 }
+
+/* GEO: Randomizer technical steps */
+const randomizerTechSteps = [
+  'Click the "Generate" button to start the randomization process.',
+  'A cryptographically random selection is made from the curated dataset.',
+  'The result is displayed instantly with relevant details and images.',
+  'Click again to generate a new random result.',
+  'Works entirely in your browser — no data is collected.',
+];
 
 export default async function RandomizerPage({ params }) {
   const { slug } = await params;
@@ -39,7 +58,7 @@ export default async function RandomizerPage({ params }) {
     notFound();
   }
 
-  // JSON-LD Schema
+  /* GEO: Enhanced WebApplication JSON-LD */
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -47,20 +66,34 @@ export default async function RandomizerPage({ params }) {
     description: config.description,
     url: `${siteConfig.url}/randomizers/${slug}`,
     applicationCategory: 'UtilityApplication',
-    operatingSystem: 'Any',
+    operatingSystem: 'Web Browser',
+    browserRequirements: 'Requires JavaScript',
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     },
+    author: {
+      '@type': 'Organization',
+      name: 'MakerSilo',
+      url: 'https://makersilo.com',
+    },
+    datePublished: '2025-01-01',
+    inLanguage: 'en',
   };
+
+  /* GEO: Key takeaway summary */
+  const keyTakeawaySummary = `${config.name} is a free random generator by MakerSilo. ${config.description} Click to generate — no signup required.`;
 
   return (
     <>
+      {/* GEO: WebApplication JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <main className="min-h-screen bg-gray-950 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
@@ -73,47 +106,38 @@ export default async function RandomizerPage({ params }) {
             </p>
           </div>
 
-          {/* Tool Interface */}
+          {/* GEO: Key Takeaway */}
+          <div className="max-w-4xl mx-auto mb-6">
+            <KeyTakeaway toolName={config.name} summary={keyTakeawaySummary} />
+          </div>
+
+          {/* Tool Interface — UNTOUCHED */}
           <div className="max-w-4xl mx-auto mb-12">
             <RandomizerClient config={config} slug={slug} />
           </div>
 
-          {/* FAQ Section */}
+          {/* GEO: Technical Process */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <TechnicalProcess toolName={config.name} steps={randomizerTechSteps} />
+          </div>
+
+          {/* GEO: FAQ Section with JSON-LD */}
           {config.faq && config.faq.length > 0 && (
-            <section className="max-w-4xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                {config.faq.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 border border-white/10 rounded-xl p-6"
-                  >
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.q}</h3>
-                    <p className="text-gray-400">{item.a}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+            <div className="max-w-4xl mx-auto mb-12">
+              <FAQSection faqs={config.faq} keyword={config.keyword} />
+            </div>
           )}
 
-          {/* Long Content */}
+          {/* GEO: Long Content */}
           {config.longContent && (
-            <section className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">About {config.name}</h2>
-                <div className="prose prose-invert prose-orange max-w-none">
-                  {config.longContent.split('\n\n').map((paragraph, index) => (
-                    <p key={index} className="text-gray-300 mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
+                <LongContent content={config.longContent} keyword={config.name} />
               </div>
-            </section>
+            </div>
           )}
         </div>
       </main>
     </>
   );
 }
-

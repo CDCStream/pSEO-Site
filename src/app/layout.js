@@ -7,6 +7,49 @@ import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
 
+/* ===== GEO: Organization + Person JSON-LD (E-E-A-T) ===== */
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'MakerSilo',
+  url: 'https://makersilo.com',
+  logo: 'https://makersilo.com/logo.png',
+  description: 'Free online tools for creators — text generators, meme makers, wallpaper creators, and AI-powered name generators.',
+  sameAs: ['https://blog.makersilo.com'],
+  foundingDate: '2025',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    url: 'https://makersilo.com',
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'MakerSilo Team',
+  url: 'https://makersilo.com',
+  jobTitle: 'Full-Stack Developer & Creator',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'MakerSilo',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'MakerSilo',
+  url: 'https://makersilo.com',
+  description: 'Free online tools for creators. Transform text, create memes, copy symbols, and generate wallpapers.',
+  publisher: { '@type': 'Organization', name: 'MakerSilo' },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://makersilo.com/tools?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 // Minimal font loading for better performance
 const outfit = Outfit({
   subsets: ['latin'],
@@ -84,7 +127,21 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
 
-{/* Preconnect to Google Analytics - lazy loaded */}
+        {/* GEO: Organization + Person + WebSite JSON-LD for E-E-A-T */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+
+        {/* Preconnect to Google Analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
 
