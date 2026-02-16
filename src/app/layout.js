@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
+const AHREFS_KEY = 'uQBXFDRhKP8hiFHH08h4AQ';
 
 // Only load the primary font - others loaded on demand
 const outfit = Outfit({
@@ -84,8 +85,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
 
-{/* Preconnect to Google Analytics - lazy loaded */}
+{/* Preconnect to analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
 
 
         {/* Google Analytics 4 - Load after user interaction for better mobile performance */}
@@ -115,6 +117,30 @@ export default function RootLayout({ children }) {
 
             // Fallback: load after 5 seconds
             setTimeout(loadGA, 5000);
+          `}
+        </Script>
+
+        {/* Ahrefs Web Analytics - Lazy loaded like GA */}
+        <Script id="ahrefs-analytics" strategy="lazyOnload">
+          {`
+            function loadAhrefs() {
+              if (window.ahrefsLoaded) return;
+              window.ahrefsLoaded = true;
+
+              var script = document.createElement('script');
+              script.src = 'https://analytics.ahrefs.com/analytics.js';
+              script.setAttribute('data-key', '${AHREFS_KEY}');
+              script.async = true;
+              document.head.appendChild(script);
+            }
+
+            // Load on first interaction
+            ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
+              window.addEventListener(event, loadAhrefs, { once: true, passive: true });
+            });
+
+            // Fallback: load after 6 seconds (slightly after GA)
+            setTimeout(loadAhrefs, 6000);
           `}
         </Script>
       </head>
