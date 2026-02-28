@@ -19,6 +19,9 @@ const PaletteIcon = ({ className }) => (
 const LetterAIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h1.5l1-3h11l1 3H19L13 4h-2L5 20"/><path d="M7 14h10"/></svg>
 );
+const CalculatorIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+);
 const ArrowRightIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
 );
@@ -78,6 +81,14 @@ const categories = [
     icon: PaletteIcon,
     color: 'from-blue-500 to-cyan-500',
     tools: ['Solid Colors', 'Gradients', 'Aesthetic', 'Patterns'],
+  },
+  {
+    title: 'Calculators',
+    description: 'AI-powered calculators and predictors for everyday decisions',
+    href: '/calculators',
+    icon: CalculatorIcon,
+    color: 'from-cyan-500 to-teal-500',
+    tools: ['Snow Day Predictor', 'AI Analysis', 'Weather Data', 'School Closures'],
   },
 ];
 

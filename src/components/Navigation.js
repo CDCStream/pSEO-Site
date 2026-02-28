@@ -37,6 +37,9 @@ const UserIcon = ({ className }) => (
 const LetterAIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h1.5l1-3h11l1 3H19L13 4h-2L5 20"/><path d="M7 14h10"/></svg>
 );
+const CalculatorIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+);
 
 const navItems = [
   {
@@ -125,6 +128,15 @@ const navItems = [
       { label: 'Anime Name', href: '/generators/anime-name-generator' },
     ],
   },
+  {
+    label: 'Calculators',
+    href: '/calculators',
+    icon: CalculatorIcon,
+    color: 'from-cyan-500 to-teal-500',
+    items: [
+      { label: 'Snow Day Calculator', href: '/calculators/snow-day-calculator' },
+    ],
+  },
 ];
 
 export default function Navigation() {
@@ -133,7 +145,7 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 bg-glass-dark">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
           <Link href="/" prefetch={false} className="flex items-center gap-3">
