@@ -27,11 +27,8 @@ yarn-error.log*
 .env
 
 # service account keys
-*.json
-!package.json
-!package-lock.json
-!jsconfig.json
-!tsconfig.json
+service-account.json
+makersilo-dd174afb0a76.json
 
 # vercel
 .vercel
