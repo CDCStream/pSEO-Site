@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 import { wallpapersConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import WallpaperClient from './WallpaperClient';
+import ChristmasGalleryClient from './ChristmasGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
 import LongContent from '@/components/SEO/LongContent';
 import { ImageGallerySchema } from '@/components/SEO/ToolSchema';
-import { Palette, Sliders, Download, Monitor } from 'lucide-react';
+import { Palette, Sliders, Download, Monitor, Search, Smartphone } from 'lucide-react';
 
 export async function generateStaticParams() {
   const slugs = getSlugsForCategory('wallpapers');
@@ -56,6 +57,13 @@ const wallpaperSteps = [
   },
 ];
 
+const gallerySteps = [
+  { icon: Search, title: 'Browse Gallery', description: 'Scroll through our collection of HD Christmas wallpapers.' },
+  { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+  { icon: Download, title: 'Download', description: 'Hit the download button to save the wallpaper as a PNG file.' },
+  { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
+];
+
 export default async function WallpaperPage({ params }) {
   const { slug } = await params;
   const config = wallpapersConfig[slug];
@@ -95,9 +103,12 @@ export default async function WallpaperPage({ params }) {
           <div className="flex-1 min-w-0">
             <AdSlot position="above-tool" />
 
-            <WallpaperClient config={config} slug={slug} />
+            {config.generatorType === 'christmasGallery'
+              ? <ChristmasGalleryClient />
+              : <WallpaperClient config={config} slug={slug} />
+            }
 
-            <HowToUse keyword={config.keyword} steps={wallpaperSteps} />
+            <HowToUse keyword={config.keyword} steps={config.generatorType === 'christmasGallery' ? gallerySteps : wallpaperSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

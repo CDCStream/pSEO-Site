@@ -1647,6 +1647,36 @@ Color customization is unlimited. Start with two-color gradients or add multiple
 
 Gradient wallpapers work beautifully across contexts. They're sophisticated enough for professional devices, expressive enough for personal style, and subtle enough to not distract from icons and content. Create the perfect backdrop for your digital life.`,
   },
+  'christmas-wallpaper': {
+    category: 'wallpapers',
+    name: 'Christmas Wallpaper',
+    keyword: 'Christmas Wallpaper',
+    title: 'Free Christmas Wallpapers HD - Download Festive Backgrounds | MakerSilo',
+    description: 'Download 31 stunning free Christmas wallpapers in HD. Festive holiday backgrounds for your phone, tablet, and desktop. No sign-up required.',
+    h1: 'Free Christmas Wallpapers HD',
+    subtitle: 'Browse and download 31 beautifully crafted Christmas wallpapers for any device. Completely free, no sign-up.',
+    icon: 'tree-pine',
+    generatorType: 'christmasGallery',
+    faq: [
+      { q: 'Are these Christmas wallpapers free to download?', a: 'Yes! All 31 Christmas wallpapers are completely free to download. No sign-up, no watermarks, no limits.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are high-resolution PNG files suitable for phones, tablets, and desktop screens.' },
+      { q: 'Can I use these wallpapers commercially?', a: 'These wallpapers are intended for personal use as device backgrounds. For commercial use, please contact us.' },
+      { q: 'How do I set a wallpaper on my phone?', a: 'Download the image, go to your phone settings, look for "Wallpaper" or "Display", and select the downloaded image from your gallery.' },
+      { q: 'Will more Christmas wallpapers be added?', a: 'Yes! We regularly add new festive designs, especially as the holiday season approaches.' },
+      { q: 'What styles are included?', a: 'Our collection includes cozy winter scenes, Christmas trees, snowflakes, ornaments, Santa Claus themes, northern lights, and more festive designs.' },
+    ],
+    longContent: `Christmas is a time of warmth, joy, and celebration, and what better way to embrace the holiday spirit than by dressing up your devices with beautiful Christmas wallpapers? Our curated collection of 31 high-quality festive backgrounds brings the magic of the season right to your screen.
+
+Each wallpaper in our collection has been carefully crafted to capture a different aspect of the Christmas experience. From cozy fireside scenes and snow-covered landscapes to beautifully decorated Christmas trees and twinkling lights, every image tells a holiday story. The diverse range ensures you will find the perfect match for your personal style and mood.
+
+Our Christmas wallpapers come in high resolution, making them suitable for any device you own. Whether you are looking for a phone background that greets you with holiday cheer every time you check your notifications, a tablet wallpaper for browsing recipes during holiday baking, or a desktop background that transforms your workspace into a winter wonderland, we have you covered.
+
+The collection spans various Christmas themes and aesthetics. You will find traditional red and green color palettes alongside modern minimalist designs. Some wallpapers feature classic Christmas symbols like candy canes, stockings, and wreaths, while others take a more artistic approach with abstract winter patterns and gradient-based festive compositions.
+
+Downloading is simple and instant. Just browse the gallery, click on any wallpaper that catches your eye, and hit the download button. The image saves directly to your device as a high-quality PNG file, ready to be set as your wallpaper. No accounts to create, no emails to provide, no hidden costs.
+
+Refresh your devices throughout the holiday season by switching between different wallpapers from the collection. Start with a warm Advent-themed background in early December, switch to a Christmas tree design on Christmas Eve, and ring in the new year with a snowy winter landscape. With 31 options to choose from, you will never run out of festive inspiration.`,
+  },
 };
 
 // Get all pages for sitemap generation

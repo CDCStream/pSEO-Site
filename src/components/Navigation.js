@@ -34,6 +34,9 @@ const DiceIcon = ({ className }) => (
 const UserIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 );
+const LetterAIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h1.5l1-3h11l1 3H19L13 4h-2L5 20"/><path d="M7 14h10"/></svg>
+);
 
 const navItems = [
   {
@@ -64,6 +67,15 @@ const navItems = [
     ],
   },
   {
+    label: 'Letter Art',
+    href: '/tools/letter-art',
+    icon: LetterAIcon,
+    color: 'from-pink-500 to-rose-500',
+    items: [
+      { label: 'Bubble Letters', href: '/tools/letter-art/bubble-letters' },
+    ],
+  },
+  {
     label: 'Meme Maker',
     href: '/meme-maker',
     icon: ImageIcon,
@@ -84,6 +96,7 @@ const navItems = [
       { label: 'Solid Color Backgrounds', href: '/wallpapers/solid-color-backgrounds' },
       { label: 'Gradient Wallpaper', href: '/wallpapers/gradient-wallpaper-generator' },
       { label: 'Aesthetic Wallpaper', href: '/wallpapers/aesthetic-wallpaper' },
+      { label: 'Christmas Wallpaper', href: '/wallpapers/christmas-wallpaper' },
     ],
   },
   {

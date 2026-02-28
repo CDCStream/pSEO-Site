@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import { Snowflake, Palette, Cat, Square, Blend, ArrowRight } from 'lucide-react';
+import { Snowflake, Palette, Cat, Square, Blend, TreePine, ArrowRight } from 'lucide-react';
 import { wallpapersConfig } from '@/config/pSEO-data';
 
 const iconMap = {
   'snowflake': Snowflake,
-  'bow-tie': Palette, // Using Palette as fallback
+  'bow-tie': Palette,
   'cat': Cat,
   'palette': Palette,
   'square': Square,
   'blend': Blend,
+  'tree-pine': TreePine,
 };
 
 export const metadata = {
