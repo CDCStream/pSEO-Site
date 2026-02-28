@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Image, MessageCircle, Armchair, Coffee, ArrowRight } from 'lucide-react';
+import { Image, MessageCircle, Armchair, Coffee, RotateCcw, ArrowRight } from 'lucide-react';
 import { memeMakerConfig } from '@/config/pSEO-data';
 
 const iconMap = {
@@ -7,6 +7,7 @@ const iconMap = {
   'message-circle': MessageCircle,
   'armchair': Armchair,
   'coffee': Coffee,
+  'rotate-ccw': RotateCcw,
 };
 
 export const metadata = {

@@ -1013,6 +1013,34 @@ Our generator makes creating these memes effortless. Type your opinion, see it r
 
 Best practices for Change My Mind memes include keeping text concise (it needs to fit the sign legibly), choosing genuinely debatable topics, and considering your audience. The most shared versions balance confidence with just enough controversy to spark discussion.`,
   },
+  'uno-reverse-card': {
+    category: 'meme-maker',
+    name: 'Uno Reverse Card Maker',
+    keyword: 'Uno Reverse Card Maker',
+    title: 'Custom Uno Reverse Card Maker - Create Your Own Meme',
+    description: 'Create a custom Uno Reverse Card meme with our free online maker. Choose colors, add your own text or image, and download a high-quality PNG instantly.',
+    h1: 'Custom Uno Reverse Card Maker',
+    subtitle: 'Design your own personalized Uno Reverse Card meme with custom colors, text, and images.',
+    icon: 'rotate-ccw',
+    templateType: 'unoReverse',
+    faq: [
+      { q: 'What is the Uno Reverse Card meme?', a: 'The Uno Reverse Card meme uses the iconic card from the Uno card game to symbolize turning a situation around on someone. When someone insults or challenges you, playing the Reverse Card means the same thing now applies to them — essentially a visual "no u" response.' },
+      { q: 'How do I customize my Uno Reverse Card?', a: 'Use our maker to pick one of four classic Uno colors (Red, Blue, Green, Yellow), type your own center text like "No U" or "Blocked", or upload a photo to place inside the card. The live preview updates instantly as you make changes.' },
+      { q: 'Can I upload my own image to the card?', a: 'Yes! Drag and drop or click to upload any image. It will be automatically masked into the oval center area of the card for a clean, authentic look.' },
+      { q: 'Is this Uno Reverse Card Maker free?', a: 'Absolutely. Our tool is 100% free with no watermarks, no sign-up, and unlimited downloads.' },
+      { q: 'What file format is the download?', a: 'Your custom Uno Reverse Card downloads as a high-quality PNG image, perfect for sharing on social media, messaging apps, or forums.' },
+      { q: 'Can I use it on mobile?', a: 'Yes, the maker is fully responsive and works on phones, tablets, and desktops.' },
+    ],
+    longContent: `The Uno Reverse Card has become one of the most recognizable and widely used memes on the internet. Originating from the popular Mattel card game Uno, the Reverse Card's in-game function is simple: it reverses the direction of play. Online, however, it has taken on a much bigger cultural meaning — it represents the ultimate comeback, a way to deflect any statement, insult, or situation right back at the sender.
+
+The meme gained massive traction across platforms like Reddit, Twitter, Instagram, and Discord. When someone says something negative or challenging, responding with an Uno Reverse Card image is the visual equivalent of saying "no, you." Its simplicity is what makes it so powerful. No explanation is needed — the card speaks for itself. The meme has been used in everything from casual group chats to viral Twitter threads with millions of impressions.
+
+Our Custom Uno Reverse Card Maker takes this beloved meme format and gives you full creative control. Unlike basic meme generators that only let you slap text on a static image, our tool draws the entire card dynamically on an HTML5 Canvas. You can choose from the four classic Uno colors — Red, Blue, Green, and Yellow — and watch the card's gradient background update in real time. Want to add a personal touch? Type custom text that replaces the center of the card, or upload your own photo that gets cleanly masked into the oval area.
+
+Whether you are settling a friendly debate, responding to a roast, or just creating content for your social media pages, this tool gives you everything you need. The generated cards download as high-quality PNG files with no watermarks, ready to be shared anywhere. The entire process happens in your browser — no server uploads, no waiting, complete privacy.
+
+The Uno Reverse Card meme shows no signs of slowing down. Its universal appeal, instant recognizability, and endless adaptability ensure it will remain a staple of internet culture for years to come. With our maker, you are not just sharing a meme — you are creating a personalized version that hits harder and stands out from the crowd.`,
+  },
 };
 
 // Generators (Name Generators) configuration

@@ -1,21 +1,40 @@
 import './globals.css';
 import Script from 'next/script';
-import { Outfit } from 'next/font/google';
+import { Outfit, JetBrains_Mono, Press_Start_2P } from 'next/font/google';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
 
 const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
-const AHREFS_KEY = 'uQBXFDRhKP8hiFHH08h4AQ';
 
-// Only load the primary font - others loaded on demand
+// Optimized font loading - only essential weights
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
-  weight: ['400', '600', '700'],
+  weight: ['400', '600', '700'], // Only 3 weights for better performance
   preload: true,
   fallback: ['system-ui', 'sans-serif'],
+});
+
+// Mono font - lazy loaded, not critical for initial render
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+  weight: ['400'],
+  preload: false,
+  fallback: ['monospace'],
+});
+
+// Minecraft font - lazy loaded, only used on specific pages
+const pressStart2P = Press_Start_2P({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-minecraft',
+  weight: '400',
+  preload: false,
+  fallback: ['monospace'],
 });
 
 export const metadata = {
@@ -34,18 +53,16 @@ export const metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/logo.png',
         alt: 'MakerSilo - Free Online Tools for Creators',
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'MakerSilo - Free Online Tools for Creators',
     description: 'Transform your text, create memes, find symbols, and generate beautiful wallpapers.',
-    images: ['/og-image.png'],
+    images: ['/logo.png'],
     creator: '@makersilo',
   },
   robots: {
@@ -78,17 +95,24 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={outfit.variable}
+      className={`${outfit.variable} ${jetbrainsMono.variable} ${pressStart2P.variable}`}
       suppressHydrationWarning
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
 
-{/* Preconnect to analytics - lazy loaded */}
+{/* Preconnect to Google Analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
 
+        {/* Preload critical font for faster LCP */}
+        <link
+          rel="preload"
+          href="/_next/static/media/1b99372b3eaef0c8.p.758e15a8.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
 
         {/* Google Analytics 4 - Load after user interaction for better mobile performance */}
         <Script id="google-analytics" strategy="lazyOnload">
@@ -117,30 +141,6 @@ export default function RootLayout({ children }) {
 
             // Fallback: load after 5 seconds
             setTimeout(loadGA, 5000);
-          `}
-        </Script>
-
-        {/* Ahrefs Web Analytics - Lazy loaded like GA */}
-        <Script id="ahrefs-analytics" strategy="lazyOnload">
-          {`
-            function loadAhrefs() {
-              if (window.ahrefsLoaded) return;
-              window.ahrefsLoaded = true;
-
-              var script = document.createElement('script');
-              script.src = 'https://analytics.ahrefs.com/analytics.js';
-              script.setAttribute('data-key', '${AHREFS_KEY}');
-              script.async = true;
-              document.head.appendChild(script);
-            }
-
-            // Load on first interaction
-            ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
-              window.addEventListener(event, loadAhrefs, { once: true, passive: true });
-            });
-
-            // Fallback: load after 6 seconds (slightly after GA)
-            setTimeout(loadAhrefs, 6000);
           `}
         </Script>
       </head>

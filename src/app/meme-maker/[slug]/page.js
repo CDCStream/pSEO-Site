@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 import { memeMakerConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import MemeClient from './MemeClient';
+import UnoReverseClient from './UnoReverseClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
 import LongContent from '@/components/SEO/LongContent';
 import ToolSchema from '@/components/SEO/ToolSchema';
-import { Image, Type, Download, Share2 } from 'lucide-react';
+import { Image, Type, Download, Share2, Palette, Upload as UploadIcon } from 'lucide-react';
 
 export async function generateStaticParams() {
   const slugs = getSlugsForCategory('meme-maker');
@@ -56,6 +57,29 @@ const memeSteps = [
   },
 ];
 
+const unoSteps = [
+  {
+    icon: Palette,
+    title: 'Pick a Color',
+    description: 'Choose from Red, Blue, Green, or Yellow — the four classic Uno card colors.',
+  },
+  {
+    icon: Type,
+    title: 'Add Text or Image',
+    description: 'Type custom center text or upload your own photo to personalize the card.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your custom Uno Reverse Card as a high-quality PNG file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share It',
+    description: 'Send it in group chats, post on social media, or use it as a reaction image.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -96,9 +120,13 @@ export default async function MemePage({ params }) {
           <div className="flex-1 min-w-0">
             <AdSlot position="above-tool" />
 
-            <MemeClient config={config} slug={slug} />
+            {slug === 'uno-reverse-card' ? (
+              <UnoReverseClient config={config} slug={slug} />
+            ) : (
+              <MemeClient config={config} slug={slug} />
+            )}
 
-            <HowToUse keyword={config.keyword} steps={memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

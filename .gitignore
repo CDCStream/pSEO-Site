@@ -26,6 +26,13 @@ yarn-error.log*
 .env*.local
 .env
 
+# service account keys
+*.json
+!package.json
+!package-lock.json
+!jsconfig.json
+!tsconfig.json
+
 # vercel
 .vercel
 
@@ -33,7 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Google Indexing API
-service-account.json
-indexing-log.json
-makersilo-dd174afb0a76.json
+
