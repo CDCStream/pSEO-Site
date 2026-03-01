@@ -122,11 +122,15 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* Ahrefs Web Analytics */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="uQBXFDRhKP8hiFHH08h4AQ"
-          strategy="afterInteractive"
-        />
+        <Script id="ahrefs-analytics" strategy="afterInteractive">
+          {`
+            var s = document.createElement('script');
+            s.src = 'https://analytics.ahrefs.com/analytics.js';
+            s.setAttribute('data-key', 'uQBXFDRhKP8hiFHH08h4AQ');
+            s.async = true;
+            document.head.appendChild(s);
+          `}
+        </Script>
 
         <ToastProvider>
           <Navigation />
