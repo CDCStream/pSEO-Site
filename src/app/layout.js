@@ -101,53 +101,33 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
-
-{/* Preconnect to Google Analytics - lazy loaded */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
-        {/* Preload critical font for faster LCP */}
-        <link
-          rel="preload"
-          href="/_next/static/media/1b99372b3eaef0c8.p.758e15a8.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-
-        {/* Google Analytics 4 - Load after user interaction for better mobile performance */}
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            // Delay GA until user interacts or after 5 seconds
-            function loadGA() {
-              if (window.gaLoaded) return;
-              window.gaLoaded = true;
-
-              var script = document.createElement('script');
-              script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
-              script.async = true;
-              document.head.appendChild(script);
-
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}');
-            }
-
-            // Load on first interaction
-            ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
-              window.addEventListener(event, loadGA, { once: true, passive: true });
-            });
-
-            // Fallback: load after 5 seconds
-            setTimeout(loadGA, 5000);
-          `}
-        </Script>
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning
       >
+        {/* GA4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
+        {/* Ahrefs Web Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="uQBXFDRhKP8hiFHH08h4AQ"
+          strategy="afterInteractive"
+        />
+
         <ToastProvider>
           <Navigation />
           <main className="flex-1">
