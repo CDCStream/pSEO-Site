@@ -45,9 +45,12 @@ export async function POST(request) {
     });
 
   } catch (error) {
+    if (error.userError) {
+      return Response.json({ error: error.message }, { status: 400 });
+    }
     console.error('YouTube Comments API Error:', error);
     return Response.json(
-      { error: error.message || 'Failed to fetch comments. Please try again.' },
+      { error: 'Failed to fetch comments. Please try again.' },
       { status: 500 }
     );
   }
@@ -87,7 +90,14 @@ async function fetchAllComments(videoId, apiKey, maxComments = 500) {
     const data = await response.json();
 
     if (data.error) {
-      throw new Error(data.error.message || 'YouTube API error');
+      const msg = data.error.message || '';
+      if (msg.includes('disabled comments') || msg.includes('commentsDisabled')) {
+        throw { userError: true, message: 'This video has comments disabled. Please try a different video.' };
+      }
+      if (msg.includes('not found') || data.error.code === 404) {
+        throw { userError: true, message: 'Video not found. Please check the URL and try again.' };
+      }
+      throw new Error(msg || 'YouTube API error');
     }
 
     if (!data.items || data.items.length === 0) {
