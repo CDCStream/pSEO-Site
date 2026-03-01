@@ -69,8 +69,8 @@ export default function BubbleLettersPage() {
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://makersilo.com' },
               { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://makersilo.com/tools' },
-              { '@type': 'ListItem', position: 3, name: 'Letter Art' },
-              { '@type': 'ListItem', position: 4, name: 'Bubble Letters', item: 'https://makersilo.com/tools/letter-art/bubble-letters' },
+              { '@type': 'ListItem', position: 3, name: 'Letter Art', item: 'https://makersilo.com/tools/letter-art' },
+              { '@type': 'ListItem', position: 4, name: 'Bubble Letters' },
             ],
           }),
         }}
