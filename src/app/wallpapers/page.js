@@ -57,7 +57,7 @@ export default function WallpapersPage() {
             return (
               <Link
                 key={wallpaper.slug}
-                href={`/wallpapers/${wallpaper.slug}`}
+                href={`/wallpapers/${wallpaper.slug}/`}
                 className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/[0.07]"
               >
                 <div className="flex items-start gap-4">

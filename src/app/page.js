@@ -45,7 +45,7 @@ const categories = [
   {
     title: 'Text Tools',
     description: 'Transform your text with unique fonts, styles, and encodings',
-    href: '/tools',
+    href: '/tools/',
     icon: TypeIcon,
     color: 'from-orange-500 to-amber-500',
     tools: ['Small Text', 'Glitch Text', 'Gothic Font', 'Morse Code'],
@@ -53,7 +53,7 @@ const categories = [
   {
     title: 'Symbols',
     description: 'Copy and paste symbols, emojis, and special characters',
-    href: '/symbols',
+    href: '/symbols/',
     icon: SparklesIcon,
     color: 'from-purple-500 to-pink-500',
     tools: ['Music ♪', 'Hearts ❤', 'Kaomoji (◕‿◕)', 'Japanese あ'],
@@ -61,7 +61,7 @@ const categories = [
   {
     title: 'Letter Art',
     description: 'Create stunning letter art with bubble fonts, outlines, and shadow effects',
-    href: '/tools/letter-art',
+    href: '/tools/letter-art/',
     icon: LetterAIcon,
     color: 'from-pink-500 to-rose-500',
     tools: ['Bubble Letters', 'Custom Fonts', 'Shadow Effects', 'Transparent PNG'],
@@ -69,7 +69,7 @@ const categories = [
   {
     title: 'Meme Maker',
     description: 'Create viral memes with our easy-to-use templates',
-    href: '/meme-maker',
+    href: '/meme-maker/',
     icon: ImageIcon,
     color: 'from-green-500 to-emerald-500',
     tools: ['Drake Meme', 'Speech Bubble', 'Bernie Sanders', 'Change My Mind'],
@@ -77,7 +77,7 @@ const categories = [
   {
     title: 'Wallpapers',
     description: 'Generate beautiful backgrounds for any device',
-    href: '/wallpapers',
+    href: '/wallpapers/',
     icon: PaletteIcon,
     color: 'from-blue-500 to-cyan-500',
     tools: ['Solid Colors', 'Gradients', 'Aesthetic', 'Patterns'],
@@ -85,7 +85,7 @@ const categories = [
   {
     title: 'Calculators',
     description: 'AI-powered calculators and predictors for everyday decisions',
-    href: '/calculators',
+    href: '/calculators/',
     icon: CalculatorIcon,
     color: 'from-cyan-500 to-teal-500',
     tools: ['Snow Day Predictor', 'AI Analysis', 'Weather Data', 'School Closures'],
@@ -144,7 +144,7 @@ export default function HomePage() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/tools"
+                href="/tools/"
                 prefetch={false}
                 className="btn-primary px-8 py-4 rounded-xl text-lg inline-flex items-center gap-2"
               >
@@ -152,7 +152,7 @@ export default function HomePage() {
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
-                href="/symbols"
+                href="/symbols/"
                 prefetch={false}
                 className="btn-secondary px-8 py-4 rounded-xl text-lg"
               >
@@ -240,18 +240,18 @@ export default function HomePage() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {[
-            { label: 'Small Text ᵗⁱⁿʸ', href: '/tools/small-text-generator' },
-            { label: 'Gothic 𝔉𝔬𝔫𝔱', href: '/tools/gothic-font' },
-            { label: 'Glitch T̷̙̓e̴̢͠x̵̣̆t̵͇̐', href: '/tools/glitch-text-generator' },
-            { label: 'Hearts ❤', href: '/symbols/heart-symbol-copy-paste' },
-            { label: 'Kaomoji (◕‿◕)', href: '/symbols/kaomoji-list' },
-            { label: 'Drake Meme', href: '/meme-maker/drake-meme' },
-            { label: 'Music ♪♫', href: '/symbols/music-symbols' },
-            { label: 'Solid Colors', href: '/wallpapers/solid-color-backgrounds' },
-            { label: 'Gradients', href: '/wallpapers/gradient-wallpaper-generator' },
-            { label: 'Morse ·-·', href: '/tools/morse-code-generator' },
-            { label: 'Binary 01', href: '/tools/text-to-binary' },
-            { label: 'Bubbles ⓑ', href: '/tools/bubble-font' },
+            { label: 'Small Text ᵗⁱⁿʸ', href: '/tools/small-text-generator/' },
+            { label: 'Gothic 𝔉𝔬𝔫𝔱', href: '/tools/gothic-font/' },
+            { label: 'Glitch T̷̙̓e̴̢͠x̵̣̆t̵͇̐', href: '/tools/glitch-text-generator/' },
+            { label: 'Hearts ❤', href: '/symbols/heart-symbol-copy-paste/' },
+            { label: 'Kaomoji (◕‿◕)', href: '/symbols/kaomoji-list/' },
+            { label: 'Drake Meme', href: '/meme-maker/drake-meme/' },
+            { label: 'Music ♪♫', href: '/symbols/music-symbols/' },
+            { label: 'Solid Colors', href: '/wallpapers/solid-color-backgrounds/' },
+            { label: 'Gradients', href: '/wallpapers/gradient-wallpaper-generator/' },
+            { label: 'Morse ·-·', href: '/tools/morse-code-generator/' },
+            { label: 'Binary 01', href: '/tools/text-to-binary/' },
+            { label: 'Bubbles ⓑ', href: '/tools/bubble-font/' },
           ].map((tool) => (
             <Link
               key={tool.href}
@@ -275,7 +275,7 @@ export default function HomePage() {
             Join thousands of creators using MakerSilo every day.
           </p>
           <Link
-            href="/tools/small-text-generator"
+            href="/tools/small-text-generator/"
             prefetch={false}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-gray-900 font-semibold"
           >

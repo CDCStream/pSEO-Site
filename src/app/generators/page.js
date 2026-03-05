@@ -76,7 +76,7 @@ export default function GeneratorsPage() {
           {generators.map((tool) => (
             <Link
               key={tool.slug}
-              href={`/generators/${tool.slug}`}
+              href={`/generators/${tool.slug}/`}
               prefetch={false}
               className="group bg-white/5 border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:bg-white/10 hover:border-orange-500/30"
             >

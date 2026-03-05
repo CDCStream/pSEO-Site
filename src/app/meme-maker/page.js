@@ -55,7 +55,7 @@ export default function MemeMakerPage() {
             return (
               <Link
                 key={meme.slug}
-                href={`/meme-maker/${meme.slug}`}
+                href={`/meme-maker/${meme.slug}/`}
                 className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-green-500/30 transition-all duration-300 hover:bg-white/[0.07]"
               >
                 <div className="flex items-start gap-4">

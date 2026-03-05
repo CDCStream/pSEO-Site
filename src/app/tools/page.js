@@ -59,7 +59,7 @@ export default function ToolsPage() {
             return (
               <Link
                 key={tool.slug}
-                href={`/tools/${tool.slug}`}
+                href={`/tools/${tool.slug}/`}
                 className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-orange-500/30 transition-all duration-300 hover:bg-white/[0.07]"
               >
                 <div className="flex items-start gap-4">

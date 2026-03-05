@@ -56,7 +56,7 @@ export default function SymbolsPage() {
             return (
               <Link
                 key={symbol.slug}
-                href={`/symbols/${symbol.slug}`}
+                href={`/symbols/${symbol.slug}/`}
                 className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.07]"
               >
                 <div className="flex items-start gap-4">

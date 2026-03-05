@@ -21,7 +21,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <Link
-            href="/tools"
+            href="/tools/"
             className="btn-secondary px-6 py-3 rounded-xl inline-flex items-center gap-2"
           >
             <Search className="w-5 h-5" />
@@ -30,10 +30,10 @@ export default function NotFound() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
-          <Link href="/tools" className="text-gray-400 hover:text-white transition-colors">Text Tools</Link>
-          <Link href="/symbols" className="text-gray-400 hover:text-white transition-colors">Symbols</Link>
-          <Link href="/meme-maker" className="text-gray-400 hover:text-white transition-colors">Meme Maker</Link>
-          <Link href="/wallpapers" className="text-gray-400 hover:text-white transition-colors">Wallpapers</Link>
+          <Link href="/tools/" className="text-gray-400 hover:text-white transition-colors">Text Tools</Link>
+          <Link href="/symbols/" className="text-gray-400 hover:text-white transition-colors">Symbols</Link>
+          <Link href="/meme-maker/" className="text-gray-400 hover:text-white transition-colors">Meme Maker</Link>
+          <Link href="/wallpapers/" className="text-gray-400 hover:text-white transition-colors">Wallpapers</Link>
         </div>
       </div>
     </div>

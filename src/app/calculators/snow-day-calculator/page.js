@@ -82,7 +82,7 @@ export default function SnowDayCalculatorPage() {
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>/</span>
-            <a href="/calculators" className="hover:text-white transition-colors">Calculators</a>
+            <a href="/calculators/" className="hover:text-white transition-colors">Calculators</a>
             <span>/</span>
             <span className="text-gray-300">Snow Day Calculator</span>
           </nav>

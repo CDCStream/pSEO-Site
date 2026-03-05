@@ -14,27 +14,27 @@ const MailIcon = ({ className }) => (
 
 const footerLinks = {
   tools: [
-    { label: 'Small Text Generator', href: '/tools/small-text-generator' },
-    { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator' },
-    { label: 'Gothic Font', href: '/tools/gothic-font' },
-    { label: 'Morse Code', href: '/tools/morse-code-generator' },
-    { label: 'Text to Binary', href: '/tools/text-to-binary' },
+    { label: 'Small Text Generator', href: '/tools/small-text-generator/' },
+    { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator/' },
+    { label: 'Gothic Font', href: '/tools/gothic-font/' },
+    { label: 'Morse Code', href: '/tools/morse-code-generator/' },
+    { label: 'Text to Binary', href: '/tools/text-to-binary/' },
   ],
   symbols: [
-    { label: 'Music Symbols', href: '/symbols/music-symbols' },
-    { label: 'Heart Symbols', href: '/symbols/heart-symbol-copy-paste' },
-    { label: 'Japanese Symbols', href: '/symbols/japanese-symbols' },
-    { label: 'Kaomoji', href: '/symbols/kaomoji-list' },
+    { label: 'Music Symbols', href: '/symbols/music-symbols/' },
+    { label: 'Heart Symbols', href: '/symbols/heart-symbol-copy-paste/' },
+    { label: 'Japanese Symbols', href: '/symbols/japanese-symbols/' },
+    { label: 'Kaomoji', href: '/symbols/kaomoji-list/' },
   ],
   wallpapers: [
-    { label: 'Solid Colors', href: '/wallpapers/solid-color-backgrounds' },
-    { label: 'Gradient Wallpapers', href: '/wallpapers/gradient-wallpaper-generator' },
-    { label: 'Aesthetic Wallpapers', href: '/wallpapers/aesthetic-wallpaper' },
+    { label: 'Solid Colors', href: '/wallpapers/solid-color-backgrounds/' },
+    { label: 'Gradient Wallpapers', href: '/wallpapers/gradient-wallpaper-generator/' },
+    { label: 'Aesthetic Wallpapers', href: '/wallpapers/aesthetic-wallpaper/' },
   ],
   memes: [
-    { label: 'Drake Meme', href: '/meme-maker/drake-meme' },
-    { label: 'Speech Bubble', href: '/meme-maker/speech-bubble-meme' },
-    { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme' },
+    { label: 'Drake Meme', href: '/meme-maker/drake-meme/' },
+    { label: 'Speech Bubble', href: '/meme-maker/speech-bubble-meme/' },
+    { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme/' },
   ],
 };
 
@@ -133,8 +133,8 @@ export default function Footer() {
             © {new Date().getFullYear()} MakerSilo. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500">
-            <Link href="/privacy" prefetch={false} className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" prefetch={false} className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy/" prefetch={false} className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms/" prefetch={false} className="hover:text-white transition-colors">Terms of Service</Link>
             <Link href="/sitemap.xml" prefetch={false} className="hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>

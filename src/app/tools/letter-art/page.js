@@ -9,7 +9,7 @@ const letterArtTools = [
   {
     title: 'Bubble Letter Art Generator',
     description: 'Create eye-catching bubble letter art with 6 unique fonts. Customize fill color, outline, shadow effects and download as transparent PNG.',
-    href: '/tools/letter-art/bubble-letters',
+    href: '/tools/letter-art/bubble-letters/',
     tags: ['6 Fonts', 'Outline', 'Shadow', 'Transparent PNG'],
   },
 ];

@@ -5,7 +5,7 @@ const calculatorTools = [
   {
     name: 'Snow Day Calculator',
     description: 'Predict the probability of a snow day tomorrow using real-time weather data and AI analysis.',
-    href: '/calculators/snow-day-calculator',
+    href: '/calculators/snow-day-calculator/',
     icon: Snowflake,
     color: 'from-blue-500 to-sky-400',
     tags: ['Weather', 'AI Prediction', 'School Closure', 'Real-time Data'],
