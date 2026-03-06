@@ -36,6 +36,9 @@ const footerLinks = {
     { label: 'Speech Bubble', href: '/meme-maker/speech-bubble-meme/' },
     { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme/' },
   ],
+  blog: [
+    { label: 'All Posts', href: '/blog/' },
+  ],
 };
 
 export default function Footer() {
@@ -118,6 +121,16 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-3">Meme Maker</h3>
             <ul className="space-y-2">
               {footerLinks.memes.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-sm font-semibold text-white mb-3 mt-6">Blog</h3>
+            <ul className="space-y-2">
+              {footerLinks.blog.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} prefetch={false} className="text-sm text-gray-400 hover:text-white transition-colors">
                     {link.label}

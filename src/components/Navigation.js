@@ -40,6 +40,9 @@ const LetterAIcon = ({ className }) => (
 const CalculatorIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
 );
+const BlogIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+);
 
 const navItems = [
   {
@@ -137,6 +140,13 @@ const navItems = [
       { label: 'Snow Day Calculator', href: '/calculators/snow-day-calculator/' },
     ],
   },
+  {
+    label: 'Blog',
+    href: '/blog/',
+    icon: BlogIcon,
+    color: 'from-indigo-500 to-blue-500',
+    items: [],
+  },
 ];
 
 export default function Navigation() {
@@ -168,7 +178,7 @@ export default function Navigation() {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseEnter={() => item.items.length > 0 && setOpenDropdown(item.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <Link
@@ -178,11 +188,13 @@ export default function Navigation() {
                 >
                   <item.icon className="w-4 h-4" />
                   {item.label}
-                  <ChevronDownIcon className={`w-3 h-3 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
+                  {item.items.length > 0 && (
+                    <ChevronDownIcon className={`w-3 h-3 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
+                  )}
                 </Link>
 
                 {/* Dropdown */}
-                {openDropdown === item.label && (
+                {openDropdown === item.label && item.items.length > 0 && (
                   <div className="absolute top-full left-0 mt-1 w-56 py-2 bg-[#1a1a2e] rounded-xl border border-white/10 shadow-xl animate-fade-in">
                     {item.items.map((subItem) => (
                       <Link
@@ -234,19 +246,21 @@ export default function Navigation() {
                   </div>
                   {item.label}
                 </Link>
-                <div className="ml-16 mt-1 space-y-1">
-                  {item.items.slice(0, 3).map((subItem) => (
-                    <Link
-                      key={subItem.href}
-                      href={subItem.href}
-                      prefetch={false}
-                      className="block py-1 text-sm text-gray-400 hover:text-white transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {subItem.label}
-                    </Link>
-                  ))}
-                </div>
+                {item.items.length > 0 && (
+                  <div className="ml-16 mt-1 space-y-1">
+                    {item.items.slice(0, 3).map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        prefetch={false}
+                        className="block py-1 text-sm text-gray-400 hover:text-white transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>

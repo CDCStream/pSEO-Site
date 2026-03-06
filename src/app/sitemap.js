@@ -1,12 +1,12 @@
-export const dynamic = 'force-static';
-
 import { getAllPages } from '@/config/pSEO-data';
+import { supabase } from '@/lib/supabase';
 
-export default function sitemap() {
+export const revalidate = 3600;
+
+export default async function sitemap() {
   const baseUrl = 'https://makersilo.com';
   const allPages = getAllPages();
 
-  // Static pages
   const staticPages = [
     {
       url: baseUrl,
@@ -75,6 +75,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/privacy/`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -88,7 +94,6 @@ export default function sitemap() {
     },
   ];
 
-  // Dynamic pages from pSEO config
   const dynamicPages = allPages.map((page) => ({
     url: `${baseUrl}/${page.category}/${page.slug}/`,
     lastModified: new Date(),
@@ -96,5 +101,23 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...dynamicPages];
+  let blogPages = [];
+  try {
+    const { data } = await supabase
+      .from('blog_posts')
+      .select('slug, updated_at')
+      .eq('status', 'published');
+    if (data) {
+      blogPages = data.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}/`,
+        lastModified: new Date(post.updated_at),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      }));
+    }
+  } catch {
+    // Supabase not configured yet – skip blog posts
+  }
+
+  return [...staticPages, ...dynamicPages, ...blogPages];
 }
