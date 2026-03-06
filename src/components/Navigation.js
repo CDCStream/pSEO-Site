@@ -155,7 +155,7 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 bg-glass-dark">
-      <nav className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 {/* Logo */}
           <Link href="/" prefetch={false} className="flex items-center gap-3">
@@ -173,7 +173,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-0.5">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -184,12 +184,12 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   prefetch={false}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                  className="flex items-center gap-1.5 px-3 py-2 text-[13px] font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
                 >
-                  <item.icon className="w-4 h-4" />
+                  <item.icon className="w-3.5 h-3.5" />
                   {item.label}
                   {item.items.length > 0 && (
-                    <ChevronDownIcon className={`w-3 h-3 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
+                    <ChevronDownIcon className={`w-2.5 h-2.5 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
                   )}
                 </Link>
 
