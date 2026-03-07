@@ -1041,6 +1041,38 @@ Whether you are settling a friendly debate, responding to a roast, or just creat
 
 The Uno Reverse Card meme shows no signs of slowing down. Its universal appeal, instant recognizability, and endless adaptability ensure it will remain a staple of internet culture for years to come. With our maker, you are not just sharing a meme — you are creating a personalized version that hits harder and stands out from the crowd.`,
   },
+  'spongebob-meme': {
+    category: 'meme-maker',
+    name: 'SpongeBob Meme Maker',
+    keyword: 'SpongeBob Meme Generator',
+    title: 'SpongeBob Meme Generator - 10 Free Templates | MakerSilo',
+    description: 'Create hilarious SpongeBob memes with 10 popular templates. Add custom text, preview instantly, and download free. Mocking SpongeBob, Buff SpongeBob, Here Lies & more.',
+    h1: 'SpongeBob Meme Generator',
+    subtitle: 'Choose from 10 iconic SpongeBob SquarePants meme templates. Add your text, preview in real-time, and download as PNG — completely free.',
+    icon: 'image',
+    generatorType: 'spongebobMeme',
+    faq: [
+      { q: 'How many SpongeBob meme templates are available?', a: 'We offer 10 popular SpongeBob SquarePants meme templates including Increasingly Buff SpongeBob, Mocking SpongeBob, Squidward Leaving, Poor Squidward vs Rich SpongeBob, Smart Patrick vs Dumb Patrick, SpongeBob Ol\' Reliable, Chocolate Guy, Here Lies tombstone, and more.' },
+      { q: 'Is the SpongeBob Meme Generator free?', a: 'Yes! The SpongeBob Meme Generator is 100% free with no watermarks, no sign-up required, and unlimited downloads.' },
+      { q: 'Can I download the meme I create?', a: 'Absolutely! Once you add your text, click the "Download as PNG" button to save a high-quality image of your SpongeBob meme.' },
+      { q: 'What is the Mocking SpongeBob meme?', a: 'The Mocking SpongeBob meme features SpongeBob in a chicken-like pose, used to mock or ridicule something by repeating it in alternating caps (LiKe ThIs). It became viral in 2017 and remains one of the most popular internet memes.' },
+      { q: 'What is the Increasingly Buff SpongeBob meme?', a: 'This three-panel meme shows SpongeBob becoming progressively more muscular. It is used to compare things of increasing intensity, quality, or impressiveness — from weak to normal to extremely powerful.' },
+      { q: 'Can I use these memes on social media?', a: 'Yes! All generated memes are downloadable as PNG files and can be shared on any social media platform including Instagram, Twitter/X, Reddit, Discord, TikTok, and WhatsApp.' },
+    ],
+    longContent: `SpongeBob SquarePants is not just a beloved animated series — it is one of the greatest meme goldmines in internet history. Since the show premiered in 1999, countless scenes and screenshots have been transformed into viral memes that dominate social media, group chats, and online forums worldwide. Our SpongeBob Meme Generator brings 10 of the most iconic templates together in one easy-to-use tool.
+
+The beauty of SpongeBob memes lies in their versatility. The show's exaggerated expressions and absurd situations perfectly capture the range of human emotions and experiences. Whether you are expressing frustration with Squidward, mocking someone with the famous chicken SpongeBob pose, or showing escalating intensity with the Buff SpongeBob template, there is a SpongeBob meme for every occasion.
+
+Our generator includes the most popular and widely recognized SpongeBob templates. The Increasingly Buff SpongeBob (also known as the SpongeBob Strength meme) is perfect for comparing three things of escalating power or quality. The Squidward Leaving template captures the moment of dramatically departing from one thing only to reluctantly return. Poor Squidward vs Rich SpongeBob provides a classic contrast between struggle and success.
+
+The Mocking SpongeBob template, featuring SpongeBob in his iconic chicken pose, has become one of the most recognizable memes on the internet. It is the go-to format for sarcastically repeating what someone has said. The Smart Patrick vs Dumb Patrick template offers a hilarious side-by-side comparison using everyone's favorite starfish in two very different contexts.
+
+SpongeBob's Ol' Reliable template shows SpongeBob proudly presenting something in a case — perfect for revealing your go-to solution or secret weapon. The Chocolate Guy from the famous chocolate-selling episode captures pure, unhinged enthusiasm. And the Here Lies tombstone template from the series provides a darkly humorous way to declare something dead or over.
+
+Creating your SpongeBob meme is simple. Browse through all 10 templates, select the one that fits your idea, type your custom text into the provided fields, and watch the preview update in real-time. When you are happy with the result, download it as a high-quality PNG file ready to share on Instagram, Twitter, Reddit, Discord, or any platform.
+
+SpongeBob memes continue to evolve and stay relevant because the source material is timeless. New generations of fans discover the show while longtime viewers find fresh ways to apply classic scenes to modern situations. With our generator, you can create professional-looking SpongeBob memes in seconds, keeping the tradition alive one meme at a time.`,
+  },
 };
 
 // Generators (Name Generators) configuration

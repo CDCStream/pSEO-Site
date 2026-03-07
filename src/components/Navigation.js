@@ -91,6 +91,7 @@ const navItems = [
       { label: 'Speech Bubble Meme', href: '/meme-maker/speech-bubble-meme/' },
       { label: 'Bernie Sanders Meme', href: '/meme-maker/bernie-sanders-meme/' },
       { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme/' },
+      { label: 'SpongeBob Meme', href: '/meme-maker/spongebob-meme/' },
     ],
   },
   {

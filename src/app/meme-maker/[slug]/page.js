@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { memeMakerConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import MemeClient from './MemeClient';
 import UnoReverseClient from './UnoReverseClient';
+import SpongeBobMemeClient from './SpongeBobMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -122,6 +123,8 @@ export default async function MemePage({ params }) {
 
             {slug === 'uno-reverse-card' ? (
               <UnoReverseClient config={config} slug={slug} />
+            ) : slug === 'spongebob-meme' ? (
+              <SpongeBobMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
