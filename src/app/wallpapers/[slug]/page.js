@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { wallpapersConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import WallpaperClient from './WallpaperClient';
 import ChristmasGalleryClient from './ChristmasGalleryClient';
+import StitchGalleryClient from './StitchGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -57,12 +58,20 @@ const wallpaperSteps = [
   },
 ];
 
-const gallerySteps = [
-  { icon: Search, title: 'Browse Gallery', description: 'Scroll through our collection of HD Christmas wallpapers.' },
-  { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
-  { icon: Download, title: 'Download', description: 'Hit the download button to save the wallpaper as a PNG file.' },
-  { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
-];
+const gallerySteps = {
+  christmasGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through our collection of HD Christmas wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Hit the download button to save the wallpaper as a PNG file.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
+  ],
+  stitchGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through our collection of cute HD Stitch wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Hit the download button to save the Stitch wallpaper as a PNG file.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
+  ],
+};
 
 export default async function WallpaperPage({ params }) {
   const { slug } = await params;
@@ -105,10 +114,12 @@ export default async function WallpaperPage({ params }) {
 
             {config.generatorType === 'christmasGallery'
               ? <ChristmasGalleryClient />
+              : config.generatorType === 'stitchGallery'
+              ? <StitchGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
-            <HowToUse keyword={config.keyword} steps={config.generatorType === 'christmasGallery' ? gallerySteps : wallpaperSteps} />
+            <HowToUse keyword={config.keyword} steps={gallerySteps[config.generatorType] || wallpaperSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
