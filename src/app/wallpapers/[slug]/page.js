@@ -3,6 +3,8 @@ import { wallpapersConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import WallpaperClient from './WallpaperClient';
 import ChristmasGalleryClient from './ChristmasGalleryClient';
 import StitchGalleryClient from './StitchGalleryClient';
+import PrepyGalleryClient from './PrepyGalleryClient';
+import HelloKittyGalleryClient from './HelloKittyGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -71,6 +73,18 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Hit the download button to save the Stitch wallpaper as a PNG file.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
   ],
+  preppyGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 19 cute preppy aesthetic wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the preppy wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
+  helloKittyGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 15 adorable Hello Kitty wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Hit the download button to save the Hello Kitty wallpaper as a PNG file.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -116,6 +130,10 @@ export default async function WallpaperPage({ params }) {
               ? <ChristmasGalleryClient />
               : config.generatorType === 'stitchGallery'
               ? <StitchGalleryClient />
+              : config.generatorType === 'preppyGallery'
+              ? <PrepyGalleryClient />
+              : config.generatorType === 'helloKittyGallery'
+              ? <HelloKittyGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 

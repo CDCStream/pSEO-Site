@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Palette, Cat, Square, Blend, TreePine, Star, ArrowRight } from 'lucide-react';
+import { Snowflake, Palette, Cat, Square, Blend, TreePine, Star, Heart, ArrowRight } from 'lucide-react';
 import { wallpapersConfig } from '@/config/pSEO-data';
 
 const iconMap = {
@@ -11,6 +11,7 @@ const iconMap = {
   'blend': Blend,
   'tree-pine': TreePine,
   'star': Star,
+  'heart': Heart,
 };
 
 export const metadata = {

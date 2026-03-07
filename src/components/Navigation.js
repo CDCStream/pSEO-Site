@@ -92,6 +92,7 @@ const navItems = [
       { label: 'Bernie Sanders Meme', href: '/meme-maker/bernie-sanders-meme/' },
       { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme/' },
       { label: 'SpongeBob Meme', href: '/meme-maker/spongebob-meme/' },
+      { label: 'Hyperpigmentation Meme', href: '/meme-maker/hyperpigmentation-meme/' },
     ],
   },
   {
@@ -103,8 +104,10 @@ const navItems = [
       { label: 'Solid Color Backgrounds', href: '/wallpapers/solid-color-backgrounds/' },
       { label: 'Gradient Wallpaper', href: '/wallpapers/gradient-wallpaper-generator/' },
       { label: 'Aesthetic Wallpaper', href: '/wallpapers/aesthetic-wallpaper/' },
+      { label: 'Preppy Wallpaper', href: '/wallpapers/preppy-wallpaper/' },
       { label: 'Christmas Wallpaper', href: '/wallpapers/christmas-wallpaper/' },
       { label: 'Stitch Wallpaper', href: '/wallpapers/stitch-wallpaper/' },
+      { label: 'Hello Kitty Wallpaper', href: '/wallpapers/hello-kitty-wallpaper/' },
     ],
   },
   {

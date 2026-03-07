@@ -3,6 +3,7 @@ import { memeMakerConfig, getSlugsForCategory } from '@/config/pSEO-data';
 import MemeClient from './MemeClient';
 import UnoReverseClient from './UnoReverseClient';
 import SpongeBobMemeClient from './SpongeBobMemeClient';
+import HyperpigmentationMemeClient from './HyperpigmentationMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -81,6 +82,29 @@ const unoSteps = [
   },
 ];
 
+const hyperpigmentationSteps = [
+  {
+    icon: Type,
+    title: 'Enter Left Side Text',
+    description: 'Type the "before" text for the left panel of the comparison meme.',
+  },
+  {
+    icon: Type,
+    title: 'Enter Right Side Text',
+    description: 'Type the "after" text for the right panel to complete the contrast.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your hyperpigmentation meme as a high-quality PNG image.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -125,11 +149,13 @@ export default async function MemePage({ params }) {
               <UnoReverseClient config={config} slug={slug} />
             ) : slug === 'spongebob-meme' ? (
               <SpongeBobMemeClient />
+            ) : slug === 'hyperpigmentation-meme' ? (
+              <HyperpigmentationMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
