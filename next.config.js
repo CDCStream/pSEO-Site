@@ -12,6 +12,16 @@ const nextConfig = {
 
   trailingSlash: true,
 
+  async redirects() {
+    return [
+      {
+        source: '/tools/cursive-text-generator/',
+        destination: '/tools/cursed-text-generator/',
+        permanent: true,
+      },
+    ];
+  },
+
   // Performance optimizations
   poweredByHeader: false,
 
