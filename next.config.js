@@ -3,9 +3,11 @@ const nextConfig = {
   // Note: Removed 'output: export' to enable API routes for AI features
   // Vercel will use serverless functions instead of static export
 
-  // Image optimization
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
 
   trailingSlash: true,

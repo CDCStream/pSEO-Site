@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useToast } from '@/components/Toast';
 
@@ -46,12 +47,13 @@ export default function StitchGalleryClient() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
           {ALL_IMAGES.map((img, i) => (
             <div key={img.id} className="group relative rounded-xl overflow-hidden border border-white/10 bg-black/20 aspect-[9/16] cursor-pointer" onClick={() => openLightbox(i)}>
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                quality={60}
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-3">
                 <span className="text-xs text-white/80 font-medium">#{i + 1}</span>
