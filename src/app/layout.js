@@ -1,6 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import { Outfit, JetBrains_Mono, Press_Start_2P } from 'next/font/google';
+import AhrefsAnalytics from '@/components/AhrefsAnalytics';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
@@ -103,7 +104,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
-        <script dangerouslySetInnerHTML={{ __html: `document.write('<scr'+'ipt src="https://analytics.ahrefs.com/analytics.js" data-key="uQBXFDRhKP8hiFHH08h4AQ" async><\\/scr'+'ipt>');` }} />
+        <AhrefsAnalytics />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
