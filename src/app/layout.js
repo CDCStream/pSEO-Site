@@ -102,6 +102,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var s=document.createElement('script');s.async=true;s.setAttribute('data-key','uQBXFDRhKP8hiFHH08h4AQ');s.src='https://analytics.ahrefs.com/analytics.js';document.head.appendChild(s);})();`,
+          }}
+        />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
@@ -120,13 +125,6 @@ export default function RootLayout({ children }) {
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-
-        {/* Ahrefs Web Analytics */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="uQBXFDRhKP8hiFHH08h4AQ"
-          strategy="afterInteractive"
-        />
 
         <ToastProvider>
           <Navigation />
