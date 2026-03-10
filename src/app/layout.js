@@ -102,11 +102,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="uQBXFDRhKP8hiFHH08h4AQ"
-          async
-        />
+        <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
@@ -116,6 +112,13 @@ export default function RootLayout({ children }) {
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
+        />
+
+        {/* Ahrefs Web Analytics — beforeInteractive renders directly into HTML head */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="uQBXFDRhKP8hiFHH08h4AQ"
+          strategy="beforeInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
