@@ -1,12 +1,9 @@
 import './globals.css';
-import Script from 'next/script';
 import { Outfit, JetBrains_Mono, Press_Start_2P } from 'next/font/google';
-import AhrefsAnalytics from '@/components/AhrefsAnalytics';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ToastProvider } from '@/components/Toast';
-
-const GA_MEASUREMENT_ID = 'G-EYQHD3FFHG';
+import Analytics from '@/components/Analytics';
 
 // Optimized font loading - only essential weights
 const outfit = Outfit({
@@ -104,26 +101,11 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
-        <AhrefsAnalytics />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning
       >
-        {/* GA4 */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
-
         <ToastProvider>
           <Navigation />
           <main className="flex-1">
@@ -131,6 +113,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </ToastProvider>
+        <Analytics />
       </body>
     </html>
   );
