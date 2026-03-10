@@ -103,9 +103,9 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var s=document.createElement('script');s.async=true;s.setAttribute('data-key','uQBXFDRhKP8hiFHH08h4AQ');s.src='https://analytics.ahrefs.com/analytics.js';document.head.appendChild(s);})();`,
-          }}
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="uQBXFDRhKP8hiFHH08h4AQ"
+          async
         />
       </head>
       <body
