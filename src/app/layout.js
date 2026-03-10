@@ -103,6 +103,15 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function(){
+            var a=document.createElement('script');
+            a.setAttribute('data-key','uQBXFDRhKP8hiFHH08h4AQ');
+            a.async=true;
+            a.src='https://analytics.ahrefs.com/analytics.js';
+            document.currentScript.parentNode.insertBefore(a,document.currentScript);
+          })();
+        `}} />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
@@ -112,13 +121,6 @@ export default function RootLayout({ children }) {
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
-        />
-
-        {/* Ahrefs Web Analytics — beforeInteractive renders directly into HTML head */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="uQBXFDRhKP8hiFHH08h4AQ"
-          strategy="beforeInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
