@@ -103,15 +103,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          (function(){
-            var a=document.createElement('script');
-            a.setAttribute('data-key','uQBXFDRhKP8hiFHH08h4AQ');
-            a.async=true;
-            a.src='https://analytics.ahrefs.com/analytics.js';
-            document.currentScript.parentNode.insertBefore(a,document.currentScript);
-          })();
-        `}} />
+        <script dangerouslySetInnerHTML={{ __html: `document.write('<scr'+'ipt src="https://analytics.ahrefs.com/analytics.js" data-key="uQBXFDRhKP8hiFHH08h4AQ" async><\\/scr'+'ipt>');` }} />
       </head>
       <body
         className={`${outfit.className} antialiased min-h-screen flex flex-col`}
