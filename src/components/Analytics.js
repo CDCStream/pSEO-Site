@@ -21,6 +21,24 @@ function sendAhrefsDirect(name) {
   } catch {}
 }
 
+function trackPage(page) {
+  try {
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        page,
+        referrer: document.referrer || null,
+        title: document.title || null,
+        sw: screen.width,
+        sh: screen.height,
+        lang: navigator.language,
+      }),
+      keepalive: true,
+    }).catch(() => {})
+  } catch {}
+}
+
 export default function Analytics() {
   useEffect(() => {
     if (window.__analytics_loaded) return
@@ -40,7 +58,6 @@ export default function Analytics() {
     }
 
     // --- Ahrefs: inject via createContextualFragment for parser-inserted behavior ---
-    // This ensures document.currentScript works so analytics.js can read data-key
     try {
       const range = document.createRange()
       range.setStart(document.head, 0)
@@ -49,16 +66,36 @@ export default function Analytics() {
       )
       document.head.appendChild(fragment)
     } catch {
-      // Fallback: direct API call if createContextualFragment fails
       sendAhrefsDirect('pageview')
     }
 
-    // Safety net: if analytics.js fails to init after 5s, send pageview directly
     setTimeout(() => {
       if (typeof window.AhrefsAnalytics === 'undefined') {
         sendAhrefsDirect('pageview')
       }
     }, 5000)
+
+    // --- Supabase page tracking ---
+    let lastTrackedPath = null
+
+    function trackCurrentPage() {
+      const path = location.pathname + location.search
+      if (path !== lastTrackedPath) {
+        lastTrackedPath = path
+        trackPage(path)
+      }
+    }
+
+    trackCurrentPage()
+
+    const origPushState = history.pushState
+    history.pushState = function () {
+      origPushState.apply(this, arguments)
+      setTimeout(trackCurrentPage, 0)
+    }
+    window.addEventListener('popstate', () => {
+      setTimeout(trackCurrentPage, 0)
+    })
   }, [])
 
   return null
