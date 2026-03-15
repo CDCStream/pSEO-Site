@@ -5,6 +5,7 @@ import ChristmasGalleryClient from './ChristmasGalleryClient';
 import StitchGalleryClient from './StitchGalleryClient';
 import PrepyGalleryClient from './PrepyGalleryClient';
 import HelloKittyGalleryClient from './HelloKittyGalleryClient';
+import PinkGalleryClient from './PinkGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -85,6 +86,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Hit the download button to save the Hello Kitty wallpaper as a PNG file.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your wallpaper.' },
   ],
+  pinkGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 16 stunning pink aesthetic wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the pink wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -134,6 +141,8 @@ export default async function WallpaperPage({ params }) {
               ? <PrepyGalleryClient />
               : config.generatorType === 'helloKittyGallery'
               ? <HelloKittyGalleryClient />
+              : config.generatorType === 'pinkGallery'
+              ? <PinkGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
