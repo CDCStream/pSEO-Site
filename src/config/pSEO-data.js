@@ -1105,6 +1105,36 @@ Creating your SpongeBob meme is simple. Browse through all 10 templates, select 
 
 SpongeBob memes continue to evolve and stay relevant because the source material is timeless. New generations of fans discover the show while longtime viewers find fresh ways to apply classic scenes to modern situations. With our generator, you can create professional-looking SpongeBob memes in seconds, keeping the tradition alive one meme at a time.`,
   },
+  'sybau-meme': {
+    category: 'meme-maker',
+    name: 'SYBAU Meme Maker',
+    keyword: 'SYBAU Meme',
+    title: 'SYBAU Meme Generator - Shut Your Bitch Ass Up Meme Maker | MakerSilo',
+    description: 'Create funny SYBAU (Shut Your Bitch Ass Up) memes with custom top and bottom text. Add your own captions to the viral template and download free as PNG.',
+    h1: 'SYBAU Meme Generator',
+    subtitle: 'Add custom top and bottom text to the iconic SYBAU meme template. Preview in real-time, download as high-quality PNG — 100% free.',
+    icon: 'image',
+    generatorType: 'sybauMeme',
+    faq: [
+      { q: 'What does SYBAU mean?', a: 'SYBAU stands for "Shut Your Bitch Ass Up." It is a popular internet slang expression used in memes to humorously shut down someone\'s argument or opinion. The SYBAU meme format has gone viral across social media platforms including TikTok, Twitter/X, Instagram, and Reddit.' },
+      { q: 'How do I make a SYBAU meme?', a: 'Simply type your custom text in the Top Text and Bottom Text fields. The live preview updates instantly so you can see exactly how your meme will look. When you are satisfied, click the "Download as PNG" button to save it to your device.' },
+      { q: 'Is the SYBAU meme maker free?', a: 'Yes, completely free! No sign-up, no watermarks, no limits. Create as many SYBAU memes as you want and download them all in high-quality PNG format.' },
+      { q: 'Can I share SYBAU memes on social media?', a: 'Absolutely! After downloading your meme, you can share it on any platform — Instagram, Twitter/X, TikTok, Reddit, Discord, WhatsApp, or anywhere else. The PNG format ensures high quality on all platforms.' },
+      { q: 'What text works best for SYBAU memes?', a: 'SYBAU memes work best with short, punchy captions. The top text usually sets up a scenario or statement, and the bottom text delivers the punchline or reaction. Keep it concise for maximum impact.' },
+      { q: 'Will my text overflow the image?', a: 'No! Our meme maker automatically wraps long text to the next line and shrinks the font size if needed to ensure your text always fits perfectly within the image boundaries.' },
+    ],
+    longContent: `The SYBAU meme, short for "Shut Your Bitch Ass Up," has become one of the most widely shared and instantly recognizable meme formats on social media. Originating from internet culture and popularized through platforms like TikTok, Twitter, and Instagram, the SYBAU meme captures the universal feeling of wanting to shut down an absurd, annoying, or completely wrong take.
+
+What makes the SYBAU meme so effective is its simplicity and directness. Unlike complex multi-panel memes that require context, the SYBAU format delivers its message immediately. The image paired with bold, attention-grabbing text creates a visceral reaction that resonates with viewers instantly. This directness is exactly why the format has achieved such widespread popularity.
+
+The classic SYBAU meme structure follows a simple top-text and bottom-text format. The top text typically presents a situation, quote, or opinion — something someone said that deserves a strong reaction. The bottom text serves as the punchline or the SYBAU response. This two-part structure makes the memes incredibly versatile, as virtually any scenario can be adapted to fit the format.
+
+SYBAU memes have found their home across every major social media platform. On Twitter/X, they are used as quote-tweet responses to hot takes. On Instagram and TikTok, they appear in story shares and comment sections. On Reddit, they dominate meme subreddits. On Discord, they are staple reaction images in group chats. The format transcends platform boundaries because the humor is universal.
+
+Our SYBAU meme generator makes creating these memes effortless. Simply type your custom text into the top and bottom text fields, watch the live preview update in real-time, and download your finished meme as a high-quality PNG. The tool automatically handles text wrapping and sizing, ensuring your text never overflows the image boundaries regardless of how long your caption is.
+
+Whether you are creating memes for your group chat, building your social media presence, or simply looking for a creative way to express your frustration with a bad take, the SYBAU meme generator has you covered. No watermarks, no sign-ups, no limits — just pure meme-making freedom.`,
+  },
 };
 
 // Generators (Name Generators) configuration

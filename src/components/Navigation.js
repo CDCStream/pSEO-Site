@@ -93,6 +93,7 @@ const navItems = [
       { label: 'Change My Mind', href: '/meme-maker/change-my-mind-meme/' },
       { label: 'SpongeBob Meme', href: '/meme-maker/spongebob-meme/' },
       { label: 'Hyperpigmentation Meme', href: '/meme-maker/hyperpigmentation-meme/' },
+      { label: 'SYBAU Meme', href: '/meme-maker/sybau-meme/' },
     ],
   },
   {

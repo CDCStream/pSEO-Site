@@ -4,6 +4,7 @@ import MemeClient from './MemeClient';
 import UnoReverseClient from './UnoReverseClient';
 import SpongeBobMemeClient from './SpongeBobMemeClient';
 import HyperpigmentationMemeClient from './HyperpigmentationMemeClient';
+import SybauMemeClient from './SybauMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -105,6 +106,29 @@ const hyperpigmentationSteps = [
   },
 ];
 
+const sybauSteps = [
+  {
+    icon: Type,
+    title: 'Add Top Text',
+    description: 'Type the setup text at the top of the SYBAU meme.',
+  },
+  {
+    icon: Type,
+    title: 'Add Bottom Text',
+    description: 'Type the punchline or reaction text at the bottom.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your SYBAU meme as a high-quality PNG image.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -151,11 +175,13 @@ export default async function MemePage({ params }) {
               <SpongeBobMemeClient />
             ) : slug === 'hyperpigmentation-meme' ? (
               <HyperpigmentationMemeClient />
+            ) : slug === 'sybau-meme' ? (
+              <SybauMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
