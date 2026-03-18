@@ -1902,6 +1902,38 @@ The beauty of black wallpapers lies in their versatility. They complement any ph
 
 All wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect dark wallpaper for your screen.`,
   },
+  'blue-wallpaper': {
+    category: 'wallpapers',
+    name: 'Blue Wallpaper',
+    keyword: 'Blue Wallpaper',
+    title: 'Blue Wallpaper HD - 24 Free Aesthetic Blue Backgrounds Download | MakerSilo',
+    description: 'Download 24 free HD blue wallpapers for your phone. Aesthetic blue backgrounds with ocean gradients, sky themes, neon accents, and calming designs. No watermark.',
+    h1: 'Blue Wallpaper — Free HD Backgrounds',
+    subtitle: 'Browse and download 24 stunning blue aesthetic wallpapers. Perfect for iPhone, Android, and iPad — 100% free, no watermark.',
+    icon: 'blend',
+    generatorType: 'blueGallery',
+    faq: [
+      { q: 'What types of blue wallpapers are available?', a: 'Our collection features 24 high-definition blue wallpapers in a variety of styles — ocean and water themes, sky and cloud compositions, neon blue accents, pastel baby blue aesthetics, deep navy tones, abstract blue art, and gradient designs. Whether you prefer a calming light blue or a bold electric blue, there is a wallpaper for every taste.' },
+      { q: 'Are these blue wallpapers free to download?', a: 'Yes! All 24 blue wallpapers are completely free to download. No sign-up required, no watermarks, no hidden fees. Just click the download button and save the wallpaper directly to your device.' },
+      { q: 'What resolution are the blue wallpapers?', a: 'All wallpapers are high-definition PNG images designed to look sharp and vibrant on modern smartphones, tablets, and desktop monitors. They are optimized for both iPhone and Android screens.' },
+      { q: 'How do I set a blue wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the blue wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'Why is blue a popular wallpaper color?', a: 'Blue is the world\'s most universally liked color. It evokes feelings of calm, trust, and stability. Studies show that blue environments can reduce stress and promote relaxation, making blue wallpapers an excellent choice for a phone background you look at dozens of times a day.' },
+    ],
+    longContent: `Blue wallpapers are consistently among the most downloaded and beloved phone background categories worldwide. There is a reason blue is the most popular color across cultures — it evokes the vastness of the sky, the depth of the ocean, and a profound sense of calm that few other colors can match.
+
+Our curated collection of 24 free HD blue wallpapers spans the entire blue spectrum. From the softest baby blues that create a serene, airy atmosphere to deep midnight navy tones that add mystery and sophistication, every shade is represented. You will find ocean-inspired compositions with waves and underwater scenes, sky and cloud themes that bring the outdoors to your screen, and abstract blue art that pushes creative boundaries.
+
+The psychology of blue is well-documented and fascinating. Blue is associated with trust, loyalty, wisdom, and confidence — qualities that major brands like Facebook, Twitter, Samsung, and Dell leverage in their branding. On a personal level, surrounding yourself with blue has been shown to lower heart rate and blood pressure, reduce anxiety, and promote a sense of tranquility. A blue wallpaper on your phone creates a micro-moment of calm every time you unlock your device.
+
+Blue wallpapers are also incredibly versatile from a design perspective. Light blues pair beautifully with white and pastel app icons for a clean, minimalist look. Dark navy backgrounds make colorful app icons pop with striking contrast. Electric and neon blues create an energetic, futuristic aesthetic. Whatever your personal style, blue adapts effortlessly.
+
+Each wallpaper in our collection has been carefully selected for visual impact and screen compatibility. You will find smooth gradient wallpapers that transition between multiple blue shades, creating a soothing backdrop for your apps. Nature-inspired designs bring the beauty of the ocean and sky to your fingertips. Abstract geometric patterns offer modern, eye-catching backgrounds. Textured compositions add depth and character without overwhelming your screen.
+
+The popularity of blue wallpapers extends across all demographics and platforms. Whether you are going for a professional look for your work phone, a calming aesthetic for daily use, or a bold statement piece, blue delivers. The color works beautifully in both light and dark mode interfaces, making it a practical choice that complements any system theme.
+
+All wallpapers are available as high-resolution PNG files, ensuring crystal-clear quality on any device. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect blue wallpaper to bring calm and beauty to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
