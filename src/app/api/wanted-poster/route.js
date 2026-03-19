@@ -45,7 +45,13 @@ Replace these fields on the poster:
     if (lastSeen) prompt += `\n- Replace "LAST SEEN: SNEAKING EXTRA HOT DOGS AT THE BBQ PARTY" with: "LAST SEEN: ${lastSeen.trim().toUpperCase()}"`;
     else prompt += `\n- Remove the "LAST SEEN" text completely`;
 
-    prompt += `\n\nKeep everything else exactly the same: the "WANTED!" header, the "RONCELLE NEWS" text, the stars, the ornamental frame, the wood plank background, the parchment paper texture, and the "REPORT SIGHTINGS TO" section. The output image MUST be a full portrait poster (3:4 ratio) with the poster filling the entire image. Do NOT shrink or crop the poster.`;
+    prompt += `\n\nKeep everything else exactly the same: the "WANTED!" header, the "RONCELLE NEWS" text, the stars, the ornamental frame, the wood plank background, the parchment paper texture, and the "REPORT SIGHTINGS TO" section.
+
+CRITICAL OUTPUT RULES:
+- The poster MUST fill the ENTIRE output image edge-to-edge with ZERO empty space or padding around it.
+- Do NOT place the poster as a smaller element inside a larger background. The poster IS the image.
+- Do NOT add any extra background, margin, or border around the poster.
+- The output must look exactly like the input template in terms of composition — just with updated text.`;
 
     if (photo) {
       prompt += `\n\nAlso replace the empty photo frame area in the center of the poster with the provided person's photo. Fit the photo naturally inside the ornamental frame.`;
