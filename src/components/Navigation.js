@@ -94,6 +94,7 @@ const navItems = [
       { label: 'SpongeBob Meme', href: '/meme-maker/spongebob-meme/' },
       { label: 'Hyperpigmentation Meme', href: '/meme-maker/hyperpigmentation-meme/' },
       { label: 'SYBAU Meme', href: '/meme-maker/sybau-meme/' },
+      { label: 'Wanted Poster', href: '/meme-maker/wanted-poster/' },
     ],
   },
   {

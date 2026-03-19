@@ -1105,6 +1105,38 @@ Creating your SpongeBob meme is simple. Browse through all 10 templates, select 
 
 SpongeBob memes continue to evolve and stay relevant because the source material is timeless. New generations of fans discover the show while longtime viewers find fresh ways to apply classic scenes to modern situations. With our generator, you can create professional-looking SpongeBob memes in seconds, keeping the tradition alive one meme at a time.`,
   },
+  'wanted-poster': {
+    category: 'meme-maker',
+    name: 'Wanted Poster Maker',
+    keyword: 'Wanted Poster',
+    title: 'Wanted Poster Maker - Create Custom Wanted Posters with AI | MakerSilo',
+    description: 'Create funny custom wanted posters with AI-generated content. Add your name, photo, crime, reward, and download as high-quality PNG. Free online wanted poster generator.',
+    h1: 'Wanted Poster Maker',
+    subtitle: 'Create hilarious custom wanted posters with AI. Enter a name, upload a photo, and let AI fill in the crimes, alias, and reward — or write your own. Download as PNG instantly.',
+    icon: 'image',
+    generatorType: 'wantedPoster',
+    faq: [
+      { q: 'How does the Wanted Poster Maker work?', a: 'Simply enter a name (required), optionally add a crime, nickname, reward, and photo. Click "Fill Empty Fields with AI" to let our AI generate funny, creative content for any fields you left blank. The live preview updates in real-time, and you can download the finished poster as a high-quality PNG.' },
+      { q: 'Is the AI-generated content free?', a: 'Yes! The AI content generation is completely free. No sign-up, no limits, no watermarks. Generate as many wanted posters as you want.' },
+      { q: 'Can I upload my own photo?', a: 'Absolutely! Click the "Upload Photo" button to add any image. Your photo will be automatically cropped and fitted into the poster frame. You can also create a poster without a photo.' },
+      { q: 'What happens if I leave fields blank?', a: 'Any field left blank will be hidden from the final poster. The template adapts cleanly — only the fields you fill in (or let AI generate) appear on the poster. You can also use the AI button to auto-fill empty fields with humorous content.' },
+      { q: 'Can I edit the AI-generated text?', a: 'Yes! After the AI fills in the fields, you can freely edit any of them. The AI only fills in fields that are currently empty, so your manually entered text is never overwritten.' },
+      { q: 'What can I use wanted posters for?', a: 'Wanted posters are perfect for birthday parties, office pranks, bachelor/bachelorette parties, school events, social media content, group chat fun, gaming profiles, and any occasion where you want to create a hilarious personalized poster about someone.' },
+    ],
+    longContent: `The wanted poster is one of the most iconic and instantly recognizable formats in visual culture. Originating from the American Wild West era, where law enforcement would post bounty notices to catch outlaws, the wanted poster has evolved into a beloved meme and party decoration format that brings humor and creativity to any occasion.
+
+Our Wanted Poster Maker combines the classic old-west aesthetic with modern AI technology to make creating custom wanted posters effortless and fun. Simply enter a name, and our AI powered by Claude will generate hilarious crimes, nicknames, rewards, and last-seen descriptions that are perfectly tailored to create maximum comedic impact.
+
+The tool is designed with flexibility in mind. You can fill in every field manually for complete creative control, let the AI handle everything for instant laughs, or use a hybrid approach where you provide some details and let the AI complete the rest. The AI only fills in empty fields, so your custom text is never overwritten.
+
+Wanted posters have become a staple at parties and events. Birthday parties use them to roast the guest of honor with funny "crimes" like "STEALING ALL THE CAKE" or "BEING TOO AWESOME." Bachelor and bachelorette parties create wanted posters for the bride or groom with embarrassing but lovable offenses. Office events use them for retirement parties, promotions, or just everyday workplace humor.
+
+On social media, wanted poster memes consistently generate high engagement. The format works perfectly for Instagram stories, Twitter/X posts, TikTok content, and Discord/WhatsApp group chats. The combination of a familiar visual template with personalized, often absurd content creates posts that people love to share and tag their friends in.
+
+Our poster maker supports photo uploads, so you can add the "wanted" person's actual photo for maximum effect. The image is automatically cropped and fitted into the ornate frame of the poster, maintaining the authentic old-west feel while featuring a modern photograph.
+
+The download produces a high-resolution PNG file suitable for printing or digital sharing. Whether you want to print it as a party decoration, post it on social media, or send it in a group chat, the quality is crisp and professional. All completely free, with no watermarks or sign-ups required.`,
+  },
   'sybau-meme': {
     category: 'meme-maker',
     name: 'SYBAU Meme Maker',

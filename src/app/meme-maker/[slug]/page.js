@@ -5,6 +5,7 @@ import UnoReverseClient from './UnoReverseClient';
 import SpongeBobMemeClient from './SpongeBobMemeClient';
 import HyperpigmentationMemeClient from './HyperpigmentationMemeClient';
 import SybauMemeClient from './SybauMemeClient';
+import WantedPosterClient from './WantedPosterClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -106,6 +107,29 @@ const hyperpigmentationSteps = [
   },
 ];
 
+const wantedPosterSteps = [
+  {
+    icon: Type,
+    title: 'Enter a Name',
+    description: 'Type the name of your "wanted" person — the star of the poster.',
+  },
+  {
+    icon: UploadIcon,
+    title: 'Upload a Photo',
+    description: 'Optionally upload a photo to place inside the poster frame.',
+  },
+  {
+    icon: Image,
+    title: 'Generate with AI',
+    description: 'Click "Fill Empty Fields with AI" to auto-generate funny crimes, alias, and reward.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your custom wanted poster as a high-quality PNG image.',
+  },
+];
+
 const sybauSteps = [
   {
     icon: Type,
@@ -177,11 +201,13 @@ export default async function MemePage({ params }) {
               <HyperpigmentationMemeClient />
             ) : slug === 'sybau-meme' ? (
               <SybauMemeClient />
+            ) : slug === 'wanted-poster' ? (
+              <WantedPosterClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
