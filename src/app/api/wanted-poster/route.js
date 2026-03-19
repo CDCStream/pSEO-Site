@@ -1,50 +1,100 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-});
+const GEMINI_KEY = process.env.GOOGLE_GEMINI_API_KEY;
 
 export async function POST(request) {
   try {
-    const { name } = await request.json();
+    const body = await request.json();
+    const { name, crime, alias, reward, lastSeen, photo } = body;
 
     if (!name || name.trim().length === 0) {
-      return Response.json(
-        { error: 'Please provide a name' },
-        { status: 400 }
-      );
+      return Response.json({ error: 'Please provide a name' }, { status: 400 });
     }
 
-    const message = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 300,
-      messages: [
-        {
-          role: 'user',
-          content: `Generate funny wanted poster content for someone named "${name.trim()}". Return ONLY a valid JSON object with these exact keys:
-- "crime": a humorous crime (max 8 words, e.g. "STEALING ALL THE PIZZA SLICES")
-- "alias": a funny nickname (max 4 words, e.g. "THE SNACK BANDIT")
-- "reward": a funny reward amount or prize (max 8 words, e.g. "$10,000 AND A FREE TACO")
-- "lastSeen": a funny last seen location/activity (max 10 words, e.g. "RAIDING THE FRIDGE AT 3AM")
+    const templatePath = join(process.cwd(), 'public', 'memes', 'wanted-poster-templete.png');
+    const templateBase64 = readFileSync(templatePath).toString('base64');
 
-Keep it PG-13 and humorous. All text should be uppercase. Return only the JSON, no explanation.`,
-        },
-      ],
+    const parts = [];
+
+    let prompt = `You are given a wanted poster template image. Edit this poster by replacing the existing placeholder text with the following custom information. Keep the EXACT same poster design, layout, decorative elements, borders, wood background, parchment texture, and vintage western style. Only change the text content.
+
+Replace these fields on the poster:
+- Replace "AARON LOEB" with: "${name.trim().toUpperCase()}"`;
+
+    if (crime) prompt += `\n- Replace "FOR CRIMES OF FUN AND MISCHIEF" with: "FOR ${crime.trim().toUpperCase()}"`;
+    else prompt += `\n- Remove the "FOR CRIMES OF FUN AND MISCHIEF" text completely`;
+
+    if (alias) prompt += `\n- Replace 'A.K.A. "THE BURGER BANDIT"' with: 'A.K.A. "${alias.trim().toUpperCase()}"'`;
+    else prompt += `\n- Remove the A.K.A. text completely`;
+
+    if (reward) prompt += `\n- Replace "A FRONT-ROW SEAT AT THE BBQ AND UNLIMITED RIBS" with: "${reward.trim().toUpperCase()}"`;
+    else prompt += `\n- Remove the reward description text (keep the "REWARD" label)`;
+
+    if (lastSeen) prompt += `\n- Replace "LAST SEEN: SNEAKING EXTRA HOT DOGS AT THE BBQ PARTY" with: "LAST SEEN: ${lastSeen.trim().toUpperCase()}"`;
+    else prompt += `\n- Remove the "LAST SEEN" text completely`;
+
+    prompt += `\n\nKeep everything else exactly the same: the "WANTED!" header, the "RONCELLE NEWS" text, the stars, the ornamental frame, the wood plank background, the parchment paper texture, and the "REPORT SIGHTINGS TO" section.`;
+
+    if (photo) {
+      prompt += `\n\nAlso replace the empty photo frame area in the center of the poster with the provided person's photo. Fit the photo naturally inside the ornamental frame.`;
+    }
+
+    parts.push({ text: prompt });
+    parts.push({
+      inlineData: { mimeType: 'image/png', data: templateBase64 }
     });
 
-    const text = message.content[0].text.trim();
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return Response.json({ error: 'AI response parsing failed' }, { status: 500 });
+    if (photo) {
+      const photoMatch = photo.match(/^data:image\/(.*?);base64,(.*)$/);
+      if (photoMatch) {
+        parts.push({
+          inlineData: { mimeType: `image/${photoMatch[1]}`, data: photoMatch[2] }
+        });
+      }
     }
 
-    const result = JSON.parse(jsonMatch[0]);
+    const geminiRes = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts }],
+          generationConfig: {
+            responseModalities: ['TEXT', 'IMAGE'],
+          },
+        }),
+      }
+    );
 
-    return Response.json(result);
+    if (!geminiRes.ok) {
+      const errText = await geminiRes.text();
+      console.error('Gemini API error:', errText);
+      return Response.json({ error: 'Image generation failed' }, { status: 500 });
+    }
+
+    const geminiData = await geminiRes.json();
+
+    const candidates = geminiData.candidates;
+    if (!candidates || candidates.length === 0) {
+      return Response.json({ error: 'No image generated' }, { status: 500 });
+    }
+
+    const resultParts = candidates[0].content?.parts || [];
+    const imagePart = resultParts.find(p => p.inlineData);
+
+    if (!imagePart) {
+      return Response.json({ error: 'No image in response' }, { status: 500 });
+    }
+
+    return Response.json({
+      image: `data:${imagePart.inlineData.mimeType};base64,${imagePart.inlineData.data}`,
+    });
   } catch (error) {
     console.error('Wanted Poster API Error:', error);
     return Response.json(
-      { error: 'Failed to generate content. Please try again.' },
+      { error: 'Failed to generate poster. Please try again.' },
       { status: 500 }
     );
   }
