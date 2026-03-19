@@ -1,7 +1,19 @@
+import sharp from 'sharp';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
 const GEMINI_KEY = process.env.GOOGLE_GEMINI_API_KEY;
+
+let cachedTemplate = null;
+
+async function getTemplate() {
+  if (cachedTemplate) return cachedTemplate;
+  const templatePath = join(process.cwd(), 'public', 'memes', 'wanted-poster-templete.png');
+  const raw = readFileSync(templatePath);
+  const resized = await sharp(raw).resize(800, null, { withoutEnlargement: true }).jpeg({ quality: 75 }).toBuffer();
+  cachedTemplate = resized.toString('base64');
+  return cachedTemplate;
+}
 
 export async function POST(request) {
   try {
@@ -12,8 +24,7 @@ export async function POST(request) {
       return Response.json({ error: 'Please provide a name' }, { status: 400 });
     }
 
-    const templatePath = join(process.cwd(), 'public', 'memes', 'wanted-poster-templete.png');
-    const templateBase64 = readFileSync(templatePath).toString('base64');
+    const templateBase64 = await getTemplate();
 
     const parts = [];
 
@@ -42,7 +53,7 @@ Replace these fields on the poster:
 
     parts.push({ text: prompt });
     parts.push({
-      inlineData: { mimeType: 'image/png', data: templateBase64 }
+      inlineData: { mimeType: 'image/jpeg', data: templateBase64 }
     });
 
     if (photo) {

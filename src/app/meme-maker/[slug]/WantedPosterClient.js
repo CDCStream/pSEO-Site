@@ -11,6 +11,23 @@ const TEXT_FIELDS = [
   { id: 'lastSeen', label: 'Last Seen', placeholder: 'e.g. Raiding the fridge at 3AM' },
 ];
 
+function resizeImage(dataUrl, maxSize = 512) {
+  return new Promise((resolve) => {
+    const img = new window.Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      let w = img.width, h = img.height;
+      if (w > h) { if (w > maxSize) { h = Math.round(h * maxSize / w); w = maxSize; } }
+      else { if (h > maxSize) { w = Math.round(w * maxSize / h); h = maxSize; } }
+      canvas.width = w;
+      canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL('image/jpeg', 0.7));
+    };
+    img.src = dataUrl;
+  });
+}
+
 export default function WantedPosterClient() {
   const [fields, setFields] = useState({ name: '', crime: '', alias: '', reward: '', lastSeen: '' });
   const [photo, setPhoto] = useState(null);
@@ -19,11 +36,14 @@ export default function WantedPosterClient() {
   const fileInputRef = useRef(null);
   const { addToast } = useToast();
 
-  const handlePhotoUpload = (e) => {
+  const handlePhotoUpload = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = (ev) => setPhoto(ev.target.result);
+    reader.onload = async (ev) => {
+      const resized = await resizeImage(ev.target.result, 512);
+      setPhoto(resized);
+    };
     reader.readAsDataURL(file);
   };
 

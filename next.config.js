@@ -35,6 +35,9 @@ const nextConfig = {
   // Experimental performance features
   experimental: {
     optimizeCss: true,
+    serverActions: {
+      bodySizeLimit: '4mb',
+    },
   },
 };
 
