@@ -1966,6 +1966,38 @@ The popularity of blue wallpapers extends across all demographics and platforms.
 
 All wallpapers are available as high-resolution PNG files, ensuring crystal-clear quality on any device. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect blue wallpaper to bring calm and beauty to your screen.`,
   },
+  'fall-wallpaper': {
+    category: 'wallpapers',
+    name: 'Fall Wallpaper',
+    keyword: 'Fall Wallpaper',
+    title: 'Fall Wallpaper HD - 24 Free Autumn Aesthetic Backgrounds Download | MakerSilo',
+    description: 'Download 24 free HD fall wallpapers for your phone. Aesthetic autumn backgrounds with golden leaves, cozy harvest vibes, warm tones, and seasonal nature scenes. No watermark.',
+    h1: 'Fall Wallpaper — Free HD Autumn Backgrounds',
+    subtitle: 'Browse and download 24 stunning fall aesthetic wallpapers. Perfect for iPhone, Android, and iPad — 100% free, no watermark.',
+    icon: 'leaf',
+    generatorType: 'fallGallery',
+    faq: [
+      { q: 'What types of fall wallpapers are available?', a: 'Our collection features 24 high-definition fall wallpapers in a variety of styles — golden leaf landscapes, cozy autumn forests, warm sunset scenes, pumpkin and harvest themes, misty morning compositions, and vibrant orange-red foliage. Whether you prefer a rustic countryside feel or a minimal autumn aesthetic, there is a wallpaper for every taste.' },
+      { q: 'Are these fall wallpapers free to download?', a: 'Yes! All 24 fall wallpapers are completely free to download. No sign-up required, no watermarks, no hidden fees. Just click the download button and save the wallpaper directly to your device.' },
+      { q: 'What resolution are the fall wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a fall wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the fall wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'Why are fall wallpapers so popular?', a: 'Fall is one of the most visually stunning seasons. The warm color palette of oranges, reds, golds, and browns creates a cozy and inviting atmosphere. Autumn wallpapers evoke feelings of warmth, nostalgia, and comfort — making them perfect backgrounds that people love to use during the September-November season and year-round.' },
+    ],
+    longContent: `Fall wallpapers capture the breathtaking beauty of autumn, one of nature's most visually spectacular seasons. The warm palette of golden yellows, deep oranges, rich reds, and earthy browns creates a sense of coziness and comfort that resonates deeply with people around the world.
+
+Our curated collection of 24 free HD fall wallpapers celebrates every aspect of autumn's charm. From sweeping landscapes of forests ablaze with color to intimate close-ups of dew-kissed leaves, every image captures the magic of the season. You will find pumpkin-patch scenes, misty woodland paths, sunlit canopies of changing foliage, and serene autumn lakes reflecting golden trees.
+
+The psychology behind fall aesthetics is fascinating. Warm colors like orange, amber, and red stimulate feelings of warmth, energy, and excitement, while the earthy tones of brown and tan evoke stability and reliability. Together, these colors create an emotional response that combines excitement with comfort — the perfect balance for a phone wallpaper you interact with dozens of times daily.
+
+Fall wallpapers are incredibly versatile in terms of design and personal expression. The warm tones complement virtually any app icon color scheme, from bright social media icons to minimalist productivity apps. Dark autumn scenes pair beautifully with dark mode interfaces, while bright foliage shots create vibrant contrast with light-themed apps.
+
+Each wallpaper in our collection has been carefully selected for visual impact and device compatibility. You will find sweeping panoramas that take advantage of tall phone screens, macro shots that reveal nature's intricate details, and abstract autumn compositions that blend art with nature. Every image is designed to transform your device into a window to the beauty of fall.
+
+The appeal of fall wallpapers extends far beyond the autumn months. Many people use fall-themed backgrounds year-round because the warm, rich colors create a universally pleasing aesthetic. The cozy atmosphere these wallpapers provide is perfect for anyone who appreciates nature, warmth, and timeless beauty.
+
+All wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect autumn wallpaper to bring warmth and beauty to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
