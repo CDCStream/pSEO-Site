@@ -114,6 +114,7 @@ const navItems = [
       { label: 'Black Wallpaper', href: '/wallpapers/black-wallpaper/' },
       { label: 'Blue Wallpaper', href: '/wallpapers/blue-wallpaper/' },
       { label: 'Fall Wallpaper', href: '/wallpapers/fall-wallpaper/' },
+      { label: 'Halloween Wallpaper', href: '/wallpapers/halloween-wallpaper/' },
     ],
   },
   {

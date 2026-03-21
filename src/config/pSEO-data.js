@@ -1998,6 +1998,38 @@ The appeal of fall wallpapers extends far beyond the autumn months. Many people 
 
 All wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect autumn wallpaper to bring warmth and beauty to your screen.`,
   },
+  'halloween-wallpaper': {
+    category: 'wallpapers',
+    name: 'Halloween Wallpaper',
+    keyword: 'Halloween Wallpaper',
+    title: 'Halloween Wallpaper HD - 16 Free Spooky Aesthetic Backgrounds Download | MakerSilo',
+    description: 'Download 16 free HD Halloween wallpapers for your phone. Spooky aesthetic backgrounds with jack-o-lanterns, haunted houses, bats, witches, and dark night scenes. No watermark.',
+    h1: 'Halloween Wallpaper — Free HD Spooky Backgrounds',
+    subtitle: 'Browse and download 16 stunning Halloween aesthetic wallpapers. Perfect for iPhone, Android, and iPad — 100% free, no watermark.',
+    icon: 'ghost',
+    generatorType: 'halloweenGallery',
+    faq: [
+      { q: 'What types of Halloween wallpapers are available?', a: 'Our collection features 16 high-definition Halloween wallpapers in a variety of styles — glowing jack-o-lanterns, haunted houses, spooky forests, flying bats, witch silhouettes, full moon scenes, creepy graveyards, and dark gothic aesthetics. Whether you want a cute Halloween vibe or a truly eerie atmosphere, there is a wallpaper for every taste.' },
+      { q: 'Are these Halloween wallpapers free to download?', a: 'Yes! All 16 Halloween wallpapers are completely free to download. No sign-up required, no watermarks, no hidden fees. Just click the download button and save the wallpaper directly to your device.' },
+      { q: 'What resolution are the Halloween wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a Halloween wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the Halloween wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'When is the best time to use Halloween wallpapers?', a: 'While October is the classic Halloween season, many people enjoy spooky and gothic aesthetics year-round. Dark, moody Halloween wallpapers work perfectly for anyone who loves horror themes, gothic art, or simply prefers a darker phone aesthetic regardless of the season.' },
+    ],
+    longContent: `Halloween wallpapers bring the thrilling, spooky atmosphere of the most beloved horror holiday right to your phone screen. From eerie jack-o-lanterns glowing in the dark to silhouetted witches flying across a full moon, these backgrounds capture the essence of Halloween in all its creepy glory.
+
+Our curated collection of 16 free HD Halloween wallpapers spans the full range of Halloween aesthetics. You will find classic jack-o-lantern scenes with carved pumpkins casting warm orange light against dark backgrounds, haunted house compositions with gothic architecture and stormy skies, spooky forest paths shrouded in mist, and graveyards illuminated by moonlight. Each image has been selected to evoke the perfect balance of thrilling and beautiful.
+
+The visual appeal of Halloween imagery is rooted in powerful contrasts. The interplay between darkness and light — glowing pumpkins against pitch-black nights, moonlit scenes piercing through fog, flickering candles in abandoned spaces — creates a dramatic visual tension that is inherently captivating. These contrasts make Halloween wallpapers some of the most visually striking backgrounds you can use.
+
+Halloween wallpapers also tap into the psychology of the spooky season. The combination of orange, black, purple, and deep green creates a color palette that is both exciting and mysterious. Orange evokes warmth and energy, black adds mystery and elegance, purple brings a sense of magic and the supernatural, while deep greens suggest enchanted forests and witchcraft. Together, these colors create an atmosphere that millions of people find irresistible.
+
+Each wallpaper in our collection has been carefully selected for visual impact and screen compatibility. You will find atmospheric compositions that take full advantage of phone screen dimensions, detailed close-ups of carved pumpkins and Halloween decorations, wide-angle shots of haunted landscapes, and artistic interpretations of classic Halloween themes. Every image transforms your device into a portal to the spooky season.
+
+The popularity of Halloween aesthetics extends well beyond October. The gothic and dark aesthetic community embraces Halloween themes year-round, and many people prefer darker, moodier phone backgrounds regardless of the season. A well-designed Halloween wallpaper works beautifully with dark mode interfaces and creates a striking contrast with colorful app icons.
+
+All wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect spooky wallpaper to haunt your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
