@@ -1167,6 +1167,38 @@ Our SYBAU meme generator makes creating these memes effortless. Simply type your
 
 Whether you are creating memes for your group chat, building your social media presence, or simply looking for a creative way to express your frustration with a bad take, the SYBAU meme generator has you covered. No watermarks, no sign-ups, no limits — just pure meme-making freedom.`,
   },
+  'jd-vance-meme': {
+    category: 'meme-maker',
+    name: 'JD Vance Meme Generator',
+    keyword: 'JD Vance Meme',
+    title: 'JD Vance Meme Generator - Create Custom JD Vance Memes Free | MakerSilo',
+    description: 'Create hilarious JD Vance memes with 10 templates. Add custom top and bottom text, preview in real-time, and download as PNG. Free JD Vance meme maker online.',
+    h1: 'JD Vance Meme Generator',
+    subtitle: 'Choose from 10 JD Vance meme templates, add your own top and bottom text, and download your custom meme as a high-quality PNG — 100% free.',
+    icon: 'image',
+    generatorType: 'jdVanceMeme',
+    faq: [
+      { q: 'How do I make a JD Vance meme?', a: 'Select one of the 10 JD Vance meme templates from the gallery, type your custom text in the Top Text and Bottom Text fields, see the live preview update instantly, and click "Download Meme as PNG" to save it to your device.' },
+      { q: 'How many JD Vance meme templates are available?', a: 'We offer 10 different JD Vance meme templates featuring various expressions and poses. You can switch between templates instantly and the text you have entered will carry over to the new template.' },
+      { q: 'Is the JD Vance meme maker free?', a: 'Yes, completely free! No sign-up, no watermarks, no limits. Create and download as many JD Vance memes as you want.' },
+      { q: 'Can I share these memes on social media?', a: 'Absolutely! After downloading your meme as a PNG, you can share it on any platform — Instagram, Twitter/X, TikTok, Reddit, Discord, WhatsApp, Facebook, or anywhere else.' },
+      { q: 'Will my text overflow the image?', a: 'No! The meme maker automatically wraps long text to the next line and shrinks the font size if needed to ensure your text always fits perfectly within the image boundaries.' },
+      { q: 'Why are JD Vance memes so popular?', a: 'JD Vance memes surged in popularity due to his high-profile political career and frequent media appearances. His expressions and quotes have become a goldmine for meme creators, making JD Vance one of the most memed political figures on the internet.' },
+    ],
+    longContent: `JD Vance memes have become a massive cultural phenomenon across social media. As the U.S. Vice President and a polarizing public figure, JD Vance has inspired an entire genre of internet humor that spans political satire, relatable reactions, and absurdist comedy. His distinctive expressions, memorable quotes, and viral moments have provided meme creators with an endless supply of material.
+
+The rise of JD Vance memes can be traced back to his bestselling memoir "Hillbilly Elegy" and his subsequent political career. As he transitioned from author to senator to vice presidential candidate, every public appearance, debate performance, and interview became potential meme material. The internet's ability to capture and remix these moments has turned JD Vance into one of the most memed political figures of the 2020s.
+
+What makes JD Vance memes so effective is their versatility. His various expressions — from intense debate faces to candid moments — lend themselves to a wide range of captions and contexts. Whether the meme is political commentary, workplace humor, relationship jokes, or purely absurdist content, there is a JD Vance expression that fits perfectly. This versatility is what separates truly viral meme templates from one-hit wonders.
+
+Our JD Vance meme generator offers 10 carefully selected templates featuring his most meme-worthy expressions and moments. Each template has been optimized for clarity and impact, ensuring your text is always readable against the image. The tool supports both top and bottom text placement, following the classic meme format that audiences instantly recognize and engage with.
+
+The classic top-text/bottom-text meme format used in our generator is the gold standard for image macro memes. The top text sets up the joke, context, or scenario, while the bottom text delivers the punchline. This time-tested structure, combined with JD Vance's expressive templates, creates memes that are instantly shareable and consistently funny.
+
+JD Vance memes thrive across every major social media platform. On Twitter/X, they dominate political discourse and trending topics. On Instagram and TikTok, they appear in stories, reels, and comment sections. On Reddit, they fuel discussions in political and meme subreddits alike. On Discord and WhatsApp, they serve as reaction images in group chats. The format works everywhere because political humor is universally engaging.
+
+Creating your own JD Vance meme takes just seconds. Browse our 10 templates, select the one that best fits your idea, add your custom text, and download. The live preview ensures you get exactly the meme you envision before downloading. No watermarks, no sign-ups, no limits — just pure meme-making freedom.`,
+  },
 };
 
 // Generators (Name Generators) configuration

@@ -95,6 +95,7 @@ const navItems = [
       { label: 'Hyperpigmentation Meme', href: '/meme-maker/hyperpigmentation-meme/' },
       { label: 'SYBAU Meme', href: '/meme-maker/sybau-meme/' },
       { label: 'Wanted Poster', href: '/meme-maker/wanted-poster/' },
+      { label: 'JD Vance Meme', href: '/meme-maker/jd-vance-meme/' },
     ],
   },
   {
