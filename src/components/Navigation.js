@@ -96,6 +96,7 @@ const navItems = [
       { label: 'SYBAU Meme', href: '/meme-maker/sybau-meme/' },
       { label: 'Wanted Poster', href: '/meme-maker/wanted-poster/' },
       { label: 'JD Vance Meme', href: '/meme-maker/jd-vance-meme/' },
+      { label: 'Dog Meme', href: '/meme-maker/dog-meme/' },
     ],
   },
   {

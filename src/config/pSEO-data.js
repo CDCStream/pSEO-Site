@@ -1199,6 +1199,38 @@ JD Vance memes thrive across every major social media platform. On Twitter/X, th
 
 Creating your own JD Vance meme takes just seconds. Browse our 10 templates, select the one that best fits your idea, add your custom text, and download. The live preview ensures you get exactly the meme you envision before downloading. No watermarks, no sign-ups, no limits — just pure meme-making freedom.`,
   },
+  'dog-meme': {
+    category: 'meme-maker',
+    name: 'Dog Meme Generator',
+    keyword: 'Dog Meme',
+    title: 'Dog Meme Generator - Create Custom Dog Memes Free Online | MakerSilo',
+    description: 'Create hilarious dog memes with 7 templates. Click anywhere on the image to place text, add multiple captions, drag to reposition, and download as PNG. Free dog meme maker.',
+    h1: 'Dog Meme Generator',
+    subtitle: 'Choose from 7 dog meme templates, click anywhere on the image to place your text, add multiple captions, and download your meme as PNG — 100% free.',
+    icon: 'image',
+    generatorType: 'dogMeme',
+    faq: [
+      { q: 'How do I make a dog meme?', a: 'Select one of the 7 dog meme templates, then click anywhere on the image to place a text box at that spot. Type your caption, and the text will appear where you clicked. You can add as many text boxes as you want and drag them to reposition. When you are done, click "Download Meme as PNG" to save it.' },
+      { q: 'Can I add multiple text boxes?', a: 'Yes! Unlike traditional top/bottom meme makers, our dog meme generator lets you place unlimited text boxes anywhere on the image. Just click on different spots to add more. Each text box can be edited independently.' },
+      { q: 'Can I move the text after placing it?', a: 'Absolutely! Click and drag any text box to reposition it on the image. The live preview updates in real-time as you drag, so you can place your captions exactly where you want them.' },
+      { q: 'Is the dog meme maker free?', a: 'Yes, completely free! No sign-up, no watermarks, no limits. Create and download as many dog memes as you want.' },
+      { q: 'What dog meme templates are available?', a: 'We offer 7 popular dog meme templates featuring various dog breeds and expressions — from confused puppies to dramatic huskies. Each template is perfect for different types of humor.' },
+      { q: 'Why are dog memes so popular?', a: 'Dogs are universally loved animals with expressive faces that perfectly capture human emotions. Dog memes have been a cornerstone of internet culture since the early days of memes. From Doge to "This is fine" dog, canine memes consistently go viral because they combine adorable visuals with relatable humor.' },
+    ],
+    longContent: `Dog memes are one of the most enduring and beloved genres in internet meme culture. From the iconic Doge meme that spawned an entire cryptocurrency to the "This is fine" dog sitting in a burning room, dogs have been at the center of viral internet humor for over a decade. Their expressive faces, silly behaviors, and unconditional love make them perfect subjects for relatable, shareable content.
+
+Our dog meme generator takes the classic meme format to the next level with a unique click-to-place text system. Unlike traditional meme makers that restrict you to top and bottom text positions, our tool lets you click anywhere on the image to place text exactly where you want it. This gives you complete creative freedom to create memes with speech bubbles near a dog's mouth, thought bubbles above their head, or captions in any corner of the image.
+
+The ability to add multiple text boxes opens up creative possibilities that fixed-position meme makers simply cannot offer. Create dialogue between two dogs in the same image, add a narrator's commentary alongside a character's speech, or layer multiple jokes for maximum comedic effect. Each text box can be independently edited and repositioned by dragging, making the creative process intuitive and fun.
+
+Dog memes work because of the incredible range of emotions that dogs display. A confused head tilt becomes the perfect reaction to a bizarre situation. A guilty-looking dog embodies that feeling when you get caught doing something you should not. An overly enthusiastic puppy captures unbridled joy. These relatable expressions, combined with clever captions, create memes that resonate with virtually everyone.
+
+The versatility of dog memes extends across every context and platform. They work perfectly for lighthearted social media posts, group chat reactions, workplace humor, and even marketing content. Dog memes transcend language and cultural barriers because the emotions they express are universal. A happy dog is understood in every country, making dog memes one of the most globally shareable content formats.
+
+Our collection features 7 carefully selected dog meme templates covering the most popular expressions and scenarios. Each template has been optimized for clarity and visual impact, ensuring your text is always readable and your meme looks professional. The bold Impact font with white fill and black stroke provides maximum readability against any background.
+
+Creating your dog meme takes just seconds. Browse the templates, click to place your text, type your caption, and download. The live preview updates instantly so you always know exactly what your meme will look like. No watermarks, no sign-ups, no limits — just pure meme-making creativity.`,
+  },
 };
 
 // Generators (Name Generators) configuration

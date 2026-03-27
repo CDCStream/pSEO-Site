@@ -7,6 +7,7 @@ import HyperpigmentationMemeClient from './HyperpigmentationMemeClient';
 import SybauMemeClient from './SybauMemeClient';
 import WantedPosterClient from './WantedPosterClient';
 import JdVanceMemeClient from './JdVanceMemeClient';
+import DogMemeClient from './DogMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -177,6 +178,29 @@ const jdVanceSteps = [
   },
 ];
 
+const dogMemeSteps = [
+  {
+    icon: Image,
+    title: 'Pick a Template',
+    description: 'Browse 7 dog meme templates and select the one that fits your idea.',
+  },
+  {
+    icon: Type,
+    title: 'Click to Place Text',
+    description: 'Click anywhere on the image to add a text box. Add as many as you want.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your dog meme as a high-quality PNG image.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -229,11 +253,13 @@ export default async function MemePage({ params }) {
               <WantedPosterClient />
             ) : slug === 'jd-vance-meme' ? (
               <JdVanceMemeClient />
+            ) : slug === 'dog-meme' ? (
+              <DogMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
