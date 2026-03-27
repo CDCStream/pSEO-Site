@@ -10,6 +10,20 @@ const TEMPLATES = Array.from({ length: 7 }, (_, i) => ({
   label: `Template ${i + 1}`,
 }));
 
+const FONTS = [
+  { id: 'impact', label: 'Impact', value: 'Impact, Arial Black, sans-serif' },
+  { id: 'arial', label: 'Arial', value: 'Arial, Helvetica, sans-serif' },
+  { id: 'comic', label: 'Comic Sans', value: '"Comic Sans MS", cursive' },
+  { id: 'courier', label: 'Courier', value: '"Courier New", monospace' },
+  { id: 'georgia', label: 'Georgia', value: 'Georgia, serif' },
+  { id: 'times', label: 'Times', value: '"Times New Roman", serif' },
+  { id: 'verdana', label: 'Verdana', value: 'Verdana, Geneva, sans-serif' },
+];
+
+const FONT_SIZES = [16, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72];
+
+const PRESET_COLORS = ['#ffffff', '#000000', '#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff6600', '#ff69b4'];
+
 let nextId = 1;
 
 function wrapText(ctx, text, maxWidth) {
@@ -84,9 +98,10 @@ export default function DogMemeClient() {
       if (!txt) return;
 
       const maxW = canvas.width * 0.45;
-      let fs = Math.max(10, Math.round(36 * scale));
+      const fs = Math.max(10, Math.round((box.fontSize || 36) * scale));
+      const fontFamily = box.fontFamily || FONTS[0].value;
 
-      ctx.font = `bold ${fs}px Impact, Arial Black, sans-serif`;
+      ctx.font = `bold ${fs}px ${fontFamily}`;
       let lines = wrapText(ctx, txt.toUpperCase(), maxW);
       const lineHeight = fs * 1.15;
 
@@ -101,11 +116,13 @@ export default function DogMemeClient() {
 
       lines.forEach((line, i) => {
         const ly = startY + i * lineHeight;
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = Math.max(3, fs / 5);
-        ctx.lineJoin = 'round';
-        ctx.strokeText(line, cx, ly);
-        ctx.fillStyle = '#fff';
+        if (box.stroke && box.stroke !== 'none') {
+          ctx.strokeStyle = box.stroke;
+          ctx.lineWidth = Math.max(3, fs / 5);
+          ctx.lineJoin = 'round';
+          ctx.strokeText(line, cx, ly);
+        }
+        ctx.fillStyle = box.color || '#ffffff';
         ctx.fillText(line, cx, ly);
       });
     });
@@ -153,7 +170,7 @@ export default function DogMemeClient() {
       return;
     }
 
-    const newBox = { id: nextId++, x: nx, y: ny, text: '' };
+    const newBox = { id: nextId++, x: nx, y: ny, text: '', color: '#ffffff', stroke: '#000000', fontFamily: FONTS[0].value, fontSize: 36 };
     setTextBoxes((prev) => [...prev, newBox]);
     setActiveBox(newBox.id);
   };
@@ -205,6 +222,12 @@ export default function DogMemeClient() {
   const updateText = (id, text) => {
     setTextBoxes((prev) =>
       prev.map((b) => (b.id === id ? { ...b, text } : b))
+    );
+  };
+
+  const updateBoxStyle = (id, key, value) => {
+    setTextBoxes((prev) =>
+      prev.map((b) => (b.id === id ? { ...b, [key]: value } : b))
     );
   };
 
@@ -291,50 +314,130 @@ export default function DogMemeClient() {
             </div>
           )}
 
-          <div className="space-y-2 max-h-[300px] overflow-y-auto">
+          <div className="space-y-3 max-h-[400px] overflow-y-auto pr-1">
             {textBoxes.map((box, i) => (
               <div
                 key={box.id}
-                className={`flex items-center gap-2 p-2 rounded-lg border transition-colors ${
+                className={`rounded-lg border transition-colors ${
                   activeBox === box.id
                     ? 'border-amber-500/50 bg-amber-500/10'
                     : 'border-white/10 bg-white/5'
                 }`}
                 onClick={() => setActiveBox(box.id)}
               >
-                <span className="text-xs text-gray-500 font-mono w-5 shrink-0">
-                  {i + 1}
-                </span>
-                <input
-                  type="text"
-                  value={box.text}
-                  onChange={(e) => updateText(box.id, e.target.value)}
-                  placeholder="Type your text..."
-                  className="flex-1 px-2 py-1.5 rounded bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500/50 placeholder-gray-600"
-                />
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    removeBox(box.id);
-                  }}
-                  className="p-1 text-gray-500 hover:text-red-400 transition-colors shrink-0"
-                  aria-label="Remove text box"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                {/* Text input row */}
+                <div className="flex items-center gap-2 p-2">
+                  <span className="text-xs text-gray-500 font-mono w-5 shrink-0">
+                    {i + 1}
+                  </span>
+                  <input
+                    type="text"
+                    value={box.text}
+                    onChange={(e) => updateText(box.id, e.target.value)}
+                    placeholder="Type your text..."
+                    className="flex-1 px-2 py-1.5 rounded bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500/50 placeholder-gray-600"
+                  />
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      removeBox(box.id);
+                    }}
+                    className="p-1 text-gray-500 hover:text-red-400 transition-colors shrink-0"
+                    aria-label="Remove text box"
                   >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
-                </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Style controls - visible when active */}
+                {activeBox === box.id && (
+                  <div className="px-2 pb-2 pt-1 border-t border-white/5 space-y-2">
+                    {/* Font Family */}
+                    <div className="flex items-center gap-2">
+                      <label className="text-[10px] text-gray-500 uppercase w-10 shrink-0">Font</label>
+                      <select
+                        value={box.fontFamily || FONTS[0].value}
+                        onChange={(e) => updateBoxStyle(box.id, 'fontFamily', e.target.value)}
+                        className="flex-1 px-2 py-1 rounded bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-amber-500/50 appearance-none cursor-pointer"
+                      >
+                        {FONTS.map((f) => (
+                          <option key={f.id} value={f.value} className="bg-[#1a1a2e] text-white">
+                            {f.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Font Size */}
+                    <div className="flex items-center gap-2">
+                      <label className="text-[10px] text-gray-500 uppercase w-10 shrink-0">Size</label>
+                      <input
+                        type="range"
+                        min="12"
+                        max="72"
+                        step="2"
+                        value={box.fontSize || 36}
+                        onChange={(e) => updateBoxStyle(box.id, 'fontSize', Number(e.target.value))}
+                        className="flex-1 accent-amber-500 h-1.5"
+                      />
+                      <span className="text-xs text-gray-400 font-mono w-7 text-right">{box.fontSize || 36}</span>
+                    </div>
+
+                    {/* Colors */}
+                    <div className="flex items-center gap-2">
+                      <label className="text-[10px] text-gray-500 uppercase w-10 shrink-0">Color</label>
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {PRESET_COLORS.map((c) => (
+                          <button
+                            key={c}
+                            onClick={(e) => { e.stopPropagation(); updateBoxStyle(box.id, 'color', c); }}
+                            className={`w-5 h-5 rounded-full border-2 transition-transform ${
+                              (box.color || '#ffffff') === c ? 'border-amber-400 scale-125' : 'border-white/20'
+                            }`}
+                            style={{ backgroundColor: c }}
+                            aria-label={`Text color ${c}`}
+                          />
+                        ))}
+                        <input
+                          type="color"
+                          value={box.color || '#ffffff'}
+                          onChange={(e) => updateBoxStyle(box.id, 'color', e.target.value)}
+                          className="w-5 h-5 rounded cursor-pointer border-0 bg-transparent"
+                          title="Custom color"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Stroke Color */}
+                    <div className="flex items-center gap-2">
+                      <label className="text-[10px] text-gray-500 uppercase w-10 shrink-0">Stroke</label>
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {['#000000', '#ffffff', '#ff0000', '#0000ff', '#ffff00', 'none'].map((c) => (
+                          <button
+                            key={c}
+                            onClick={(e) => { e.stopPropagation(); updateBoxStyle(box.id, 'stroke', c); }}
+                            className={`w-5 h-5 rounded-full border-2 transition-transform ${
+                              (box.stroke || '#000000') === c ? 'border-amber-400 scale-125' : 'border-white/20'
+                            }`}
+                            style={{ backgroundColor: c === 'none' ? 'transparent' : c }}
+                            aria-label={c === 'none' ? 'No stroke' : `Stroke color ${c}`}
+                          >
+                            {c === 'none' && <span className="text-[8px] text-gray-400 leading-none">OFF</span>}
+                          </button>
+                        ))}
+                        <input
+                          type="color"
+                          value={box.stroke === 'none' ? '#000000' : (box.stroke || '#000000')}
+                          onChange={(e) => updateBoxStyle(box.id, 'stroke', e.target.value)}
+                          className="w-5 h-5 rounded cursor-pointer border-0 bg-transparent"
+                          title="Custom stroke color"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
