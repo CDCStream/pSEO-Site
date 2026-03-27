@@ -102,6 +102,7 @@ export default function DogMemeClient() {
       const fontFamily = box.fontFamily || FONTS[0].value;
 
       ctx.font = `bold ${fs}px ${fontFamily}`;
+      ctx.letterSpacing = `${Math.max(1, Math.round(fs * 0.06))}px`;
       let lines = wrapText(ctx, txt.toUpperCase(), maxW);
       const lineHeight = fs * 1.15;
 
