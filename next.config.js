@@ -19,6 +19,11 @@ const nextConfig = {
         destination: '/tools/cursed-text-generator/',
         permanent: true,
       },
+      {
+        source: '/tools/fancy-text-generator/',
+        destination: '/tools/glitch-text-generator/',
+        permanent: true,
+      },
     ];
   },
 
