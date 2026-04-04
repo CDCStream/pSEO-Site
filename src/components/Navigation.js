@@ -97,6 +97,7 @@ const navItems = [
       { label: 'Wanted Poster', href: '/meme-maker/wanted-poster/' },
       { label: 'JD Vance Meme', href: '/meme-maker/jd-vance-meme/' },
       { label: 'Dog Meme', href: '/meme-maker/dog-meme/' },
+      { label: 'Crying Meme', href: '/meme-maker/crying-meme/' },
     ],
   },
   {

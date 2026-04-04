@@ -1231,6 +1231,38 @@ Our collection features 7 carefully selected dog meme templates covering the mos
 
 Creating your dog meme takes just seconds. Browse the templates, click to place your text, type your caption, and download. The live preview updates instantly so you always know exactly what your meme will look like. No watermarks, no sign-ups, no limits — just pure meme-making creativity.`,
   },
+  'crying-meme': {
+    category: 'meme-maker',
+    name: 'Crying Meme Collection',
+    keyword: 'Crying Meme',
+    title: 'Crying Meme - 23 Free Funny Crying Reaction Memes Download | MakerSilo',
+    description: 'Browse and download 23 free crying memes. Funny crying face reactions, sad meme templates, and emotional reaction images. No watermark, instant download as PNG.',
+    h1: 'Crying Meme — Free Reaction Images',
+    subtitle: 'Browse and download 23 hilarious crying reaction memes. Perfect for group chats, social media, and online conversations — 100% free, no watermark.',
+    icon: 'image',
+    generatorType: 'cryingMemeGallery',
+    faq: [
+      { q: 'How many crying memes are available?', a: 'Our collection features 23 high-quality crying meme images in various styles — from exaggerated cartoon crying faces to relatable real-life crying reactions. Each meme captures a different shade of emotional distress that is perfect for online humor.' },
+      { q: 'Are these crying memes free to download?', a: 'Yes! All 23 crying memes are completely free to download. No sign-up required, no watermarks, no hidden fees. Just click the download button and save the meme directly to your device.' },
+      { q: 'How do I download a crying meme?', a: 'Simply browse the gallery, hover over the meme you like and click the download icon, or click to open the lightbox preview and use the download button there. The meme saves as a high-quality PNG file.' },
+      { q: 'Can I use these memes on social media?', a: 'Absolutely! These crying memes are perfect for Instagram stories, Twitter/X replies, TikTok comments, Reddit posts, Discord servers, WhatsApp groups, and any other platform where reaction images are used.' },
+      { q: 'What are crying memes used for?', a: 'Crying memes are versatile reaction images used to express sadness, disappointment, frustration, or ironic humor. They are commonly shared in response to relatable situations, bad news, funny failures, or as exaggerated emotional reactions in group chats and social media.' },
+      { q: 'Why are crying memes so popular?', a: 'Crying memes tap into the universal human experience of feeling overwhelmed, disappointed, or emotionally moved. The exaggerated nature of crying reaction images adds humor to relatable situations, making them one of the most shared and understood meme formats across all cultures and platforms.' },
+    ],
+    longContent: `Crying memes have become one of the most essential categories of reaction images on the internet. From the classic crying Jordan face to the modern "this is fine" tears, crying reaction images communicate a universal emotion that transcends language barriers and cultural differences. Everyone knows the feeling of wanting to cry — whether from laughter, frustration, or genuine sadness — and crying memes capture that feeling perfectly.
+
+Our collection of 23 free crying memes covers the full spectrum of tearful expressions. You will find exaggerated cartoon crying faces that are perfect for dramatic reactions, subtle teary-eyed expressions for more nuanced emotional responses, and full-blown ugly crying faces that capture those moments when everything falls apart. Each image has been selected for maximum emotional impact and meme versatility.
+
+The psychology behind crying memes is fascinating. Humans are naturally drawn to emotional expressions, and crying is one of the most powerful emotional signals we recognize. When used in a humorous context, crying images create an immediate emotional connection with the viewer. The contrast between the genuine emotion in the image and the often trivial or absurd context in which it is shared creates a comedic effect that people find irresistibly shareable.
+
+Crying memes serve multiple functions in digital communication. They act as emotional punctuation — a way to emphasize how strongly you feel about something without typing a lengthy response. They function as solidarity signals, showing others that you share their pain or frustration. They serve as humor devices, exaggerating minor inconveniences into dramatic crises for comedic effect. This versatility is why crying memes never go out of style.
+
+The use cases for crying memes are endless. Sports fans share them after tough losses. Students post them during exam season. Workers use them to express Monday morning feelings. Gamers share them after devastating defeats. Parents use them for relatable parenting moments. The format works because crying is something everyone experiences, and turning that universal experience into humor is one of the internet's greatest gifts.
+
+On social media, crying memes are engagement gold. They generate reactions because people instantly relate to the emotion being expressed. Whether used as a reply, a story post, or a group chat reaction, crying memes consistently drive interaction because they invite others to share their own similar experiences.
+
+All memes in our collection are available as high-quality PNG files, ready for instant download. No accounts, no watermarks, no limits — browse, click, and download. Find the perfect crying reaction image for every emotional moment.`,
+  },
 };
 
 // Generators (Name Generators) configuration

@@ -8,12 +8,13 @@ import SybauMemeClient from './SybauMemeClient';
 import WantedPosterClient from './WantedPosterClient';
 import JdVanceMemeClient from './JdVanceMemeClient';
 import DogMemeClient from './DogMemeClient';
+import CryingMemeGalleryClient from './CryingMemeGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
 import LongContent from '@/components/SEO/LongContent';
 import ToolSchema from '@/components/SEO/ToolSchema';
-import { Image, Type, Download, Share2, Palette, Upload as UploadIcon } from 'lucide-react';
+import { Image, Type, Download, Share2, Palette, Upload as UploadIcon, Search } from 'lucide-react';
 
 export async function generateStaticParams() {
   const slugs = getSlugsForCategory('meme-maker');
@@ -201,6 +202,29 @@ const dogMemeSteps = [
   },
 ];
 
+const cryingMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 23 hilarious crying reaction memes.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any meme to open a full-size lightbox preview.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Hit the download button to save the crying meme as a PNG file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats, post on social media, or use as a reaction image.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -255,11 +279,13 @@ export default async function MemePage({ params }) {
               <JdVanceMemeClient />
             ) : slug === 'dog-meme' ? (
               <DogMemeClient />
+            ) : slug === 'crying-meme' ? (
+              <CryingMemeGalleryClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
