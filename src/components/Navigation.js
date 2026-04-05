@@ -98,6 +98,7 @@ const navItems = [
       { label: 'JD Vance Meme', href: '/meme-maker/jd-vance-meme/' },
       { label: 'Dog Meme', href: '/meme-maker/dog-meme/' },
       { label: 'Crying Meme', href: '/meme-maker/crying-meme/' },
+      { label: 'Side Eye Meme', href: '/meme-maker/side-eye-meme/' },
     ],
   },
   {
