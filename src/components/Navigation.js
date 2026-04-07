@@ -99,6 +99,7 @@ const navItems = [
       { label: 'Dog Meme', href: '/meme-maker/dog-meme/' },
       { label: 'Crying Meme', href: '/meme-maker/crying-meme/' },
       { label: 'Side Eye Meme', href: '/meme-maker/side-eye-meme/' },
+      { label: 'Get A Load Of This Guy', href: '/meme-maker/get-a-load-of-this-guy-meme/' },
     ],
   },
   {

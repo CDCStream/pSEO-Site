@@ -1295,6 +1295,38 @@ On social media, side eye memes and GIFs are engagement powerhouses. They invite
 
 All memes are available for instant download — PNG for static images and GIF for animations. No accounts, no watermarks, no limits. Browse our collection and find the perfect side eye for every suspicious moment.`,
   },
+  'get-a-load-of-this-guy-meme': {
+    category: 'meme-maker',
+    name: 'Get A Load Of This Guy Meme Maker',
+    keyword: 'Get A Load Of This Guy Meme',
+    title: 'Get A Load Of This Guy Meme Maker - Create Custom Memes Free',
+    description: 'Create your own "Get A Load Of This Guy" memes instantly! Add custom text anywhere, choose fonts, colors, and sizes. Free meme maker — no watermark, instant download.',
+    h1: 'Get A Load Of This Guy Meme Maker',
+    subtitle: 'Add custom text to the iconic "Get A Load Of This Guy" template and download your meme for free.',
+    icon: 'image',
+    generatorType: 'getALoadMeme',
+    faq: [
+      { q: 'What is the "Get A Load Of This Guy" meme?', a: 'The "Get A Load Of This Guy" meme features a character pointing or gesturing toward someone in disbelief. It is used to mock, tease, or sarcastically highlight something absurd someone said or did. The format went viral across Reddit, Twitter, and Instagram.' },
+      { q: 'How do I add text to the meme?', a: 'Click anywhere on the image to place a text box. Type your text in the panel on the left. You can add multiple text boxes, drag them to reposition, and customize font, size, color, and stroke for each one individually.' },
+      { q: 'Can I change the font and text color?', a: 'Yes! Each text box has its own customization options. Choose from 7 font families (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjust font size with a slider, pick text color from presets or a custom color picker, and add or remove text stroke.' },
+      { q: 'How do I download my meme?', a: 'Click the green "Download Meme as PNG" button below the text controls. Your meme will be saved as a high-quality PNG file with no watermark.' },
+      { q: 'Can I reposition text after placing it?', a: 'Absolutely! Click and drag any text box to move it anywhere on the image. You can also click an existing text box to select it and edit its content or styling.' },
+      { q: 'Is this meme maker free to use?', a: 'Yes, completely free! No sign-up, no watermark, no limits. Create as many "Get A Load Of This Guy" memes as you want and download them instantly.' },
+    ],
+    longContent: `The "Get A Load Of This Guy" meme is one of the most versatile and enduring reaction memes on the internet. Featuring a character pointing at someone with a mixture of disbelief, amusement, and mockery, this template perfectly captures the universal experience of encountering someone doing or saying something hilariously absurd. Our free meme maker lets you create your own custom version in seconds.
+
+The origin of "Get A Load Of This Guy" traces back to classic cartoon and movie moments where a character breaks the fourth wall to share their incredulity with the audience. The phrase itself became a catchphrase for expressing mock surprise or sarcastic acknowledgment. Over time, internet culture adopted the format and turned it into a reaction meme that works in countless situations — from roasting friends to commenting on viral tweets.
+
+Our meme maker features an advanced text placement system that gives you complete creative control. Unlike basic top-and-bottom text memes, you can click anywhere on the image to place text exactly where it works best. Need the text near the character's mouth like a speech bubble? Click there. Want bold text across the top? Place it precisely. Add multiple text boxes for complex setups with captions, dialogue, or layered jokes.
+
+Every text box is fully customizable. Choose from seven popular font families including the classic Impact font that defines meme culture, or switch to Comic Sans for ironic effect. Adjust the font size with a smooth slider from tiny annotations to massive bold statements. Pick text colors from a curated palette of ten popular choices, or use the custom color picker for the exact shade you need. Add text stroke (outline) in any color to ensure your text pops against any background, or disable it for a clean look.
+
+The drag-and-drop functionality makes composition effortless. After placing a text box, simply click and drag it to the perfect position. This precision ensures your meme reads exactly as intended, with text placed where it has maximum comedic impact. Rearrange elements until the timing and visual flow of your joke is just right.
+
+"Get A Load Of This Guy" memes thrive on social media. They are perfect for quote tweets, comment section reactions, group chat responses, and standalone posts. The format works equally well for light-hearted teasing among friends and for commentary on public figures, trends, or absurd situations. The pointing gesture creates an inherent call to attention that draws viewers into the joke.
+
+Download your finished meme as a high-quality PNG with no watermark. Share it on Twitter, Reddit, Instagram, Discord, WhatsApp, or any platform. Every meme you create is yours to use freely. No accounts, no subscriptions — just pure meme-making fun.`,
+  },
 };
 
 // Generators (Name Generators) configuration
