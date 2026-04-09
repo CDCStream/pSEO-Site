@@ -1327,6 +1327,38 @@ The drag-and-drop functionality makes composition effortless. After placing a te
 
 Download your finished meme as a high-quality PNG with no watermark. Share it on Twitter, Reddit, Instagram, Discord, WhatsApp, or any platform. Every meme you create is yours to use freely. No accounts, no subscriptions — just pure meme-making fun.`,
   },
+  'hamster-meme': {
+    category: 'meme-maker',
+    name: 'Hamster Meme Collection',
+    keyword: 'Hamster Meme',
+    title: 'Best Hamster Memes - Funny Hamster GIFs & Images Free Download',
+    description: 'Browse and download the funniest hamster memes and GIFs! From dramatic hamster to cute hamster reactions — all free, no watermark, instant download.',
+    h1: 'Hamster Meme Collection',
+    subtitle: 'Download the funniest hamster memes and animated GIFs for free — no watermark, instant download.',
+    icon: 'image',
+    generatorType: 'hamsterMemeGallery',
+    faq: [
+      { q: 'How many hamster memes are available?', a: 'Our collection features 10 hamster memes — a mix of static images (PNG) and animated GIFs. The animated GIFs play directly on the page so you can preview them before downloading.' },
+      { q: 'Are the hamster meme GIFs animated on the page?', a: 'Yes! All GIF files play their full animation right in the gallery grid and in the lightbox preview. Look for the green "GIF" badge to identify animated entries.' },
+      { q: 'How do I download a hamster meme?', a: 'Hover over any meme and click the download button, or click to open it full-screen and use the download button in the lightbox. The original format (PNG or GIF) is preserved.' },
+      { q: 'Can I use these hamster memes for free?', a: 'Absolutely! All memes are free to download and share. No account needed, no watermarks, no limits. Use them in group chats, social media, or anywhere you like.' },
+      { q: 'What is the Dramatic Hamster meme?', a: 'The Dramatic Hamster (also known as Dramatic Chipmunk or Dramatic Prairie Dog) is one of the earliest viral animal memes. It features a hamster turning dramatically toward the camera with suspenseful music. It became one of the most iconic reaction GIFs on the internet.' },
+      { q: 'Where can I share these hamster memes?', a: 'Share them anywhere! These memes work perfectly on Twitter/X, Reddit, Instagram, Discord, WhatsApp, Telegram, Facebook, and any messaging app. GIFs are especially popular as reaction images in group chats.' },
+    ],
+    longContent: `Hamster memes hold a special place in internet culture as some of the earliest and most beloved animal memes ever created. From the legendary Dramatic Hamster that captivated early YouTube audiences to modern-day hamster reaction GIFs, these tiny furry creatures have delivered outsized laughs for over a decade. Our curated collection brings together the funniest hamster memes and GIFs for instant download.
+
+The Dramatic Hamster — technically a prairie dog from a Japanese TV show — became one of the first viral animal videos in 2007. The five-second clip of the animal turning to stare dramatically at the camera, paired with suspenseful music, spawned countless parodies and reaction GIFs. It proved that animals could be internet comedy gold, paving the way for every cat meme, dog meme, and animal reaction that followed.
+
+Hamster memes work because hamsters are inherently expressive despite their tiny size. Their round cheeks stuffed with food became a universal metaphor for eating too much. Their startled expressions perfectly capture the feeling of being caught doing something you shouldn't. Their frantic wheel-running represents the futile busyness of modern life. Every hamster behavior has a human parallel, which is why these memes resonate so deeply.
+
+The animated GIFs in our collection add an extra dimension of humor that static images simply cannot match. A hamster slowly stuffing food into its cheeks, dramatically turning toward the camera, or running at full speed on a tiny wheel — these moments need motion to deliver their full comedic punch. The timing, the expressions, the tiny paws — animated hamster GIFs capture every hilarious detail.
+
+Hamster memes are incredibly versatile reaction images. Use them to express shock, surprise, guilt, greed, panic, or sheer adorable confusion. They work as gentle, non-offensive reactions that lighten any conversation. Whether you are responding to a friend's text, commenting on a social media post, or adding personality to a group chat, hamster memes bring warmth and laughter without ever crossing a line.
+
+On social media, hamster content consistently goes viral. The combination of cuteness and comedy creates an irresistible shareable package. Hamster GIFs dominate reaction threads on Twitter and Reddit. Instagram hamster accounts have millions of followers. Discord servers use hamster emotes and GIFs as beloved community staples. The universal appeal of these tiny comedians transcends language and cultural barriers.
+
+All memes are available for instant download — PNG for static images and GIF for animations. No accounts, no watermarks, no limits. Browse our collection and find the perfect hamster meme for every situation that calls for a tiny, furry dose of comedy.`,
+  },
 };
 
 // Generators (Name Generators) configuration
