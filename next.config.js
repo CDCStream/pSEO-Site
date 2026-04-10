@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/tools/glitch-text-generator/',
         permanent: true,
       },
+      {
+        source: '/blog/complete-aqua-color-code/',
+        destination: '/blog/',
+        permanent: true,
+      },
     ];
   },
 
