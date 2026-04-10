@@ -1359,6 +1359,40 @@ On social media, hamster content consistently goes viral. The combination of cut
 
 All memes are available for instant download — PNG for static images and GIF for animations. No accounts, no watermarks, no limits. Browse our collection and find the perfect hamster meme for every situation that calls for a tiny, furry dose of comedy.`,
   },
+  'mike-wazowski-meme': {
+    category: 'meme-maker',
+    name: 'Mike Wazowski Meme Collection',
+    keyword: 'Mike Wazowski Meme',
+    title: 'Best Mike Wazowski Memes - Funny Monsters Inc GIFs & Images Free',
+    description: 'Browse and download the funniest Mike Wazowski memes and GIFs! Iconic Monsters Inc face swap, reaction memes — all free, no watermark, instant download.',
+    h1: 'Mike Wazowski Meme Collection',
+    subtitle: 'Download the funniest Mike Wazowski memes and animated GIFs for free — the iconic Monsters Inc face that broke the internet.',
+    icon: 'image',
+    generatorType: 'mikeWazowskiMemeGallery',
+    faq: [
+      { q: 'How many Mike Wazowski memes are available?', a: 'Our collection features 14 Mike Wazowski memes — 13 animated GIFs and 1 static image. The animated GIFs play directly on the page so you can preview them before downloading.' },
+      { q: 'What is the Mike Wazowski meme?', a: 'The Mike Wazowski meme originates from the Pixar movie Monsters Inc. The most famous version is the "Mike Wazowski face swap" where his face is replaced with Sulley\'s face, creating a hilariously distorted expression. It became one of the most popular reaction memes on the internet.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIF files play their full animation right in the gallery grid and in the lightbox preview. Look for the green "GIF" badge to identify animated entries.' },
+      { q: 'How do I download a Mike Wazowski meme?', a: 'Hover over any meme and click the download button, or click to open it full-screen and use the download button in the lightbox. The original format (PNG or GIF) is preserved.' },
+      { q: 'Can I use these memes for free?', a: 'Absolutely! All memes are free to download and share. No account needed, no watermarks, no limits. Use them in group chats, social media, or anywhere you like.' },
+      { q: 'Where can I share these Mike Wazowski memes?', a: 'Share them anywhere! These memes work perfectly on Twitter/X, Reddit, Instagram, Discord, WhatsApp, Telegram, Facebook, and any messaging app. GIFs are especially popular as reaction images.' },
+    ],
+    longContent: `Mike Wazowski memes are among the most recognizable and universally loved reaction memes on the internet. Born from Pixar's beloved 2001 film Monsters Inc., Mike Wazowski — the small, green, one-eyed monster voiced by Billy Crystal — has become an unlikely icon of internet humor. Our curated collection brings together the funniest Mike Wazowski memes and GIFs for instant free download.
+
+The most iconic Mike Wazowski meme is the "face swap" variant. In this version, Mike's face is replaced with the face of his best friend Sulley (James P. Sullivan), creating a hilariously unsettling expression that perfectly captures feelings of confusion, awkwardness, and mild horror. The image went viral on Reddit and Twitter around 2019-2020 and has remained a staple reaction meme ever since.
+
+What makes the Mike Wazowski face swap so enduringly funny is its versatility. The expression works for virtually any situation that calls for a reaction of bemused disbelief. Someone says something absurd in a group chat? Mike Wazowski face. You catch yourself making a terrible decision? Mike Wazowski face. A friend tells a joke so bad it circles back to being funny? Mike Wazowski face. The meme's power lies in its simplicity — one look says everything.
+
+The animated GIFs in our collection elevate the comedy even further. Seeing Mike Wazowski in motion — blinking, turning, reacting — adds layers of expressiveness that static images cannot match. The timing of an animated Mike Wazowski reaction GIF can turn a good joke into a legendary one. These GIFs are perfect for Discord servers, Twitter replies, and group chat reactions where animation catches the eye.
+
+Beyond the face swap, Mike Wazowski has inspired dozens of meme formats. There is "Mike Wazowski explaining" where he presents at a whiteboard, "Mike Wazowski walking" which captures that confident strut energy, and "Mike Wazowski with two eyes" which is cursed in an entirely different way. Each variant taps into a different emotional frequency while maintaining the character's inherent charm.
+
+Monsters Inc. nostalgia plays a huge role in these memes' popularity. For millennials and Gen Z, the film is a childhood touchstone. Seeing a beloved character repurposed for internet comedy creates an instant connection that feels both familiar and fresh. The memes bridge generations — older fans appreciate the reference while newer internet users discover the character through meme culture.
+
+Mike Wazowski memes dominate reaction culture across every major platform. On Reddit, Mike Wazowski templates regularly reach the front page. On Twitter/X, the face swap GIF is one of the most-used reaction images. Discord communities have adopted Mike Wazowski as an unofficial mascot for confusion and disbelief. Instagram meme pages feature him constantly, and TikTok has spawned countless Mike Wazowski-themed edits.
+
+All memes are available for instant download — PNG for static images and GIF for animations. No accounts, no watermarks, no limits. Browse our collection and find the perfect Mike Wazowski reaction for every moment that deserves that unforgettable one-eyed stare.`,
+  },
 };
 
 // Generators (Name Generators) configuration

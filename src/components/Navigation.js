@@ -101,6 +101,7 @@ const navItems = [
       { label: 'Side Eye Meme', href: '/meme-maker/side-eye-meme/' },
       { label: 'Get A Load Of This Guy', href: '/meme-maker/get-a-load-of-this-guy-meme/' },
       { label: 'Hamster Meme', href: '/meme-maker/hamster-meme/' },
+      { label: 'Mike Wazowski Meme', href: '/meme-maker/mike-wazowski-meme/' },
     ],
   },
   {
