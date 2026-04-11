@@ -7,6 +7,7 @@ import DissTrackClient from './DissTrackClient';
 import TierListClient from './TierListClient';
 import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
 import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
+import GraffitiLettersClient from './GraffitiLettersClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -81,13 +82,15 @@ export default async function ToolPage({ params }) {
       </section>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-w-0">
+        <div className="flex flex-col xl:flex-row gap-8 xl:items-start min-w-0">
           {/* Main Column */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 w-full">
             {/* Ad Above Tool */}
             <AdSlot position="above-tool" />
 
+            {/* Keep tools above any full-width ad layers */}
+            <div className="relative z-10 min-w-0">
             {/* Tool Interface */}
             {slug === 'minecraft-font' ? (
               <MinecraftTextClient config={config} />
@@ -101,9 +104,12 @@ export default async function ToolPage({ params }) {
               <YouTubeChannelIdeaClient config={config} />
             ) : config.generatorType === 'youtubeCommentPicker' ? (
               <YouTubeCommentPickerClient config={config} />
+            ) : config.generatorType === 'graffitiLetters' ? (
+              <GraffitiLettersClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}
+            </div>
 
             {/* How to Use */}
             <HowToUse keyword={config.keyword} />

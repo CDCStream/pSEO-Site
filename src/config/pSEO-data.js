@@ -735,6 +735,39 @@ Our tier system uses the standard gaming convention: S tier for the absolute bes
 
 Share your tier lists on social media to show your opinions and invite discussion. The visual format is perfect for sparking friendly debates about rankings and preferences.`,
   },
+
+  'graffiti-letters': {
+    category: 'tools',
+    name: 'Graffiti Letters Generator',
+    keyword: 'Graffiti Letters',
+    title: 'Best Free Graffiti Letters Generator - 94 Graffiti Fonts Online',
+    description: 'Create stunning graffiti letters with 94 free graffiti fonts. Type your text, pick a style, change colors, and preview on a realistic brick wall. Download as PNG instantly.',
+    h1: 'Graffiti Letters Generator',
+    subtitle: 'Type your text, choose from 94 graffiti fonts, customize colors, and preview your graffiti on a brick wall.',
+    icon: 'spray-can',
+    generatorType: 'graffitiLetters',
+    faq: [
+      { q: 'How many graffiti fonts are available?', a: 'We offer 94 unique graffiti fonts including dripping, stencil, bubble, wildstyle, and street art styles — all completely free to use.' },
+      { q: 'Can I change the graffiti text color?', a: 'Yes! Use the color picker to change both the fill color and outline color of your graffiti text. You can also adjust the outline thickness.' },
+      { q: 'What is the wall preview feature?', a: 'The wall preview renders your graffiti text on a realistic brick wall background, so you can see how it would look as actual street art. You can download both the plain text and the wall version.' },
+      { q: 'Can I download my graffiti text as an image?', a: 'Absolutely! Download your graffiti as a transparent PNG (text only) or as a wall preview PNG with the brick background. Both are high quality and free.' },
+      { q: 'Do I need to install fonts to use this tool?', a: 'No installation needed. Fonts load automatically in your browser when you select them. Just pick a font, type your text, and download.' },
+      { q: 'Can I use graffiti letters for logos and YouTube thumbnails?', a: 'Yes! The downloaded PNG files are perfect for logos, YouTube thumbnails, Instagram posts, T-shirt designs, posters, and any creative project.' },
+    ],
+    longContent: `The Graffiti Letters Generator brings street art typography to your screen with 94 unique graffiti fonts. Whether you are creating a logo, designing a poster, or just having fun, this tool lets you transform any text into authentic graffiti lettering in seconds.
+
+Graffiti lettering has evolved from subway tags in 1970s New York into a globally recognized art form. Our collection spans the full spectrum of graffiti styles — from classic wildstyle fonts with interlocking arrows and flourishes to clean bubble letters, dripping paint effects, stencil sprays, and urban block styles.
+
+Type your text and watch it transform instantly as you browse through fonts like Crazy Graffiti, Dripping Drops, Trigger Graffiti, Street Explorer, and dozens more. Each font captures a different aspect of street art culture, from aggressive throw-ups to polished pieces.
+
+The color customization lets you dial in the perfect look. Change the fill color to match your brand or project palette, adjust the outline color for contrast, and control the outline thickness from subtle to bold. Experiment with neon greens, hot pinks, classic reds, or any color you can imagine.
+
+The brick wall preview is where the magic happens. See your graffiti rendered on a realistic brick wall background, complete with mortar lines and texture variation. This gives you a true street art visualization that is perfect for social media posts, presentation mockups, or creative inspiration.
+
+Download your creation in two formats: a transparent PNG with just the styled text (ideal for overlaying on other designs) or a wall preview PNG with the full brick background. Both are high resolution and ready for immediate use in any project.
+
+Graffiti fonts are popular for YouTube thumbnails, gaming channel branding, hip-hop album covers, skateboard graphics, event flyers, and streetwear designs. The bold, expressive nature of graffiti lettering commands attention and communicates energy, creativity, and urban culture.`,
+  },
 };
 
 // Symbols configuration

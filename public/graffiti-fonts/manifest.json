@@ -1,0 +1,566 @@
+[
+  {
+    "id": "a-attack-graffiti-font",
+    "label": "A Attack Graffiti",
+    "file": "a-attack-graffiti-font.otf",
+    "size": 31
+  },
+  {
+    "id": "a-dripping-marker-font",
+    "label": "A Dripping Marker",
+    "file": "a-dripping-marker-font.ttf",
+    "size": 68
+  },
+  {
+    "id": "absolute-graffiti-font",
+    "label": "Absolute Graffiti",
+    "file": "absolute-graffiti-font.otf",
+    "size": 32
+  },
+  {
+    "id": "angel-rhapsody-font",
+    "label": "Angel Rhapsody",
+    "file": "angel-rhapsody-font.otf",
+    "size": 31
+  },
+  {
+    "id": "ayaha-2-font",
+    "label": "Ayaha 2",
+    "file": "ayaha-2-font.ttf",
+    "size": 394
+  },
+  {
+    "id": "barachiel-font",
+    "label": "Barachiel",
+    "file": "barachiel-font.ttf",
+    "size": 164
+  },
+  {
+    "id": "beast-quotz-solid-font",
+    "label": "Beast Quotz Solid",
+    "file": "beast-quotz-solid-font.ttf",
+    "size": 106
+  },
+  {
+    "id": "big-monkey-font",
+    "label": "Big Monkey",
+    "file": "big-monkey-font.otf",
+    "size": 60
+  },
+  {
+    "id": "black-destroy-font",
+    "label": "Black Destroy",
+    "file": "black-destroy-font.otf",
+    "size": 34
+  },
+  {
+    "id": "black-gatte-font",
+    "label": "Black Gatte",
+    "file": "black-gatte-font.otf",
+    "size": 693
+  },
+  {
+    "id": "bloody-modes-font",
+    "label": "Bloody Modes",
+    "file": "bloody-modes-font.ttf",
+    "size": 184
+  },
+  {
+    "id": "bobagum-font",
+    "label": "Bobagum",
+    "file": "bobagum-font.otf",
+    "size": 51
+  },
+  {
+    "id": "boldie-blondie-font",
+    "label": "Boldie Blondie",
+    "file": "boldie-blondie-font.otf",
+    "size": 80
+  },
+  {
+    "id": "breakingrule-font",
+    "label": "Breakingrule",
+    "file": "breakingrule-font.otf",
+    "size": 661
+  },
+  {
+    "id": "bricks-font",
+    "label": "Bricks",
+    "file": "bricks-font.ttf",
+    "size": 1068
+  },
+  {
+    "id": "bulbis-font",
+    "label": "Bulbis",
+    "file": "bulbis-font.ttf",
+    "size": 33
+  },
+  {
+    "id": "bulzing-font",
+    "label": "Bulzing",
+    "file": "bulzing-font.otf",
+    "size": 32
+  },
+  {
+    "id": "christmas-cypher-font",
+    "label": "Christmas Cypher",
+    "file": "christmas-cypher-font.otf",
+    "size": 438
+  },
+  {
+    "id": "closer-font",
+    "label": "Closer",
+    "file": "closer-font.otf",
+    "size": 18
+  },
+  {
+    "id": "comback-home-font",
+    "label": "Comback Home",
+    "file": "comback-home-font.ttf",
+    "size": 48
+  },
+  {
+    "id": "crackline-font",
+    "label": "Crackline",
+    "file": "crackline-font.otf",
+    "size": 294
+  },
+  {
+    "id": "crazy-graffiti-font",
+    "label": "Crazy Graffiti",
+    "file": "crazy-graffiti-font.otf",
+    "size": 20
+  },
+  {
+    "id": "criminalz-font",
+    "label": "Criminalz",
+    "file": "criminalz-font.ttf",
+    "size": 428
+  },
+  {
+    "id": "cruel-machine-font",
+    "label": "Cruel Machine",
+    "file": "cruel-machine-font.otf",
+    "size": 203
+  },
+  {
+    "id": "deathmetal-font",
+    "label": "Deathmetal",
+    "file": "deathmetal-font.otf",
+    "size": 797
+  },
+  {
+    "id": "devious-road-font",
+    "label": "Devious Road",
+    "file": "devious-road-font.ttf",
+    "size": 86
+  },
+  {
+    "id": "dirtyboy-font",
+    "label": "Dirtyboy",
+    "file": "dirtyboy-font.ttf",
+    "size": 66
+  },
+  {
+    "id": "docallisme-on-street-font",
+    "label": "Docallisme On Street",
+    "file": "docallisme-on-street-font.otf",
+    "size": 54
+  },
+  {
+    "id": "dripping-drops-font",
+    "label": "Dripping Drops",
+    "file": "dripping-drops-font.otf",
+    "size": 55
+  },
+  {
+    "id": "dunara-font",
+    "label": "Dunara",
+    "file": "dunara-font.ttf",
+    "size": 43
+  },
+  {
+    "id": "exthing-font",
+    "label": "Exthing",
+    "file": "exthing-font.ttf",
+    "size": 93
+  },
+  {
+    "id": "fczl-font",
+    "label": "Fczl",
+    "file": "fczl-font.ttf",
+    "size": 32
+  },
+  {
+    "id": "fillings-urban-font",
+    "label": "Fillings Urban",
+    "file": "fillings-urban-font.otf",
+    "size": 31
+  },
+  {
+    "id": "fluffy-blitz-font",
+    "label": "Fluffy Blitz",
+    "file": "fluffy-blitz-font.otf",
+    "size": 20
+  },
+  {
+    "id": "gas-huffer-phat-font",
+    "label": "Gas Huffer Phat",
+    "file": "gas-huffer-phat-font.ttf",
+    "size": 42
+  },
+  {
+    "id": "gaviro-font",
+    "label": "Gaviro",
+    "file": "gaviro-font.ttf",
+    "size": 303
+  },
+  {
+    "id": "genius-fraud-font",
+    "label": "Genius Fraud",
+    "file": "genius-fraud-font.ttf",
+    "size": 303
+  },
+  {
+    "id": "ghang-font",
+    "label": "Ghang",
+    "file": "ghang-font.ttf",
+    "size": 37
+  },
+  {
+    "id": "glowst-font",
+    "label": "Glowst",
+    "file": "glowst-font.otf",
+    "size": 116
+  },
+  {
+    "id": "graffiti-brick-font",
+    "label": "Graffiti Brick",
+    "file": "graffiti-brick-font.ttf",
+    "size": 132
+  },
+  {
+    "id": "groovy-bombs-font",
+    "label": "Groovy Bombs",
+    "file": "groovy-bombs-font.ttf",
+    "size": 114
+  },
+  {
+    "id": "hiro-misake-font",
+    "label": "Hiro Misake",
+    "file": "hiro-misake-font.otf",
+    "size": 600
+  },
+  {
+    "id": "holland-font",
+    "label": "Holland",
+    "file": "holland-font.ttf",
+    "size": 70
+  },
+  {
+    "id": "hoperush-font",
+    "label": "Hoperush",
+    "file": "hoperush-font.otf",
+    "size": 138
+  },
+  {
+    "id": "hyper-blob-font",
+    "label": "Hyper Blob",
+    "file": "hyper-blob-font.otf",
+    "size": 43
+  },
+  {
+    "id": "jackboa-font",
+    "label": "Jackboa",
+    "file": "jackboa-font.otf",
+    "size": 132
+  },
+  {
+    "id": "kemujan-font",
+    "label": "Kemujan",
+    "file": "kemujan-font.otf",
+    "size": 27
+  },
+  {
+    "id": "kortz-font",
+    "label": "Kortz",
+    "file": "kortz-font.otf",
+    "size": 68
+  },
+  {
+    "id": "kramood-font",
+    "label": "Kramood",
+    "file": "kramood-font.ttf",
+    "size": 135
+  },
+  {
+    "id": "mashiro-font",
+    "label": "Mashiro",
+    "file": "mashiro-font.otf",
+    "size": 384
+  },
+  {
+    "id": "mawns-graffiti-filled-font",
+    "label": "Mawns Graffiti Filled",
+    "file": "mawns-graffiti-filled-font.ttf",
+    "size": 33
+  },
+  {
+    "id": "melted-monster-font",
+    "label": "Melted Monster",
+    "file": "melted-monster-font.ttf",
+    "size": 47
+  },
+  {
+    "id": "misdemeanor-font",
+    "label": "Misdemeanor",
+    "file": "misdemeanor-font.ttf",
+    "size": 860
+  },
+  {
+    "id": "monovibe-graffiti-font",
+    "label": "Monovibe Graffiti",
+    "file": "monovibe-graffiti-font.ttf",
+    "size": 78
+  },
+  {
+    "id": "nightfate-graffiti-font",
+    "label": "Nightfate Graffiti",
+    "file": "nightfate-graffiti-font.ttf",
+    "size": 30
+  },
+  {
+    "id": "noctra-drip-solid-font",
+    "label": "Noctra Drip Solid",
+    "file": "noctra-drip-solid-font.ttf",
+    "size": 72
+  },
+  {
+    "id": "noise-block-font",
+    "label": "Noise Block",
+    "file": "noise-block-font.ttf",
+    "size": 60
+  },
+  {
+    "id": "outline-mirage-fill-font",
+    "label": "Outline Mirage Fill",
+    "file": "outline-mirage-fill-font.ttf",
+    "size": 61
+  },
+  {
+    "id": "paper-ropped-font",
+    "label": "Paper Ropped",
+    "file": "paper-ropped-font.otf",
+    "size": 101
+  },
+  {
+    "id": "ragamgaris-font",
+    "label": "Ragamgaris",
+    "file": "ragamgaris-font.otf",
+    "size": 131
+  },
+  {
+    "id": "rattenca-font",
+    "label": "Rattenca",
+    "file": "rattenca-font.otf",
+    "size": 178
+  },
+  {
+    "id": "rattle-dread-font",
+    "label": "Rattle Dread",
+    "file": "rattle-dread-font.ttf",
+    "size": 139
+  },
+  {
+    "id": "rift-punk-drip-font",
+    "label": "Rift Punk Drip",
+    "file": "rift-punk-drip-font.ttf",
+    "size": 91
+  },
+  {
+    "id": "ruthless-wreckin-one-font",
+    "label": "Ruthless Wreckin One",
+    "file": "ruthless-wreckin-one-font.ttf",
+    "size": 66
+  },
+  {
+    "id": "sabindo-font",
+    "label": "Sabindo",
+    "file": "sabindo-font.otf",
+    "size": 32
+  },
+  {
+    "id": "sabloomy-font",
+    "label": "Sabloomy",
+    "file": "sabloomy-font.otf",
+    "size": 85
+  },
+  {
+    "id": "sabrock-font",
+    "label": "Sabrock",
+    "file": "sabrock-font.otf",
+    "size": 64
+  },
+  {
+    "id": "scary-graffiti-font",
+    "label": "Scary Graffiti",
+    "file": "scary-graffiti-font.ttf",
+    "size": 305
+  },
+  {
+    "id": "silooc-font",
+    "label": "Silooc",
+    "file": "silooc-font.ttf",
+    "size": 56
+  },
+  {
+    "id": "sion-possible-font",
+    "label": "Sion Possible",
+    "file": "sion-possible-font.otf",
+    "size": 117
+  },
+  {
+    "id": "slime-drip-font",
+    "label": "Slime Drip",
+    "file": "slime-drip-font.ttf",
+    "size": 186
+  },
+  {
+    "id": "smilen-font",
+    "label": "Smilen",
+    "file": "smilen-font.otf",
+    "size": 63
+  },
+  {
+    "id": "solarona-font",
+    "label": "Solarona",
+    "file": "solarona-font.otf",
+    "size": 297
+  },
+  {
+    "id": "spooky-punk-font",
+    "label": "Spooky Punk",
+    "file": "spooky-punk-font.ttf",
+    "size": 192
+  },
+  {
+    "id": "stencil-ptx-sprayed-font",
+    "label": "Stencil Ptx Sprayed",
+    "file": "stencil-ptx-sprayed-font.ttf",
+    "size": 494
+  },
+  {
+    "id": "stop-famous-font",
+    "label": "Stop Famous",
+    "file": "stop-famous-font.ttf",
+    "size": 302
+  },
+  {
+    "id": "street-explorer-font",
+    "label": "Street Explorer",
+    "file": "street-explorer-font.otf",
+    "size": 756
+  },
+  {
+    "id": "strezy-break-font",
+    "label": "Strezy Break",
+    "file": "strezy-break-font.otf",
+    "size": 263
+  },
+  {
+    "id": "subway-graph-font",
+    "label": "Subway Graph",
+    "file": "subway-graph-font.ttf",
+    "size": 23
+  },
+  {
+    "id": "super-crown-font",
+    "label": "Super Crown",
+    "file": "super-crown-font.ttf",
+    "size": 194
+  },
+  {
+    "id": "super-feel-font",
+    "label": "Super Feel",
+    "file": "super-feel-font.ttf",
+    "size": 90
+  },
+  {
+    "id": "tf-madloud-font",
+    "label": "Tf Madloud",
+    "file": "tf-madloud-font.otf",
+    "size": 48
+  },
+  {
+    "id": "the-battle-continuez-font",
+    "label": "The Battle Continuez",
+    "file": "the-battle-continuez-font.ttf",
+    "size": 44
+  },
+  {
+    "id": "the-droga-font",
+    "label": "The Droga",
+    "file": "the-droga-font.ttf",
+    "size": 114
+  },
+  {
+    "id": "throwupz-font",
+    "label": "Throwupz",
+    "file": "throwupz-font.ttf",
+    "size": 59
+  },
+  {
+    "id": "toxia-font",
+    "label": "Toxia",
+    "file": "toxia-font.ttf",
+    "size": 133
+  },
+  {
+    "id": "tratags-font",
+    "label": "Tratags",
+    "file": "tratags-font.otf",
+    "size": 48
+  },
+  {
+    "id": "trigger-graffiti-font",
+    "label": "Trigger Graffiti",
+    "file": "trigger-graffiti-font.ttf",
+    "size": 78
+  },
+  {
+    "id": "ugesra-font",
+    "label": "Ugesra",
+    "file": "ugesra-font.otf",
+    "size": 33
+  },
+  {
+    "id": "urban-sign-font",
+    "label": "Urban Sign",
+    "file": "urban-sign-font.otf",
+    "size": 42
+  },
+  {
+    "id": "vantela-font",
+    "label": "Vantela",
+    "file": "vantela-font.otf",
+    "size": 23
+  },
+  {
+    "id": "viper-gear-font",
+    "label": "Viper Gear",
+    "file": "viper-gear-font.otf",
+    "size": 20
+  },
+  {
+    "id": "wasted-punk-font",
+    "label": "Wasted Punk",
+    "file": "wasted-punk-font.ttf",
+    "size": 243
+  },
+  {
+    "id": "zombies-coming-graffiti-font",
+    "label": "Zombies Coming Graffiti",
+    "file": "zombies-coming-graffiti-font.ttf",
+    "size": 69
+  }
+]

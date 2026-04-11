@@ -57,6 +57,7 @@ const navItems = [
       { label: 'QR Code Generator', href: '/tools/qr-code-generator/' },
       { label: 'WiFi QR Generator', href: '/tools/wifi-qr-code-generator/' },
       { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator/' },
+      { label: 'Graffiti Letters', href: '/tools/graffiti-letters/' },
     ],
   },
   {
