@@ -102,6 +102,7 @@ const navItems = [
       { label: 'Get A Load Of This Guy', href: '/meme-maker/get-a-load-of-this-guy-meme/' },
       { label: 'Hamster Meme', href: '/meme-maker/hamster-meme/' },
       { label: 'Mike Wazowski Meme', href: '/meme-maker/mike-wazowski-meme/' },
+      { label: 'Spiderman Meme', href: '/meme-maker/spiderman-meme/' },
     ],
   },
   {

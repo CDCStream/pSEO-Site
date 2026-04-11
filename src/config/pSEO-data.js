@@ -1393,6 +1393,40 @@ Mike Wazowski memes dominate reaction culture across every major platform. On Re
 
 All memes are available for instant download — PNG for static images and GIF for animations. No accounts, no watermarks, no limits. Browse our collection and find the perfect Mike Wazowski reaction for every moment that deserves that unforgettable one-eyed stare.`,
   },
+  'spiderman-meme': {
+    category: 'meme-maker',
+    name: 'Spiderman Meme Maker',
+    keyword: 'Spiderman Meme',
+    title: 'Spiderman Meme Maker - Create Custom Spider-Man Memes Free',
+    description: 'Create your own Spiderman memes with 14 classic templates! Add custom text anywhere, choose fonts, colors, and sizes. Free meme maker — no watermark, instant download.',
+    h1: 'Spiderman Meme Maker',
+    subtitle: 'Choose from 14 iconic Spider-Man meme templates, add custom text anywhere, and download your meme for free.',
+    icon: 'image',
+    generatorType: 'spidermanMeme',
+    faq: [
+      { q: 'How many Spiderman meme templates are available?', a: 'We offer 14 classic Spiderman meme templates including the iconic "Spiderman Pointing at Spiderman," "Spiderman at Desk," "Spiderman Presenting," and many more fan-favorite formats from across the Spider-Man franchise.' },
+      { q: 'How do I add text to a Spiderman meme?', a: 'Click anywhere on the image to place a text box. Type your text in the panel on the left. You can add multiple text boxes, drag them to reposition, and customize font, size, color, and stroke for each one individually.' },
+      { q: 'Can I change the font and text color?', a: 'Yes! Each text box has its own customization options. Choose from 7 font families (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjust font size with a slider, pick text color from presets or a custom picker, and add or remove text stroke.' },
+      { q: 'What is the Spiderman Pointing meme?', a: 'The "Spiderman Pointing at Spiderman" meme comes from a 1967 Spider-Man cartoon episode where two characters in Spider-Man costumes point at each other. It is used to highlight when two things are identical, hypocritical, or ironically similar.' },
+      { q: 'Can I reposition text after placing it?', a: 'Absolutely! Click and drag any text box to move it anywhere on the image. You can also click an existing text box to select it and edit its content or styling.' },
+      { q: 'Is this meme maker free to use?', a: 'Yes, completely free! No sign-up, no watermark, no limits. Create as many Spiderman memes as you want and download them instantly as high-quality PNG files.' },
+    ],
+    longContent: `Spiderman memes are among the most iconic and versatile meme formats on the entire internet. From the legendary "Spiderman Pointing at Spiderman" scene from the 1967 animated series to modern MCU-inspired reaction templates, Spider-Man has provided meme culture with an endless supply of comedic gold. Our free meme maker gives you access to 14 classic templates and a powerful text editor to create your own custom Spiderman memes in seconds.
+
+The "Spiderman Pointing" meme is perhaps the most famous of all Spider-Man memes. Originating from the 1967 animated TV series episode "Double Identity," the scene shows two characters dressed as Spider-Man pointing at each other in confusion. This simple image became the internet's go-to visual for calling out hypocrisy, highlighting similarities, or pointing out when two things are essentially the same. It has been adapted into countless variations, from corporate humor to political commentary to everyday social media reactions.
+
+Beyond the pointing meme, Spiderman has given us dozens of beloved formats. "Spiderman at the Desk" captures the feeling of pretending to work while doing nothing productive. "Spiderman Presenting" works perfectly for making announcements or stating obvious truths. "Spiderman Behind Desk" conveys the energy of quietly watching chaos unfold. Each template captures a distinct emotion that resonates with universal human experiences.
+
+Our meme maker features an advanced click-to-place text system that gives you complete creative freedom. Unlike basic meme generators with fixed top and bottom text zones, you can place text anywhere on the image by simply clicking. Need dialogue near a character? Click next to them. Want a caption across the top? Place it precisely. Add multiple text boxes for complex setups with conversations, labels, or layered jokes that make your meme stand out.
+
+Every text box is fully customizable with individual controls. Choose from seven font families including the classic Impact font that defines meme culture. Adjust font size from small annotations to massive bold statements. Pick text colors from ten preset options or use the custom color picker. Add text stroke in any color to ensure readability against any background, or disable it entirely for a cleaner look. Each text box remembers its own settings, so you can mix styles within a single meme.
+
+The drag-and-drop functionality makes precise composition effortless. After placing a text box, click and drag to reposition it anywhere. This precision ensures your meme reads exactly as intended, with text placed for maximum comedic timing and visual impact. Rearrange elements until every joke lands perfectly.
+
+Spider-Man's enduring popularity across generations makes these memes universally understood. Whether your audience grew up with the 1967 cartoon, the Tobey Maguire trilogy, the Andrew Garfield films, or Tom Holland's MCU era, everyone recognizes the web-slinger. This cross-generational familiarity means Spiderman memes consistently perform well on every platform — Twitter, Reddit, Instagram, Discord, TikTok, and beyond.
+
+Download your finished meme as a high-quality PNG with no watermark. Share it across social media, send it in group chats, or use it as a reaction image. Every meme you create is completely free to use. No accounts, no subscriptions — just pick a template, add your text, and let your friendly neighborhood Spider-Man deliver the laughs.`,
+  },
 };
 
 // Generators (Name Generators) configuration
