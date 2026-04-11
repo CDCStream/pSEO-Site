@@ -14,6 +14,7 @@ import GetALoadMemeClient from './GetALoadMemeClient';
 import HamsterMemeGalleryClient from './HamsterMemeGalleryClient';
 import MikeWazowskiMemeGalleryClient from './MikeWazowskiMemeGalleryClient';
 import SpidermanMemeClient from './SpidermanMemeClient';
+import ChillGuyMemeClient from './ChillGuyMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -299,6 +300,29 @@ const hamsterMemeSteps = [
   },
 ];
 
+const chillGuyMemeSteps = [
+  {
+    icon: Image,
+    title: 'Pick a Template',
+    description: 'Browse 4 Chill Guy meme templates and select the one that fits your idea.',
+  },
+  {
+    icon: Type,
+    title: 'Click to Place Text',
+    description: 'Click anywhere on the image to add text. Customize font, size, color, and stroke.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your Chill Guy meme as a high-quality PNG image.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 const spidermanMemeSteps = [
   {
     icon: Image,
@@ -411,11 +435,13 @@ export default async function MemePage({ params }) {
               <MikeWazowskiMemeGalleryClient />
             ) : slug === 'spiderman-meme' ? (
               <SpidermanMemeClient />
+            ) : slug === 'chill-guy-meme' ? (
+              <ChillGuyMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

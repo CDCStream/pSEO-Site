@@ -1427,6 +1427,40 @@ Spider-Man's enduring popularity across generations makes these memes universall
 
 Download your finished meme as a high-quality PNG with no watermark. Share it across social media, send it in group chats, or use it as a reaction image. Every meme you create is completely free to use. No accounts, no subscriptions — just pick a template, add your text, and let your friendly neighborhood Spider-Man deliver the laughs.`,
   },
+  'chill-guy-meme': {
+    category: 'meme-maker',
+    name: 'Chill Guy Meme Maker',
+    keyword: 'Chill Guy Meme',
+    title: 'Chill Guy Meme Maker - Create Custom Chill Guy Memes Free',
+    description: 'Create your own Chill Guy memes with 4 classic templates! Add custom text anywhere, choose fonts, colors, and sizes. Free meme maker — no watermark, instant download.',
+    h1: 'Chill Guy Meme Maker',
+    subtitle: 'Choose from 4 iconic Chill Guy meme templates, add custom text anywhere, and download your meme for free.',
+    icon: 'image',
+    generatorType: 'chillGuyMeme',
+    faq: [
+      { q: 'What is the Chill Guy meme?', a: 'The Chill Guy meme features a cartoon dog character with a relaxed, unbothered expression. Originally drawn by artist Philip Banks (@PhilipBankss), the character became a viral meme representing the attitude of staying calm and unbothered despite stressful or chaotic situations. The meme exploded on Twitter/X, TikTok, and Instagram in late 2024.' },
+      { q: 'How do I add text to the Chill Guy meme?', a: 'Click anywhere on the image to place a text box. Type your text in the panel on the left. You can add multiple text boxes, drag them to reposition, and customize font, size, color, and stroke for each one individually.' },
+      { q: 'How many Chill Guy templates are available?', a: 'We offer 4 Chill Guy meme templates featuring different variations of the iconic relaxed dog character. Each template captures a slightly different vibe while maintaining the signature chill energy.' },
+      { q: 'Can I change the font and text color?', a: 'Yes! Each text box has its own customization options. Choose from 7 font families (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjust font size with a slider, pick text color from presets or a custom picker, and add or remove text stroke.' },
+      { q: 'Can I reposition text after placing it?', a: 'Absolutely! Click and drag any text box to move it anywhere on the image. You can also click an existing text box to select it and edit its content or styling.' },
+      { q: 'Is this meme maker free to use?', a: 'Yes, completely free! No sign-up, no watermark, no limits. Create as many Chill Guy memes as you want and download them instantly as high-quality PNG files.' },
+    ],
+    longContent: `The Chill Guy meme took the internet by storm and quickly became one of the most recognizable meme formats of the modern era. Featuring a cartoon dog standing casually with his hands in his pockets and an expression of pure, unbothered serenity, the Chill Guy perfectly captures the universal desire to remain calm in the face of chaos. Our free meme maker lets you create your own custom Chill Guy memes in seconds with 4 template variations.
+
+The character was originally created by digital artist Philip Banks and posted on social media. The simple yet expressive design resonated immediately with audiences who saw in the Chill Guy a reflection of their own aspirations — to be the person who stays relaxed when everything around them is falling apart. The meme format typically places text above or around the character describing a stressful situation, with the implication being "I'm just a chill guy" who doesn't let it bother me.
+
+What makes the Chill Guy meme so powerful is its universal relatability. Everyone has experienced moments where the best response to stress, drama, or absurdity is simply... not caring. Whether it's work deadlines, social media drama, relationship chaos, or global events, the Chill Guy represents the aspiration to remain unfazed. This emotional resonance is why the meme spread so rapidly across every major platform.
+
+Our meme maker features an advanced click-to-place text system that gives you complete creative control. Unlike basic top-and-bottom text generators, you can click anywhere on the image to place text exactly where it works best. Need text describing the stressful situation above the character? Click there. Want to add a caption near his feet? Place it precisely. Add multiple text boxes for complex setups that maximize the comedic contrast between chaos and chill.
+
+Every text box is fully customizable with individual controls. Choose from seven popular font families including the classic Impact font. Adjust font size from small annotations to massive bold statements. Pick text colors from ten preset options or use the custom color picker for any shade. Add text stroke in any color for readability or disable it for a cleaner look. Each text box maintains its own style settings.
+
+The drag-and-drop functionality ensures perfect composition every time. After placing a text box, simply click and drag to reposition it. This precision means your meme reads exactly as intended, with the text-to-image relationship creating maximum comedic impact. The contrast between the described chaos and the Chill Guy's serene expression is where the humor lives, and precise text placement makes that contrast hit harder.
+
+Chill Guy memes thrive across every social media platform. They dominate Twitter/X feeds as relatable quote tweets, flood Instagram story reactions, fill TikTok comment sections, and serve as perfect Discord reaction images. The format works for everything from lighthearted personal observations to commentary on current events. The Chill Guy's expression says what words sometimes cannot — "it is what it is, and I'm okay with that."
+
+Download your finished meme as a high-quality PNG with no watermark. Share it on any platform, send it in group chats, or save it for the perfect moment. Every meme you create is yours to use freely. No accounts, no subscriptions — just pure chill energy, one meme at a time.`,
+  },
 };
 
 // Generators (Name Generators) configuration

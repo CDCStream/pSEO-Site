@@ -103,6 +103,7 @@ const navItems = [
       { label: 'Hamster Meme', href: '/meme-maker/hamster-meme/' },
       { label: 'Mike Wazowski Meme', href: '/meme-maker/mike-wazowski-meme/' },
       { label: 'Spiderman Meme', href: '/meme-maker/spiderman-meme/' },
+      { label: 'Chill Guy Meme', href: '/meme-maker/chill-guy-meme/' },
     ],
   },
   {
