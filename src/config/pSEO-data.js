@@ -2356,6 +2356,40 @@ The appeal of cute wallpapers spans all ages and demographics. Students love the
 
 All wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect cute wallpaper to brighten your screen and your day.`,
   },
+  'summer-wallpaper': {
+    category: 'wallpapers',
+    name: 'Summer Wallpaper',
+    keyword: 'Summer Wallpaper',
+    title: 'Best Free Summer Wallpapers HD - Beach, Tropical & Sunset Backgrounds',
+    description: 'Download 32 stunning free HD summer wallpapers for your phone and desktop. Beach sunsets, tropical vibes, ocean waves — instant download, no watermark.',
+    h1: 'Free Summer Wallpapers HD',
+    subtitle: 'Download 32 beautiful summer wallpapers featuring beaches, sunsets, tropical scenery, and warm summer vibes.',
+    icon: 'sun',
+    generatorType: 'summerGallery',
+    faq: [
+      { q: 'How many summer wallpapers are available?', a: 'Our collection features 32 high-definition summer wallpapers, all available as optimized PNG files. Each wallpaper captures a different aspect of summer — from golden beach sunsets and crystal-clear ocean waters to tropical palm trees and vibrant summer skies.' },
+      { q: 'Are these summer wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device.' },
+      { q: 'What resolution are the summer wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a summer wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the summer wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'What types of summer scenes are included?', a: 'Our collection includes beach sunsets, tropical palm trees, ocean waves, clear blue skies, seaside scenery, golden hour photography, floral summer designs, and abstract warm-toned backgrounds that capture the essence of summer.' },
+    ],
+    longContent: `Summer wallpapers bring the warmth, energy, and freedom of the sunniest season right to your screen. There is something deeply satisfying about unlocking your phone and being greeted by a golden beach sunset, crystal-clear turquoise waters, or the silhouette of palm trees against a warm evening sky. Our curated collection of 32 free HD summer wallpapers captures every facet of summer's beauty.
+
+The appeal of summer imagery goes far beyond simple aesthetics. Research in environmental psychology shows that exposure to natural scenes — especially those associated with warmth, sunlight, and water — can reduce stress and improve mood. A summer wallpaper on your phone serves as a pocket-sized window to paradise, offering a brief mental escape during busy days, winter months, or any moment when you need a dose of sunshine.
+
+Our collection spans the full spectrum of summer aesthetics. You will find classic beach scenes with powdery white sand meeting impossibly blue water, dramatic sunset photographs with skies painted in shades of orange, pink, and purple, and tropical landscapes featuring lush palm trees and exotic flowers. There are abstract warm-toned designs for those who prefer artistic interpretations of summer energy, and minimal ocean horizon shots that capture the calming simplicity of sea and sky.
+
+Beach wallpapers are consistently among the most popular phone background categories worldwide, and for good reason. The beach represents freedom, relaxation, and adventure — universal feelings that transcend cultural boundaries. Whether you live near the coast or in a landlocked city, a beach wallpaper connects you to that carefree summer feeling. The combination of natural colors — ocean blues, sandy golds, sky whites, and sunset oranges — creates a palette that feels inherently optimistic.
+
+Summer wallpapers work beautifully from a design perspective as well. The bright, warm colors of summer imagery create natural contrast with dark app icons and text, ensuring excellent readability on your home screen. Sunset wallpapers with their gradient transitions from warm to cool tones pair perfectly with both light and dark mode interfaces. The natural depth in beach and landscape photos creates a sense of dimension behind your apps.
+
+Tropical wallpapers add an element of exotic escapism to your daily routine. Palm trees, exotic flowers, and lush vegetation transform your phone into a portal to a tropical island retreat. These images are popular year-round — during summer they match the season's energy, and during winter they provide a much-needed reminder that warmth and sunshine exist somewhere in the world.
+
+The versatility of summer wallpapers makes them suitable for every device and every user. Students set them as motivational backgrounds during study sessions. Professionals use them to bring a touch of vacation energy to their work phones. Travel enthusiasts use them as inspiration boards for future trips. The universal appeal of summer imagery means these wallpapers work for anyone who appreciates beauty, warmth, and the promise of sunny days.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection, click to preview in full screen, and download your favorites to bring endless summer vibes to your phone.`,
+  },
 };
 
 // Get all pages for sitemap generation
