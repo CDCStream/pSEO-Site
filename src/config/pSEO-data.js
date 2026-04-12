@@ -1556,6 +1556,37 @@ Political memes have become one of the most shared content categories online. Bi
 
 All memes in this collection are free to download and share. No accounts required, no watermarks added, and no usage limits. Browse, preview, download, and spread the laughs across your favorite platforms.`,
   },
+
+  'low-taper-fade-meme': {
+    category: 'meme-maker',
+    name: 'Low Taper Fade Meme Maker',
+    keyword: 'Low Taper Fade Meme',
+    title: 'Best Low Taper Fade Meme Maker - Free Online Generator',
+    description: 'Create hilarious Low Taper Fade memes with our free online maker. Click anywhere to place custom text, drag to reposition, choose fonts and colors, and download as PNG.',
+    h1: 'Low Taper Fade Meme Maker',
+    subtitle: 'Click to place text anywhere on the Low Taper Fade template. Drag to reposition, customize fonts and colors, then download your meme.',
+    icon: 'image',
+    generatorType: 'lowTaperFadeMeme',
+    faq: [
+      { q: 'What is the Low Taper Fade meme?', a: 'The Low Taper Fade meme originates from the viral Brainrot trend and features a character associated with the "low taper fade" haircut request. It became a massive meme on TikTok, YouTube, and Reddit, often paired with absurd or ironic captions about requesting a low taper fade in inappropriate situations.' },
+      { q: 'How do I add text to the Low Taper Fade meme?', a: 'Simply click anywhere on the meme image to place a text box at that position. You can add as many text boxes as you want and drag them to reposition.' },
+      { q: 'Can I customize the text style?', a: 'Yes! Each text box has its own customization options including font family (Impact, Arial, Comic Sans, etc.), font size, text color, and outline stroke color.' },
+      { q: 'Can I drag and move the text after placing it?', a: 'Absolutely! Click and drag any text box to reposition it anywhere on the image. The text moves in real time as you drag.' },
+      { q: 'What format is the downloaded meme?', a: 'Your meme downloads as a high-quality PNG image with no watermark, ready to share on social media, messaging apps, or anywhere else.' },
+      { q: 'Is this Low Taper Fade meme maker free?', a: 'Yes, completely free with no sign-up required. Create unlimited memes, download them instantly, and share anywhere.' },
+    ],
+    longContent: `The Low Taper Fade Meme Maker lets you create custom memes using the viral Low Taper Fade template. This meme exploded across TikTok, YouTube Shorts, and Reddit as part of the broader Brainrot meme culture, becoming one of the most recognizable formats in internet humor.
+
+The Low Taper Fade meme revolves around the absurd and relentless request for a "low taper fade" haircut in the most unexpected contexts. The humor comes from placing this mundane barber shop request into completely unrelated or dramatic situations, creating an ironic contrast that resonates with Gen Z humor.
+
+Our maker gives you full creative control. Click anywhere on the template to place text exactly where you want it — no rigid top-and-bottom limitations. Add a single caption or scatter multiple text boxes for complex setups. Each box can be independently dragged and repositioned in real time for pixel-perfect placement.
+
+Customize every text element with the built-in style controls. Choose from seven font families including the classic Impact font. Adjust size from small labels to bold headlines. Pick any text color using preset swatches or the custom color picker. Add an outline stroke for contrast and readability against any background area of the template.
+
+The Low Taper Fade format works across every major social media platform. It dominates TikTok comment sections, Twitter/X quote tweets, Instagram stories, Reddit threads, and Discord servers. The meme pairs naturally with Brainrot culture references, Skibidi Toilet humor, and other trending internet phenomena.
+
+Download your finished meme as a high-quality PNG with no watermarks. Share it instantly on any platform, send it in group chats, or save it for the perfect moment. Every meme you create is completely free — no accounts, no subscriptions, no limits on creativity.`,
+  },
 };
 
 // Generators (Name Generators) configuration

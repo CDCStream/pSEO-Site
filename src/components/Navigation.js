@@ -107,6 +107,7 @@ const navItems = [
       { label: 'Chill Guy Meme', href: '/meme-maker/chill-guy-meme/' },
       { label: 'Monkey Thinking Meme', href: '/meme-maker/monkey-thinking-meme/' },
       { label: 'Biden Meme', href: '/meme-maker/biden-meme/' },
+      { label: 'Low Taper Fade Meme', href: '/meme-maker/low-taper-fade-meme/' },
     ],
   },
   {

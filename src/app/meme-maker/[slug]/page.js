@@ -17,6 +17,7 @@ import SpidermanMemeClient from './SpidermanMemeClient';
 import ChillGuyMemeClient from './ChillGuyMemeClient';
 import MonkeyThinkingMemeClient from './MonkeyThinkingMemeClient';
 import BidenMemeGalleryClient from './BidenMemeGalleryClient';
+import LowTaperFadeMemeClient from './LowTaperFadeMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -371,6 +372,29 @@ const monkeyThinkingSteps = [
   },
 ];
 
+const lowTaperFadeSteps = [
+  {
+    icon: Type,
+    title: 'Click to Place Text',
+    description: 'Click anywhere on the Low Taper Fade image to add a text box at that position.',
+  },
+  {
+    icon: Palette,
+    title: 'Customize Style',
+    description: 'Choose font, size, color, and stroke for each text box individually.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your Low Taper Fade meme as a high-quality PNG.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 const bidenMemeSteps = [
   {
     icon: Search,
@@ -489,11 +513,13 @@ export default async function MemePage({ params }) {
               <MonkeyThinkingMemeClient />
             ) : slug === 'biden-meme' ? (
               <BidenMemeGalleryClient />
+            ) : slug === 'low-taper-fade-meme' ? (
+              <LowTaperFadeMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
