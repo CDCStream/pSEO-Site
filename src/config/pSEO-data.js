@@ -1525,6 +1525,37 @@ The Monkey Thinking meme format thrives on platforms like Reddit, Twitter, Insta
 
 Download your creation as a clean PNG with no watermarks. Share it instantly on any platform, send it in group chats, or save it for the perfect comedic moment. Every meme you make is yours to use freely — no accounts, no subscriptions, no limits.`,
   },
+
+  'biden-meme': {
+    category: 'meme-maker',
+    name: 'Biden Meme Collection',
+    keyword: 'Biden Meme',
+    title: 'Best Biden Memes - Free Download Funny Biden GIFs & Images',
+    description: 'Browse and download hilarious Biden memes and animated GIFs for free. 15 hand-picked reaction images ready to share on social media, group chats, and forums.',
+    h1: 'Biden Meme Collection',
+    subtitle: 'Browse 15 hilarious Biden reaction memes and animated GIFs. Click to preview, download instantly, and share anywhere.',
+    icon: 'image',
+    generatorType: 'bidenMemeGallery',
+    faq: [
+      { q: 'How many Biden memes are in this collection?', a: 'We have 15 hand-picked Biden memes including 12 animated GIFs and 3 static images, covering the funniest presidential reaction moments.' },
+      { q: 'Are the Biden memes free to download?', a: 'Yes! All memes are completely free to download with no sign-up, no watermarks, and no limits. Click the download button on any meme.' },
+      { q: 'Do the GIFs play automatically on the page?', a: 'Yes! All animated GIFs play automatically so you can preview the full animation before downloading. GIFs marked with a green badge are animated.' },
+      { q: 'What format are the downloads?', a: 'GIFs download as animated .gif files and static images download as .png files. The original format and quality are fully preserved.' },
+      { q: 'Can I use these Biden memes on social media?', a: 'Absolutely! These memes work perfectly on Twitter/X, Instagram, Reddit, Discord, TikTok, and messaging apps like WhatsApp and iMessage.' },
+      { q: 'Is there a lightbox preview?', a: 'Yes! Click any meme to open a full-size lightbox preview. Use the arrow buttons or keyboard to navigate between memes.' },
+    ],
+    longContent: `The Biden Meme Collection features 15 of the funniest and most shareable Biden reaction memes found across the internet. From awkward moments to wholesome interactions, these memes capture the lighter side of politics that everyone can enjoy regardless of their views.
+
+Biden memes have become a staple of internet humor, with animated GIFs being especially popular for their ability to capture fleeting expressions and gestures. Our collection includes 12 animated GIFs showing classic Biden reactions — the confused look, the ice cream moments, the sunglasses cool walk, and more.
+
+Each meme in the collection is optimized for fast loading while maintaining visual quality. GIFs play automatically on the page so you can see the full animation loop before deciding to download. Static images are available as high-quality PNGs for maximum clarity.
+
+The lightbox feature lets you view each meme in full-screen detail. Navigate through the entire collection with arrow buttons and download your favorites with a single click. Every download preserves the original format — GIFs stay animated, PNGs stay crisp.
+
+Political memes have become one of the most shared content categories online. Biden reaction GIFs work perfectly as responses in group chats, Twitter/X replies, Reddit comments, and Discord servers. They add humor to everyday conversations without needing any additional text or context.
+
+All memes in this collection are free to download and share. No accounts required, no watermarks added, and no usage limits. Browse, preview, download, and spread the laughs across your favorite platforms.`,
+  },
 };
 
 // Generators (Name Generators) configuration

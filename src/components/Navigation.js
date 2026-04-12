@@ -106,6 +106,7 @@ const navItems = [
       { label: 'Spiderman Meme', href: '/meme-maker/spiderman-meme/' },
       { label: 'Chill Guy Meme', href: '/meme-maker/chill-guy-meme/' },
       { label: 'Monkey Thinking Meme', href: '/meme-maker/monkey-thinking-meme/' },
+      { label: 'Biden Meme', href: '/meme-maker/biden-meme/' },
     ],
   },
   {
