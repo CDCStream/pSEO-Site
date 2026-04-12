@@ -105,6 +105,7 @@ const navItems = [
       { label: 'Mike Wazowski Meme', href: '/meme-maker/mike-wazowski-meme/' },
       { label: 'Spiderman Meme', href: '/meme-maker/spiderman-meme/' },
       { label: 'Chill Guy Meme', href: '/meme-maker/chill-guy-meme/' },
+      { label: 'Monkey Thinking Meme', href: '/meme-maker/monkey-thinking-meme/' },
     ],
   },
   {

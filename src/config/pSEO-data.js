@@ -1494,6 +1494,37 @@ Chill Guy memes thrive across every social media platform. They dominate Twitter
 
 Download your finished meme as a high-quality PNG with no watermark. Share it on any platform, send it in group chats, or save it for the perfect moment. Every meme you create is yours to use freely. No accounts, no subscriptions — just pure chill energy, one meme at a time.`,
   },
+
+  'monkey-thinking-meme': {
+    category: 'meme-maker',
+    name: 'Monkey Thinking Meme Maker',
+    keyword: 'Monkey Thinking Meme',
+    title: 'Best Monkey Thinking Meme Maker - Free Online Generator',
+    description: 'Create hilarious Monkey Thinking memes with our free online maker. Click anywhere to place custom text, drag to reposition, choose fonts and colors, and download as PNG.',
+    h1: 'Monkey Thinking Meme Maker',
+    subtitle: 'Click to place text anywhere on the Monkey Thinking template. Drag to reposition, customize fonts and colors, then download your meme.',
+    icon: 'image',
+    generatorType: 'monkeyThinkingMeme',
+    faq: [
+      { q: 'What is the Monkey Thinking meme?', a: 'The Monkey Thinking meme features a primate with a deeply contemplative or puzzled expression, often used to represent moments of confusion, deep thought, or questioning life choices. It became popular on Reddit, Twitter, and Instagram as a reaction image for overthinking situations.' },
+      { q: 'How do I add text to the Monkey Thinking meme?', a: 'Simply click anywhere on the meme image to place a text box at that position. You can add as many text boxes as you want and drag them to reposition.' },
+      { q: 'Can I customize the text style?', a: 'Yes! Each text box has its own customization options including font family (Impact, Arial, Comic Sans, etc.), font size, text color, and outline stroke color.' },
+      { q: 'Can I drag and move the text after placing it?', a: 'Absolutely! Click and drag any text box to reposition it anywhere on the image. The text moves in real time as you drag.' },
+      { q: 'What format is the downloaded meme?', a: 'Your meme downloads as a high-quality PNG image with no watermark, ready to share on social media, messaging apps, or anywhere else.' },
+      { q: 'Is this Monkey Thinking meme maker free?', a: 'Yes, completely free with no sign-up required. Create unlimited memes, download them instantly, and share anywhere.' },
+    ],
+    longContent: `The Monkey Thinking Meme Maker lets you create custom memes using the iconic contemplative monkey image. This beloved internet meme captures that universal moment of deep thought, confusion, or existential pondering that everyone can relate to.
+
+The thinking monkey has become one of the most versatile reaction memes online. Whether someone asks you a question you cannot answer, you realize something mind-blowing, or you are simply overthinking a mundane decision, this primate's expression says it all. The meme works perfectly for both lighthearted humor and surprisingly philosophical observations.
+
+Our maker gives you full creative control over your meme. Click anywhere on the image to place text exactly where you want it — no fixed top and bottom text limitations. Add a single caption or scatter multiple text boxes across the image for complex meme formats. Each text box can be dragged and repositioned in real time.
+
+Customize every aspect of your text with the built-in style controls. Choose from seven font families including the classic Impact font that defines meme culture. Adjust the font size from small captions to bold statements. Pick any text color from preset options or use the custom color picker. Add an outline stroke for readability against any background.
+
+The Monkey Thinking meme format thrives on platforms like Reddit, Twitter, Instagram, Discord, and TikTok. It works as a standalone joke, a reply reaction, or part of a multi-panel meme conversation. The contemplative expression pairs perfectly with philosophical questions, relatable daily dilemmas, and absurd humor.
+
+Download your creation as a clean PNG with no watermarks. Share it instantly on any platform, send it in group chats, or save it for the perfect comedic moment. Every meme you make is yours to use freely — no accounts, no subscriptions, no limits.`,
+  },
 };
 
 // Generators (Name Generators) configuration

@@ -15,6 +15,7 @@ import HamsterMemeGalleryClient from './HamsterMemeGalleryClient';
 import MikeWazowskiMemeGalleryClient from './MikeWazowskiMemeGalleryClient';
 import SpidermanMemeClient from './SpidermanMemeClient';
 import ChillGuyMemeClient from './ChillGuyMemeClient';
+import MonkeyThinkingMemeClient from './MonkeyThinkingMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -346,6 +347,29 @@ const spidermanMemeSteps = [
   },
 ];
 
+const monkeyThinkingSteps = [
+  {
+    icon: Type,
+    title: 'Click to Place Text',
+    description: 'Click anywhere on the monkey image to add a text box at that position.',
+  },
+  {
+    icon: Palette,
+    title: 'Customize Style',
+    description: 'Choose font, size, color, and stroke for each text box individually.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your Monkey Thinking meme as a high-quality PNG.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
 const mikeWazowskiSteps = [
   {
     icon: Search,
@@ -437,11 +461,13 @@ export default async function MemePage({ params }) {
               <SpidermanMemeClient />
             ) : slug === 'chill-guy-meme' ? (
               <ChillGuyMemeClient />
+            ) : slug === 'monkey-thinking-meme' ? (
+              <MonkeyThinkingMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
