@@ -5,12 +5,24 @@ const LetterAIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h1.5l1-3h11l1 3H19L13 4h-2L5 20"/><path d="M7 14h10"/></svg>
 );
 
+const SprayCanIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 22v-6.57"/><path d="M12 11h.01"/><path d="M12 7h.01"/><path d="M14 22v-6.57"/><path d="M16 2v4"/><path d="M18 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/><path d="M20 2v4"/></svg>
+);
+
 const letterArtTools = [
   {
     title: 'Bubble Letter Art Generator',
     description: 'Create eye-catching bubble letter art with 6 unique fonts. Customize fill color, outline, shadow effects and download as transparent PNG.',
     href: '/tools/letter-art/bubble-letters/',
     tags: ['6 Fonts', 'Outline', 'Shadow', 'Transparent PNG'],
+    icon: 'letter',
+  },
+  {
+    title: 'Graffiti Letters Generator',
+    description: 'Transform your text into authentic graffiti art with 94 unique street fonts. Customize colors, preview on a brick wall, and download as PNG.',
+    href: '/tools/graffiti-letters/',
+    tags: ['94 Fonts', 'Wall Preview', 'Color Picker', 'PNG Download'],
+    icon: 'spray',
   },
 ];
 
@@ -61,8 +73,8 @@ export default function LetterArtPage() {
               className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-pink-500/30 transition-all duration-300 hover:bg-white/[0.07]"
             >
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                  <LetterAIcon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
                 </div>
 
                 <div className="flex-1 min-w-0">
@@ -87,7 +99,7 @@ export default function LetterArtPage() {
 
         {/* Coming Soon placeholder */}
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">More letter art styles coming soon — Graffiti Letters, 3D Letters, Block Letters, and more.</p>
+          <p className="text-gray-500 text-sm">More letter art styles coming soon — 3D Letters, Block Letters, and more.</p>
         </div>
       </section>
     </div>
