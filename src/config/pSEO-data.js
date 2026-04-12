@@ -768,6 +768,39 @@ Download your creation in two formats: a transparent PNG with just the styled te
 
 Graffiti fonts are popular for YouTube thumbnails, gaming channel branding, hip-hop album covers, skateboard graphics, event flyers, and streetwear designs. The bold, expressive nature of graffiti lettering commands attention and communicates energy, creativity, and urban culture.`,
   },
+
+  'calligraphy-alphabet': {
+    category: 'tools',
+    name: 'Calligraphy Alphabet Generator',
+    keyword: 'Calligraphy Alphabet',
+    title: 'Best Free Calligraphy Alphabet Generator - 40 Elegant Fonts Online',
+    description: 'Create beautiful calligraphy text with 40 free elegant fonts. Type your text, pick a calligraphy style, change colors, and download as transparent PNG instantly.',
+    h1: 'Calligraphy Alphabet Generator',
+    subtitle: 'Type your text, choose from 40 elegant calligraphy fonts, customize colors, and download as a transparent PNG.',
+    icon: 'pen-tool',
+    generatorType: 'calligraphyAlphabet',
+    faq: [
+      { q: 'How many calligraphy fonts are available?', a: 'We offer 40 unique calligraphy fonts including script, brush, signature, wedding, and decorative styles — all completely free to use.' },
+      { q: 'Can I change the calligraphy text color?', a: 'Yes! Use the color picker to change both the text fill color and outline color. You can also adjust the outline thickness for added emphasis.' },
+      { q: 'Can I download my calligraphy text as an image?', a: 'Absolutely! Download your calligraphy as a transparent PNG. The background is transparent so you can easily overlay it on any design, invitation, or project.' },
+      { q: 'Do I need to install fonts to use this tool?', a: 'No installation needed. Fonts load automatically in your browser when you select them. Just pick a font, type your text, and download.' },
+      { q: 'Can I use calligraphy fonts for wedding invitations?', a: 'Yes! Many fonts in our collection like Weddingday, Beautiful People, and Geraldine are perfect for wedding invitations, save-the-dates, and event stationery.' },
+      { q: 'What types of calligraphy styles are included?', a: 'Our collection includes modern calligraphy, classic script, brush lettering, signature fonts, decorative scripts, and holiday-themed calligraphy styles.' },
+    ],
+    longContent: `The Calligraphy Alphabet Generator brings the art of beautiful handwriting to your screen with 40 elegant calligraphy fonts. Whether you are designing wedding invitations, creating social media graphics, or crafting personalized gifts, this tool transforms your text into stunning calligraphy instantly.
+
+Calligraphy has been practiced for thousands of years across cultures worldwide, from Chinese brush calligraphy to Arabic scripts to Western copperplate styles. Our collection captures the elegance and artistry of these traditions in digital form, making beautiful lettering accessible to everyone.
+
+Browse through fonts like Beautiful People, Geraldine, Stylish Calligraphy, and Weddingday to find the perfect style for your project. Each font offers a unique character — from flowing romantic scripts to bold brush strokes to delicate signature styles.
+
+The color customization lets you match your calligraphy to any design palette. Choose dark ink tones for classic elegance, metallic golds for luxury invitations, or vibrant colors for modern social media graphics. The optional outline adds definition and can create stunning two-tone calligraphy effects.
+
+Downloads are transparent PNGs, making them incredibly versatile. Layer your calligraphy text over photos, place it on colored backgrounds, add it to Canva designs, or print it directly onto cardstock. The transparent background means your calligraphy integrates seamlessly into any creative project.
+
+Calligraphy fonts are essential for wedding stationery, event invitations, greeting cards, logo design, quote graphics, social media branding, journal covers, and personalized gifts. The timeless beauty of calligraphy adds sophistication and a personal touch that typed text simply cannot achieve.
+
+The font preview section shows the complete alphabet in your selected style, so you can see exactly how every letter looks before committing to a design. Experiment freely with different fonts, sizes, and colors until you find the perfect combination for your project.`,
+  },
 };
 
 // Symbols configuration

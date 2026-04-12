@@ -8,6 +8,7 @@ import TierListClient from './TierListClient';
 import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
 import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
 import GraffitiLettersClient from './GraffitiLettersClient';
+import CalligraphyAlphabetClient from './CalligraphyAlphabetClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -106,6 +107,8 @@ export default async function ToolPage({ params }) {
               <YouTubeCommentPickerClient config={config} />
             ) : config.generatorType === 'graffitiLetters' ? (
               <GraffitiLettersClient config={config} />
+            ) : config.generatorType === 'calligraphyAlphabet' ? (
+              <CalligraphyAlphabetClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

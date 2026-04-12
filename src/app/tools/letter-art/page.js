@@ -9,6 +9,10 @@ const SprayCanIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 22v-6.57"/><path d="M12 11h.01"/><path d="M12 7h.01"/><path d="M14 22v-6.57"/><path d="M16 2v4"/><path d="M18 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/><path d="M20 2v4"/></svg>
 );
 
+const PenToolIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+);
+
 const letterArtTools = [
   {
     title: 'Bubble Letter Art Generator',
@@ -23,6 +27,13 @@ const letterArtTools = [
     href: '/tools/graffiti-letters/',
     tags: ['94 Fonts', 'Wall Preview', 'Color Picker', 'PNG Download'],
     icon: 'spray',
+  },
+  {
+    title: 'Calligraphy Alphabet Generator',
+    description: 'Create elegant calligraphy text with 40 beautiful script and handwriting fonts. Customize colors and download as transparent PNG.',
+    href: '/tools/calligraphy-alphabet/',
+    tags: ['40 Fonts', 'Script Styles', 'Color Picker', 'Transparent PNG'],
+    icon: 'calligraphy',
   },
 ];
 
@@ -73,8 +84,8 @@ export default function LetterArtPage() {
               className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-pink-500/30 transition-all duration-300 hover:bg-white/[0.07]"
             >
               <div className="flex items-start gap-4">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : tool.icon === 'calligraphy' ? 'from-purple-500 to-pink-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : tool.icon === 'calligraphy' ? <PenToolIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
                 </div>
 
                 <div className="flex-1 min-w-0">
