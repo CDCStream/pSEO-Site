@@ -57,7 +57,6 @@ const navItems = [
       { label: 'QR Code Generator', href: '/tools/qr-code-generator/' },
       { label: 'WiFi QR Generator', href: '/tools/wifi-qr-code-generator/' },
       { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator/' },
-      { label: 'Graffiti Letters', href: '/tools/graffiti-letters/' },
     ],
   },
   {
@@ -80,6 +79,7 @@ const navItems = [
     color: 'from-pink-500 to-rose-500',
     items: [
       { label: 'Bubble Letters', href: '/tools/letter-art/bubble-letters/' },
+      { label: 'Graffiti Letters', href: '/tools/graffiti-letters/' },
     ],
   },
   {
