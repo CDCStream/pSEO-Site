@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import { useToast } from '@/components/Toast';
 
 const TEMPLATES = Array.from({ length: 16 }, (_, i) => ({
@@ -250,7 +249,7 @@ export default function JobApplicationMemeClient() {
                   : 'border-white/10 hover:border-white/30'
               }`}
             >
-              <Image src={tpl.src} alt={tpl.label} fill sizes="60px" quality={30} className="object-cover" />
+              <img src={tpl.src} alt={tpl.label} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </button>
           ))}
         </div>
