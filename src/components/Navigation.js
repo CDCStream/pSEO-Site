@@ -110,6 +110,7 @@ const navItems = [
       { label: 'Biden Meme', href: '/meme-maker/biden-meme/' },
       { label: 'Low Taper Fade Meme', href: '/meme-maker/low-taper-fade-meme/' },
       { label: 'Job Application Meme', href: '/meme-maker/job-application-meme/' },
+      { label: 'No Meme', href: '/meme-maker/no-meme/' },
     ],
   },
   {

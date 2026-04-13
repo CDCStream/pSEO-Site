@@ -1652,6 +1652,38 @@ Job application memes thrive on every social platform. They dominate LinkedIn fo
 
 Download your finished meme as a high-quality PNG with no watermarks. The entire process is free — no accounts, no subscriptions, no hidden costs. Create one meme or a hundred; share them everywhere and let the world laugh along with the beautiful absurdity of the modern job market.`,
   },
+  'no-meme': {
+    category: 'meme-maker',
+    name: 'No Meme Collection',
+    keyword: 'No Meme',
+    title: 'Best "No" Meme GIFs - Free Download Funny No Reaction Memes',
+    description: 'Download 13 hilarious "No" reaction GIF memes for free. Perfect for saying no, denying requests, and shutting down conversations. Instant download, no watermark.',
+    h1: 'Free "No" Meme GIFs',
+    subtitle: 'Browse and download 13 animated "No" reaction GIFs — the perfect way to say no in any group chat, comment, or social post.',
+    icon: 'image',
+    generatorType: 'noMemeGallery',
+    faq: [
+      { q: 'How many "No" meme GIFs are available?', a: 'Our collection features 13 animated "No" reaction GIFs, each capturing a different way to say no — from dramatic head shakes and finger wags to emphatic refusals and comedic denials. Every GIF is optimized for fast loading.' },
+      { q: 'Are these "No" meme GIFs free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any GIF to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'All files are downloaded as animated GIF format, preserving the full animation. GIFs are universally supported across all devices, messaging apps, and social media platforms.' },
+      { q: 'Where can I use these "No" meme GIFs?', a: 'Use them anywhere! They work perfectly in iMessage, WhatsApp, Discord, Slack, Twitter/X replies, Reddit comments, Instagram DMs, and any platform that supports GIF images.' },
+      { q: 'Can I use these on my phone?', a: 'Absolutely! The gallery is fully responsive and works on all devices. Download GIFs directly to your phone camera roll and share them in any messaging app.' },
+    ],
+    longContent: `The "No" meme has become one of the most essential reaction formats in internet culture. When words alone cannot convey the intensity of your refusal, a perfectly timed "No" GIF does the job with style, humor, and unmistakable clarity. Our curated collection of 13 animated "No" reaction GIFs gives you the ultimate arsenal for shutting down bad ideas, declining invitations, and expressing disagreement in the most entertaining way possible.
+
+The power of the "No" meme lies in its universality. Everyone has experienced moments where a simple "no" needs dramatic emphasis — a coworker suggesting a meeting that could have been an email, a friend proposing yet another questionable plan, or an online comment so absurd it demands a theatrical response. These GIFs capture every shade of refusal, from polite but firm head shakes to emphatic, full-body rejections.
+
+Animated GIFs bring a dimension that static images cannot match. The movement, timing, and expression in a "No" GIF convey tone and emotion that text alone struggles to communicate. A well-chosen "No" GIF can defuse tension with humor, make your point without starting an argument, or simply get a laugh from everyone in the group chat. The animation loops create a satisfying, repeating emphasis that drives the message home.
+
+Our collection spans the full spectrum of "No" energy. You will find subtle, disappointed head shakes for gentle refusals. There are dramatic, over-the-top rejections for situations that call for maximum theatrical impact. Some GIFs feature iconic characters and reactions that have become internet legends in their own right. The variety ensures you always have the perfect "No" for every situation.
+
+Every GIF in our collection has been optimized for web performance without sacrificing animation quality. We use lossy compression techniques to reduce file sizes while maintaining smooth, clear animations. This means faster loading times on the gallery page and smaller download sizes for sharing — crucial factors for mobile users and messaging apps with file size limits.
+
+The "No" meme format dominates every major social platform and messaging service. It thrives in Twitter/X quote tweets and replies, Reddit comment threads, Discord servers, WhatsApp and iMessage conversations, Instagram stories and DMs, and Slack channels. The format transcends language barriers — a "No" GIF communicates the same message regardless of what language the viewer speaks.
+
+All 13 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites to build your personal reaction GIF library. Say "No" with style.`,
+  },
 };
 
 // Generators (Name Generators) configuration
