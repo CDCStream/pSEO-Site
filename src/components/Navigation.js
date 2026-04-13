@@ -109,6 +109,7 @@ const navItems = [
       { label: 'Monkey Thinking Meme', href: '/meme-maker/monkey-thinking-meme/' },
       { label: 'Biden Meme', href: '/meme-maker/biden-meme/' },
       { label: 'Low Taper Fade Meme', href: '/meme-maker/low-taper-fade-meme/' },
+      { label: 'Job Application Meme', href: '/meme-maker/job-application-meme/' },
     ],
   },
   {

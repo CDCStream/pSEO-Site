@@ -1620,6 +1620,38 @@ The Low Taper Fade format works across every major social media platform. It dom
 
 Download your finished meme as a high-quality PNG with no watermarks. Share it instantly on any platform, send it in group chats, or save it for the perfect moment. Every meme you create is completely free — no accounts, no subscriptions, no limits on creativity.`,
   },
+  'job-application-meme': {
+    category: 'meme-maker',
+    name: 'Job Application Meme Maker',
+    keyword: 'Job Application Meme',
+    title: 'Best Job Application Meme Maker - Free Online Generator (16 Templates)',
+    description: 'Create hilarious job application memes with our free online maker. Choose from 16 templates, click to place custom text anywhere, drag to reposition, customize fonts and colors, and download as PNG.',
+    h1: 'Job Application Meme Maker',
+    subtitle: 'Choose from 16 relatable job application meme templates, add your own text, and download your creation as a high-quality PNG.',
+    icon: 'image',
+    generatorType: 'jobApplicationMeme',
+    faq: [
+      { q: 'How many job application meme templates are available?', a: 'We offer 16 unique job application meme templates. Each template features a different relatable scenario about job hunting, interviews, and the hiring process. Browse all templates and pick the one that best matches your joke.' },
+      { q: 'How do I add text to the job application meme?', a: 'Simply click anywhere on the meme image to place a text box at that exact position. You can add multiple text boxes, and each one can be dragged to reposition it. This click-to-place system gives you complete creative control over text placement.' },
+      { q: 'Can I customize the text style?', a: 'Yes! Each text box has individual style controls. Choose from 7 font families (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjust font size from 12 to 72, pick any text color from presets or a custom color picker, and add a stroke outline for readability.' },
+      { q: 'Is the job application meme maker free to use?', a: 'Completely free! No account needed, no email required, no watermarks added. Create and download as many job application memes as you want with zero limitations.' },
+      { q: 'What format are the downloaded memes?', a: 'All memes are downloaded as high-quality PNG images. The files are optimized for sharing on social media platforms including Instagram, Twitter/X, TikTok, Reddit, LinkedIn, and Discord.' },
+      { q: 'Can I use this meme maker on my phone?', a: 'Yes! The meme maker is fully responsive and works on all devices — smartphones, tablets, and desktops. The touch-friendly interface supports tap-to-place and drag-to-reposition on mobile devices.' },
+    ],
+    longContent: `The job application meme has become one of the most relatable meme formats on the internet. Anyone who has ever applied for a job, sat through an awkward interview, or waited weeks for a response that never came can instantly connect with these memes. Our free online Job Application Meme Maker lets you turn those frustrating — and often hilarious — experiences into shareable content.
+
+With 16 carefully curated templates, our maker covers the full spectrum of job hunting humor. From the absurdity of entry-level positions requiring five years of experience to the emotional rollercoaster of getting ghosted after a "great" interview, every template captures a moment that job seekers know all too well. The diversity of templates means you can find the perfect visual for any job-related joke or observation.
+
+The click-to-place text system sets our maker apart from basic meme generators. Instead of being limited to rigid top-and-bottom text positions, you can click anywhere on the template to drop a text box at that exact location. Need text in the corner? Click there. Want a caption right next to a character's face? Click there. Add as many text boxes as your joke needs — there are no limits.
+
+Every text box is fully customizable with individual style controls. Choose from seven font families including the iconic Impact font that defines meme culture. Adjust the font size from subtle labels to bold headlines. Pick any text color using the preset palette or the custom color picker. Add a stroke outline to ensure your text is readable against any background — a crucial feature for memes with complex imagery.
+
+Drag-to-reposition functionality means you can fine-tune text placement after initial placement. Grab any text box and slide it to the perfect position. This real-time repositioning works smoothly on both desktop (mouse) and mobile (touch) devices, so you get pixel-perfect results regardless of how you access the maker.
+
+Job application memes thrive on every social platform. They dominate LinkedIn for their professional humor, get massive engagement on Twitter/X and Reddit, fill Instagram story feeds, and spark conversations in Discord servers and group chats. The universal experience of job hunting means these memes resonate with an enormous audience — from fresh graduates to seasoned professionals.
+
+Download your finished meme as a high-quality PNG with no watermarks. The entire process is free — no accounts, no subscriptions, no hidden costs. Create one meme or a hundred; share them everywhere and let the world laugh along with the beautiful absurdity of the modern job market.`,
+  },
 };
 
 // Generators (Name Generators) configuration
