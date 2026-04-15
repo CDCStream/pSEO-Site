@@ -1716,6 +1716,40 @@ The "No" meme format dominates every major social platform and messaging service
 
 All 13 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites to build your personal reaction GIF library. Say "No" with style.`,
   },
+  'shocked-meme': {
+    category: 'meme-maker',
+    name: 'Shocked Meme Maker',
+    keyword: 'Shocked Meme',
+    title: 'Best Shocked Meme Maker - Free Online Generator (18 Templates)',
+    description: 'Create hilarious shocked face memes with our free online maker. Choose from 18 templates, click to place custom text anywhere, drag to reposition, customize fonts and colors, and download as PNG.',
+    h1: 'Shocked Meme Maker',
+    subtitle: 'Choose from 18 shocked face meme templates, add your own text anywhere, and download your creation as a high-quality PNG.',
+    icon: 'image',
+    generatorType: 'shockedMeme',
+    faq: [
+      { q: 'How many shocked meme templates are available?', a: 'We offer 18 unique shocked face meme templates. Each template features a different shocked, surprised, or stunned reaction — from wide-eyed gasps to jaw-dropping expressions. Browse all templates and pick the one that best matches your joke.' },
+      { q: 'How do I add text to the shocked meme?', a: 'Simply click anywhere on the meme image to place a text box at that exact position. You can add multiple text boxes, and each one can be dragged to reposition it. This click-to-place system gives you complete creative control over text placement.' },
+      { q: 'Can I customize the text style?', a: 'Yes! Each text box has individual style controls. Choose from 7 font families (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjust font size from 12 to 72, pick any text color from presets or a custom color picker, and add a stroke outline for readability.' },
+      { q: 'Is the shocked meme maker free to use?', a: 'Completely free! No account needed, no email required, no watermarks added. Create and download as many shocked memes as you want with zero limitations.' },
+      { q: 'What format are the downloaded memes?', a: 'All memes are downloaded as high-quality PNG images. The files are optimized for sharing on social media platforms including Instagram, Twitter/X, TikTok, Reddit, and Discord.' },
+      { q: 'Can I use this meme maker on my phone?', a: 'Yes! The meme maker is fully responsive and works on all devices — smartphones, tablets, and desktops. The touch-friendly interface supports tap-to-place and drag-to-reposition on mobile devices.' },
+    ],
+    longContent: `The shocked meme is one of the most versatile and universally recognized reaction formats on the internet. A perfectly timed shocked face captures that moment of pure disbelief, surprise, or astonishment that words alone cannot express. Our free online Shocked Meme Maker gives you 18 templates to create the perfect shocked reaction meme for any situation.
+
+Shocked face memes dominate internet culture because surprise is a fundamental human emotion that translates instantly across all languages and cultures. Whether someone just heard unbelievable news, witnessed something unexpected, or simply cannot process what they are seeing, the shocked expression communicates that feeling with perfect clarity. These memes thrive in comment sections, group chats, and social media feeds worldwide.
+
+With 18 carefully selected templates, our maker covers the full range of shock and surprise. From subtle wide-eyed expressions to dramatic jaw-dropping reactions, from comedic exaggerated shock to genuinely stunned faces — every template captures a different intensity and flavor of surprise. The diversity means you can always find the perfect shocked face for your specific joke or reaction.
+
+The click-to-place text system provides complete creative freedom. Instead of being limited to rigid top-and-bottom text positions, you can click anywhere on the template to place a text box exactly where you want it. Add text near the character's mouth for a speech-bubble effect, place it at the top for setup text, or scatter multiple captions across the image for complex multi-panel jokes.
+
+Every text box is independently customizable with individual style controls. Choose from seven font families including the classic Impact font that defines meme culture. Adjust font size from small annotations to bold headlines. Pick any text color using preset swatches or the custom color picker. Add a stroke outline in any color to ensure your text remains readable against any background — essential for memes with busy or detailed imagery.
+
+Drag-to-reposition makes fine-tuning effortless. After placing a text box, grab it and slide it to the perfect position. The drag system works seamlessly on both desktop with a mouse and mobile devices with touch, ensuring pixel-perfect placement regardless of your device.
+
+Shocked memes work across every major social platform. They are perfect for Twitter/X quote tweets and replies, Instagram stories and reels, TikTok comments, Reddit threads, Discord servers, and group chats on any messaging app. The universal nature of the shocked reaction means these memes resonate with virtually any audience.
+
+Download your finished meme as a high-quality PNG with no watermarks. The entire process is completely free — no accounts, no subscriptions, no hidden costs. Create one meme or create dozens; express your shock and surprise without limits.`,
+  },
 };
 
 // Generators (Name Generators) configuration
