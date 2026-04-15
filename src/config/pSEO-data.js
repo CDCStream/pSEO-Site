@@ -1750,6 +1750,40 @@ Shocked memes work across every major social platform. They are perfect for Twit
 
 Download your finished meme as a high-quality PNG with no watermarks. The entire process is completely free — no accounts, no subscriptions, no hidden costs. Create one meme or create dozens; express your shock and surprise without limits.`,
   },
+  'thursday-meme': {
+    category: 'meme-maker',
+    name: 'Thursday Meme Collection',
+    keyword: 'Thursday Meme',
+    title: 'Best Thursday Meme GIFs - Free Download Happy Thursday Memes',
+    description: 'Download 21 hilarious happy Thursday meme GIFs for free. Perfect for celebrating almost-Friday vibes, sharing in group chats, and making Thursdays fun. Instant download, no watermark.',
+    h1: 'Free Thursday Meme GIFs',
+    subtitle: 'Browse and download 21 animated Thursday meme GIFs — celebrate the almost-Friday feeling with humor and style.',
+    icon: 'image',
+    generatorType: 'thursdayMemeGallery',
+    faq: [
+      { q: 'How many Thursday meme GIFs are available?', a: 'Our collection features 21 animated Thursday meme GIFs, each capturing a different way to celebrate or survive Thursday — from excited almost-Friday energy to exhausted mid-week humor. Every GIF is optimized for fast loading while preserving animation quality.' },
+      { q: 'Are these Thursday meme GIFs free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any GIF to open it in a full-size lightbox view with navigation controls.' },
+      { q: 'What format are the downloads?', a: 'All files are downloaded as animated GIF format, preserving the full animation. GIFs are universally supported across all devices, messaging apps, and social media platforms.' },
+      { q: 'Where can I use these Thursday meme GIFs?', a: 'Use them anywhere! They work perfectly in iMessage, WhatsApp, Discord, Slack, Twitter/X replies, Reddit comments, Instagram DMs, and any platform that supports GIF images. Share them every Thursday to brighten your friends\' day.' },
+      { q: 'Can I use these on my phone?', a: 'Absolutely! The gallery is fully responsive and works on all devices. Download GIFs directly to your phone camera roll and share them in any messaging app.' },
+    ],
+    longContent: `Thursday memes have become an essential part of weekly internet culture. As the gateway to the weekend, Thursday holds a special place in the hearts of workers, students, and anyone counting down to Friday. Our curated collection of 21 animated Thursday meme GIFs captures every shade of that almost-there feeling — from unbridled excitement to humorous exhaustion.
+
+The Thursday meme phenomenon taps into a shared human experience that transcends cultures and time zones. By Thursday, the workweek has worn everyone down just enough that humor becomes the best coping mechanism. These memes say what everyone is thinking: we are so close to the weekend that we can almost taste it. The shared anticipation creates an instant bond between anyone who sees a Thursday meme in their feed or inbox.
+
+Our collection spans the full emotional range of Thursday energy. You will find excited, over-the-top celebrations of making it to Thursday — the kind that would make you think Friday had already arrived. There are relatable exhaustion memes for those who feel like Thursday is the longest day of the week. Motivational Thursday memes remind everyone that the finish line is in sight. And there are pure comedic gems that find humor in the specific absurdity of the fourth day of the workweek.
+
+Animated GIFs bring Thursday memes to life in ways that static images cannot. The movement, expressions, and timing in a well-crafted Thursday GIF convey emotions that text and still images struggle to match. A character doing a happy dance because it is Thursday, an animal dramatically collapsing from mid-week exhaustion, or a celebrity reaction that perfectly captures the almost-Friday mood — animation makes these moments land with perfect comedic timing.
+
+Every GIF in our collection has been optimized for web performance using lossy compression techniques. This reduces file sizes significantly while maintaining smooth, clear animations. Faster loading times on the gallery page and smaller download sizes mean better experiences for everyone, especially mobile users sharing in messaging apps with file size limits.
+
+Thursday memes have carved out a unique niche on social media. They dominate office Slack channels and Microsoft Teams chats every Thursday morning. They flood Twitter/X feeds as people commiserate about the workweek. They fill Instagram stories with weekly ritual posts. They spark conversations in Discord servers and Reddit communities. The weekly nature of Thursday creates a built-in recurring audience — people actively seek out Thursday content every single week.
+
+The beauty of Thursday memes is their versatility. They work in professional contexts — sharing a tasteful Thursday meme in the work group chat is practically a team-building exercise. They work in personal circles — sending a Thursday GIF to friends and family is a simple way to spread joy. They work on public social media — posting a Thursday meme gets engagement from everyone who feels the same way about the approaching weekend.
+
+All 21 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Make every Thursday a little brighter.`,
+  },
 };
 
 // Generators (Name Generators) configuration

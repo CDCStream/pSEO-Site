@@ -113,6 +113,7 @@ const navItems = [
       { label: 'Job Application Meme', href: '/meme-maker/job-application-meme/' },
       { label: 'No Meme', href: '/meme-maker/no-meme/' },
       { label: 'Shocked Meme', href: '/meme-maker/shocked-meme/' },
+      { label: 'Thursday Meme', href: '/meme-maker/thursday-meme/' },
     ],
   },
   {
