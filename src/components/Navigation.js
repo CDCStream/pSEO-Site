@@ -81,6 +81,7 @@ const navItems = [
       { label: 'Bubble Letters', href: '/tools/letter-art/bubble-letters/' },
       { label: 'Graffiti Letters', href: '/tools/graffiti-letters/' },
       { label: 'Calligraphy Alphabet', href: '/tools/calligraphy-alphabet/' },
+      { label: 'Freaky Font', href: '/tools/freaky-font/' },
     ],
   },
   {

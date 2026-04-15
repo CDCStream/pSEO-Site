@@ -9,6 +9,7 @@ import YouTubeChannelIdeaClient from './YouTubeChannelIdeaClient';
 import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
 import GraffitiLettersClient from './GraffitiLettersClient';
 import CalligraphyAlphabetClient from './CalligraphyAlphabetClient';
+import FreakyFontClient from './FreakyFontClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -109,6 +110,8 @@ export default async function ToolPage({ params }) {
               <GraffitiLettersClient config={config} />
             ) : config.generatorType === 'calligraphyAlphabet' ? (
               <CalligraphyAlphabetClient config={config} />
+            ) : config.generatorType === 'freakyFont' ? (
+              <FreakyFontClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

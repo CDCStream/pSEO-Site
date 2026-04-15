@@ -13,6 +13,10 @@ const PenToolIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
 );
 
+const SkullIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/></svg>
+);
+
 const letterArtTools = [
   {
     title: 'Bubble Letter Art Generator',
@@ -34,6 +38,13 @@ const letterArtTools = [
     href: '/tools/calligraphy-alphabet/',
     tags: ['40 Fonts', 'Script Styles', 'Color Picker', 'Transparent PNG'],
     icon: 'calligraphy',
+  },
+  {
+    title: 'Freaky Font Generator',
+    description: 'Generate freaky, creepy, and weird text with 10 unique freaky fonts. Customize colors, size, outline and download as transparent PNG.',
+    href: '/tools/freaky-font/',
+    tags: ['10 Fonts', 'Creepy Styles', 'Color Picker', 'Transparent PNG'],
+    icon: 'skull',
   },
 ];
 
@@ -84,8 +95,8 @@ export default function LetterArtPage() {
               className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-pink-500/30 transition-all duration-300 hover:bg-white/[0.07]"
             >
               <div className="flex items-start gap-4">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : tool.icon === 'calligraphy' ? 'from-purple-500 to-pink-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : tool.icon === 'calligraphy' ? <PenToolIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : tool.icon === 'calligraphy' ? 'from-purple-500 to-pink-500' : tool.icon === 'skull' ? 'from-violet-500 to-purple-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : tool.icon === 'calligraphy' ? <PenToolIcon className="w-8 h-8 text-white" /> : tool.icon === 'skull' ? <SkullIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
                 </div>
 
                 <div className="flex-1 min-w-0">

@@ -801,6 +801,38 @@ Calligraphy fonts are essential for wedding stationery, event invitations, greet
 
 The font preview section shows the complete alphabet in your selected style, so you can see exactly how every letter looks before committing to a design. Experiment freely with different fonts, sizes, and colors until you find the perfect combination for your project.`,
   },
+  'freaky-font': {
+    category: 'tools',
+    name: 'Freaky Font Generator',
+    keyword: 'Freaky Font',
+    title: 'Best Freaky Font Generator - Free Online Creepy & Weird Text Maker',
+    description: 'Generate freaky, creepy, and weird text with 10 unique freaky fonts. Customize colors, size, and outline. Download as transparent PNG for free.',
+    h1: 'Free Freaky Font Generator',
+    subtitle: 'Type your text, pick from 10 unique freaky fonts, customize colors and size, and download your creation as a transparent PNG.',
+    icon: 'skull',
+    generatorType: 'freakyFont',
+    faq: [
+      { q: 'How many freaky fonts are available?', a: 'Our generator includes 10 unique freaky font styles — from bubbly and chalky to creepy and dreamy. Each font offers a distinct weird aesthetic perfect for Halloween designs, horror themes, quirky social media posts, and creative projects.' },
+      { q: 'Can I customize the text color?', a: 'Yes! Use the color picker to set any text fill color and outline color. You can also adjust the outline width from 0 to 12 pixels for different visual effects — from clean text to bold outlined letters.' },
+      { q: 'What format is the download?', a: 'Text is downloaded as a transparent PNG image. This means the background is see-through, making it easy to overlay your freaky text on any background in design tools, presentations, or social media posts.' },
+      { q: 'Is the freaky font generator free?', a: 'Completely free! No account needed, no email required, no watermarks on downloads. Generate and download as many freaky text images as you want.' },
+      { q: 'Can I adjust the font size?', a: 'Yes! The size slider lets you adjust from 24px to 200px. This gives you flexibility for everything from small labels to large display text and poster-sized designs.' },
+      { q: 'Does it support multiple lines?', a: 'Yes! Press Enter in the text input to create multiple lines. Each line is rendered with proper spacing and alignment in your selected freaky font.' },
+    ],
+    longContent: `The Freaky Font Generator transforms ordinary text into extraordinary, eye-catching designs using 10 unique freaky font styles. Whether you need creepy lettering for Halloween content, weird typography for memes, quirky text for social media, or unusual fonts for creative projects, this free tool gives you instant results with full customization.
+
+Our collection of freaky fonts spans a wide range of weird and wonderful aesthetics. The Creamy series offers playful, organic letterforms — Creamy Bubble with its rounded, inflated characters, Creamy Chalk with its textured handwritten feel, Creamy Chocolate with its rich flowing strokes, and Creamy Love with its romantic yet quirky curves. For something more dramatic, Zreaks NFI delivers the classic horror-inspired lettering that dominates Halloween designs and spooky content.
+
+The generator provides complete control over your text appearance. The color picker lets you choose any fill color and outline color, creating endless combinations. Want neon green text with a black outline for maximum impact? Purple text with no outline for a clean look? Red text with a white stroke for horror vibes? Every combination is possible. The outline width slider adds another dimension of control, from subtle 1px borders to bold 12px outlines.
+
+Freaky fonts serve a surprising variety of purposes beyond just Halloween. Content creators use them for attention-grabbing thumbnails and social media graphics. Gamers love them for stream overlays and Discord server branding. Party planners use them for themed invitations and decorations. Students add personality to presentations and school projects. The weird, unexpected nature of these fonts naturally draws the eye and creates memorable visual impressions.
+
+Every download produces a transparent PNG file, which is the most versatile format for creative work. The transparent background means you can place your freaky text over any image, pattern, or solid color in design applications like Canva, Photoshop, or even PowerPoint. There is no need to manually remove backgrounds — the text is ready to use immediately.
+
+The font preview section displays the complete alphabet in your selected freaky style, showing exactly how every uppercase letter, lowercase letter, number, and symbol looks. This preview helps you choose the perfect font before committing to your final design. Experiment with different fonts, sizes, and color combinations until you create something truly unique and freaky.
+
+All fonts load on-demand for fast page performance. Select a font and it loads instantly — no waiting for all 10 fonts to download before you can start creating. The real-time canvas preview updates as you type and adjust settings, giving you immediate visual feedback on your design.`,
+  },
 };
 
 // Symbols configuration
