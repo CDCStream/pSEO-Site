@@ -2713,6 +2713,38 @@ The versatility of summer wallpapers makes them suitable for every device and ev
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection, click to preview in full screen, and download your favorites to bring endless summer vibes to your phone.`,
   },
+  'thanksgiving-wallpaper': {
+    category: 'wallpapers',
+    name: 'Thanksgiving Wallpaper',
+    keyword: 'Thanksgiving Wallpaper',
+    title: 'Best Free Thanksgiving Wallpapers HD - Fall Harvest & Autumn Backgrounds',
+    description: 'Download 32 stunning free HD Thanksgiving wallpapers for your phone and desktop. Fall harvest, autumn leaves, pumpkins, and gratitude-themed backgrounds — instant download, no watermark.',
+    h1: 'Free Thanksgiving Wallpapers HD',
+    subtitle: 'Download 32 beautiful Thanksgiving wallpapers featuring fall harvest, autumn colors, pumpkins, and warm holiday vibes.',
+    icon: 'leaf',
+    generatorType: 'thanksgivingGallery',
+    faq: [
+      { q: 'How many Thanksgiving wallpapers are available?', a: 'Our collection features 32 high-definition Thanksgiving wallpapers, all available as optimized PNG files. Each wallpaper captures a different aspect of the Thanksgiving spirit — from golden autumn leaves and harvest scenes to pumpkin arrangements and warm holiday aesthetics.' },
+      { q: 'Are these Thanksgiving wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device.' },
+      { q: 'What resolution are the Thanksgiving wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a Thanksgiving wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the Thanksgiving wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'What types of Thanksgiving scenes are included?', a: 'Our collection includes autumn harvest scenes, pumpkin arrangements, fall foliage with golden and orange leaves, cozy Thanksgiving table settings, gratitude-themed designs, rustic autumn aesthetics, and warm-toned backgrounds that capture the essence of the holiday season.' },
+    ],
+    longContent: `Thanksgiving wallpapers bring the warmth, gratitude, and cozy beauty of the harvest season right to your screen. There is something deeply comforting about unlocking your phone and being greeted by golden autumn leaves, a beautifully arranged pumpkin display, or the warm amber tones of a fall harvest scene. Our curated collection of 32 free HD Thanksgiving wallpapers captures every facet of this beloved holiday's visual spirit.
+
+The appeal of Thanksgiving imagery goes beyond simple seasonal decoration. The holiday represents gratitude, family, abundance, and the beauty of nature's autumn transformation. A Thanksgiving wallpaper on your phone serves as a daily reminder of these values — a moment of warmth and appreciation every time you check your device during the busy November weeks leading up to the holiday.
+
+Our collection spans the full spectrum of Thanksgiving aesthetics. You will find classic harvest scenes with cornucopias overflowing with fall produce, elegant pumpkin arrangements in warm orange and gold tones, stunning autumn leaf photography with vibrant reds, oranges, and yellows, cozy Thanksgiving table settings with candles and seasonal decor, and artistic interpretations of gratitude and thankfulness themes.
+
+Autumn is universally recognized as one of the most photogenic seasons, and Thanksgiving sits at its peak. The natural color palette of fall — deep oranges, rich reds, golden yellows, warm browns, and rustic creams — creates wallpapers that are inherently beautiful and soothing. These warm tones pair perfectly with both light and dark mode interfaces on modern phones, ensuring your apps remain readable while your background radiates seasonal warmth.
+
+Thanksgiving wallpapers serve multiple purposes throughout the season. They help build excitement in the weeks leading up to the holiday. They create a festive atmosphere on your phone during Thanksgiving dinner and family gatherings. They extend the warm, grateful feeling throughout the entire autumn season. Many people keep their Thanksgiving wallpapers from November through the end of the year, as the autumn aesthetic naturally transitions into the winter holiday season.
+
+The versatility of these wallpapers makes them perfect for everyone who celebrates or appreciates the autumn season. Students use them to add seasonal warmth to their study sessions. Professionals enjoy the cozy, grounded energy they bring to work devices. Parents share them with family members to build holiday excitement. The universal themes of gratitude, harvest, and natural beauty mean these wallpapers resonate across all ages and backgrounds.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect Thanksgiving wallpaper to celebrate the season of gratitude on your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
