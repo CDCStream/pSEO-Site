@@ -114,6 +114,7 @@ const navItems = [
       { label: 'No Meme', href: '/meme-maker/no-meme/' },
       { label: 'Shocked Meme', href: '/meme-maker/shocked-meme/' },
       { label: 'Thursday Meme', href: '/meme-maker/thursday-meme/' },
+      { label: 'Chad Meme', href: '/meme-maker/chad-meme/' },
     ],
   },
   {

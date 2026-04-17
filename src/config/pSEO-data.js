@@ -1784,6 +1784,38 @@ The beauty of Thursday memes is their versatility. They work in professional con
 
 All 21 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Make every Thursday a little brighter.`,
   },
+  'chad-meme': {
+    category: 'meme-maker',
+    name: 'Chad Meme Collection',
+    keyword: 'Chad Meme',
+    title: 'Best Chad Meme & GigaChad GIFs - Free Download Funny Chad Memes',
+    description: 'Download 19 hilarious Chad and GigaChad memes and GIFs for free. The ultimate sigma male reaction images. Instant download, no watermark.',
+    h1: 'Free Chad & GigaChad Memes',
+    subtitle: 'Browse and download 19 Chad and GigaChad memes and animated GIFs — the ultimate sigma male reaction collection.',
+    icon: 'image',
+    generatorType: 'chadMemeGallery',
+    faq: [
+      { q: 'How many Chad memes are available?', a: 'Our collection features 19 Chad and GigaChad memes — 9 animated GIFs and 10 static images. Each captures a different aspect of the iconic Chad meme format, from classic GigaChad poses to creative variations of the sigma male aesthetic.' },
+      { q: 'Are these Chad memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any meme to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'GIFs are downloaded as animated GIF files preserving full animation. Static memes are downloaded as PNG images. Both formats are universally supported across all devices and platforms.' },
+      { q: 'Where can I use these Chad memes?', a: 'Use them anywhere! They work perfectly in Twitter/X replies, Reddit comments, Discord servers, Instagram DMs, WhatsApp, Slack, and any platform that supports image or GIF sharing.' },
+      { q: 'What is the GigaChad meme?', a: 'GigaChad is an internet meme based on a hyper-masculine figure representing the idealized "alpha" or "sigma" male. The meme is used humorously to represent supreme confidence, dominance, or an absurdly based opinion. It has become one of the most recognizable meme formats worldwide.' },
+    ],
+    longContent: `The Chad meme has evolved from a simple internet joke into one of the most iconic and versatile meme formats in digital culture. Based on the concept of the ultimate confident, composed, and unbothered individual, GigaChad memes have become the go-to reaction for expressing supreme agreement, asserting dominance in arguments, or simply acknowledging something incredibly based. Our curated collection of 19 Chad and GigaChad memes and GIFs gives you the complete arsenal for every sigma male moment.
+
+The GigaChad phenomenon represents a unique chapter in meme history. What started as digitally enhanced photographs of an impossibly chiseled figure quickly became a universal symbol for confidence, self-assurance, and the refusal to be bothered by trivial matters. The beauty of the Chad meme lies in its flexibility — it can be used sincerely to celebrate genuine achievements or ironically to mock absurd overconfidence. This dual nature makes it one of the few meme formats that works equally well in serious and comedic contexts.
+
+Our collection spans the full range of Chad meme energy. You will find the classic GigaChad poses with their iconic jawline and muscular definition, animated GIFs that bring the Chad energy to life with movement and timing, creative variations that put the Chad in unexpected situations, and reaction images perfect for asserting dominance in any comment thread or group chat.
+
+Animated GIFs in the collection add a dynamic element that static images cannot match. A Chad slowly turning to face the camera, a GigaChad casually dismissing inferior opinions, or the classic walking Chad animation — these GIFs convey timing and confidence that make reactions land with maximum impact. The animation loops create a satisfying, repeating display of pure Chad energy.
+
+Every file in our collection has been optimized for web performance. WebP images were converted to universally compatible PNG format, and GIFs were compressed using lossy optimization to reduce file sizes while maintaining visual quality. This means faster loading times and smaller downloads for sharing — crucial for messaging apps and social platforms.
+
+The Chad meme format dominates internet culture across every major platform. It is a staple of Twitter/X quote tweets, Reddit threads (especially r/memes and r/shitposting), Discord servers, 4chan boards, Instagram meme pages, and TikTok comments. The GigaChad format transcends language barriers — the image alone communicates supreme confidence regardless of what language the viewer speaks.
+
+All 19 memes and GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each one in the full-screen lightbox, and download your favorites to build the ultimate Chad reaction library. Stay based.`,
+  },
 };
 
 // Generators (Name Generators) configuration
