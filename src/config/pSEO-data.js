@@ -2841,6 +2841,38 @@ The variety in our collection ensures there is a perfect flower wallpaper for ev
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect flower wallpaper to bring natural beauty to your screen every day.`,
   },
+  'gif-wallpaper': {
+    category: 'wallpapers',
+    name: 'GIF Wallpaper',
+    keyword: 'GIF Wallpaper',
+    title: 'Best Free GIF Wallpapers HD - Animated Style Backgrounds for Phone',
+    description: 'Download 30 stunning free HD GIF-style wallpapers for your phone and desktop. Vibrant animated aesthetic backgrounds — instant download, no watermark.',
+    h1: 'Free GIF Wallpapers HD',
+    subtitle: 'Download 30 eye-catching GIF-style wallpapers featuring vibrant colors, dynamic patterns, and animated aesthetic designs.',
+    icon: 'image',
+    generatorType: 'gifWallpaperGallery',
+    faq: [
+      { q: 'How many GIF wallpapers are available?', a: 'Our collection features 30 high-definition GIF-style wallpapers, all available as optimized PNG files. Each wallpaper captures the vibrant, dynamic energy of animated GIF aesthetics — bold colors, fluid gradients, neon glows, and eye-catching patterns.' },
+      { q: 'Are these GIF wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device.' },
+      { q: 'What resolution are the GIF wallpapers?', a: 'All wallpapers are high-definition 1024x1024 PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a GIF wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the GIF wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and vibrant on larger screens.' },
+      { q: 'What styles of GIF wallpapers are included?', a: 'Our collection includes retro pixel art styles, neon glow effects, fluid gradient animations, abstract geometric patterns, vaporwave aesthetics, glitch art designs, and dynamic color burst compositions — all capturing the vibrant energy of animated GIF culture.' },
+    ],
+    longContent: `GIF wallpapers bring the vibrant, dynamic energy of internet culture directly to your phone screen. Inspired by the mesmerizing loops and bold color palettes that define animated GIF art, these wallpapers capture that same eye-catching energy in a static format perfect for phone backgrounds. Our curated collection of 30 free HD GIF-style wallpapers delivers the visual punch and creative aesthetics that GIF lovers crave.
+
+The GIF aesthetic has become one of the most recognizable visual styles in digital culture. Characterized by bold color contrasts, fluid gradients, neon glows, pixel art influences, and the kind of hypnotic patterns that make you want to stare for hours, this aesthetic translates beautifully into phone wallpapers. Each image in our collection captures a different facet of this dynamic visual language — from retro-inspired pixel compositions to modern abstract fluid art.
+
+What makes GIF-style wallpapers unique is their inherent sense of motion and energy. Even as static images, they carry the visual DNA of animation — the suggestion of movement, the illusion of depth, and the kind of vibrant color relationships that emerge when artists create frame-by-frame animations. This gives your phone screen a dynamic, alive quality that traditional wallpapers simply cannot match.
+
+Our collection spans the full range of GIF-inspired aesthetics. You will find vaporwave-influenced designs with their signature purple and teal gradients, glitch art compositions that play with digital distortion and pixel manipulation, neon glow effects reminiscent of cyberpunk cityscapes, retro pixel art that pays homage to early internet culture, and fluid abstract designs that capture the smooth, hypnotic quality of the best animated GIFs.
+
+The color palettes in our GIF wallpaper collection are intentionally bold and attention-grabbing. Vivid neons — electric blue, hot pink, acid green — pop against dark backgrounds to create that classic GIF glow effect. Warm gradients flow from sunset oranges to deep purples, creating a sense of warmth and depth. Cool-toned compositions use icy blues and crisp whites to achieve a clean, futuristic aesthetic. Every wallpaper is designed to make your phone screen visually striking.
+
+GIF culture has profoundly shaped internet aesthetics over the past two decades. From the early days of GeoCities and MySpace to the current era of Giphy and Tenor, the GIF format has influenced everything from web design to fashion to fine art. These wallpapers celebrate that legacy by translating the most compelling aspects of GIF art into phone backgrounds that you can enjoy every day.
+
+All 30 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect GIF wallpaper to bring dynamic, animated energy to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
