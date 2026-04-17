@@ -1816,6 +1816,38 @@ The Chad meme format dominates internet culture across every major platform. It 
 
 All 19 memes and GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each one in the full-screen lightbox, and download your favorites to build the ultimate Chad reaction library. Stay based.`,
   },
+  'sad-meme': {
+    category: 'meme-maker',
+    name: 'Sad Meme Collection',
+    keyword: 'Sad Meme',
+    title: 'Best Sad Memes & GIFs - Free Download Sad Reaction Memes',
+    description: 'Download 19 sad memes and GIFs for free. The best sad reaction images and animated GIFs for when words just aren\'t enough. Instant download, no watermark.',
+    h1: 'Free Sad Memes & Reaction GIFs',
+    subtitle: 'Browse and download 19 sad memes and animated GIFs — the ultimate collection of sad, emotional, and relatable reaction images.',
+    icon: 'image',
+    generatorType: 'sadMemeGallery',
+    faq: [
+      { q: 'How many sad memes are available?', a: 'Our collection features 19 sad memes — 13 animated GIFs and 6 static images. Each captures a different flavor of sadness, from dramatic crying reactions to subtle melancholy expressions perfect for any emotional moment.' },
+      { q: 'Are these sad memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any meme to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'GIFs are downloaded as animated GIF files preserving full animation. Static memes are downloaded as PNG images. Both formats are universally supported across all devices and platforms.' },
+      { q: 'Where can I use these sad memes?', a: 'Use them anywhere! They work perfectly in Twitter/X replies, Reddit comments, Discord servers, Instagram DMs, WhatsApp, Slack, and any platform that supports image or GIF sharing.' },
+      { q: 'What is a sad meme?', a: 'Sad memes are reaction images and GIFs that express sadness, disappointment, or emotional pain in a relatable and often humorous way. They are widely used in online conversations to convey empathy, dramatic reactions, or comedic sorrow when something unfortunate or relatable happens.' },
+    ],
+    longContent: `Sad memes have become one of the most universally relatable formats in internet culture. Whether expressing genuine disappointment, dramatic sorrow for comedic effect, or simply reacting to bad news in a group chat, sad reaction memes and GIFs communicate emotions that words often cannot capture. Our curated collection of 19 sad memes and GIFs provides the perfect emotional response for every heartbreaking, disappointing, or bittersweet moment.
+
+The beauty of sad memes lies in their incredible versatility. A well-timed sad reaction GIF can express sympathy when a friend shares bad news, add comedic exaggeration to a minor inconvenience, or perfectly capture that feeling when your favorite show gets cancelled. The emotional range spans from subtle melancholy to full-blown dramatic crying, giving you the exact level of sadness needed for any situation.
+
+Our collection includes the full spectrum of sad meme energy. You will find classic crying reaction faces, dramatically sad animated GIFs with looping tears and expressions, subtle "this is fine" sadness, and deeply relatable images that capture everyday disappointments. Each meme has been selected for maximum emotional impact and reaction potential.
+
+Animated GIFs in the collection bring the sadness to life in ways static images cannot match. A slowly forming tear, a trembling lip, or a dramatic rain-soaked moment — these GIFs convey timing and emotion that make reactions land with genuine impact. The animation loops create a continuous display of emotional resonance that static images simply cannot replicate.
+
+Every file in our collection has been optimized for web performance. WebP images were converted to universally compatible PNG format, and GIFs were compressed using lossy optimization to reduce file sizes while maintaining visual quality. This means faster loading times and smaller downloads for sharing — crucial for messaging apps and social platforms where speed matters.
+
+Sad memes dominate reaction culture across every major platform. They are staples of Twitter/X quote tweets expressing collective disappointment, Reddit comment threads sharing relatable struggles, Discord servers providing emotional support, and Instagram DMs conveying sympathy. The sad meme transcends language barriers — a crying face communicates the same emotion regardless of what language the viewer speaks.
+
+All 19 memes and GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each one in the full-screen lightbox, and download your favorites. Sometimes you just need the perfect sad reaction.`,
+  },
 };
 
 // Generators (Name Generators) configuration
