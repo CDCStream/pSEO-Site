@@ -13,6 +13,7 @@ import HalloweenGalleryClient from './HalloweenGalleryClient';
 import CuteGalleryClient from './CuteGalleryClient';
 import SummerGalleryClient from './SummerGalleryClient';
 import ThanksgivingGalleryClient from './ThanksgivingGalleryClient';
+import FlowerGalleryClient from './FlowerGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -141,6 +142,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the Thanksgiving wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  flowerGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 beautiful flower and botanical wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the flower wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -206,6 +213,8 @@ export default async function WallpaperPage({ params }) {
               ? <SummerGalleryClient />
               : config.generatorType === 'thanksgivingGallery'
               ? <ThanksgivingGalleryClient />
+              : config.generatorType === 'flowerGallery'
+              ? <FlowerGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 

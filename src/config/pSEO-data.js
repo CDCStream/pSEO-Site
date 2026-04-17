@@ -2745,6 +2745,38 @@ The versatility of these wallpapers makes them perfect for everyone who celebrat
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect Thanksgiving wallpaper to celebrate the season of gratitude on your screen.`,
   },
+  'flower-wallpaper': {
+    category: 'wallpapers',
+    name: 'Flower Wallpaper',
+    keyword: 'Flower Wallpaper',
+    title: 'Best Free Flower Wallpapers HD - Beautiful Floral Backgrounds for Phone',
+    description: 'Download 32 stunning free HD flower wallpapers for your phone and desktop. Roses, sunflowers, cherry blossoms, and botanical designs — instant download, no watermark.',
+    h1: 'Free Flower Wallpapers HD',
+    subtitle: 'Download 32 beautiful flower wallpapers featuring roses, sunflowers, cherry blossoms, and elegant botanical designs.',
+    icon: 'flower',
+    generatorType: 'flowerGallery',
+    faq: [
+      { q: 'How many flower wallpapers are available?', a: 'Our collection features 32 high-definition flower wallpapers, all available as optimized PNG files. Each wallpaper showcases a different floral style — from vibrant rose arrangements and sunflower fields to delicate cherry blossoms and abstract botanical patterns.' },
+      { q: 'Are these flower wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device.' },
+      { q: 'What resolution are the flower wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a flower wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the flower wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'What types of flowers are included?', a: 'Our collection includes roses, sunflowers, cherry blossoms, tulips, lavender, daisies, peonies, wildflower arrangements, tropical flowers, and abstract botanical designs in various color palettes from soft pastels to bold vibrant tones.' },
+    ],
+    longContent: `Flower wallpapers bring the timeless beauty and natural elegance of the botanical world right to your screen. There is something universally uplifting about unlocking your phone and being greeted by a stunning arrangement of roses, a field of golden sunflowers, or the delicate pink petals of cherry blossoms in full bloom. Our curated collection of 32 free HD flower wallpapers captures every facet of floral beauty.
+
+The appeal of flower imagery transcends trends and seasons. Flowers have been symbols of beauty, love, growth, and renewal across every culture in human history. A flower wallpaper on your phone taps into this deep connection — providing a moment of natural beauty and calm every time you glance at your screen. Research in environmental psychology consistently shows that exposure to natural imagery, especially flowers, can reduce stress and improve mood.
+
+Our collection spans the full spectrum of floral aesthetics. You will find classic rose arrangements in deep reds and soft pinks, cheerful sunflower compositions bursting with golden yellow energy, elegant cherry blossom scenes with their iconic soft pink petals, and vibrant tropical flowers in bold, exotic colors. There are minimalist single-bloom close-ups for those who prefer clean simplicity, and lush bouquet arrangements for those who love abundant floral displays.
+
+The natural color palette of flowers creates wallpapers that work beautifully from a design perspective. Soft pastels — blush pinks, lavender purples, mint greens — create gentle, calming backgrounds that pair perfectly with any app icons. Bold floral colors — deep reds, bright yellows, vivid oranges — add energy and vibrancy to your home screen. The organic shapes and natural gradients in flower photography create depth and dimension that make your phone screen feel alive.
+
+Flower wallpapers are among the most popular phone background categories worldwide, and for good reason. They work for every season — spring blossoms celebrate renewal, summer blooms match the season's energy, autumn flowers add warm tones, and winter florals provide a refreshing contrast to cold weather. This year-round versatility means a flower wallpaper never feels out of place.
+
+The variety in our collection ensures there is a perfect flower wallpaper for every personal style. Romantic souls gravitate toward rose and peony designs. Nature lovers prefer wildflower meadows and botanical garden scenes. Minimalists enjoy single stems against clean backgrounds. Bold personalities choose tropical and exotic flower arrangements. Whatever your aesthetic preference, flowers offer a wallpaper that feels personally meaningful.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect flower wallpaper to bring natural beauty to your screen every day.`,
+  },
 };
 
 // Get all pages for sitemap generation

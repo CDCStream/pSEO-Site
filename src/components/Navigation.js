@@ -137,6 +137,7 @@ const navItems = [
       { label: 'Cute Wallpaper', href: '/wallpapers/cute-wallpaper/' },
       { label: 'Summer Wallpaper', href: '/wallpapers/summer-wallpaper/' },
       { label: 'Thanksgiving Wallpaper', href: '/wallpapers/thanksgiving-wallpaper/' },
+      { label: 'Flower Wallpaper', href: '/wallpapers/flower-wallpaper/' },
     ],
   },
   {
