@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -9,6 +9,14 @@ const calculatorTools = [
     icon: Snowflake,
     color: 'from-blue-500 to-sky-400',
     tags: ['Weather', 'AI Prediction', 'School Closure', 'Real-time Data'],
+  },
+  {
+    name: 'Chronological Age Calculator',
+    description: 'Calculate your exact age in years, months, days, hours, and minutes from your date of birth.',
+    href: '/calculators/chronological-age-calculator/',
+    icon: Calendar,
+    color: 'from-teal-500 to-cyan-400',
+    tags: ['Age', 'Date of Birth', 'Time', 'Free Calculator'],
   },
 ];
 

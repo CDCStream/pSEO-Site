@@ -179,6 +179,7 @@ const navItems = [
     color: 'from-cyan-500 to-teal-500',
     items: [
       { label: 'Snow Day Calculator', href: '/calculators/snow-day-calculator/' },
+      { label: 'Age Calculator', href: '/calculators/chronological-age-calculator/' },
     ],
   },
   {
