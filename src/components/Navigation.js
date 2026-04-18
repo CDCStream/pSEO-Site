@@ -117,6 +117,7 @@ const navItems = [
       { label: 'Chad Meme', href: '/meme-maker/chad-meme/' },
       { label: 'Sad Meme', href: '/meme-maker/sad-meme/' },
       { label: 'Monday Meme', href: '/meme-maker/monday-meme/' },
+      { label: 'Anthony Mackie Meme', href: '/meme-maker/anthony-mackie-meme/' },
     ],
   },
   {

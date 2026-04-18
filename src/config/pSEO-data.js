@@ -1880,6 +1880,38 @@ The workplace culture surrounding Monday memes is particularly rich. Office Slac
 
 All 16 memes and GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each one in the full-screen lightbox, and download your favorites. Make every Monday a little more bearable.`,
   },
+  'anthony-mackie-meme': {
+    category: 'meme-maker',
+    name: 'Anthony Mackie Meme Collection',
+    keyword: 'Anthony Mackie Meme',
+    title: 'Best Anthony Mackie Memes & GIFs - Free Download Funny Reaction GIFs',
+    description: 'Download 16 hilarious Anthony Mackie reaction GIFs for free. The best Falcon and Captain America meme reactions. Instant download, no watermark.',
+    h1: 'Free Anthony Mackie Memes & GIFs',
+    subtitle: 'Browse and download 16 hilarious Anthony Mackie reaction GIFs — the ultimate collection of Marvel\'s funniest actor in action.',
+    icon: 'image',
+    generatorType: 'anthonyMackieMemeGallery',
+    faq: [
+      { q: 'How many Anthony Mackie memes are available?', a: 'Our collection features 16 animated Anthony Mackie reaction GIFs. Each captures a different iconic expression or moment — from his signature laugh and confused looks to dramatic reactions that have made him one of the most memed actors in Hollywood.' },
+      { q: 'Are these Anthony Mackie memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'All memes are downloaded as animated GIF files preserving full animation. GIF format is universally supported across all devices, platforms, and messaging apps.' },
+      { q: 'Where can I use these Anthony Mackie memes?', a: 'Use them anywhere! They work perfectly in Twitter/X replies, Reddit comments, Discord servers, Instagram DMs, WhatsApp, Slack, and any platform that supports GIF sharing. Perfect for Marvel fan communities.' },
+      { q: 'Why is Anthony Mackie so popular in memes?', a: 'Anthony Mackie is known for his incredibly expressive face, infectious laugh, and natural comedic timing both on and off screen. His press tour antics with Sebastian Stan, hilarious interview moments, and animated performances in Marvel films have made him a goldmine for reaction GIFs and memes.' },
+    ],
+    longContent: `Anthony Mackie has become one of the most beloved and memed actors in Hollywood, and for good reason. His infectious energy, expressive facial reactions, and natural comedic timing have turned him into a reaction GIF goldmine. From his Marvel Cinematic Universe appearances as Sam Wilson and Captain America to his legendary press tour moments and interviews, Mackie delivers meme-worthy content effortlessly. Our curated collection of 16 Anthony Mackie reaction GIFs captures the full range of his iconic expressions.
+
+What makes Anthony Mackie such a perfect subject for memes is his genuine expressiveness. Unlike many actors who maintain a carefully controlled public persona, Mackie wears his emotions on his face with unapologetic honesty. His confusion looks, his dramatic eye rolls, his signature full-body laugh, and his playful surprise reactions are all instantly recognizable and universally relatable. When you need to express an emotion in a group chat, chances are there is an Anthony Mackie GIF that captures it perfectly.
+
+The Marvel press tours have been particularly rich ground for Mackie meme content. His dynamic with co-star Sebastian Stan — nicknamed the "Stackie" duo by fans — produced some of the most hilarious and quotable interview moments in MCU history. Their playful banter, mutual roasting, and genuine friendship translated into countless GIF-worthy moments that fans continue to share years later.
+
+Beyond Marvel, Mackie's appearances on talk shows, red carpets, and social media have only added to his meme legacy. His willingness to be goofy, his quick wit in interviews, and his ability to deliver perfectly timed reactions make every public appearance a potential source of new meme material. He has embraced his meme status with good humor, which has only endeared him further to internet culture.
+
+Our collection spans the full emotional spectrum of Anthony Mackie reactions. You will find his classic confused face perfect for "wait, what?" moments, his infectious laugh for celebrating good news, his dramatic shock expressions for unexpected plot twists, his playful side-eye for calling out nonsense, and his wholesome smile for genuine appreciation. Each GIF has been selected for maximum reaction potential and versatility.
+
+Every GIF in our collection has been optimized for web performance using lossy compression while preserving animation quality. This means faster loading times and smaller file sizes — crucial for messaging apps and social platforms where speed matters. The animations remain smooth and expressive while being efficiently sized for sharing.
+
+All 16 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites to build the ultimate Anthony Mackie reaction library.`,
+  },
 };
 
 // Generators (Name Generators) configuration
