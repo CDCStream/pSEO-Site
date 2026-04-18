@@ -1912,6 +1912,38 @@ Every GIF in our collection has been optimized for web performance using lossy c
 
 All 16 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites to build the ultimate Anthony Mackie reaction library.`,
   },
+  'always-has-been-meme': {
+    category: 'meme-maker',
+    name: 'Always Has Been Meme Maker',
+    keyword: 'Always Has Been Meme',
+    title: 'Always Has Been Meme Maker - Create Free Custom Astronaut Memes',
+    description: 'Create custom Always Has Been memes with our free online maker. Click to place text anywhere on the iconic astronaut template. Download as PNG instantly.',
+    h1: 'Always Has Been Meme Maker',
+    subtitle: 'Create your own "Always Has Been" astronaut meme — click anywhere to add text, customize fonts and colors, download as PNG.',
+    icon: 'image',
+    generatorType: 'alwaysHasBeenMeme',
+    faq: [
+      { q: 'How do I add text to the Always Has Been meme?', a: 'Simply click anywhere on the meme image to place a text box at that position. You can add as many text boxes as you want and drag them to reposition. Each text box can be individually customized with different fonts, sizes, colors, and stroke effects.' },
+      { q: 'Can I customize the text style?', a: 'Yes! Each text box supports full customization. You can change the font family (Impact, Arial, Comic Sans, etc.), font size (12–72px), text color from preset options or a custom color picker, and stroke/outline color for better readability against the space background.' },
+      { q: 'Is this meme maker free?', a: 'Completely free! No sign-up, no email required, no watermarks. Create your Always Has Been meme and download it as a high-quality PNG file instantly.' },
+      { q: 'What is the "Always Has Been" meme?', a: 'The "Always Has Been" meme features two astronauts in space — one looking at Earth and making a realization, while the other points a gun and says "Always Has Been." It is used to reveal that something has always been a certain way, often as a humorous commentary on hidden truths or obvious facts people overlook.' },
+      { q: 'Can I move text after placing it?', a: 'Yes! Click and drag any text box to reposition it anywhere on the image. This gives you full control over the layout of your meme.' },
+      { q: 'What format is the download?', a: 'Your meme is downloaded as a high-quality PNG image with full resolution. PNG format is universally supported across all devices and platforms.' },
+    ],
+    longContent: `The "Always Has Been" meme is one of the most iconic and versatile meme formats to emerge from internet culture. Featuring two astronauts floating in space with Earth visible in the background, the meme format delivers a powerful punchline structure: one astronaut makes a surprising observation about the world, and the second astronaut — often pointing a gun — confirms with the legendary words "Always Has Been." Our free meme maker lets you create your own custom version of this classic format.
+
+The template originated from an illustration depicting the profound moment of realization in space, but internet culture transformed it into something far more entertaining. The format works because of its dramatic contrast — the vastness of space providing gravitas to what is often an absurd or mundane observation. This juxtaposition of cosmic significance with everyday humor is what makes the Always Has Been meme endlessly adaptable and perpetually funny.
+
+Our meme maker gives you complete creative control. Click anywhere on the astronaut template to place text boxes exactly where you want them. The click-to-place system means you are not limited to predetermined text positions — put your setup text near the first astronaut, your punchline near the second, or add additional commentary anywhere on the image. You can add as many text boxes as your joke requires.
+
+Each text box comes with a full suite of customization options. Choose from seven different font families including the classic Impact font that defines meme culture. Adjust font size from tiny to massive with a smooth slider. Pick text colors from ten preset options or use the custom color picker for exact shade matching. Add stroke outlines in various colors to ensure your text remains readable against the detailed space background.
+
+The drag-to-reposition feature gives you pixel-perfect control over your meme layout. After placing a text box, simply click and drag it to fine-tune its position. This is especially important for the Always Has Been format, where text placement relative to each astronaut is crucial for comedic timing and visual flow.
+
+The Always Has Been meme format has proven remarkably durable in the fast-moving world of internet humor. It has been used for political commentary, gaming observations, tech industry insights, sports hot takes, and everyday life revelations. Its staying power comes from the universal human experience of suddenly realizing something that was true all along — that "wait, it's all X? Always has been" moment of clarity.
+
+Create your Always Has Been meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
+  },
 };
 
 // Generators (Name Generators) configuration

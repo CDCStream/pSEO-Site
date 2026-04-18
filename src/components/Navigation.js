@@ -118,6 +118,7 @@ const navItems = [
       { label: 'Sad Meme', href: '/meme-maker/sad-meme/' },
       { label: 'Monday Meme', href: '/meme-maker/monday-meme/' },
       { label: 'Anthony Mackie Meme', href: '/meme-maker/anthony-mackie-meme/' },
+      { label: 'Always Has Been Meme', href: '/meme-maker/always-has-been-meme/' },
     ],
   },
   {
