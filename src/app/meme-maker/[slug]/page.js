@@ -24,6 +24,7 @@ import ShockedMemeClient from './ShockedMemeClient';
 import ThursdayMemeGalleryClient from './ThursdayMemeGalleryClient';
 import ChadMemeGalleryClient from './ChadMemeGalleryClient';
 import SadMemeGalleryClient from './SadMemeGalleryClient';
+import MondayMemeGalleryClient from './MondayMemeGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -539,6 +540,29 @@ const noMemeSteps = [
   },
 ];
 
+const mondayMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 16 funny Monday memes and animated GIFs.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any meme to open a full-size lightbox. GIFs play automatically.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download as PNG (static) or GIF (animated) — format is preserved.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats every Monday morning to survive the week.',
+  },
+];
+
 const sadMemeSteps = [
   {
     icon: Search,
@@ -671,11 +695,13 @@ export default async function MemePage({ params }) {
               <ChadMemeGalleryClient />
             ) : slug === 'sad-meme' ? (
               <SadMemeGalleryClient />
+            ) : slug === 'monday-meme' ? (
+              <MondayMemeGalleryClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
