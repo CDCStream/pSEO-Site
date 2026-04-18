@@ -140,9 +140,11 @@ export default function ChronologicalAgeClient() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setUseCustomTarget(!useCustomTarget)}
-                className={`relative w-10 h-5 rounded-full transition-colors ${useCustomTarget ? 'bg-teal-500' : 'bg-white/20'}`}
+                className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors duration-200 ${useCustomTarget ? 'bg-teal-500' : 'bg-white/20'}`}
+                role="switch"
+                aria-checked={useCustomTarget}
               >
-                <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${useCustomTarget ? 'translate-x-5' : 'translate-x-0.5'}`} />
+                <span className={`pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-md ring-0 transition-transform duration-200 translate-y-0.5 ${useCustomTarget ? 'translate-x-[22px]' : 'translate-x-0.5'}`} />
               </button>
               <span className="text-sm text-gray-400">Calculate age at a specific date</span>
             </div>
