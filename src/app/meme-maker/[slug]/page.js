@@ -27,6 +27,7 @@ import SadMemeGalleryClient from './SadMemeGalleryClient';
 import MondayMemeGalleryClient from './MondayMemeGalleryClient';
 import AnthonyMackieMemeGalleryClient from './AnthonyMackieMemeGalleryClient';
 import AlwaysHasBeenMemeClient from './AlwaysHasBeenMemeClient';
+import ShrekMemeGalleryClient from './ShrekMemeGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -542,6 +543,29 @@ const noMemeSteps = [
   },
 ];
 
+const shrekMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 18 hilarious Shrek reaction GIFs.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any GIF to open a full-size lightbox. All GIFs play automatically.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download any Shrek meme as an animated GIF file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats, post on social media, or use as a reaction GIF.',
+  },
+];
+
 const alwaysHasBeenSteps = [
   {
     icon: Type,
@@ -749,11 +773,13 @@ export default async function MemePage({ params }) {
               <AnthonyMackieMemeGalleryClient />
             ) : slug === 'always-has-been-meme' ? (
               <AlwaysHasBeenMemeClient />
+            ) : slug === 'shrek-meme' ? (
+              <ShrekMemeGalleryClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

@@ -1944,6 +1944,38 @@ The Always Has Been meme format has proven remarkably durable in the fast-moving
 
 Create your Always Has Been meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'shrek-meme': {
+    category: 'meme-maker',
+    name: 'Shrek Meme Collection',
+    keyword: 'Shrek Meme',
+    title: 'Best Shrek Memes & GIFs - Free Download Funny Shrek Reaction GIFs',
+    description: 'Download 18 hilarious Shrek reaction GIFs for free. The best ogre memes from the legendary DreamWorks franchise. Instant download, no watermark.',
+    h1: 'Free Shrek Memes & Reaction GIFs',
+    subtitle: 'Browse and download 18 hilarious Shrek reaction GIFs — the ultimate collection from everybody\'s favorite ogre.',
+    icon: 'image',
+    generatorType: 'shrekMemeGallery',
+    faq: [
+      { q: 'How many Shrek memes are available?', a: 'Our collection features 18 animated Shrek reaction GIFs. Each captures a different iconic moment from the Shrek franchise — from his signature "Get out of my swamp" rage to wholesome Donkey interactions and Shrek\'s classic side-eye expressions.' },
+      { q: 'Are these Shrek memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'All memes are downloaded as animated GIF files preserving full animation. GIF format is universally supported across all devices, platforms, and messaging apps.' },
+      { q: 'Where can I use these Shrek memes?', a: 'Use them anywhere! They work perfectly in Twitter/X replies, Reddit comments, Discord servers, Instagram DMs, WhatsApp, Slack, and any platform that supports GIF sharing. Perfect for Shrek fans and meme lovers alike.' },
+      { q: 'Why is Shrek such a popular meme?', a: 'Shrek became a meme phenomenon due to the franchise\'s unique blend of irreverent humor, quotable dialogue, and surprisingly relatable characters. The "Shrek is love, Shrek is life" internet phenomenon, combined with the character\'s expressive face and iconic moments, cemented Shrek as one of the most enduring meme subjects in internet history.' },
+    ],
+    longContent: `Shrek memes represent one of the most enduring and beloved categories in internet meme culture. The lovable green ogre from DreamWorks\' animated franchise has transcended his origins as a children\'s movie character to become a genuine icon of internet humor. From the famous "Get out of my swamp" line to the surprisingly deep emotional moments, Shrek provides an inexhaustible supply of reaction-worthy content. Our curated collection of 18 Shrek reaction GIFs captures the full range of ogre expressions.
+
+What makes Shrek such perfect meme material is the character\'s remarkable expressiveness. Despite being an animated ogre, Shrek displays a range of emotions that feel deeply human and universally relatable. His annoyed expressions, his moments of genuine surprise, his rare but powerful smiles, and his iconic angry outbursts all translate perfectly into reaction GIFs that work in countless conversational contexts.
+
+The Shrek franchise\'s cultural impact cannot be overstated. What began as a fairy tale parody in 2001 has grown into a multi-billion dollar franchise that continues to generate fresh meme content decades later. The films\' quotable dialogue — "What are you doing in my swamp?", "Ogres are like onions", "That\'ll do, Donkey" — has become embedded in internet vernacular, and the accompanying facial expressions make for perfect animated reactions.
+
+The "Shrek is love, Shrek is life" phenomenon of the early 2010s catapulted Shrek from a beloved animated character to a full-blown internet deity. This ironic worship of Shrek spawned countless memes, remixes, and fan content that ensured the green ogre would remain relevant in meme culture indefinitely. The self-aware, tongue-in-cheek nature of Shrek memes appeals to every generation of internet users.
+
+Our collection spans the full emotional spectrum of Shrek reactions. You will find his classic annoyed face perfect for responding to unwanted opinions, his shocked expression for unexpected revelations, his wholesome smile for genuinely heartwarming moments, his dramatic rage for expressing frustration, and his deadpan stare for calling out absurdity. Each GIF has been selected for maximum reaction potential and versatility.
+
+Every GIF in our collection has been optimized for web performance using lossy compression while preserving animation quality and the iconic green color palette. This means faster loading times and smaller file sizes — crucial for messaging apps and social platforms where speed matters.
+
+All 18 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Because Shrek is life.`,
+  },
 };
 
 // Generators (Name Generators) configuration
