@@ -15,6 +15,7 @@ import SummerGalleryClient from './SummerGalleryClient';
 import ThanksgivingGalleryClient from './ThanksgivingGalleryClient';
 import FlowerGalleryClient from './FlowerGalleryClient';
 import GifWallpaperGalleryClient from './GifWallpaperGalleryClient';
+import GreenGalleryClient from './GreenGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -155,6 +156,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the GIF wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  greenGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 36 stunning green aesthetic wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the green wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -224,6 +231,8 @@ export default async function WallpaperPage({ params }) {
               ? <FlowerGalleryClient />
               : config.generatorType === 'gifWallpaperGallery'
               ? <GifWallpaperGalleryClient />
+              : config.generatorType === 'greenGallery'
+              ? <GreenGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 

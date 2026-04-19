@@ -2969,6 +2969,40 @@ GIF culture has profoundly shaped internet aesthetics over the past two decades.
 
 All 30 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect GIF wallpaper to bring dynamic, animated energy to your screen.`,
   },
+  'green-wallpaper': {
+    category: 'wallpapers',
+    name: 'Green Wallpaper',
+    keyword: 'Green Wallpaper',
+    title: 'Best Free Green Wallpapers HD - Aesthetic Green Backgrounds for Phone',
+    description: 'Download 36 stunning free HD green wallpapers for your phone and desktop. Nature, emerald, sage, and neon green aesthetic backgrounds — instant download, no watermark.',
+    h1: 'Free Green Wallpapers HD',
+    subtitle: 'Download 36 beautiful green wallpapers featuring nature greens, emerald tones, sage aesthetics, and vibrant neon green backgrounds.',
+    icon: 'palette',
+    generatorType: 'greenGallery',
+    faq: [
+      { q: 'How many green wallpapers are available?', a: 'Our collection features 36 high-definition green wallpapers, all available as optimized PNG files. Each wallpaper showcases a different shade and style of green — from deep forest greens and emerald tones to soft sage aesthetics and vibrant neon green patterns.' },
+      { q: 'Are these green wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device.' },
+      { q: 'What resolution are the green wallpapers?', a: 'All wallpapers are high-definition PNG images optimized for modern smartphones, tablets, and desktop monitors. They look sharp and vibrant on both iPhone and Android screens.' },
+      { q: 'How do I set a green wallpaper on my phone?', a: 'After downloading, go to your device settings. On iPhone: Settings > Wallpaper > Add New Wallpaper and choose the image. On Android: long-press your home screen, select "Wallpapers," and pick the green wallpaper from your gallery.' },
+      { q: 'Can I use these wallpapers on my desktop?', a: 'Absolutely! While these wallpapers are optimized for phone screens, they also look great on tablets and desktops. The high resolution ensures they remain crisp and beautiful on larger screens.' },
+      { q: 'What shades of green are included?', a: 'Our collection spans the entire green spectrum — forest green, emerald, jade, sage, mint, lime, olive, neon green, teal, and hunter green. Styles range from natural landscapes and botanical patterns to abstract gradients and minimalist solid tones.' },
+    ],
+    longContent: `Green wallpapers bring the calming, refreshing energy of nature directly to your screen. Green is universally associated with growth, renewal, harmony, and vitality — making it one of the most psychologically soothing colors for a phone background. Our curated collection of 36 free HD green wallpapers covers every shade and style of green imaginable, from deep forest tones to bright neon accents.
+
+The color green occupies a unique position in human perception. It sits at the center of the visible light spectrum, making it the easiest color for the human eye to process. Studies in color psychology consistently show that green reduces stress, promotes relaxation, and creates feelings of balance and stability. Having a green wallpaper on your phone provides a micro-dose of these calming effects every time you glance at your screen.
+
+Our collection spans the full spectrum of green aesthetics. You will find deep forest greens that evoke ancient woodlands, rich emerald tones reminiscent of precious gemstones, soft sage greens that define the modern minimalist aesthetic, refreshing mint shades perfect for a clean and airy feel, vibrant lime and neon greens for bold and energetic personalities, and muted olive tones that bring warmth and sophistication.
+
+Nature-inspired green wallpapers dominate our collection. Lush tropical leaves, serene forest canopies, dewy grass close-ups, and botanical arrangements bring the beauty of the natural world to your device. These organic compositions create a sense of depth and tranquility that artificial designs struggle to match. The natural color variations within real foliage create rich, layered backgrounds that never feel flat or monotonous.
+
+Abstract and geometric green designs offer a more modern aesthetic. Smooth gradients flowing from emerald to teal, geometric patterns in varying shades of green, and minimalist compositions with clean lines provide options for those who prefer a contemporary look. These designs pair beautifully with any app icon arrangement and maintain visual interest without being distracting.
+
+Green wallpapers are incredibly versatile across seasons and trends. Spring brings fresh green energy that matches perfectly, summer pairs with lush tropical greens, autumn offers rich olive and forest tones, and winter provides a refreshing contrast to the cold with evergreen themes. This year-round adaptability means a green wallpaper never feels out of season.
+
+The growing popularity of the sage green aesthetic in interior design and fashion has made green one of the most sought-after wallpaper colors. The soft, muted quality of sage green creates a sophisticated and calming backdrop that feels both modern and timeless. Our collection includes multiple sage-inspired options for those who love this trending shade.
+
+All 36 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect green wallpaper to bring natural harmony and fresh energy to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
