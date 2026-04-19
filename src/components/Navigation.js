@@ -121,6 +121,7 @@ const navItems = [
       { label: 'Always Has Been Meme', href: '/meme-maker/always-has-been-meme/' },
       { label: 'Shrek Meme', href: '/meme-maker/shrek-meme/' },
       { label: 'Thumbs Up Meme', href: '/meme-maker/thumbs-up-meme/' },
+      { label: 'Good Morning Meme', href: '/meme-maker/good-morning-meme/' },
     ],
   },
   {
