@@ -120,6 +120,7 @@ const navItems = [
       { label: 'Anthony Mackie Meme', href: '/meme-maker/anthony-mackie-meme/' },
       { label: 'Always Has Been Meme', href: '/meme-maker/always-has-been-meme/' },
       { label: 'Shrek Meme', href: '/meme-maker/shrek-meme/' },
+      { label: 'Thumbs Up Meme', href: '/meme-maker/thumbs-up-meme/' },
     ],
   },
   {

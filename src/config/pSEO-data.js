@@ -1976,6 +1976,38 @@ Every GIF in our collection has been optimized for web performance using lossy c
 
 All 18 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Because Shrek is life.`,
   },
+  'thumbs-up-meme': {
+    category: 'meme-maker',
+    name: 'Thumbs Up Meme Collection',
+    keyword: 'Thumbs Up Meme',
+    title: 'Best Thumbs Up Memes & GIFs - Free Download Funny Approval Reaction GIFs',
+    description: 'Download 23 hilarious thumbs up reaction GIFs for free. The best approval, agreement, and "good job" memes. Instant download, no watermark.',
+    h1: 'Free Thumbs Up Memes & Reaction GIFs',
+    subtitle: 'Browse and download 23 hilarious thumbs up reaction GIFs — the ultimate collection for expressing approval, agreement, and encouragement.',
+    icon: 'image',
+    generatorType: 'thumbsUpMemeGallery',
+    faq: [
+      { q: 'How many thumbs up memes are available?', a: 'Our collection features 23 animated thumbs up reaction GIFs. Each one captures a different style of approval — from subtle nods of agreement to enthusiastic double thumbs up celebrations, celebrity reactions, and classic cartoon thumbs ups.' },
+      { q: 'Are these thumbs up memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'All memes are downloaded as animated GIF files preserving full animation. GIF format is universally supported across all devices, platforms, and messaging apps.' },
+      { q: 'Where can I use these thumbs up memes?', a: 'Use them anywhere! They are perfect for responding to good news in group chats, approving ideas in Slack or Teams, reacting on Twitter/X, Reddit, Discord, Instagram DMs, WhatsApp, and any platform that supports GIFs.' },
+      { q: 'Why are thumbs up memes so popular?', a: 'The thumbs up gesture is one of the most universally recognized symbols of approval and agreement. In digital communication where tone can be easily misread, a thumbs up GIF instantly conveys positive sentiment, encouragement, or a simple "I agree" without any ambiguity. Their versatility makes them among the most frequently used reaction GIFs online.' },
+    ],
+    longContent: `The thumbs up is one of humanity's oldest and most universally understood gestures. Long before emojis and reaction GIFs existed, people raised their thumbs to signal approval, agreement, and encouragement. In the modern digital landscape, the thumbs up meme has evolved into an essential piece of online communication — a quick, visual way to say "great job," "I approve," or simply "okay" without typing a single word. Our curated collection of 23 thumbs up reaction GIFs captures every shade of approval.
+
+What makes thumbs up GIFs so indispensable in digital conversations is their incredible versatility. A well-placed thumbs up reaction can communicate genuine enthusiasm, polite agreement, sarcastic approval, passive-aggressive acceptance, or wholehearted support — all depending on context. This range of emotional expression packed into a single, simple gesture is what keeps the thumbs up meme relevant across every corner of the internet.
+
+Our collection spans a wide variety of styles and moods. You will find classic enthusiastic thumbs ups for genuine moments of celebration, subtle and understated nods of approval for professional settings, exaggerated and comedic thumbs ups for humorous situations, celebrity and pop culture reactions that add personality, and ironic or sarcastic thumbs ups for those moments when words would say too much.
+
+The thumbs up meme has become particularly important in workplace communication. As remote work and digital collaboration have become the norm, reaction GIFs serve as the digital equivalent of body language. A thumbs up GIF in Slack or Microsoft Teams can acknowledge a message, approve a proposal, or simply let a colleague know you have read and understood their update — all while adding a touch of personality and warmth to otherwise sterile text-based communication.
+
+In social media contexts, thumbs up reaction GIFs serve as powerful engagement tools. On Twitter/X, a thumbs up reply can express agreement more effectively than words. On Reddit, it amplifies the upvote sentiment. In Discord servers, it keeps conversations flowing with quick, visual acknowledgments. The universal nature of the gesture means it transcends language barriers, making these GIFs useful for international communities.
+
+Every GIF in our collection has been optimized for web performance using lossy compression while preserving smooth animation quality. This means faster loading times and smaller file sizes — crucial for messaging apps and social platforms where speed matters.
+
+All 23 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites to build your ultimate reaction GIF toolkit.`,
+  },
 };
 
 // Generators (Name Generators) configuration
