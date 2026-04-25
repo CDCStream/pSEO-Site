@@ -3163,6 +3163,38 @@ The spiritual and meditative qualities of purple also make it a popular choice f
 
 All 31 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect purple wallpaper to add elegance, creativity, and depth to your screen.`,
   },
+  'white-wallpaper': {
+    category: 'wallpapers',
+    name: 'White Wallpaper',
+    keyword: 'White Wallpaper',
+    title: 'Free White Wallpapers HD - Download White Aesthetic Phone Backgrounds',
+    description: 'Download 32 stunning white aesthetic wallpapers for free. Beautiful HD minimalist backgrounds featuring clean, elegant white designs. No watermark.',
+    h1: 'Free White Aesthetic HD Wallpapers',
+    subtitle: 'Browse and download 32 stunning white wallpapers — beautiful minimalist, clean, and elegant aesthetic backgrounds for your phone and desktop.',
+    icon: 'palette',
+    generatorType: 'whiteGallery',
+    faq: [
+      { q: 'How many white wallpapers are available?', a: 'Our collection features 32 high-quality white aesthetic wallpapers. Each image showcases different styles — from pure minimalist white compositions and soft marble textures to elegant floral arrangements, abstract geometric patterns, and dreamy cloud-inspired designs.' },
+      { q: 'Are these white wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'Why choose a white wallpaper?', a: 'White wallpapers create a clean, distraction-free backdrop that makes your app icons pop and your screen feel organized. They are perfect for minimalist aesthetics, professional setups, and anyone who values simplicity and elegance in their digital environment.' },
+      { q: 'Will a white wallpaper drain my battery?', a: 'On OLED and AMOLED screens, white pixels consume more power than black ones. However, the difference is minimal for most users, and the aesthetic and organizational benefits of a clean white wallpaper far outweigh the negligible battery impact. On LCD screens, wallpaper color has no effect on battery life.' },
+    ],
+    longContent: `White wallpapers represent the pinnacle of minimalist design — clean, elegant, and timelessly sophisticated. In a digital world filled with visual noise and endless distractions, a white wallpaper serves as a breath of fresh air, creating a calm and organized canvas for your phone or desktop. Our curated collection of 32 white aesthetic wallpapers offers a variety of textures and styles that prove white is anything but boring.
+
+The minimalist movement in design has elevated white from a simple absence of color to a powerful design statement. From the clean lines of Scandinavian interior design to the sleek aesthetic of modern technology, white communicates sophistication, clarity, and intentionality. A white wallpaper on your phone sends a subtle but unmistakable message about your appreciation for refined simplicity.
+
+Our collection goes far beyond plain white backgrounds. You will find soft marble textures that add depth and luxury, delicate floral compositions with white petals and gentle shadows, abstract geometric patterns that play with light and form, cloud-inspired designs that evoke serenity, subtle gradient transitions from warm white to cool white tones, and textured surfaces that add visual interest while maintaining the clean white aesthetic.
+
+One of the greatest practical advantages of white wallpapers is how they make your app icons and widgets stand out. Dark-colored app icons pop beautifully against a white background, making your home screen easier to navigate and visually more organized. This functional benefit is why many productivity enthusiasts and design professionals prefer white backgrounds — they reduce visual clutter and help you focus on what matters.
+
+The white aesthetic has seen a massive resurgence in popularity across social media platforms. The "clean girl aesthetic," "light academia," and "minimalist lifestyle" trends on Instagram, Pinterest, and TikTok all embrace white as a foundational color. A white wallpaper aligns perfectly with these trends, creating a cohesive aesthetic that extends from your physical space to your digital one.
+
+White also carries deep symbolic meaning across cultures. It represents purity, new beginnings, peace, and clarity. Many users choose white wallpapers at the start of a new year, a new chapter in life, or simply when they want to reset their mental space. The psychological effect of seeing a clean, white screen can genuinely promote feelings of calm and fresh possibilities.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect white wallpaper to bring minimalist elegance and clean sophistication to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
