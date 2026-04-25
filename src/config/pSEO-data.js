@@ -3099,6 +3099,38 @@ The growing popularity of the sage green aesthetic in interior design and fashio
 
 All 36 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect green wallpaper to bring natural harmony and fresh energy to your screen.`,
   },
+  'jesus-wallpaper': {
+    category: 'wallpapers',
+    name: 'Jesus Wallpaper',
+    keyword: 'Jesus Wallpaper',
+    title: 'Free Jesus Wallpapers HD - Download Jesus Christ Phone Backgrounds',
+    description: 'Download 41 beautiful Jesus Christ wallpapers for free. Stunning HD religious backgrounds featuring Jesus, the cross, and inspirational Christian art. No watermark.',
+    h1: 'Free Jesus Christ HD Wallpapers',
+    subtitle: 'Browse and download 41 stunning Jesus wallpapers — beautiful Christian art and inspiring religious backgrounds for your phone and desktop.',
+    icon: 'image',
+    generatorType: 'jesusGallery',
+    faq: [
+      { q: 'How many Jesus wallpapers are available?', a: 'Our collection features 41 high-quality Jesus Christ wallpapers. Each image has been carefully selected to represent different artistic interpretations of Jesus — from classical Renaissance-style paintings to modern digital art, featuring scenes of prayer, the cross, light imagery, and inspirational compositions.' },
+      { q: 'Are these Jesus wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'What styles of Jesus art are included?', a: 'Our collection spans a wide variety of artistic styles — including classical oil painting aesthetics, soft watercolor effects, dramatic lighting compositions, golden divine light imagery, peaceful pastoral scenes, and modern minimalist interpretations of Jesus Christ.' },
+      { q: 'Can I share these wallpapers with others?', a: 'Absolutely! Feel free to share these wallpapers with friends, family, and your church community. They make wonderful daily reminders of faith and can be shared via WhatsApp, Messenger, email, or any messaging platform.' },
+    ],
+    longContent: `Jesus Christ wallpapers serve as a beautiful daily reminder of faith, hope, and spiritual devotion. In a world where we check our phones hundreds of times each day, having an inspiring image of Jesus as your wallpaper transforms every glance at your screen into a moment of reflection and peace. Our curated collection of 41 Jesus wallpapers offers a diverse range of artistic interpretations that speak to believers across all walks of life.
+
+The artistic tradition of depicting Jesus Christ spans over two thousand years, from the earliest catacomb paintings of ancient Rome to the masterpieces of the Renaissance and beyond into the digital age. Each era has brought its own vision of the Savior, and our collection draws from this rich tradition. You will find wallpapers inspired by classical painting techniques with warm golden tones, dramatic chiaroscuro lighting that emphasizes the divine nature of Christ, soft and serene compositions perfect for meditation, and modern artistic interpretations that resonate with contemporary believers.
+
+Religious wallpapers hold a special significance that goes beyond mere aesthetics. For millions of Christians worldwide, having an image of Jesus on their phone is a personal expression of faith — a silent testimony that accompanies them throughout their day. Whether it is a moment of stress at work, a quiet morning prayer, or a late-night reflection, a Jesus wallpaper provides comfort and spiritual grounding when it is needed most.
+
+Our collection includes a thoughtful variety of scenes and themes. You will find depictions of Jesus in prayer, radiating divine light, offering comfort and healing, standing before the cross, walking through peaceful landscapes, and portrayed with the gentle compassion that defines His ministry. Each image has been selected not only for its artistic quality but also for its ability to inspire and uplift the viewer.
+
+The power of religious imagery in daily life has been recognized by spiritual leaders and psychologists alike. Visual reminders of faith can reduce anxiety, promote gratitude, and strengthen spiritual practice. A Jesus wallpaper serves as a constant anchor to one\'s beliefs, providing a moment of calm amid the noise and rush of modern life. Many users report that simply seeing an image of Christ on their phone helps them pause, breathe, and reconnect with their faith throughout the day.
+
+Every wallpaper in our collection has been optimized for modern devices using professional compression techniques. The images maintain their visual beauty and rich detail while being optimized for fast loading and minimal storage usage. This ensures a seamless experience whether you are browsing on mobile data or saving multiple wallpapers to your device.
+
+All 41 wallpapers are available for instant, free download as high-resolution PNG files. No accounts, no emails, no watermarks, no limitations. Browse our collection and find the perfect Jesus wallpaper to bring faith, inspiration, and peace to your daily screen experience.`,
+  },
 };
 
 // Get all pages for sitemap generation
