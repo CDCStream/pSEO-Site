@@ -3195,6 +3195,38 @@ White also carries deep symbolic meaning across cultures. It represents purity, 
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect white wallpaper to bring minimalist elegance and clean sophistication to your screen.`,
   },
+  'labubu-wallpaper': {
+    category: 'wallpapers',
+    name: 'Labubu Wallpaper',
+    keyword: 'Labubu Wallpaper',
+    title: 'Free Labubu Wallpapers HD - Download Cute Labubu Phone Backgrounds',
+    description: 'Download 25 adorable Labubu wallpapers for free. Cute HD phone backgrounds featuring the iconic Pop Mart Labubu character. No watermark, instant download.',
+    h1: 'Free Cute Labubu HD Wallpapers',
+    subtitle: 'Browse and download 25 adorable Labubu wallpapers — cute and colorful phone backgrounds featuring the beloved Pop Mart collectible character.',
+    icon: 'image',
+    generatorType: 'labubuGallery',
+    faq: [
+      { q: 'How many Labubu wallpapers are available?', a: 'Our collection features 25 high-quality Labubu wallpapers. Each image showcases the adorable Pop Mart character in different styles — from pastel kawaii compositions and playful poses to artistic interpretations and colorful aesthetic designs perfect for fans of the iconic collectible figure.' },
+      { q: 'Are these Labubu wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'What is Labubu?', a: 'Labubu is a character created by artist Kasing Lung for Pop Mart, a leading designer toy company. Known for its mischievous grin, pointy ears, and adorable expression, Labubu has become one of the most popular and collectible figures in the designer toy world, beloved by fans across Asia and increasingly worldwide.' },
+      { q: 'Why are Labubu wallpapers so popular?', a: 'Labubu wallpapers are popular because the character perfectly captures the kawaii aesthetic that millions of people love. The cute, playful design brings joy every time you unlock your phone. Labubu has also become a cultural icon, with celebrities and influencers showcasing their collections, making Labubu wallpapers a trendy way to express your love for the character.' },
+    ],
+    longContent: `Labubu has taken the world by storm as one of the most beloved characters in the designer toy and collectible figure scene. Created by Hong Kong-based artist Kasing Lung and produced by Pop Mart, this adorable little creature with its signature mischievous grin and pointy ears has captured the hearts of millions worldwide. Our collection of 25 Labubu wallpapers lets you carry this beloved character with you everywhere, turning your phone screen into a daily dose of cuteness and joy.
+
+The appeal of Labubu goes far beyond its status as a collectible figure. The character embodies a unique blend of cute and slightly mischievous energy that resonates with people of all ages. With its wide grin, expressive eyes, and playful poses, Labubu has become a symbol of the kawaii culture that continues to grow in popularity across the globe. A Labubu wallpaper brings that same energy to your phone, making every screen unlock a moment of happiness.
+
+Our collection features a diverse range of Labubu-inspired designs and artistic styles. You will find classic Labubu poses that highlight the character signature expression, pastel-colored compositions perfect for the soft aesthetic trend, vibrant and colorful backgrounds that pop with energy, artistic interpretations that blend Labubu with different visual styles, and minimalist designs that put the character front and center against clean backgrounds.
+
+The Labubu phenomenon has grown from a niche collectible into a mainstream cultural movement. Celebrities like Lisa from BLACKPINK have been spotted with Labubu figures, and the character regularly sells out in minutes when new series drop. Pop Mart stores draw massive queues of eager fans hoping to get their hands on the latest Labubu releases. This cultural momentum has made Labubu one of the most searched-for wallpaper subjects among young smartphone users.
+
+What makes Labubu particularly special as a wallpaper subject is the character versatility. The design works beautifully in every color palette and artistic style — from soft pastel pinks and blues to bold neon colors and earthy tones. Whether you prefer a minimalist lock screen or a vibrant home screen, there is a Labubu wallpaper that fits your aesthetic perfectly. The character rounded, friendly shape also pairs well with app icons and widgets.
+
+The emotional connection people feel with Labubu is what drives the demand for Labubu-themed phone customization. In a world where our phones are extensions of our personalities, choosing a Labubu wallpaper is a way to express creativity, a love for cute design, and a connection to the global community of Labubu collectors and fans. It transforms an everyday device into something that sparks joy.
+
+All 25 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect Labubu wallpaper to add cuteness and character to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation

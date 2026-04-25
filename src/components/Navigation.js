@@ -151,6 +151,7 @@ const navItems = [
       { label: 'Jesus Wallpaper', href: '/wallpapers/jesus-wallpaper/' },
       { label: 'Purple Wallpaper', href: '/wallpapers/purple-wallpaper/' },
       { label: 'White Wallpaper', href: '/wallpapers/white-wallpaper/' },
+      { label: 'Labubu Wallpaper', href: '/wallpapers/labubu-wallpaper/' },
     ],
   },
   {
