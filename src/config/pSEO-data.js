@@ -3131,6 +3131,38 @@ Every wallpaper in our collection has been optimized for modern devices using pr
 
 All 41 wallpapers are available for instant, free download as high-resolution PNG files. No accounts, no emails, no watermarks, no limitations. Browse our collection and find the perfect Jesus wallpaper to bring faith, inspiration, and peace to your daily screen experience.`,
   },
+  'purple-wallpaper': {
+    category: 'wallpapers',
+    name: 'Purple Wallpaper',
+    keyword: 'Purple Wallpaper',
+    title: 'Free Purple Wallpapers HD - Download Purple Aesthetic Phone Backgrounds',
+    description: 'Download 31 stunning purple aesthetic wallpapers for free. Beautiful HD purple backgrounds featuring lavender, violet, and amethyst tones. No watermark.',
+    h1: 'Free Purple Aesthetic HD Wallpapers',
+    subtitle: 'Browse and download 31 stunning purple wallpapers — beautiful violet, lavender, and amethyst aesthetic backgrounds for your phone and desktop.',
+    icon: 'palette',
+    generatorType: 'purpleGallery',
+    faq: [
+      { q: 'How many purple wallpapers are available?', a: 'Our collection features 31 high-quality purple aesthetic wallpapers. Each image showcases different shades and styles — from deep royal purple and rich amethyst tones to soft lavender gradients, violet nebula designs, and dreamy pastel purple compositions.' },
+      { q: 'Are these purple wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'What shades of purple are included?', a: 'Our collection covers the full purple spectrum — including deep royal purple, rich amethyst, soft lavender, bright violet, muted mauve, pastel lilac, dark plum, and cosmic purple-blue gradients. There is a shade for every aesthetic preference.' },
+      { q: 'Why is purple such a popular wallpaper color?', a: 'Purple has long been associated with royalty, creativity, mystery, and spirituality. It is a rare color in nature, which gives it an inherently special and luxurious feel. Purple wallpapers create a sense of elegance and depth on your screen, making them one of the most popular aesthetic choices for phone customization.' },
+    ],
+    longContent: `Purple wallpapers bring an undeniable sense of elegance, mystery, and creativity to your digital screens. As a color historically associated with royalty and luxury, purple transforms any phone or desktop into a visually stunning canvas that feels both sophisticated and deeply personal. Our curated collection of 31 purple aesthetic wallpapers spans the full spectrum of this captivating color family, from the deepest plum to the softest lavender.
+
+The psychology of purple is as rich as the color itself. Studies consistently show that purple promotes creativity, inspires imagination, and evokes feelings of luxury and sophistication. For those who use their phones as creative tools — designers, writers, artists, and content creators — a purple wallpaper can serve as a subtle but constant source of creative inspiration. The color stimulates the imagination while maintaining a sense of calm, making it ideal for both work and relaxation.
+
+Our collection includes a thoughtful variety of purple shades and artistic styles. You will find deep royal purple backgrounds that exude power and elegance, soft lavender compositions perfect for a calming aesthetic, vibrant violet gradients that pop with energy, rich amethyst tones inspired by precious gemstones, cosmic purple-blue nebula designs for space enthusiasts, and muted mauve patterns for those who prefer understated sophistication.
+
+The purple aesthetic has experienced a massive surge in popularity across social media and digital culture. From the iconic "purple reign" of pop culture to the dreamy "purple aesthetic" trend on Instagram, TikTok, and Pinterest, this color family has become a defining element of modern digital style. A purple wallpaper signals creativity, individuality, and a refined taste that stands out from more common blue or black backgrounds.
+
+Purple is remarkably versatile as a wallpaper color because it complements virtually every app icon color scheme. Whether your home screen features bright, colorful app icons or a minimal monochrome layout, purple provides a backdrop that enhances without competing. The darker shades offer excellent contrast for readability, while lighter lavender tones create a soft, approachable feel.
+
+The spiritual and meditative qualities of purple also make it a popular choice for mindfulness-oriented users. In color therapy, purple is associated with the crown chakra, representing higher consciousness and spiritual awareness. Many users choose purple wallpapers specifically for the sense of calm introspection the color promotes, turning every phone unlock into a micro-moment of mindfulness.
+
+All 31 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect purple wallpaper to add elegance, creativity, and depth to your screen.`,
+  },
 };
 
 // Get all pages for sitemap generation
