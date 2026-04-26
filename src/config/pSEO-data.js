@@ -2136,6 +2136,38 @@ The drag-to-reposition feature ensures your text is always perfectly placed. Whe
 
 Create your Chicken Jockey meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'charlie-kirk-meme': {
+    category: 'meme-maker',
+    name: 'Charlie Kirk Meme Maker',
+    keyword: 'Charlie Kirk Meme',
+    title: 'Charlie Kirk Meme Maker - Create Small Face & Big Face Memes Online Free',
+    description: 'Create hilarious Charlie Kirk memes with 6 templates. Add custom text, choose fonts and colors, and download your meme as PNG. Free, no watermark.',
+    h1: 'Free Charlie Kirk Meme Maker',
+    subtitle: 'Create your own Charlie Kirk memes — choose from 6 templates, click to add text, customize fonts and colors, and download as high-quality PNG.',
+    icon: 'image',
+    generatorType: 'charlieKirkMeme',
+    faq: [
+      { q: 'How do I create a Charlie Kirk meme?', a: 'Choose one of the 6 templates, then click anywhere on the image to place a text box. Type your caption, customize the font, size, color, and stroke, then drag to reposition. When you are happy with your meme, click the download button to save it as a PNG file.' },
+      { q: 'How many templates are available?', a: 'We offer 6 different Charlie Kirk meme templates, each featuring a different expression and pose. You can switch between templates at any time — your text boxes will reset when you select a new template so you can start fresh.' },
+      { q: 'Can I add multiple text boxes?', a: 'Yes! Click on different areas of the image to add as many text boxes as you want. Each text box can be individually customized with its own font, size, color, and stroke settings. Drag any text box to reposition it.' },
+      { q: 'What fonts are available?', a: 'We offer 7 popular meme fonts including Impact (the classic meme font), Arial, Comic Sans, Courier, Georgia, Times New Roman, and Verdana. Each font can be resized from 12px to 72px for maximum flexibility.' },
+      { q: 'Is there a watermark on the downloaded meme?', a: 'No! Your downloaded meme is completely clean with no watermarks, logos, or branding. What you see in the preview is exactly what you get when you download.' },
+      { q: 'Why is Charlie Kirk a popular meme?', a: 'Charlie Kirk became a meme primarily because of the "small face" edits where his facial features are photoshopped to appear smaller on his head. The absurd visual effect combined with his public commentary style makes his face a perfect canvas for political satire, absurdist humor, and reaction memes. The templates have become some of the most versatile in political meme culture.' },
+    ],
+    longContent: `The Charlie Kirk meme has become one of the most recognizable and versatile templates in modern internet culture. Charlie Kirk, founder of Turning Point USA, became an unlikely meme icon when internet users began creating "small face" edits of his photos — shrinking his facial features while keeping his head the same size. This simple visual gag spawned an entire genre of memes that continues to evolve and entertain millions. Our free Charlie Kirk Meme Maker puts 6 templates at your disposal for unlimited creative expression.
+
+What makes the Charlie Kirk meme format so enduringly popular is its incredible versatility. The templates work equally well for political commentary, absurdist humor, everyday observations, and pure comedic nonsense. The exaggerated expressions and distinctive face have become a blank canvas that adapts to virtually any caption, making it one of the most flexible meme formats available.
+
+Our meme maker features 6 carefully selected templates, each capturing a different expression and composition. Whether you want the classic small face edit, a reaction expression, or a more standard portrait setup, there is a template for every type of humor. The template selector makes it easy to browse and switch between options, and your text customization resets with each new template so you always start with a clean slate.
+
+The click-to-place text system provides precise control over your caption placement. Simply click anywhere on the image to drop a text box, then type your caption. Each text box can be individually styled with your choice of seven popular fonts, adjustable size from 12px to 72px, custom text color from preset palettes or a full color picker, and optional stroke outlines for readability. The drag-to-reposition feature lets you fine-tune placement until your meme is perfect.
+
+The Charlie Kirk meme format has proven remarkably durable in the fast-moving world of internet humor. It has been adapted for political debates, school humor, workplace observations, gaming commentary, relationship jokes, and existential musings. The format thrives because it pairs strong visual identity with complete caption flexibility — viewers instantly recognize the template while the text delivers the unique punchline.
+
+The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's place in meme history. These edits, which mimic the organization's motivational poster style while subverting the message, have become a genre unto themselves. Our templates support this full range of creative expression.
+
+Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
+  },
 };
 
 // Generators (Name Generators) configuration
