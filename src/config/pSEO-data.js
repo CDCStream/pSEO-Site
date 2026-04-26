@@ -2104,6 +2104,38 @@ Every GIF in our collection has been optimized for web performance using lossy c
 
 All 14 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Because sometimes only a lizard can express what you are feeling.`,
   },
+  'chicken-jockey-meme': {
+    category: 'meme-maker',
+    name: 'Chicken Jockey Meme Maker',
+    keyword: 'Chicken Jockey Meme',
+    title: 'Chicken Jockey Meme Maker - Create Funny Chicken Jockey Memes Online Free',
+    description: 'Create hilarious Chicken Jockey memes with our free online meme maker. Add custom text, choose fonts, colors, and download your meme as PNG. No watermark.',
+    h1: 'Free Chicken Jockey Meme Maker',
+    subtitle: 'Create your own Chicken Jockey memes — click to add text, customize fonts and colors, drag to reposition, and download as high-quality PNG.',
+    icon: 'image',
+    generatorType: 'chickenJockeyMeme',
+    faq: [
+      { q: 'How do I create a Chicken Jockey meme?', a: 'Simply click anywhere on the template image to place a text box. Type your caption, customize the font, size, color, and stroke, then drag to reposition. When you are happy with your meme, click the download button to save it as a PNG file.' },
+      { q: 'Can I add multiple text boxes?', a: 'Yes! Click on different areas of the image to add as many text boxes as you want. Each text box can be individually customized with its own font, size, color, and stroke settings. You can also drag any text box to reposition it.' },
+      { q: 'What fonts are available?', a: 'We offer 7 popular meme fonts including Impact (the classic meme font), Arial, Comic Sans, Courier, Georgia, Times New Roman, and Verdana. Each font can be resized from 12px to 72px for maximum flexibility.' },
+      { q: 'Is there a watermark on the downloaded meme?', a: 'No! Your downloaded meme is completely clean with no watermarks, logos, or branding. What you see in the preview is exactly what you get when you download.' },
+      { q: 'What is a Chicken Jockey?', a: 'The Chicken Jockey is a rare and hilarious mob from Minecraft — a baby zombie riding a chicken. It became a beloved meme in the gaming community because of its absurd and unexpected appearance. The sight of a tiny zombie casually riding a chicken into battle is inherently funny and has spawned countless memes.' },
+      { q: 'Can I use this meme maker on my phone?', a: 'Yes! The meme maker is fully responsive and works on smartphones, tablets, and desktops. You can tap to place text, drag to reposition, and download directly to your device. Touch controls are fully supported.' },
+    ],
+    longContent: `The Chicken Jockey meme originates from one of gaming's most unexpectedly hilarious moments — the rare Minecraft mob consisting of a baby zombie riding on top of a chicken. This bizarre combination of a hostile undead creature casually perched on a farmyard bird has become one of the most iconic and shareable images in gaming meme culture. Our free Chicken Jockey Meme Maker lets you transform this legendary template into your own custom creation.
+
+What makes the Chicken Jockey so perfect as meme material is the inherent absurdity of the concept. The juxtaposition of a menacing baby zombie with the most unassuming mount imaginable — a regular chicken — creates a comedic contrast that works in virtually any context. Whether you are commenting on an underdog situation, expressing chaotic energy, or simply sharing something hilariously random, the Chicken Jockey template delivers.
+
+Our meme maker provides full creative control over your Chicken Jockey meme. The click-to-place text system lets you position your captions exactly where they will have the most impact. You can add multiple text boxes, each with independent customization options. Choose from seven popular fonts including the classic Impact meme font, adjust the size from subtle to bold, pick from preset colors or use a custom color picker, and add stroke outlines for maximum readability against any background.
+
+The Chicken Jockey has special significance in the Minecraft community, where it represents the game's wonderful capacity for random, emergent humor. With only a 5 percent spawn chance for baby zombies and an even smaller chance of one spawning on a chicken, encountering a Chicken Jockey in-game is a genuinely rare and memorable event. This rarity has elevated the Chicken Jockey to legendary status among players and meme creators alike.
+
+Beyond the Minecraft community, the Chicken Jockey meme template has found broader appeal as a reaction image for situations involving unexpected power dynamics, underdog energy, or chaotic neutral behavior. The image of a small but determined zombie riding a chicken into battle resonates with anyone who has ever felt like they were taking on the world with unconventional means.
+
+The drag-to-reposition feature ensures your text is always perfectly placed. Whether you want classic top-and-bottom captions, a single bold statement, or creative multi-text compositions scattered across the image, the flexible placement system makes it easy. The real-time preview shows exactly how your finished meme will look before you download it.
+
+Create your Chicken Jockey meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
+  },
 };
 
 // Generators (Name Generators) configuration

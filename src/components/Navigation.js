@@ -124,6 +124,7 @@ const navItems = [
       { label: 'Good Morning Meme', href: '/meme-maker/good-morning-meme/' },
       { label: 'Confused Meme', href: '/meme-maker/confused-meme/' },
       { label: 'Lizard Meme', href: '/meme-maker/lizard-meme/' },
+      { label: 'Chicken Jockey Meme', href: '/meme-maker/chicken-jockey-meme/' },
     ],
   },
   {
