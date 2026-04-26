@@ -122,6 +122,7 @@ const navItems = [
       { label: 'Shrek Meme', href: '/meme-maker/shrek-meme/' },
       { label: 'Thumbs Up Meme', href: '/meme-maker/thumbs-up-meme/' },
       { label: 'Good Morning Meme', href: '/meme-maker/good-morning-meme/' },
+      { label: 'Confused Meme', href: '/meme-maker/confused-meme/' },
     ],
   },
   {
