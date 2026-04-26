@@ -123,6 +123,7 @@ const navItems = [
       { label: 'Thumbs Up Meme', href: '/meme-maker/thumbs-up-meme/' },
       { label: 'Good Morning Meme', href: '/meme-maker/good-morning-meme/' },
       { label: 'Confused Meme', href: '/meme-maker/confused-meme/' },
+      { label: 'Lizard Meme', href: '/meme-maker/lizard-meme/' },
     ],
   },
   {

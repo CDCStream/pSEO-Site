@@ -2072,6 +2072,38 @@ Every GIF in our collection has been optimized for web performance using lossy c
 
 All 17 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites for every bewildering moment life throws at you.`,
   },
+  'lizard-meme': {
+    category: 'meme-maker',
+    name: 'Lizard Meme Collection',
+    keyword: 'Lizard Meme',
+    title: 'Best Lizard Memes & GIFs - Free Download Funny Lizard Reaction GIFs',
+    description: 'Download 14 hilarious lizard reaction GIFs for free. The best reptile memes featuring funny lizard moments, head bobs, and dramatic expressions. Instant download, no watermark.',
+    h1: 'Free Lizard Memes & Reaction GIFs',
+    subtitle: 'Browse and download 14 hilarious lizard reaction GIFs — the ultimate collection of funny reptile moments and dramatic lizard expressions.',
+    icon: 'image',
+    generatorType: 'lizardMemeGallery',
+    faq: [
+      { q: 'How many lizard memes are available?', a: 'Our collection features 14 animated lizard reaction GIFs. Each captures a different hilarious reptile moment — from the iconic head bob and slow blink to dramatic tongue flicks, startled jumps, and the classic "plotting lizard" stare that has become a staple of internet humor.' },
+      { q: 'Are these lizard memes free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any GIF to save it instantly to your device.' },
+      { q: 'Do the GIFs play on the page?', a: 'Yes! All GIFs play automatically on the page so you can preview the full animation before downloading. Click any meme to open it in a full-size lightbox view.' },
+      { q: 'What format are the downloads?', a: 'All memes are downloaded as animated GIF files preserving full animation. GIF format is universally supported across all devices, platforms, and messaging apps.' },
+      { q: 'Where can I use these lizard memes?', a: 'Use them anywhere! They work perfectly as reaction GIFs on Twitter/X, Reddit, Discord, Instagram DMs, WhatsApp, Slack, and any platform that supports GIF sharing. Lizard memes are especially great for expressing suspicion, scheming, or unexpected surprise.' },
+      { q: 'Why are lizard memes so popular?', a: 'Lizards have become internet favorites because their natural behaviors — slow deliberate head movements, unblinking stares, sudden tongue flicks, and dramatic poses — look hilariously human when taken out of context. The "hehehe lizard" and "plotting lizard" memes went viral because reptilian expressions perfectly capture scheming, suspicion, and mischief in a way that resonates with everyone.' },
+    ],
+    longContent: `Lizard memes have carved out a unique and beloved niche in internet meme culture. There is something inherently comedic about reptiles — their slow, deliberate movements, their unblinking stares, their sudden bursts of speed, and their expressions that somehow manage to look both completely vacant and deeply scheming at the same time. Our curated collection of 14 lizard reaction GIFs captures the full range of reptilian humor that has made lizard memes a staple of online conversation.
+
+The internet's love affair with lizard memes traces back to several viral moments that cemented reptiles as top-tier meme material. The "hehehe lizard" — a bearded dragon that appeared to be laughing with sinister glee — became one of the most widely shared reaction images of all time. The "plotting lizard" with its narrowed eyes and scheming expression became the go-to visual for anyone hatching a plan or being suspiciously quiet. These iconic moments proved that lizards are natural comedians.
+
+What makes lizard GIFs so effective as reaction content is the natural expressiveness of these creatures. A lizard slowly turning its head to stare directly at the camera captures the "did you really just say that?" energy better than any human expression. A bearded dragon bobbing its head looks like it is enthusiastically agreeing with the worst take imaginable. A gecko licking its own eyeball with its tongue conveys a level of chaotic energy that no other animal can match.
+
+Our collection spans the full spectrum of lizard reactions. You will find the classic slow head turn for moments of disbelief, enthusiastic head bobs for sarcastic agreement, dramatic tongue flicks for expressing surprise or hunger, startled lizard jumps for unexpected plot twists, the calculating stare for moments of scheming, and various expressions of reptilian indifference perfect for responding to things you simply do not care about.
+
+Lizard memes also benefit from a unique quality that sets them apart from other animal memes. While cat and dog reactions feel warm and familiar, lizard reactions carry an inherent absurdity. There is a cognitive dissonance in attributing human emotions to a cold-blooded reptile that makes the humor hit differently. When a lizard appears to be laughing, plotting, or judging, the comedy comes from the impossibility of the situation — and that is precisely what makes lizard memes so shareable.
+
+Every GIF in our collection has been optimized for web performance using lossy compression while preserving smooth animation quality and detail. Smaller file sizes mean faster loading and instant sharing across all platforms.
+
+All 14 GIFs are available for instant, free download. No accounts, no emails, no watermarks, no limitations. Browse the collection, preview each animation in the full-screen lightbox, and download your favorites. Because sometimes only a lizard can express what you are feeling.`,
+  },
 };
 
 // Generators (Name Generators) configuration
