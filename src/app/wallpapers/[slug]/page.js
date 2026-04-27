@@ -20,6 +20,7 @@ import JesusGalleryClient from './JesusGalleryClient';
 import PurpleGalleryClient from './PurpleGalleryClient';
 import WhiteGalleryClient from './WhiteGalleryClient';
 import LabubuGalleryClient from './LabubuGalleryClient';
+import PinkAestheticGalleryClient from './PinkAestheticGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -190,6 +191,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the Labubu wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  pinkAestheticGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 stunning pink aesthetic HD wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the pink aesthetic wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -269,6 +276,8 @@ export default async function WallpaperPage({ params }) {
               ? <WhiteGalleryClient />
               : config.generatorType === 'labubuGallery'
               ? <LabubuGalleryClient />
+              : config.generatorType === 'pinkAestheticGallery'
+              ? <PinkAestheticGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
