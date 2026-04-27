@@ -158,6 +158,7 @@ const navItems = [
       { label: 'Labubu Wallpaper', href: '/wallpapers/labubu-wallpaper/' },
       { label: 'Pink Aesthetic Wallpaper', href: '/wallpapers/pink-aesthetic-wallpaper/' },
       { label: 'Eddie Munson Wallpaper', href: '/wallpapers/eddie-munson-wallpaper/' },
+      { label: 'Goku Wallpaper', href: '/wallpapers/goku-wallpaper/' },
     ],
   },
   {

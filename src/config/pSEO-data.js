@@ -3355,6 +3355,38 @@ The current pink aesthetic trend also encompasses several sub-aesthetics, each w
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect pink aesthetic wallpaper to add warmth and beauty to your screen.`,
   },
+  'goku-wallpaper': {
+    category: 'wallpapers',
+    name: 'Goku Wallpaper',
+    keyword: 'Goku Wallpaper',
+    title: 'Free Goku Wallpapers HD - Dragon Ball Super Saiyan Phone Backgrounds',
+    description: 'Download 32 epic Goku wallpapers for free. High-quality Dragon Ball Z and Super Saiyan phone backgrounds in HD. No watermark, instant download.',
+    h1: 'Free Goku Dragon Ball HD Wallpapers',
+    subtitle: 'Browse and download 32 epic Goku wallpapers — Super Saiyan transformations, Ultra Instinct, and iconic Dragon Ball battle scenes for your phone.',
+    icon: 'image',
+    generatorType: 'gokuGallery',
+    faq: [
+      { q: 'How many Goku wallpapers are available?', a: 'Our collection features 32 high-quality Goku wallpapers. Each image showcases the legendary Saiyan warrior in different forms and scenes — from classic Dragon Ball Z Super Saiyan transformations and intense battle poses to Ultra Instinct and artistic fan renditions of the iconic anime hero.' },
+      { q: 'Are these Goku wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'What Goku transformations are included?', a: 'The collection covers a wide range of Goku transformations including base form, Super Saiyan, Super Saiyan 2, Super Saiyan 3, Super Saiyan God, Super Saiyan Blue, Ultra Instinct Sign, and Mastered Ultra Instinct. Each transformation is captured in dynamic, visually stunning artwork.' },
+      { q: 'Why are Goku wallpapers so popular?', a: 'Goku is one of the most iconic anime characters of all time, spanning over 35 years of Dragon Ball history. His journey from a young Saiyan child to the most powerful warrior in the universe inspires millions of fans worldwide. Goku represents determination, growth, and the relentless pursuit of becoming stronger — making his wallpapers a daily source of motivation for fans.' },
+    ],
+    longContent: `Goku, the legendary Saiyan warrior created by Akira Toriyama, is arguably the most iconic character in anime history. From his humble beginnings in Dragon Ball to his godlike transformations in Dragon Ball Super, Goku has captivated audiences worldwide for over three decades. Our collection of 32 Goku wallpapers celebrates this beloved character with stunning artwork that captures the power, determination, and spirit that define the ultimate martial artist.
+
+The visual appeal of Goku as a wallpaper subject is unmatched in the anime world. His various transformations provide an incredible range of color palettes and energy — from the golden aura of Super Saiyan to the calm silver glow of Ultra Instinct. Each transformation represents not just a power-up, but a milestone in Goku journey of self-improvement. A Goku wallpaper on your phone is more than just a cool image — it is a daily reminder of perseverance and the endless pursuit of greatness.
+
+Our collection features a diverse range of Goku designs and artistic styles. You will find classic Dragon Ball Z Super Saiyan moments with explosive golden auras, intense battle scenes showcasing Goku fighting stance and raw power, serene Ultra Instinct poses that radiate calm mastery, dramatic Super Saiyan Blue compositions with brilliant azure energy, artistic interpretations that blend traditional anime style with modern digital art techniques, and dynamic action shots that capture the kinetic energy of Goku most legendary fights.
+
+Dragon Ball has had an immeasurable impact on global pop culture, and Goku stands at the center of it all. The Kamehameha wave is one of the most recognized moves in all of fiction. Super Saiyan has become a universal metaphor for powering up or pushing beyond your limits. The series has influenced countless other anime, manga, video games, and even real-world martial arts enthusiasts. Having a Goku wallpaper connects you to this massive cultural legacy.
+
+What sets Goku apart from other anime protagonists is his pure-hearted nature combined with his insatiable desire to fight and grow stronger. He is not driven by revenge, power, or glory — he simply loves the thrill of battle and the journey of self-improvement. This philosophy resonates deeply with fans around the world, making Goku more than just a fictional character but a symbol of the fighting spirit that lives within everyone.
+
+The Dragon Ball franchise continues to evolve with new content including Dragon Ball Super movies, manga chapters, and video games. Each new release reignites global interest in Goku and his adventures, keeping the demand for high-quality Goku wallpapers consistently strong. Whether you are a lifelong fan who grew up watching Dragon Ball Z or a newer fan discovering the series through Dragon Ball Super, these wallpapers offer something special for every Saiyan enthusiast.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain stunning visual quality while ensuring fast loading and minimal storage usage. Browse our collection and find the perfect Goku wallpaper to power up your phone screen.`,
+  },
   'eddie-munson-wallpaper': {
     category: 'wallpapers',
     name: 'Eddie Munson Wallpaper',
