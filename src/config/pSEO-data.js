@@ -3355,6 +3355,38 @@ The current pink aesthetic trend also encompasses several sub-aesthetics, each w
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect pink aesthetic wallpaper to add warmth and beauty to your screen.`,
   },
+  'cat-wallpaper': {
+    category: 'wallpapers',
+    name: 'Cat Wallpaper',
+    keyword: 'Cat Wallpaper',
+    title: 'Free Cat Wallpapers HD - Cute Cat Phone Backgrounds Download',
+    description: 'Download 32 adorable cat wallpapers for free. Cute, fluffy, and aesthetic cat phone backgrounds in HD. No watermark, instant download.',
+    h1: 'Free Cute Cat HD Wallpapers',
+    subtitle: 'Browse and download 32 adorable cat wallpapers — cute kittens, fluffy cats, and charming feline portraits perfect for your phone background.',
+    icon: 'image',
+    generatorType: 'catGallery',
+    faq: [
+      { q: 'How many cat wallpapers are available?', a: 'Our collection features 32 high-quality cat wallpapers. Each image showcases adorable felines in different settings and styles — from cute kittens with big eyes and fluffy Persian cats to playful tabby poses and artistic cat portraits perfect for any cat lover phone screen.' },
+      { q: 'Are these cat wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'What types of cat images are included?', a: 'The collection includes a wide variety of cat styles — adorable kittens, fluffy long-haired cats, sleek short-haired breeds, cats in cozy settings, playful poses, artistic cat illustrations, cats with flowers, cats in nature, and close-up portraits that highlight their beautiful eyes and expressions.' },
+      { q: 'Why are cat wallpapers so popular?', a: 'Cat wallpapers are among the most popular phone backgrounds because cats are universally loved for their adorable expressions, independent personalities, and photogenic nature. Studies show that looking at cute cat images can reduce stress and improve mood. Having a cute cat wallpaper on your phone creates a moment of joy every time you unlock your device.' },
+    ],
+    longContent: `Cats have been captivating humans for thousands of years, and in the digital age, they have become the undisputed rulers of the internet. From viral cat videos to adorable cat memes, felines dominate online culture — and cat wallpapers are no exception. Our collection of 32 cat wallpapers brings the warmth, charm, and irresistible cuteness of cats directly to your phone screen, creating a delightful experience every time you pick up your device.
+
+The appeal of cats as wallpaper subjects lies in their incredible range of expressions and poses. A cat can look majestic and regal in one moment, then absolutely silly and derpy in the next. Their big, expressive eyes, soft fur, and graceful movements make them endlessly photogenic. Whether captured in a serene sleeping pose, a playful pounce, or a curious gaze, cats create wallpapers that are both visually stunning and emotionally warming.
+
+Our collection features a diverse range of cat photography and artistic styles. You will find close-up portraits that showcase the mesmerizing beauty of cat eyes in vivid detail, adorable kitten images that radiate pure innocence and charm, fluffy cats in cozy settings with warm lighting perfect for autumn and winter vibes, cats in nature surrounded by flowers and greenery, artistic and illustrated cat designs for those who prefer a stylized aesthetic, and playful action shots that capture the energetic and curious nature of our feline friends.
+
+The psychological benefits of looking at cute animal images, especially cats, have been well documented by researchers. Studies have shown that viewing cute animal pictures can improve focus, reduce stress levels, and boost overall mood. This is why cat wallpapers are more than just decoration — they serve as a small but meaningful form of daily self-care. Every time you glance at your phone and see an adorable cat face, your brain receives a tiny dose of happiness.
+
+Cats hold a special place in cultures around the world. In ancient Egypt, cats were revered as sacred animals. In Japanese culture, the maneki-neko or beckoning cat is a symbol of good luck and fortune. In modern internet culture, cats are the reigning monarchs of social media, with famous felines like Grumpy Cat, Nyan Cat, and countless Instagram cat celebrities amassing millions of followers. A cat wallpaper connects you to this rich cultural tapestry of feline appreciation.
+
+What makes cat wallpapers particularly versatile is how well they complement any phone setup. The natural colors of cat fur — from warm oranges and browns to cool grays, sleek blacks, and pristine whites — pair beautifully with any app icon scheme or widget arrangement. Whether you prefer a minimalist lock screen or a vibrant home screen, there is a cat wallpaper that fits your personal style perfectly.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain stunning visual quality while ensuring fast loading and minimal storage usage. Browse our collection and find the perfect cat wallpaper to add some feline charm to your phone screen.`,
+  },
   'goku-wallpaper': {
     category: 'wallpapers',
     name: 'Goku Wallpaper',
