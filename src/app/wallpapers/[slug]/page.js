@@ -24,6 +24,7 @@ import PinkAestheticGalleryClient from './PinkAestheticGalleryClient';
 import EddieMunsonGalleryClient from './EddieMunsonGalleryClient';
 import GokuGalleryClient from './GokuGalleryClient';
 import CatGalleryClient from './CatGalleryClient';
+import DarkGalleryClient from './DarkGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -218,6 +219,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the cat wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  darkGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 stunning dark aesthetic HD wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the dark wallpaper as a high-res PNG.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -305,6 +312,8 @@ export default async function WallpaperPage({ params }) {
               ? <GokuGalleryClient />
               : config.generatorType === 'catGallery'
               ? <CatGalleryClient />
+              : config.generatorType === 'darkGallery'
+              ? <DarkGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 

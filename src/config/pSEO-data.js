@@ -3387,6 +3387,38 @@ The current pink aesthetic trend also encompasses several sub-aesthetics, each w
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect pink aesthetic wallpaper to add warmth and beauty to your screen.`,
   },
+  'dark-wallpaper': {
+    category: 'wallpapers',
+    name: 'Dark Wallpaper',
+    keyword: 'Dark Wallpaper',
+    title: 'Free Dark Wallpapers HD - Dark Aesthetic Phone Backgrounds Download',
+    description: 'Download 32 stunning dark wallpapers for free. Moody, mysterious, and elegant dark aesthetic phone backgrounds in HD. No watermark, instant download.',
+    h1: 'Free Dark Aesthetic HD Wallpapers',
+    subtitle: 'Browse and download 32 striking dark wallpapers — deep blacks, moody shadows, and elegant dark aesthetic phone backgrounds for your device.',
+    icon: 'image',
+    generatorType: 'darkGallery',
+    faq: [
+      { q: 'How many dark wallpapers are available?', a: 'Our collection features 32 high-quality dark wallpapers. Each image showcases different dark aesthetic styles — from deep black minimalist designs and moody abstract textures to dramatic dark landscapes and shadowy artistic compositions perfect for anyone who loves dark-themed phone setups.' },
+      { q: 'Are these dark wallpapers free to download?', a: 'Yes, completely free! No sign-up, no email required, no watermarks. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format, providing crisp and clear quality on modern smartphones and tablets while keeping file sizes manageable for fast downloads.' },
+      { q: 'Can I use these wallpapers on any device?', a: 'Yes! These wallpapers work beautifully on iPhones, Android phones, iPads, tablets, and desktop computers. The portrait orientation is ideal for phone lock screens and home screens.' },
+      { q: 'Do dark wallpapers save battery?', a: 'Yes, on devices with OLED or AMOLED screens, dark wallpapers can help save battery life. These display technologies turn off individual pixels to show true black, meaning darker wallpapers consume less power compared to bright, colorful backgrounds.' },
+      { q: 'Why are dark wallpapers so popular?', a: 'Dark wallpapers are popular because they offer a sleek, sophisticated look that complements dark mode interfaces. They reduce eye strain in low-light environments, look premium and elegant on modern devices, and can extend battery life on OLED screens. The dark aesthetic trend has grown massively across social media and design communities.' },
+    ],
+    longContent: `Dark wallpapers have become one of the most sought-after phone customization choices in recent years, driven by the widespread adoption of dark mode across operating systems and apps. Our collection of 32 dark wallpapers offers a stunning range of moody, mysterious, and elegant backgrounds that transform your phone screen into a canvas of sophisticated darkness.
+
+The appeal of dark wallpapers extends far beyond simple aesthetics. On modern smartphones equipped with OLED and AMOLED displays, dark wallpapers offer a practical advantage — they can significantly reduce battery consumption. These screen technologies display true black by turning off individual pixels entirely, meaning the darker your wallpaper, the less power your screen uses. A beautiful dark wallpaper is not just a style choice; it is a smart one.
+
+Our collection features a diverse range of dark aesthetic styles to suit every taste. You will find pure black minimalist designs that emphasize clean lines and negative space, moody abstract textures with subtle gradients that add depth without brightness, dramatic dark landscapes featuring night skies, moonlit scenes, and shadowy forests, artistic compositions that play with light and shadow to create striking visual contrasts, and dark-themed patterns and geometric designs that add structure and interest to your screen.
+
+The dark aesthetic movement has deep roots in art, photography, and design. From the chiaroscuro technique of Renaissance painters to the film noir cinematic style, artists have long understood the power of darkness to create mood, drama, and emotional impact. Dark wallpapers bring this artistic tradition to your phone, turning an everyday device into a piece of visual art that reflects your appreciation for sophisticated, understated beauty.
+
+Eye comfort is another major factor driving the popularity of dark wallpapers. In low-light environments — whether browsing your phone before bed, in a dark room, or at night — bright wallpapers can cause eye strain and discomfort. A dark wallpaper creates a gentler visual experience that reduces the contrast between your screen and the surrounding environment, making your phone more comfortable to use at any time of day.
+
+Dark wallpapers also provide the perfect foundation for phone customization. Dark backgrounds make app icons, widgets, and notifications pop with clarity and contrast. Whether you use iOS or Android, a dark wallpaper creates a cohesive and professional-looking home screen. The neutral darkness pairs beautifully with accent colors — a neon icon or colorful widget stands out dramatically against a dark background, creating a stunning visual hierarchy.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain stunning visual quality while ensuring fast loading and minimal storage usage. Browse our collection and find the perfect dark wallpaper to elevate your phone screen with elegant, battery-friendly style.`,
+  },
   'cat-wallpaper': {
     category: 'wallpapers',
     name: 'Cat Wallpaper',
