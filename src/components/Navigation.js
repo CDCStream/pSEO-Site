@@ -126,6 +126,7 @@ const navItems = [
       { label: 'Lizard Meme', href: '/meme-maker/lizard-meme/' },
       { label: 'Chicken Jockey Meme', href: '/meme-maker/chicken-jockey-meme/' },
       { label: 'Charlie Kirk Meme', href: '/meme-maker/charlie-kirk-meme/' },
+      { label: 'Thank You Meme', href: '/meme-maker/thank-you-thank-you-thank-you-meme/' },
     ],
   },
   {
