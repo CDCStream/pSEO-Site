@@ -189,6 +189,7 @@ const navItems = [
       { label: 'Gamertag', href: '/generators/gamertag-generator/' },
       { label: 'YouTube Name', href: '/generators/youtube-name-generator/' },
       { label: 'Anime Name', href: '/generators/anime-name-generator/' },
+      { label: 'Animal Name', href: '/generators/animal-name-generator/' },
     ],
   },
   {

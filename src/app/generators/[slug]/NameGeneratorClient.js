@@ -98,6 +98,13 @@ const NAME_DATA = {
     suffixes: ['X', 'Gaming', 'YT', 'TTV', 'HD', '69', '420', 'Pro', 'Elite', 'Boss', 'King', 'God', 'Lord', 'Master', 'Legend']
   },
 
+  animal: {
+    prefixes: ['Sir', 'Captain', 'Professor', 'Mr.', 'Mrs.', 'Lord', 'Lady', 'Duke', 'Princess', 'King', 'Queen', 'Baron', 'General', 'Agent', 'Doctor', 'Chef', 'DJ', 'Mayor', 'Sergeant', 'Admiral'],
+    adjectives: ['Fluffy', 'Mighty', 'Sneaky', 'Grumpy', 'Happy', 'Lazy', 'Brave', 'Tiny', 'Chubby', 'Sparkly', 'Sleepy', 'Fuzzy', 'Sassy', 'Dapper', 'Jolly', 'Wiggly', 'Cuddly', 'Bouncy', 'Spunky', 'Goofy'],
+    animals: ['Panda', 'Fox', 'Otter', 'Penguin', 'Koala', 'Bunny', 'Hedgehog', 'Owl', 'Kitten', 'Puppy', 'Hamster', 'Duckling', 'Squirrel', 'Raccoon', 'Sloth', 'Capybara', 'Red Panda', 'Axolotl', 'Quokka', 'Chinchilla', 'Ferret', 'Gecko', 'Corgi', 'Shiba', 'Narwhal', 'Platypus', 'Chameleon', 'Flamingo', 'Alpaca', 'Llama'],
+    suffixes: ['Whiskers', 'Paws', 'Snout', 'Tails', 'Beans', 'Boop', 'Noodle', 'Muffin', 'Biscuit', 'Nugget', 'Sprout', 'Pickle', 'Waffles', 'Pancake', 'Pudding', 'Cookie', 'Cupcake', 'Dumpling', 'Pretzel', 'Truffle']
+  },
+
   youtube: {
     patterns: [
       '{adj}{noun}',
@@ -230,6 +237,18 @@ const generators = {
       .replace('{adj}', data.adjectives[Math.floor(Math.random() * data.adjectives.length)])
       .replace('{noun}', data.nouns[Math.floor(Math.random() * data.nouns.length)])
       .replace('{name}', data.names[Math.floor(Math.random() * data.names.length)]);
+  },
+
+  animal: () => {
+    const data = NAME_DATA.animal;
+    const patterns = [
+      () => data.prefixes[Math.floor(Math.random() * data.prefixes.length)] + ' ' + data.adjectives[Math.floor(Math.random() * data.adjectives.length)] + ' ' + data.animals[Math.floor(Math.random() * data.animals.length)],
+      () => data.adjectives[Math.floor(Math.random() * data.adjectives.length)] + ' ' + data.animals[Math.floor(Math.random() * data.animals.length)] + ' ' + data.suffixes[Math.floor(Math.random() * data.suffixes.length)],
+      () => data.prefixes[Math.floor(Math.random() * data.prefixes.length)] + ' ' + data.animals[Math.floor(Math.random() * data.animals.length)] + ' ' + data.suffixes[Math.floor(Math.random() * data.suffixes.length)],
+      () => data.animals[Math.floor(Math.random() * data.animals.length)] + ' ' + data.suffixes[Math.floor(Math.random() * data.suffixes.length)],
+      () => data.adjectives[Math.floor(Math.random() * data.adjectives.length)] + ' ' + data.animals[Math.floor(Math.random() * data.animals.length)],
+    ];
+    return patterns[Math.floor(Math.random() * patterns.length)]();
   },
 
   aesthetic: () => {

@@ -2533,6 +2533,38 @@ Search optimization matters for YouTube names. Including relevant keywords can h
 
 Test potential names before committing. Say them out loud, check domain and social media availability, and get feedback from your target audience. Your YouTube name is worth getting right from the start.`,
   },
+  'animal-name-generator': {
+    category: 'generators',
+    name: 'Animal Name Generator',
+    keyword: 'Animal Name Generator',
+    title: 'Animal Name Generator - Create Funny & Cute Pet Names Free',
+    description: 'Generate hilarious and adorable animal names for pets, characters, and stories. Funny titles, cute adjectives, and creative combinations. Free and instant.',
+    h1: 'Animal Name Generator',
+    subtitle: 'Generate adorable, funny, and creative names for pets, animal characters, and stories — from Sir Fluffy Panda to Captain Bouncy Corgi.',
+    icon: 'paw',
+    generatorType: 'animal',
+    faq: [
+      { q: 'What kind of animal names does this generate?', a: 'Our generator creates fun, creative animal names by combining titles (Sir, Captain, Professor), adjectives (Fluffy, Mighty, Sneaky), animal types (Panda, Fox, Corgi), and funny suffixes (Whiskers, Noodle, Waffles). Each name is unique and entertaining.' },
+      { q: 'Can I use these names for my pet?', a: 'Absolutely! These names are perfect for naming pets — cats, dogs, hamsters, fish, or any animal companion. The generator creates names that are fun to say and easy to remember.' },
+      { q: 'Are these names good for fictional characters?', a: 'Yes! Writers, game developers, and artists love using our generator for creating memorable animal characters in stories, comics, games, and animations. The humorous naming style works great for cartoon-style characters.' },
+      { q: 'How many names can I generate at once?', a: 'You can generate between 1 and 20 names at a time. Each click produces a completely new set of random combinations, so you will never run out of inspiration.' },
+      { q: 'What animals are included?', a: 'The generator includes over 30 animals — from popular pets like Corgi, Kitten, and Bunny to exotic favorites like Axolotl, Capybara, Red Panda, Quokka, and Narwhal. Each animal can be combined with titles, adjectives, and suffixes for endless variety.' },
+      { q: 'Can I copy the generated names?', a: 'Yes! Each generated name has a copy button next to it. Click it to instantly copy the name to your clipboard, ready to paste anywhere — pet registration forms, social media bios, or character sheets.' },
+    ],
+    longContent: `The Animal Name Generator is the ultimate tool for creating adorable, hilarious, and memorable names for pets, fictional characters, and creative projects. Whether you are naming a new kitten, creating a character for a children's book, or just want to laugh at ridiculous name combinations, our generator delivers endless entertainment and inspiration.
+
+Naming a pet is one of the most fun parts of bringing a new animal companion into your life, but it can also be surprisingly difficult. You want a name that captures your pet's personality, makes you smile every time you say it, and stands out from the crowd. Our generator solves this problem by combining creative elements — distinguished titles, playful adjectives, animal types, and amusing suffixes — into names that are both unique and unforgettable.
+
+The generator draws from a carefully curated database of naming elements. Titles like Sir, Captain, Professor, and Lord add a touch of dignity and humor. Adjectives like Fluffy, Mighty, Sneaky, and Dapper describe personality traits. Animal types span from beloved pets like Corgi, Kitten, and Bunny to internet-famous species like Capybara, Axolotl, and Red Panda. Suffixes like Whiskers, Noodle, Waffles, and Biscuit add an irresistible finishing touch.
+
+Creative writers and game developers find our generator invaluable for character creation. Animal characters are staples of children's literature, animated shows, indie games, and webcomics. A well-named animal character like Professor Grumpy Hedgehog or Captain Bouncy Corgi immediately suggests personality and backstory, giving creators a head start on character development.
+
+The psychology of pet naming is fascinating. Studies show that pet names often reflect the owner's personality and values. Funny names indicate a playful owner. Dignified names suggest someone who treats their pet with respect and humor. Our generator covers the full spectrum, from silly and whimsical to distinguished and charming, ensuring you find the perfect match for both pet and owner.
+
+Social media has made creative pet names more important than ever. Pets with memorable names tend to attract more followers on Instagram, TikTok, and YouTube. A pet account named "Sir Fluffy Pancake" is inherently more shareable and memorable than a generic name. Our generator helps you create names that are social media ready from day one.
+
+Generate as many names as you want — each click produces a fresh batch of creative combinations. Copy your favorites with one click and use them for pet registration, social media profiles, character sheets, or just to brighten your day with adorable animal name combinations.`,
+  },
   'aesthetic-youtube-name-generator': {
     category: 'generators',
     name: 'Aesthetic YouTube Name Generator',
