@@ -35,6 +35,7 @@ import LizardMemeGalleryClient from './LizardMemeGalleryClient';
 import ChickenJockeyMemeClient from './ChickenJockeyMemeClient';
 import CharlieKirkMemeClient from './CharlieKirkMemeClient';
 import ThankYouMemeGalleryClient from './ThankYouMemeGalleryClient';
+import TrumpMemeClient from './TrumpMemeClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -573,6 +574,29 @@ const shrekMemeSteps = [
   },
 ];
 
+const trumpMemeSteps = [
+  {
+    icon: Image,
+    title: 'Choose Template',
+    description: 'Pick from 11 Trump meme templates.',
+  },
+  {
+    icon: Type,
+    title: 'Add Text',
+    description: 'Click anywhere on the image to place text boxes. Drag to reposition.',
+  },
+  {
+    icon: Palette,
+    title: 'Customize',
+    description: 'Choose fonts, sizes, colors, and stroke for each text box.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download your finished meme as a high-quality PNG file.',
+  },
+];
+
 const thankYouMemeSteps = [
   {
     icon: Search,
@@ -957,11 +981,13 @@ export default async function MemePage({ params }) {
               <CharlieKirkMemeClient />
             ) : slug === 'thank-you-thank-you-thank-you-meme' ? (
               <ThankYouMemeGalleryClient />
+            ) : slug === 'trump-meme' ? (
+              <TrumpMemeClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : slug === 'trump-meme' ? trumpMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

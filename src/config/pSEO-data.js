@@ -2168,6 +2168,38 @@ The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's
 
 Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'trump-meme': {
+    category: 'meme-maker',
+    name: 'Trump Meme Maker',
+    keyword: 'Trump Meme',
+    title: 'Trump Meme Maker - Free Trump Meme Generator with 11 Templates',
+    description: 'Create hilarious Trump memes with our free meme maker. 11 templates, custom text, fonts, colors, and instant PNG download. No watermark.',
+    h1: 'Trump Meme Maker',
+    subtitle: 'Pick from 11 Trump meme templates, add your own text with full customization, and download your creation as a high-quality PNG — completely free.',
+    icon: 'image',
+    generatorType: 'trumpMeme',
+    faq: [
+      { q: 'How do I make a Trump meme?', a: 'Choose one of the 11 Trump meme templates, click anywhere on the image to place a text box, type your caption, customize the font, size, color, and stroke, then hit download. Your meme will be saved as a high-quality PNG file — no watermarks, no account required.' },
+      { q: 'How many Trump meme templates are available?', a: 'We offer 11 different Trump meme templates featuring various iconic poses and expressions. Each template is perfect for different types of humor — from political commentary and reaction memes to absurdist humor and everyday relatable jokes.' },
+      { q: 'Can I add multiple text boxes?', a: 'Yes! Click anywhere on the image to place as many text boxes as you need. Each text box can be independently customized with different fonts, sizes, colors, and stroke settings. You can also drag text boxes to reposition them perfectly.' },
+      { q: 'Is the Trump meme maker free?', a: 'Yes, 100% free! No sign-up, no watermarks, no hidden fees. Create as many memes as you want and download them instantly as high-quality PNG files.' },
+      { q: 'What customization options are available?', a: 'Each text box offers full customization: 7 font options (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), adjustable font size from 12 to 72px, 10 preset text colors plus a custom color picker, and 6 stroke options including custom colors or no stroke.' },
+      { q: 'Can I use these memes on social media?', a: 'Absolutely! Download your Trump meme as a PNG and share it anywhere — Twitter/X, Instagram, Reddit, Facebook, Discord, WhatsApp, TikTok, or any platform. The memes are created at the original template resolution for crisp, shareable quality.' },
+    ],
+    longContent: `The Trump meme has become one of the most enduring and versatile formats in internet culture. From his distinctive facial expressions and hand gestures to his memorable quotes and larger-than-life personality, Donald Trump has provided an endless source of meme material that transcends political boundaries. Our Trump Meme Maker gives you 11 carefully selected templates and powerful text customization tools to create your own viral-worthy Trump memes in seconds.
+
+What makes Trump memes so uniquely popular is the sheer expressiveness of the source material. Every template in our collection captures a different mood and energy — from confident pointing and triumphant fist pumps to surprised reactions and contemplative moments. This range means you can find the perfect template for virtually any joke, observation, or commentary you want to make. The templates work for political humor, workplace jokes, relationship memes, gaming reactions, and everyday relatable content.
+
+Our meme maker features an intuitive click-to-place text system that gives you complete creative control. Simply click anywhere on the image to drop a text box, type your caption, and watch it render in real time on the canvas. Need to adjust the position? Just drag the text box to the perfect spot. Want a different look? Choose from seven font families, adjust the size with a slider, pick from preset colors or use the custom color picker, and add or remove text stroke for maximum readability.
+
+The Trump meme format has proven remarkably durable across the fast-moving landscape of internet humor. While many meme formats rise and fall within weeks, Trump memes have maintained their relevance for years because they tap into universally recognizable expressions and gestures. The pointing gesture has become shorthand for approval or accusation. The squinting expression conveys suspicion or disbelief. The thumbs-up works for sarcastic approval. Each expression is instantly recognizable and infinitely adaptable to new contexts.
+
+Creating effective memes is about pairing the right image with the right text, and our maker is designed to make that process as smooth as possible. The multiple text box system lets you create classic top-text/bottom-text layouts, single caption memes, dialogue formats, and everything in between. The real-time preview ensures you see exactly what your finished meme will look like before downloading, so you can perfect every detail.
+
+Trump memes have become a universal language of internet humor that goes far beyond politics. They are used to comment on everyday situations, express reactions in group chats, create relatable content about work, school, and relationships, and generate laughs across all demographics. The key to a great Trump meme is creative caption writing — the templates provide the visual punch, and your text delivers the punchline.
+
+Create your Trump meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
+  },
   'thank-you-thank-you-thank-you-meme': {
     category: 'meme-maker',
     name: 'Thank You Thank You Thank You Meme',
