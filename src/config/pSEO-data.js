@@ -2168,6 +2168,38 @@ The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's
 
 Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'hand-on-shoulder-meme': {
+    category: 'meme-maker',
+    name: 'Hand on Shoulder Meme Maker',
+    keyword: 'Hand on Shoulder Meme',
+    title: 'Hand on Shoulder Meme Maker - Free Meme Generator with Image Upload',
+    description: 'Create hand-on-shoulder memes with 3 templates, custom text, and image upload. Add your own photos, drag to position, and download as PNG. Free, no watermark.',
+    h1: 'Hand on Shoulder Meme Maker',
+    subtitle: 'Pick from 3 templates, upload your own images, add custom text, and create the perfect hand-on-shoulder meme — download as high-quality PNG for free.',
+    icon: 'image',
+    generatorType: 'handOnShoulderMeme',
+    faq: [
+      { q: 'How do I make a hand-on-shoulder meme?', a: 'Choose one of the 3 templates, then either click on the image to add text or upload your own images to place on the meme. You can drag elements to reposition them, customize text with fonts, colors, and stroke, then download your creation as a PNG file.' },
+      { q: 'Can I upload my own images?', a: 'Yes! Click the "Upload Image" button to add your own photos or images to the meme. Uploaded images can be dragged to any position and resized using the slider. This lets you put custom faces or objects onto the template.' },
+      { q: 'How many templates are available?', a: 'We offer 3 different hand-on-shoulder meme templates. Each captures a different variation of the iconic "hand on shoulder" pose, perfect for comfort memes, advice memes, and mentor/mentee humor.' },
+      { q: 'Can I add both text and images?', a: 'Absolutely! You can mix text boxes and uploaded images freely. Add as many of each as you need. Switch between "Add Text" and "Upload Image" modes using the buttons above the controls panel.' },
+      { q: 'Is the meme maker free?', a: 'Yes, 100% free! No sign-up, no watermarks, no hidden fees. Create as many memes as you want and download them instantly as high-quality PNG files.' },
+      { q: 'What is the hand-on-shoulder meme?', a: 'The hand-on-shoulder meme features someone placing their hand on another person shoulder in a comforting or mentoring gesture. It is widely used to represent support, passing down wisdom, relating to shared experiences, or the ironic comfort of a shared struggle. The format works for both sincere and humorous content.' },
+    ],
+    longContent: `The hand-on-shoulder meme is one of the most emotionally versatile meme formats on the internet. The simple gesture of placing a hand on someone's shoulder conveys comfort, solidarity, mentorship, and understanding — making it the perfect template for both heartfelt and hilariously ironic content. Our Hand on Shoulder Meme Maker takes this classic format to the next level with custom text placement and image upload capabilities.
+
+What sets our meme maker apart is the ability to upload your own images directly onto the template. Want to put your friend's face on the person receiving comfort? Or place a company logo on the shoulder of someone being consoled about Monday mornings? Simply upload any image, drag it into position, and resize it to fit perfectly. Combined with full text customization, you have complete creative control over your meme.
+
+The hand-on-shoulder format works brilliantly for workplace humor, where one colleague consoles another about deadlines, meetings, or printer problems. It is equally effective for gaming communities, where experienced players comfort newcomers about difficult bosses or ranked matchmaking. Sports fans use it to comfort each other after tough losses. Students share the pain of exam seasons. The format is universal because everyone understands what it feels like to need — or offer — a supportive hand on the shoulder.
+
+Our meme maker offers three distinct templates, each capturing a different mood and context for the hand-on-shoulder gesture. Whether you need a dramatic, cinematic feel or a more casual, everyday vibe, there is a template that fits your vision. The template selector makes it easy to switch between options and find the perfect base for your meme.
+
+The text system is fully featured with click-to-place positioning, drag-to-reposition functionality, and complete customization options. Choose from seven font families including the classic Impact font, adjust size from 12 to 72 pixels, pick from preset colors or use the custom color picker, and add stroke effects for maximum readability over any background. Multiple text boxes can be placed independently, each with its own styling.
+
+The image upload feature opens up endless creative possibilities. Upload photos, logos, screenshots, or any image file and place it anywhere on the template. The size slider lets you scale uploaded images from tiny accents to large overlays. Multiple images can be added simultaneously, and each can be dragged independently to achieve the perfect composition.
+
+Create your hand-on-shoulder meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
+  },
   'trump-meme': {
     category: 'meme-maker',
     name: 'Trump Meme Maker',

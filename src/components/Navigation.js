@@ -128,6 +128,7 @@ const navItems = [
       { label: 'Charlie Kirk Meme', href: '/meme-maker/charlie-kirk-meme/' },
       { label: 'Thank You Meme', href: '/meme-maker/thank-you-thank-you-thank-you-meme/' },
       { label: 'Trump Meme', href: '/meme-maker/trump-meme/' },
+      { label: 'Hand on Shoulder Meme', href: '/meme-maker/hand-on-shoulder-meme/' },
     ],
   },
   {
