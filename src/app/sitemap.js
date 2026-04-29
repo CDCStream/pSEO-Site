@@ -70,6 +70,11 @@ export default async function sitemap() {
     },
     {
       url: `${baseUrl}/calculators/snow-day-calculator/`,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/calculators/cubic-feet-calculator/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -17,6 +17,14 @@ const calculatorTools = [
     icon: Calendar,
     color: 'from-teal-500 to-cyan-400',
     tags: ['Age', 'Date of Birth', 'Time', 'Free Calculator'],
+  },
+  {
+    name: 'Cubic Feet Calculator',
+    description: 'Calculate volume in cubic feet, cubic meters, and cubic yards. Supports feet, inches, meters, cm, and yards.',
+    href: '/calculators/cubic-feet-calculator/',
+    icon: Box,
+    color: 'from-orange-500 to-amber-400',
+    tags: ['Volume', 'Construction', 'Shipping', 'Unit Conversion'],
   },
 ];
 
