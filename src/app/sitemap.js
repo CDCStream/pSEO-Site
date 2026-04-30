@@ -75,6 +75,11 @@ export default async function sitemap() {
     },
     {
       url: `${baseUrl}/calculators/cubic-feet-calculator/`,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/calculators/investment-calculator/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

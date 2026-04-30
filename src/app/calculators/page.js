@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -25,6 +25,14 @@ const calculatorTools = [
     icon: Box,
     color: 'from-orange-500 to-amber-400',
     tags: ['Volume', 'Construction', 'Shipping', 'Unit Conversion'],
+  },
+  {
+    name: 'Investment Calculator',
+    description: 'See how your investments grow over time with compound interest and monthly contributions.',
+    href: '/calculators/investment-calculator/',
+    icon: TrendingUp,
+    color: 'from-emerald-500 to-teal-400',
+    tags: ['Investing', 'Compound Interest', 'Retirement', 'Finance'],
   },
 ];
 

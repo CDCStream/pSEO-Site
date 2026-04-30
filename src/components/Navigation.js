@@ -205,6 +205,7 @@ const navItems = [
       { label: 'Snow Day Calculator', href: '/calculators/snow-day-calculator/' },
       { label: 'Age Calculator', href: '/calculators/chronological-age-calculator/' },
       { label: 'Cubic Feet Calculator', href: '/calculators/cubic-feet-calculator/' },
+      { label: 'Investment Calculator', href: '/calculators/investment-calculator/' },
     ],
   },
   {
