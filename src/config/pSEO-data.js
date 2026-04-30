@@ -3483,6 +3483,38 @@ The current pink aesthetic trend also encompasses several sub-aesthetics, each w
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect pink aesthetic wallpaper to add warmth and beauty to your screen.`,
   },
+  'floral-wallpaper': {
+    category: 'wallpapers',
+    name: 'Floral Wallpaper',
+    keyword: 'Floral Wallpaper',
+    title: 'Floral Wallpaper HD - Free Flower Phone Backgrounds Download | MakerSilo',
+    description: 'Download 32 free HD floral wallpapers for your phone. Beautiful flower designs, botanical art, and garden aesthetics. No watermarks, instant download.',
+    h1: 'Floral Wallpaper HD',
+    subtitle: 'Download 32 stunning floral HD wallpapers for your phone — beautiful flowers, botanical art, and garden aesthetics, all free with no watermarks.',
+    icon: 'image',
+    generatorType: 'floralGallery',
+    faq: [
+      { q: 'How many floral wallpapers are available?', a: 'We offer 32 high-quality floral HD wallpapers featuring roses, peonies, wildflowers, and botanical designs, all optimized for phone screens and available for free instant download.' },
+      { q: 'Are these floral wallpapers free to download?', a: 'Yes, all 32 floral wallpapers are completely free. Simply click the download button or open the lightbox preview and save directly to your device without any sign-up or watermarks.' },
+      { q: 'What types of flowers are featured?', a: 'Our collection includes a wide variety of floral designs — roses, peonies, cherry blossoms, sunflowers, wildflowers, tropical flowers, and abstract botanical patterns in various artistic styles.' },
+      { q: 'What resolution are the floral wallpapers?', a: 'All wallpapers are provided in HD resolution (1080px width) in PNG format, optimized for modern smartphones while maintaining excellent image quality and vibrant colors.' },
+      { q: 'Can I use these wallpapers on any phone?', a: 'Yes, these wallpapers work on all smartphones including iPhone and Android devices. The 9:16 aspect ratio is optimized for modern phone screens.' },
+      { q: 'How do I set a floral wallpaper on my phone?', a: 'Download the wallpaper, then go to your phone settings > Wallpaper > Choose from gallery and select the downloaded image. On iPhone, go to Settings > Wallpaper > Add New Wallpaper.' },
+    ],
+    longContent: `Flowers have been a timeless source of beauty and inspiration in art and design, and our collection of 32 HD floral wallpapers brings that natural elegance directly to your phone screen. From delicate watercolor roses to bold tropical blooms, each wallpaper captures the beauty of nature in stunning high definition.
+
+Our floral wallpaper collection spans a wide range of styles and aesthetics. You will find classic romantic designs with soft-petaled roses and peonies, vibrant tropical compositions with exotic flowers and lush greenery, minimalist botanical illustrations with clean lines and subtle colors, and dramatic dark floral arrangements that add sophistication and depth to your screen.
+
+Each wallpaper has been carefully selected and optimized for modern smartphone displays. The 1080px HD resolution ensures that every petal, leaf, and stem is rendered in crisp detail, while the PNG format preserves the rich color gradients and delicate textures that make floral art so appealing. The 9:16 portrait aspect ratio means these wallpapers display perfectly on any modern phone without cropping.
+
+Floral wallpapers are among the most popular phone background choices because they bring a sense of calm, beauty, and connection to nature into daily life. Whether you prefer a bright, cheerful sunflower to start your mornings or a moody, dark botanical arrangement for a more dramatic look, there is something in this collection that will resonate with your personal style.
+
+The collection draws inspiration from various artistic traditions. Some wallpapers feature photorealistic flower photography with stunning detail and natural lighting. Others take a more artistic approach with painted textures, watercolor effects, or digital illustration styles. Several designs incorporate vintage botanical illustration aesthetics, while others embrace contemporary graphic design with bold colors and modern compositions.
+
+Seasonal variety is also well represented in our collection. Spring cherry blossoms, summer roses, autumn wildflowers, and winter botanical arrangements ensure you can find the perfect wallpaper for any time of year — or simply choose the flowers that speak to you regardless of the season.
+
+All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect floral wallpaper to bring natural beauty to your screen every day.`,
+  },
   'y2k-wallpaper': {
     category: 'wallpapers',
     name: 'Y2K Wallpaper',

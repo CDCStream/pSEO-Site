@@ -27,6 +27,7 @@ import CatGalleryClient from './CatGalleryClient';
 import DarkGalleryClient from './DarkGalleryClient';
 import KingVonGalleryClient from './KingVonGalleryClient';
 import Y2kGalleryClient from './Y2kGalleryClient';
+import FloralGalleryClient from './FloralGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -221,6 +222,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the cat wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  floralGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 beautiful floral HD wallpapers.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Click the download button to save the wallpaper to your device.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
+  ],
   y2kGallery: [
     { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 stunning Y2K aesthetic HD wallpapers.' },
     { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
@@ -332,6 +339,8 @@ export default async function WallpaperPage({ params }) {
               ? <KingVonGalleryClient />
               : config.generatorType === 'y2kGallery'
               ? <Y2kGalleryClient />
+              : config.generatorType === 'floralGallery'
+              ? <FloralGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
