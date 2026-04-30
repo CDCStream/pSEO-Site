@@ -3483,6 +3483,38 @@ The current pink aesthetic trend also encompasses several sub-aesthetics, each w
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain visual quality while ensuring fast loading and minimal storage usage on your device. Browse our collection and find the perfect pink aesthetic wallpaper to add warmth and beauty to your screen.`,
   },
+  'king-von-wallpaper': {
+    category: 'wallpapers',
+    name: 'King Von Wallpaper',
+    keyword: 'King Von Wallpaper',
+    title: 'King Von Wallpaper HD - Free Phone Backgrounds Download | MakerSilo',
+    description: 'Download 24 free HD King Von wallpapers for your phone. High-quality King Von backgrounds optimized for mobile. No watermarks, instant download.',
+    h1: 'King Von Wallpaper HD',
+    subtitle: 'Download 24 stunning King Von HD wallpapers for your phone — all free, no watermarks, optimized for mobile screens.',
+    icon: 'image',
+    generatorType: 'kingVonGallery',
+    faq: [
+      { q: 'How many King Von wallpapers are available?', a: 'We offer 24 high-quality King Von HD wallpapers, all optimized for phone screens and available for free instant download without watermarks or sign-up.' },
+      { q: 'Are these King Von wallpapers free to download?', a: 'Yes, all 24 King Von wallpapers are completely free. Simply click the download button or open the lightbox preview and save directly to your device.' },
+      { q: 'What resolution are the King Von wallpapers?', a: 'All wallpapers are provided in HD resolution (1080px width) in PNG format, optimized for modern smartphones while maintaining excellent image quality.' },
+      { q: 'Can I use these wallpapers on any phone?', a: 'Yes, these wallpapers work on all smartphones including iPhone and Android devices. The 9:16 aspect ratio is optimized for modern phone screens.' },
+      { q: 'How do I set a King Von wallpaper on my phone?', a: 'Download the wallpaper, then go to your phone settings > Wallpaper > Choose from gallery and select the downloaded image. On iPhone, go to Settings > Wallpaper > Add New Wallpaper.' },
+      { q: 'Who was King Von?', a: 'King Von (Dayvon Bennett) was an influential Chicago rapper and storyteller known for his vivid street narratives and drill music. His legacy continues to inspire fans worldwide, and these wallpapers celebrate his iconic imagery and style.' },
+    ],
+    longContent: `King Von left an indelible mark on hip-hop culture with his raw storytelling and authentic drill music. Our collection of 24 HD King Von wallpapers celebrates his iconic imagery and legacy, giving fans the perfect way to honor the late rapper on their phone screens every day.
+
+Each wallpaper in this collection captures a different aspect of King Von's persona — from his signature poses and album artwork-inspired designs to artistic tributes and stylized portraits. Whether you prefer bold, high-contrast images or more subtle, artistic interpretations, there is a King Von wallpaper here that matches your style.
+
+All 24 wallpapers have been carefully optimized for modern smartphone screens. With a 1080px width and a 9:16 portrait aspect ratio, these images display perfectly on both iPhone and Android devices without any cropping or distortion. The PNG format ensures crisp details and vibrant colors that do justice to King Von's iconic look.
+
+The collection features a variety of styles including photographic portraits, graphic art pieces, lyric-inspired designs, and memorial tributes. Some wallpapers focus on King Von's distinctive fashion sense, while others capture the energy and intensity that made his music so compelling. Each image has been selected to represent the breadth of his cultural impact.
+
+For fans of Chicago drill music, these wallpapers serve as daily reminders of King Von's contribution to the genre. His storytelling ability set him apart from his peers, and many of these wallpapers incorporate visual elements that reflect his narrative style — street scenes, atmospheric lighting, and the raw authenticity that defined his brief but impactful career.
+
+Downloading is instant and completely free. There are no accounts to create, no watermarks to deal with, and no limits on how many wallpapers you can save. Simply browse the gallery, click on any image to preview it in the lightbox, and hit the download button. The optimized file sizes mean fast downloads even on mobile data, while maintaining the visual quality that these tributes deserve.
+
+Set any of these King Von wallpapers as your lock screen, home screen, or both to keep the legacy alive on your device. The collection is perfect for fans who want to show their appreciation every time they pick up their phone.`,
+  },
   'dark-wallpaper': {
     category: 'wallpapers',
     name: 'Dark Wallpaper',
