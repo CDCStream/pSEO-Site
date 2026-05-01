@@ -129,6 +129,7 @@ const navItems = [
       { label: 'Thank You Meme', href: '/meme-maker/thank-you-thank-you-thank-you-meme/' },
       { label: 'Trump Meme', href: '/meme-maker/trump-meme/' },
       { label: 'Hand on Shoulder Meme', href: '/meme-maker/hand-on-shoulder-meme/' },
+      { label: 'Crying Cat Meme', href: '/meme-maker/crying-cat-meme/' },
     ],
   },
   {
