@@ -132,6 +132,7 @@ const navItems = [
       { label: 'Crying Cat Meme', href: '/meme-maker/crying-cat-meme/' },
       { label: 'Laughing Meme', href: '/meme-maker/laughing-meme/' },
       { label: '41 Meme', href: '/meme-maker/41-meme/' },
+      { label: 'Jon Hamm Dancing Meme', href: '/meme-maker/jon-hamm-dancing-meme/' },
     ],
   },
   {
