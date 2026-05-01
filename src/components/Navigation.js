@@ -131,6 +131,7 @@ const navItems = [
       { label: 'Hand on Shoulder Meme', href: '/meme-maker/hand-on-shoulder-meme/' },
       { label: 'Crying Cat Meme', href: '/meme-maker/crying-cat-meme/' },
       { label: 'Laughing Meme', href: '/meme-maker/laughing-meme/' },
+      { label: '41 Meme', href: '/meme-maker/41-meme/' },
     ],
   },
   {
