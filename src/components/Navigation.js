@@ -212,6 +212,7 @@ const navItems = [
       { label: 'Age Calculator', href: '/calculators/chronological-age-calculator/' },
       { label: 'Cubic Feet Calculator', href: '/calculators/cubic-feet-calculator/' },
       { label: 'Investment Calculator', href: '/calculators/investment-calculator/' },
+      { label: 'Grade Calculator', href: '/calculators/grade-calculator/' },
     ],
   },
   {

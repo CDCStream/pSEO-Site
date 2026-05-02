@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -33,6 +33,14 @@ const calculatorTools = [
     icon: TrendingUp,
     color: 'from-emerald-500 to-teal-400',
     tags: ['Investing', 'Compound Interest', 'Retirement', 'Finance'],
+  },
+  {
+    name: 'Grade Calculator',
+    description: 'Calculate your weighted course grade with percentage or letter grades. Includes final grade calculator.',
+    href: '/calculators/grade-calculator/',
+    icon: BookOpen,
+    color: 'from-green-500 to-emerald-400',
+    tags: ['Education', 'GPA', 'Weighted Average', 'Final Grade'],
   },
 ];
 
