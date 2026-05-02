@@ -216,6 +216,15 @@ const navItems = [
     ],
   },
   {
+    label: 'Converters',
+    href: '/converters/',
+    icon: LetterAIcon,
+    color: 'from-rose-500 to-red-500',
+    items: [
+      { label: 'Chinese to English', href: '/converters/chinese-to-english-translator/' },
+    ],
+  },
+  {
     label: 'Blog',
     href: '/blog/',
     icon: BlogIcon,
