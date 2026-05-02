@@ -2168,6 +2168,38 @@ The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's
 
 Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'alpha-wolf-meme': {
+    category: 'meme-maker',
+    name: 'Alpha Wolf Meme Maker',
+    keyword: 'Alpha Wolf Meme',
+    title: 'Alpha Wolf Meme Maker - Free Meme Generator with Text & Image Upload | MakerSilo',
+    description: 'Create custom Alpha Wolf memes with text and image upload. Click to place text, drag to reposition, upload your own photos, and download as PNG. Free, no watermark.',
+    h1: 'Alpha Wolf Meme Maker',
+    subtitle: 'Add custom text and upload images to create the perfect Alpha Wolf meme — click to place, drag to reposition, customize fonts and colors, download as high-quality PNG for free.',
+    icon: 'image',
+    generatorType: 'alphaWolfMeme',
+    faq: [
+      { q: 'How do I make an Alpha Wolf meme?', a: 'Click anywhere on the template to place text. Type your caption, customize the font, size, color, and stroke. You can also upload images to place on the meme. Drag elements to reposition them, then download your creation as a PNG file.' },
+      { q: 'Can I upload my own images?', a: 'Yes! Click the "Upload Image" button to add your own photos or images to the meme. Uploaded images can be dragged to any position and resized using the slider. Put custom faces, logos, or any image onto the wolf template.' },
+      { q: 'Can I add multiple text boxes?', a: 'Absolutely! Click anywhere on the image to add as many text boxes as you need. Each text box can be independently customized with different fonts, sizes, colors, and stroke settings.' },
+      { q: 'What customization options are available?', a: 'Each text box supports 7 different fonts (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), font size from 12 to 72px, 10 preset colors plus a custom color picker, and stroke (outline) with multiple color options or no stroke.' },
+      { q: 'Is the Alpha Wolf meme maker free?', a: 'Yes, 100% free! No sign-up, no watermarks, no hidden fees. Create as many memes as you want and download them instantly as high-quality PNG files.' },
+      { q: 'What is the Alpha Wolf meme?', a: 'The Alpha Wolf meme features a powerful or intimidating wolf image used to represent dominance, confidence, leadership, or sigma male energy. It is commonly used to make bold statements, motivational quotes, or humorous comparisons between alpha behavior and everyday situations. The format is popular on social media for both ironic and unironic content.' },
+    ],
+    longContent: `The Alpha Wolf meme maker lets you create custom memes using one of the internet's most recognizable templates for expressing dominance, confidence, and pack leader energy. Whether you are making motivational content, ironic humor, or sigma male grindset jokes, our advanced editor gives you complete creative control.
+
+Our meme maker features a powerful click-to-place text system. Simply click anywhere on the wolf template image, and a new text box appears at that exact location. Type your caption, and it renders in real-time directly on the meme. You can add as many text boxes as you need — perfect for creating multi-line quotes, comparing alpha vs beta behavior, or adding context to different parts of the image.
+
+Text customization goes beyond simple captions. Choose from 7 different font families including the classic Impact (the standard meme font), Arial for clean readability, Comic Sans for ironic humor, and several other options. Adjust the font size from small (12px) to large (72px) using the slider. Pick from 10 preset colors or use the custom color picker for any shade. Add a text stroke (outline) for better readability against the wolf background.
+
+The image upload feature adds another dimension to your meme creation. Upload any photo from your device — faces, logos, objects, or any image — and place it directly on the wolf template. Uploaded images can be dragged to any position and resized using the intuitive slider control. Create truly personalized memes by combining the alpha wolf imagery with your own visual content.
+
+The Alpha Wolf meme has deep roots in internet culture. Originally used in motivational and self-improvement communities, the format evolved to encompass both serious and ironic uses. The wolf symbolism of strength, independence, and leadership resonates across different online communities, making it one of the most versatile meme templates available.
+
+The editor works seamlessly on both desktop and mobile devices. Touch gestures are fully supported for phone users. The canvas automatically scales to fit your screen while maintaining high-quality output. Downloads are full-resolution PNGs regardless of your viewing device.
+
+All meme creation happens entirely in your browser with no server uploads, no data collection, and complete privacy. Download instantly with no watermarks, no quality loss, and no limitations on how many memes you create.`,
+  },
   '67-kid-meme': {
     category: 'meme-maker',
     name: '67 Kid Meme Maker',

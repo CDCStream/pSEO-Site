@@ -134,6 +134,7 @@ const navItems = [
       { label: '41 Meme', href: '/meme-maker/41-meme/' },
       { label: 'Jon Hamm Dancing Meme', href: '/meme-maker/jon-hamm-dancing-meme/' },
       { label: '67 Kid Meme', href: '/meme-maker/67-kid-meme/' },
+      { label: 'Alpha Wolf Meme', href: '/meme-maker/alpha-wolf-meme/' },
     ],
   },
   {
