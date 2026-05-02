@@ -2168,6 +2168,38 @@ The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's
 
 Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  '67-kid-meme': {
+    category: 'meme-maker',
+    name: '67 Kid Meme Maker',
+    keyword: '67 Kid Meme',
+    title: '67 Kid Meme Maker - Free Meme Generator with Text & Image Upload | MakerSilo',
+    description: 'Create custom 67 Kid memes with text and image upload. Click to place text, drag to reposition, upload your own photos, and download as PNG. Free, no watermark.',
+    h1: '67 Kid Meme Maker',
+    subtitle: 'Add custom text and upload images to create the perfect 67 Kid meme — click to place, drag to reposition, customize fonts and colors, download as high-quality PNG for free.',
+    icon: 'image',
+    generatorType: 'sixtySevenKidMeme',
+    faq: [
+      { q: 'How do I make a 67 Kid meme?', a: 'Click anywhere on the template to place text. Type your caption, customize the font, size, color, and stroke. You can also upload images to place on the meme. Drag elements to reposition them, then download your creation as a PNG file.' },
+      { q: 'Can I upload my own images?', a: 'Yes! Click the "Upload Image" button to add your own photos or images to the meme. Uploaded images can be dragged to any position and resized using the slider. This lets you put custom faces, objects, or any image onto the template.' },
+      { q: 'Can I add multiple text boxes?', a: 'Absolutely! Click anywhere on the image to add as many text boxes as you need. Each text box can be independently customized with different fonts, sizes, colors, and stroke settings.' },
+      { q: 'What customization options are available for text?', a: 'Each text box supports 7 different fonts (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), font size from 12 to 72px, 10 preset colors plus a custom color picker, and stroke (outline) with multiple color options or no stroke.' },
+      { q: 'Is the 67 Kid meme maker free?', a: 'Yes, 100% free! No sign-up, no watermarks, no hidden fees. Create as many memes as you want and download them instantly as high-quality PNG files.' },
+      { q: 'What is the 67 Kid meme?', a: 'The 67 Kid meme features a humorous image associated with the number 67. It has become a popular template for adding custom captions and creating funny content about various topics. The format is versatile and works for jokes about age, numbers, sports references, and everyday situations.' },
+    ],
+    longContent: `The 67 Kid meme maker lets you create custom memes using one of the internet's most recognizable and versatile meme templates. With our advanced editor, you can add text, upload images, and fully customize every element to create the perfect meme for any occasion.
+
+Our meme maker features a powerful click-to-place text system. Simply click anywhere on the template image, and a new text box appears at that exact location. Type your caption, and it renders in real-time directly on the meme. You can add as many text boxes as you need — there is no limit to creativity. Each text box can be independently dragged to a new position by clicking and holding.
+
+Text customization goes beyond simple captions. Choose from 7 different font families including the classic Impact (the standard meme font), Arial for clean readability, Comic Sans for casual humor, and several other options. Adjust the font size from small (12px) to large (72px) using the slider. Pick from 10 preset colors or use the custom color picker for any shade you can imagine. Add a text stroke (outline) in black, white, red, blue, yellow, or any custom color for better readability against complex backgrounds.
+
+The image upload feature adds another dimension to your meme creation. Upload any photo from your device — faces, objects, logos, or any image — and place it directly on the meme template. Uploaded images can be dragged to any position and resized using the intuitive slider control. This means you can create truly personalized memes by combining the template with your own visual content.
+
+The editor is designed for both desktop and mobile use. Touch gestures are fully supported, so you can create memes on your phone just as easily as on a computer. The canvas automatically scales to fit your screen while maintaining high-quality output. When you download, you get the full-resolution PNG regardless of your screen size.
+
+All meme creation happens entirely in your browser. No images are uploaded to any server, no data is collected, and your creations remain completely private. The download is instant — click the button and your meme saves directly to your device with no delays, no watermarks, and no quality loss.
+
+Whether you are creating memes for group chats, social media posts, Reddit threads, Discord servers, or just to make friends laugh, our 67 Kid meme maker provides all the tools you need. The combination of flexible text placement, full style customization, and image upload capability means you can create unique, original content every time.`,
+  },
   'jon-hamm-dancing-meme': {
     category: 'meme-maker',
     name: 'Jon Hamm Dancing Meme',
