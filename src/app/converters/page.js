@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Languages, ArrowRight } from 'lucide-react';
+import { Languages, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const converterTools = [
   {
@@ -9,6 +9,14 @@ const converterTools = [
     icon: Languages,
     color: 'from-red-500 to-rose-400',
     tags: ['Chinese', 'English', 'AI Translation', 'Mandarin'],
+  },
+  {
+    name: 'Plagiarism Checker',
+    description: 'Free hybrid plagiarism checker that combines AI detection with live web search. Find AI-generated content and matching web sources.',
+    href: '/converters/plagiarism-checker/',
+    icon: ShieldCheck,
+    color: 'from-rose-500 to-pink-400',
+    tags: ['AI Detection', 'Originality', 'Web Search', 'Free'],
   },
 ];
 

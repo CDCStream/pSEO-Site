@@ -103,6 +103,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/converters/plagiarism-checker/`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/`,
       lastModified: new Date(),
       changeFrequency: 'daily',
