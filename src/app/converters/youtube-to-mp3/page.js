@@ -7,12 +7,12 @@ import ToolSchema from '@/components/SEO/ToolSchema';
 import { Link2, Settings, Download, CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Free YouTube to MP3 Converter - Download Audio & Video | MakerSilo',
-  description: 'Free YouTube to MP3 and MP4 converter. Paste any YouTube link and download high-quality audio (128/192/320 kbps) or video (360p-1080p). Fast, no sign-up, no software install.',
-  keywords: 'youtube to mp3, youtube to mp3 converter, youtube mp3 download, free youtube downloader, youtube to mp4, yt to mp3, youtube audio download, mp3 from youtube, youtube mp3 320kbps, online youtube converter',
+  title: 'Free YouTube to MP3 Converter - 320kbps Audio Download | MakerSilo',
+  description: 'Free YouTube to MP3 converter. Convert any YouTube video to high-quality MP3 audio in 128, 192, or 320 kbps. Fast, no sign-up, no software install. Works on mobile and desktop.',
+  keywords: 'youtube to mp3, convert youtube to mp3, youtube to mp3 converter, youtube mp3 download, free youtube to mp3, yt to mp3, youtube audio download, mp3 from youtube, youtube mp3 320kbps, online youtube to mp3 converter, youtube music to mp3',
   openGraph: {
-    title: 'Free YouTube to MP3 Converter - Download Audio & Video',
-    description: 'Convert YouTube videos to MP3 audio or MP4 video. Free, fast, no software install.',
+    title: 'Free YouTube to MP3 Converter - 320kbps Audio Download',
+    description: 'Convert YouTube videos to high-quality MP3 audio. Free, fast, no software install.',
     type: 'website',
   },
 };
@@ -53,6 +53,8 @@ A note on legality: downloading YouTube videos exists in a gray area that depend
 
 Compared to installing desktop applications like yt-dlp, 4K Video Downloader, or JDownloader, the browser-based approach has trade-offs. Desktop apps are faster for batch downloads (entire playlists or channels), more reliable when YouTube changes its protocols, and capable of downloading 4K and 8K video that exceeds typical browser limits. The browser-based tool — this one — wins on convenience: no installation, no updates, works on phones and Chromebooks, and good enough for the casual user who occasionally needs to grab a single MP3 or video. Choose the right tool for your use case.
 
+If you specifically need the video file (with picture, not just audio), use our companion [YouTube to MP4 Converter](/converters/youtube-to-mp4/) instead — it produces full MP4 files in HD and Full HD. If you only need the audio for music, podcasts, or audiobooks, you are in the right place: MP3 files are 5-10x smaller than MP4 video and play in every audio app on every device.
+
 For most users, the workflow is simple: copy a YouTube link, paste it here, hit Convert, hit Download, done. Less than a minute from URL to file on your device. No sign-up, no payment, no software install. That is the whole point.`;
 
 export default function YouTubeToMp3Page() {
@@ -86,7 +88,7 @@ export default function YouTubeToMp3Page() {
               Free YouTube to MP3 Converter
             </h1>
             <p className="text-gray-400 text-lg mb-8 max-w-2xl">
-              Convert YouTube videos to MP3 audio or MP4 video in seconds. Free, fast, and works on every device — no sign-up, no software install required.
+              Convert any YouTube video to high-quality MP3 audio in seconds. Choose 128, 192, or 320 kbps. Free, fast, no sign-up — works on every device.
             </p>
 
             <AdSlot position="above-tool" />

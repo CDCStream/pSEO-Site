@@ -224,6 +224,7 @@ const navItems = [
       { label: 'Chinese to English', href: '/converters/chinese-to-english-translator/' },
       { label: 'Plagiarism Checker', href: '/converters/plagiarism-checker/' },
       { label: 'YouTube to MP3', href: '/converters/youtube-to-mp3/' },
+      { label: 'YouTube to MP4', href: '/converters/youtube-to-mp4/' },
     ],
   },
   {

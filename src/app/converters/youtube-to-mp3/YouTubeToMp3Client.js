@@ -27,9 +27,9 @@ const MP4_QUALITIES = [
   { value: '1080', label: '1080p', sub: 'Full HD' },
 ];
 
-export default function YouTubeToMp3Client() {
+export default function YouTubeToMp3Client({ defaultFormat = 'mp3' } = {}) {
   const [url, setUrl] = useState('');
-  const [format, setFormat] = useState('mp3');
+  const [format, setFormat] = useState(defaultFormat === 'mp4' ? 'mp4' : 'mp3');
   const [mp3Quality, setMp3Quality] = useState('320');
   const [mp4Quality, setMp4Quality] = useState('1080');
   const [loading, setLoading] = useState(false);
