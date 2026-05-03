@@ -213,6 +213,7 @@ const navItems = [
       { label: 'Cubic Feet Calculator', href: '/calculators/cubic-feet-calculator/' },
       { label: 'Investment Calculator', href: '/calculators/investment-calculator/' },
       { label: 'Grade Calculator', href: '/calculators/grade-calculator/' },
+      { label: 'P-value Calculator', href: '/calculators/p-value-calculator/' },
     ],
   },
   {

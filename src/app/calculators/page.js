@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -41,6 +41,14 @@ const calculatorTools = [
     icon: BookOpen,
     color: 'from-green-500 to-emerald-400',
     tags: ['Education', 'GPA', 'Weighted Average', 'Final Grade'],
+  },
+  {
+    name: 'P-value Calculator',
+    description: 'Calculate p-values from Z-score, t-score, chi-square, or F-statistic. Supports one and two-tailed tests with custom significance level.',
+    href: '/calculators/p-value-calculator/',
+    icon: Sigma,
+    color: 'from-cyan-500 to-blue-400',
+    tags: ['Statistics', 'Hypothesis Testing', 'Z-test', 'T-test'],
   },
 ];
 
