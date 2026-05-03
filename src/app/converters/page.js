@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Languages, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Languages, ArrowRight, ShieldCheck, Music } from 'lucide-react';
 
 const converterTools = [
   {
@@ -17,6 +17,14 @@ const converterTools = [
     icon: ShieldCheck,
     color: 'from-rose-500 to-pink-400',
     tags: ['AI Detection', 'Originality', 'Web Search', 'Free'],
+  },
+  {
+    name: 'YouTube to MP3 Converter',
+    description: 'Convert YouTube videos to MP3 audio or MP4 video. Free, fast, no sign-up required. Supports 128/192/320 kbps audio and up to 1080p video.',
+    href: '/converters/youtube-to-mp3/',
+    icon: Music,
+    color: 'from-red-500 to-orange-400',
+    tags: ['YouTube', 'MP3', 'MP4', 'Free Downloader'],
   },
 ];
 
