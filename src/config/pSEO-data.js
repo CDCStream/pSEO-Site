@@ -3867,6 +3867,38 @@ What makes cat wallpapers particularly versatile is how well they complement any
 
 All 32 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Each wallpaper has been carefully compressed to maintain stunning visual quality while ensuring fast loading and minimal storage usage. Browse our collection and find the perfect cat wallpaper to add some feline charm to your phone screen.`,
   },
+  'gojo-wallpaper': {
+    category: 'wallpapers',
+    name: 'Gojo Wallpaper',
+    keyword: 'Gojo Wallpaper',
+    title: 'Free Gojo Satoru Wallpapers HD - Jujutsu Kaisen Phone Backgrounds',
+    description: 'Download 28 free Gojo Satoru wallpapers in HD. Iconic blindfold, Six Eyes, Infinity, and Limitless scenes from Jujutsu Kaisen. No watermark, instant download for iPhone & Android.',
+    h1: 'Free Gojo Satoru HD Wallpapers',
+    subtitle: 'Browse and download 28 stunning Gojo Satoru wallpapers \u2014 Six Eyes, Infinity, Hollow Purple, and the iconic blindfold from Jujutsu Kaisen for your phone.',
+    icon: 'image',
+    generatorType: 'gojoGallery',
+    faq: [
+      { q: 'How many Gojo wallpapers are available?', a: 'Our collection features 28 high-quality Gojo Satoru wallpapers. Each image showcases the strongest sorcerer in different iconic moments \u2014 from his blindfolded calm and unleashed Six Eyes glare to dramatic Infinity, Hollow Purple, and Domain Expansion scenes from the Jujutsu Kaisen anime.' },
+      { q: 'Are these Gojo wallpapers free to download?', a: 'Yes, completely free. No sign-up, no email, no watermarks, no daily limits. Click the download button on any wallpaper to save it instantly to your device in full HD quality.' },
+      { q: 'What resolution are the Gojo wallpapers?', a: 'All wallpapers are optimized at 1080px width in PNG format with portrait 9:16 aspect ratio \u2014 perfect for modern smartphones (iPhone 14/15/16 Pro, Samsung Galaxy S24, Google Pixel) while keeping file sizes small for fast loading and minimal storage use.' },
+      { q: 'Can I use these wallpapers on iPhone, Android, and iPad?', a: 'Yes. The portrait orientation works flawlessly on iPhones, Android phones, iPads, and tablets. They look great as both lock screens and home screens. For desktop use, the high-resolution PNG format scales nicely on most monitors.' },
+      { q: 'What Gojo moments and forms are included?', a: 'The collection covers Gojo\u2019s most iconic looks: classic blindfolded teacher mode, Six Eyes activated with piercing blue eyes, Infinity technique in action, Hollow Purple combination, Unlimited Void Domain Expansion, casual Tokyo Jujutsu High moments, and dramatic battle scenes against Sukuna and Jogo. Both anime screenshots and high-quality fan art renditions are featured.' },
+      { q: 'Why is Gojo Satoru so popular as a wallpaper subject?', a: 'Gojo Satoru is widely considered one of the most charismatic and visually striking anime characters of the modern era. His iconic white hair, those mesmerizing electric-blue Six Eyes, and his effortless confidence make every frame screen-worthy. Beyond looks, Gojo embodies a perfect balance of overwhelming power, playful arrogance, and genuine care for his students \u2014 making him an aspirational figure for fans worldwide.' },
+    ],
+    longContent: `Gojo Satoru, the strongest jujutsu sorcerer in modern history, has become one of the most iconic anime characters of the 2020s. From his playful introductions in season 1 to the world-shaking battles of the Shibuya Incident and Culling Game arcs, Gojo has captivated millions of fans worldwide. Our collection of 28 Gojo Satoru wallpapers celebrates the strongest sorcerer with high-quality artwork capturing his most memorable looks, techniques, and moments from Jujutsu Kaisen.
+
+The visual appeal of Gojo as a wallpaper subject is unmatched in modern shonen anime. His signature white hair, the iconic black blindfold, and those piercing electric-blue Six Eyes create an instantly recognizable silhouette that pops on any screen. When the blindfold comes off, the contrast of those glowing eyes against his calm expression delivers some of the most striking single-frame compositions in all of anime. Whether he is teasing his students, casually dismissing curses, or unleashing his full power against Sukuna, every Gojo moment feels wallpaper-worthy.
+
+Our collection spans the full range of Gojo\u2019s most memorable visual moments. You will find the classic blindfolded teacher mode that defines his everyday appearance, dramatic close-ups of his Six Eyes glowing with cursed energy, action shots of Infinity warping space around incoming attacks, the haunting purple void of his Hollow Purple cursed technique, intense battle frames from his fight against Jogo and the Disaster Curses, the moment Unlimited Void Domain Expansion engulfs an opponent, and quieter character moments showcasing his mentor relationship with Yuji, Megumi, and Nobara. Both official anime screenshots in MAPPA\u2019s signature style and high-quality fan-art interpretations are represented.
+
+Jujutsu Kaisen has had a massive cultural impact since its 2020 anime debut, and Gojo Satoru sits at the absolute center of that phenomenon. He has become a meme, a fashion inspiration (the white hair and round-frame sunglasses look has spread well beyond anime communities), a cosplay favorite, and one of the most discussed characters across social media. The Shibuya Incident arc only amplified his cultural moment, with manga readers and anime-only fans alike eagerly anticipating every adaptation milestone. Having a Gojo wallpaper on your phone places you firmly in the conversation around modern anime\u2019s biggest character.
+
+What sets Gojo apart from other anime protagonists and antagonists is his unique combination of overwhelming power and disarming personality. He is functionally invincible thanks to his Six Eyes and Infinity techniques, which would normally make a character boring \u2014 but Gojo flips this expectation on its head with his playful demeanor, dry humor, and genuine investment in raising the next generation of sorcerers. He breaks the typical strongest-character-is-stoic mold and instead delivers charm in every scene. This combination of god-tier power with childlike enthusiasm makes him endlessly compelling to look at and listen to.
+
+The Jujutsu Kaisen franchise continues to grow with new manga chapters, anime seasons, films like Jujutsu Kaisen 0, and an ever-expanding global fanbase. Each new release reignites interest in Gojo\u2019s character arc, his backstory, his abilities, and his fate. Whether you are a day-one fan who watched the original anime drop in 2020 or just discovering Jujutsu Kaisen now, these wallpapers offer something special for every Gojo enthusiast \u2014 from understated stylish portraits perfect for minimalist home screens to bombastic action scenes that announce your fandom loudly.
+
+All 28 wallpapers are available as high-resolution PNG files optimized at 1080px width in 9:16 portrait orientation \u2014 the ideal format for modern smartphones. Each file has been carefully compressed to maintain stunning visual quality while ensuring fast download times and minimal storage usage on your device. Download is instant and 100% free \u2014 no accounts, no emails, no watermarks, no premium tier. Browse the full collection and find the perfect Gojo Satoru wallpaper to crown your phone screen with the strongest sorcerer himself.`,
+  },
   'goku-wallpaper': {
     category: 'wallpapers',
     name: 'Goku Wallpaper',
