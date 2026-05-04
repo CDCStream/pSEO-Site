@@ -184,6 +184,7 @@ const navItems = [
     color: 'from-pink-500 to-rose-500',
     items: [
       { label: 'Random Animal', href: '/randomizers/random-animal-generator/' },
+      { label: 'Pictionary Words', href: '/randomizers/pictionary-word-generator/' },
       { label: 'Random Pokémon', href: '/randomizers/random-pokemon-generator/' },
       { label: 'Random Emoji', href: '/randomizers/random-emoji-generator/' },
       { label: 'Random Question', href: '/randomizers/random-question-generator/' },

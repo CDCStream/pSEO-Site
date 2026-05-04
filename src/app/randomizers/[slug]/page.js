@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { randomizersConfig, siteConfig } from '@/config/pSEO-data';
 import RandomizerClient from './RandomizerClient';
+import PictionaryWordClient from './PictionaryWordClient';
 
 // Generate static params for all randomizer pages
 export async function generateStaticParams() {
@@ -75,7 +76,9 @@ export default async function RandomizerPage({ params }) {
 
           {/* Tool Interface */}
           <div className="max-w-4xl mx-auto mb-12">
-            <RandomizerClient config={config} slug={slug} />
+            {config.generatorType === 'pictionary'
+              ? <PictionaryWordClient config={config} slug={slug} />
+              : <RandomizerClient config={config} slug={slug} />}
           </div>
 
           {/* FAQ Section */}
