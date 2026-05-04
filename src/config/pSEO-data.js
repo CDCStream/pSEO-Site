@@ -2168,6 +2168,38 @@ The rise of the "Turning Point USA" parody memes further cemented Charlie Kirk's
 
 Create your Charlie Kirk meme in seconds, download it as a high-quality PNG, and share it across social media, group chats, Reddit, Discord, and beyond. No accounts, no watermarks, completely free.`,
   },
+  'chicken-stars-meme': {
+    category: 'meme-maker',
+    name: 'Chicken Stars Meme Maker',
+    keyword: 'Chicken Stars Meme',
+    title: 'Chicken Stars Meme Maker - Free Meme Generator with Text & Image Upload | MakerSilo',
+    description: 'Create custom Chicken Stars memes with text and image upload. Click to place text, drag to reposition, upload your own photos, and download as PNG. Free, no watermark.',
+    h1: 'Chicken Stars Meme Maker',
+    subtitle: 'Add custom text and upload images to create the perfect Chicken Stars meme — click to place, drag to reposition, customize fonts and colors, download as high-quality PNG for free.',
+    icon: 'image',
+    generatorType: 'chickenStarsMeme',
+    faq: [
+      { q: 'How do I make a Chicken Stars meme?', a: 'Click anywhere on the chicken stars template to place text. Type your caption, customize the font, size, color, and stroke. You can also upload your own images to drop into the meme. Drag elements to reposition them, then download your finished meme as a PNG file.' },
+      { q: 'Can I upload my own images onto the chicken template?', a: 'Yes! Click the "Upload Image" button to add your own photos, faces, logos, or any image to the meme. Uploaded images can be dragged to any position and resized using the slider — perfect for placing your friends\u2019 faces inside the chicken stars scene.' },
+      { q: 'Can I add multiple text boxes?', a: 'Absolutely. Click anywhere on the image to add as many text boxes as you need. Each one can be independently customized with different fonts, sizes, colors, and stroke settings, and dragged anywhere on the canvas.' },
+      { q: 'What customization options are available for text?', a: 'Each text box supports 7 different fonts (Impact, Arial, Comic Sans, Courier, Georgia, Times, Verdana), font size from 12 to 72px, 10 preset colors plus a custom color picker, and stroke (outline) with multiple color options or no stroke at all.' },
+      { q: 'Is the Chicken Stars meme maker free?', a: 'Yes, 100% free. No sign-up, no watermarks, no hidden fees, no daily limits. Create as many Chicken Stars memes as you want and download them instantly as high-quality PNG files.' },
+      { q: 'What is the Chicken Stars meme?', a: 'The Chicken Stars meme is a humorous template featuring chickens that has become popular for adding custom captions and silly comparisons. It works for jokes about food, cereal mascots, mornings, friend groups, and absurd situations \u2014 the chicken imagery makes any caption funnier.' },
+    ],
+    longContent: `The Chicken Stars meme maker lets you create custom memes using one of the internet\u2019s funniest poultry-themed templates. With our advanced editor you can add text, upload your own images, and fully customize every element to craft the perfect Chicken Stars meme for group chats, social media, or just personal entertainment.
+
+Our meme maker uses a powerful click-to-place text system. Simply click anywhere on the chicken template image and a new text box appears at that exact location. Type your caption and it renders in real-time directly on the meme. There is no limit on how many text boxes you can add \u2014 great for callout-style memes, multi-character dialogue, or layered jokes. Each text box can be dragged to a new position by clicking and holding it.
+
+Text customization goes far beyond basic captions. Choose from 7 different font families: classic Impact (the standard meme font), Arial for clean readability, Comic Sans for unhinged ironic humor, Courier for typewriter vibes, Georgia and Times for serif elegance, and Verdana for modern sans-serif. Adjust font size from a tiny 12px up to a chunky 72px using the slider. Pick from 10 preset colors or use the full custom color picker for any shade you can imagine. Add a stroke (outline) in black, white, red, blue, yellow, or any custom color so your text pops against the chicken stars background.
+
+The image upload feature is what really sets this maker apart. Upload any photo from your device \u2014 your friends\u2019 faces, your pet, a logo, a product, anything \u2014 and drop it directly onto the meme template. Uploaded images can be dragged anywhere and resized with the intuitive slider. This means you can place yourself, your roommate, your boss, or your dog right alongside the Chicken Stars for maximum comedic impact.
+
+The Chicken Stars meme has carved out a beloved niche in meme culture thanks to its absurd, instantly-recognizable visual. The format thrives in food jokes, breakfast humor, animal-related callouts, friend-group dynamics (\u201ctag yourself\u201d posts), and surreal humor that benefits from a randomly chicken-themed backdrop. The template is endlessly versatile because the chickens are funny without needing context \u2014 your caption can take the meme in any direction.
+
+The editor is built for both desktop and mobile. Touch gestures are fully supported, so you can place, drag, and edit text boxes on your phone just as easily as with a mouse. The canvas automatically scales to fit your screen while maintaining full-resolution output. When you hit download, you get the original-quality PNG no matter what size screen you used to make it.
+
+Everything happens entirely in your browser. No images are uploaded to any server, no data is collected, no account is required. Your creations are completely private and downloads are instant \u2014 no watermarks, no quality loss, no rate limits. Whether you are flooding a group chat with chicken-themed reactions or curating a meme account, the Chicken Stars meme maker gives you everything you need to create unique, original content every time.`,
+  },
   'alpha-wolf-meme': {
     category: 'meme-maker',
     name: 'Alpha Wolf Meme Maker',
