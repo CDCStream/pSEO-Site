@@ -25,6 +25,7 @@ import EddieMunsonGalleryClient from './EddieMunsonGalleryClient';
 import GokuGalleryClient from './GokuGalleryClient';
 import GojoGalleryClient from './GojoGalleryClient';
 import KatseyeGalleryClient from './KatseyeGalleryClient';
+import ChristianGalleryClient from './ChristianGalleryClient';
 import CatGalleryClient from './CatGalleryClient';
 import DarkGalleryClient from './DarkGalleryClient';
 import KingVonGalleryClient from './KingVonGalleryClient';
@@ -230,6 +231,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the KATSEYE wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  christianGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 inspiring Christian HD wallpapers \u2014 Bible verses, cross designs, and faith art.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the Christian wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
   catGallery: [
     { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 adorable cat HD wallpapers.' },
     { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
@@ -349,6 +356,8 @@ export default async function WallpaperPage({ params }) {
               ? <GojoGalleryClient />
               : config.generatorType === 'katseyeGallery'
               ? <KatseyeGalleryClient />
+              : config.generatorType === 'christianGallery'
+              ? <ChristianGalleryClient />
               : config.generatorType === 'catGallery'
               ? <CatGalleryClient />
               : config.generatorType === 'darkGallery'
