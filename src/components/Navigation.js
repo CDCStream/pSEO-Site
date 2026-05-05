@@ -133,6 +133,7 @@ const navItems = [
       { label: 'Laughing Meme', href: '/meme-maker/laughing-meme/' },
       { label: '41 Meme', href: '/meme-maker/41-meme/' },
       { label: 'Jon Hamm Dancing Meme', href: '/meme-maker/jon-hamm-dancing-meme/' },
+      { label: 'Knee Surgery Meme', href: '/meme-maker/knee-surgery-meme/' },
       { label: '67 Kid Meme', href: '/meme-maker/67-kid-meme/' },
       { label: 'Alpha Wolf Meme', href: '/meme-maker/alpha-wolf-meme/' },
       { label: 'Chicken Stars Meme', href: '/meme-maker/chicken-stars-meme/' },
