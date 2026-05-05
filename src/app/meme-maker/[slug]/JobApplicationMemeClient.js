@@ -24,34 +24,7 @@ const PRESET_COLORS = ['#ffffff', '#000000', '#ff0000', '#00ff00', '#0000ff', '#
 let nextId = 1;
 
 function wrapText(ctx, text, maxWidth) {
-  const words = text.split(' ');
-  const lines = [];
-  let line = '';
-  for (const word of words) {
-    if (ctx.measureText(word).width > maxWidth) {
-      if (line) { lines.push(line); line = ''; }
-      let chunk = '';
-      for (const ch of word) {
-        if (ctx.measureText(chunk + ch).width > maxWidth && chunk) {
-          lines.push(chunk);
-          chunk = ch;
-        } else {
-          chunk += ch;
-        }
-      }
-      line = chunk;
-    } else {
-      const test = line ? `${line} ${word}` : word;
-      if (ctx.measureText(test).width > maxWidth && line) {
-        lines.push(line);
-        line = word;
-      } else {
-        line = test;
-      }
-    }
-  }
-  if (line) lines.push(line);
-  return lines;
+  return String(text || '').split('\n');
 }
 
 export default function JobApplicationMemeClient() {
@@ -286,12 +259,12 @@ export default function JobApplicationMemeClient() {
               >
                 <div className="flex items-center gap-2 p-2">
                   <span className="text-xs text-gray-500 font-mono w-5 shrink-0">{i + 1}</span>
-                  <input
-                    type="text"
+                  <textarea
                     value={box.text}
                     onChange={(e) => updateText(box.id, e.target.value)}
-                    placeholder="Type your text..."
-                    className="flex-1 px-2 py-1.5 rounded bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-orange-500/50 placeholder-gray-600"
+                    placeholder="Type your text... (Enter for new line)"
+                    rows={2}
+                    className="flex-1 px-2 py-1.5 rounded bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-orange-500/50 placeholder-gray-600 resize-none leading-snug"
                   />
                   <button
                     onClick={(e) => { e.stopPropagation(); removeBox(box.id); }}
