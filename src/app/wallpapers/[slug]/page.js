@@ -29,6 +29,7 @@ import ChristianGalleryClient from './ChristianGalleryClient';
 import SukunaGalleryClient from './SukunaGalleryClient';
 import CoquetteGalleryClient from './CoquetteGalleryClient';
 import CoolGalleryClient from './CoolGalleryClient';
+import BaddieGalleryClient from './BaddieGalleryClient';
 import CatGalleryClient from './CatGalleryClient';
 import DarkGalleryClient from './DarkGalleryClient';
 import KingVonGalleryClient from './KingVonGalleryClient';
@@ -258,6 +259,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the cool wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  baddieGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 fierce baddie HD wallpapers \u2014 hot pink, Y2K glam, dark feminine, butterflies, and luxury vibes.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the download button to save the baddie wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
   catGallery: [
     { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 adorable cat HD wallpapers.' },
     { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
@@ -385,6 +392,8 @@ export default async function WallpaperPage({ params }) {
               ? <CoquetteGalleryClient />
               : config.generatorType === 'coolGallery'
               ? <CoolGalleryClient />
+              : config.generatorType === 'baddieGallery'
+              ? <BaddieGalleryClient />
               : config.generatorType === 'catGallery'
               ? <CatGalleryClient />
               : config.generatorType === 'darkGallery'

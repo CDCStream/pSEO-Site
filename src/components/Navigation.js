@@ -178,6 +178,7 @@ const navItems = [
       { label: 'Sukuna Wallpaper', href: '/wallpapers/sukuna-wallpaper/' },
       { label: 'Coquette Wallpaper', href: '/wallpapers/coquette-wallpaper/' },
       { label: 'Cool Wallpaper', href: '/wallpapers/cool-wallpaper/' },
+      { label: 'Baddie Wallpaper', href: '/wallpapers/baddie-wallpaper/' },
       { label: 'Cat Wallpaper', href: '/wallpapers/cat-wallpaper/' },
       { label: 'Dark Wallpaper', href: '/wallpapers/dark-wallpaper/' },
       { label: 'King Von Wallpaper', href: '/wallpapers/king-von-wallpaper/' },
