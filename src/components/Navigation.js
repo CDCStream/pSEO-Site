@@ -177,6 +177,7 @@ const navItems = [
       { label: 'Christian Wallpaper', href: '/wallpapers/christian-wallpaper/' },
       { label: 'Sukuna Wallpaper', href: '/wallpapers/sukuna-wallpaper/' },
       { label: 'Coquette Wallpaper', href: '/wallpapers/coquette-wallpaper/' },
+      { label: 'Cool Wallpaper', href: '/wallpapers/cool-wallpaper/' },
       { label: 'Cat Wallpaper', href: '/wallpapers/cat-wallpaper/' },
       { label: 'Dark Wallpaper', href: '/wallpapers/dark-wallpaper/' },
       { label: 'King Von Wallpaper', href: '/wallpapers/king-von-wallpaper/' },
