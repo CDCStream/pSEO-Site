@@ -1,6 +1,17 @@
 import Link from 'next/link';
-import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight } from 'lucide-react';
+import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight, Quote } from 'lucide-react';
 import { toolsConfig } from '@/config/pSEO-data';
+
+const featuredTools = [
+  {
+    href: '/tools/ama-citation-generator/',
+    name: 'AMA Citation Generator',
+    subtitle: 'Auto-cite by URL, DOI, PubMed PMID, or ISBN. Build a full AMA 11 reference list with in-text superscripts. Export to Word, BibTeX, or plain text.',
+    Icon: Quote,
+    accent: 'from-blue-500 to-cyan-500',
+    badge: 'AMA 11',
+  },
+];
 
 const iconMap = {
   'type': Type,
@@ -47,6 +58,35 @@ export default function ToolsPage() {
               Perfect for social media, gaming, and creative projects.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Tools (custom-built tools that aren't part of toolsConfig) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {featuredTools.map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/[0.07]"
+            >
+              <div className="flex items-start gap-4">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${t.accent} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                  <t.Icon className="w-7 h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h2 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">{t.name}</h2>
+                    {t.badge && (
+                      <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30">{t.badge}</span>
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-400">{t.subtitle}</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all shrink-0" />
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

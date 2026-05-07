@@ -103,6 +103,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/tools/ama-citation-generator/`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/converters/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
