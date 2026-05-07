@@ -10,6 +10,7 @@ import YouTubeCommentPickerClient from './YouTubeCommentPickerClient';
 import GraffitiLettersClient from './GraffitiLettersClient';
 import CalligraphyAlphabetClient from './CalligraphyAlphabetClient';
 import FreakyFontClient from './FreakyFontClient';
+import BlockLettersClient from './BlockLettersClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -112,6 +113,8 @@ export default async function ToolPage({ params }) {
               <CalligraphyAlphabetClient config={config} />
             ) : config.generatorType === 'freakyFont' ? (
               <FreakyFontClient config={config} />
+            ) : config.generatorType === 'blockLetters' ? (
+              <BlockLettersClient config={config} />
             ) : (
               <TextToolClient config={config} slug={slug} />
             )}

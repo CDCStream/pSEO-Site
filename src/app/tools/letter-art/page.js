@@ -17,6 +17,10 @@ const SkullIcon = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/></svg>
 );
 
+const BlockIcon = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+);
+
 const letterArtTools = [
   {
     title: 'Bubble Letter Art Generator',
@@ -45,6 +49,13 @@ const letterArtTools = [
     href: '/tools/freaky-font/',
     tags: ['10 Fonts', 'Creepy Styles', 'Color Picker', 'Transparent PNG'],
     icon: 'skull',
+  },
+  {
+    title: 'Block Letters Generator',
+    description: 'Create bold block letter art with 40 unique block fonts — college, varsity, baseball, pixel, grunge and more. Customize colors and outline, download as transparent PNG.',
+    href: '/tools/block-letters/',
+    tags: ['40 Fonts', 'College / Varsity', 'Color Picker', 'Transparent PNG'],
+    icon: 'block',
   },
 ];
 
@@ -95,8 +106,8 @@ export default function LetterArtPage() {
               className="group relative bg-white/5 rounded-2xl border border-white/10 p-6 hover:border-pink-500/30 transition-all duration-300 hover:bg-white/[0.07]"
             >
               <div className="flex items-start gap-4">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : tool.icon === 'calligraphy' ? 'from-purple-500 to-pink-500' : tool.icon === 'skull' ? 'from-violet-500 to-purple-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : tool.icon === 'calligraphy' ? <PenToolIcon className="w-8 h-8 text-white" /> : tool.icon === 'skull' ? <SkullIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tool.icon === 'spray' ? 'from-orange-500 to-red-500' : tool.icon === 'calligraphy' ? 'from-purple-500 to-pink-500' : tool.icon === 'skull' ? 'from-violet-500 to-purple-500' : tool.icon === 'block' ? 'from-emerald-500 to-teal-500' : 'from-pink-500 to-rose-500'} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                  {tool.icon === 'spray' ? <SprayCanIcon className="w-8 h-8 text-white" /> : tool.icon === 'calligraphy' ? <PenToolIcon className="w-8 h-8 text-white" /> : tool.icon === 'skull' ? <SkullIcon className="w-8 h-8 text-white" /> : tool.icon === 'block' ? <BlockIcon className="w-8 h-8 text-white" /> : <LetterAIcon className="w-8 h-8 text-white" />}
                 </div>
 
                 <div className="flex-1 min-w-0">
@@ -121,7 +132,7 @@ export default function LetterArtPage() {
 
         {/* Coming Soon placeholder */}
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">More letter art styles coming soon — 3D Letters, Block Letters, and more.</p>
+          <p className="text-gray-500 text-sm">More letter art styles coming soon — 3D Letters, Neon Letters, and more.</p>
         </div>
       </section>
     </div>

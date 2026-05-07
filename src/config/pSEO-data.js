@@ -833,6 +833,78 @@ The font preview section displays the complete alphabet in your selected freaky 
 
 All fonts load on-demand for fast page performance. Select a font and it loads instantly — no waiting for all 10 fonts to download before you can start creating. The real-time canvas preview updates as you type and adjust settings, giving you immediate visual feedback on your design.`,
   },
+  'block-letters': {
+    category: 'tools',
+    name: 'Block Letters Generator',
+    keyword: 'Block Letters',
+    title: 'Block Letters Generator - 40 Free Block Fonts (Bold, College, Pixel)',
+    description:
+      'Free block letters generator with 40 unique block fonts. Type any text, customize fill, outline and size, and download your block letter art as a transparent PNG. No sign-up.',
+    h1: 'Free Block Letters Generator',
+    subtitle:
+      'Type your text, pick from 40 unique block fonts — college, varsity, baseball, pixel, grunge and more — customize colors and outline, then download as a transparent PNG.',
+    icon: 'letter',
+    generatorType: 'blockLetters',
+    faq: [
+      {
+        q: 'What are block letters?',
+        a:
+          'Block letters are bold, upright, evenly-spaced characters with thick uniform strokes and clearly defined edges. They were historically used for posters, signage, sports jerseys, and book titles because they read clearly from a distance and look strong and authoritative. Today they are popular for graphic design, social media graphics, classroom displays, gaming overlays, and printable bubble-letter / coloring-page templates.',
+      },
+      {
+        q: 'How many block letter fonts are available?',
+        a:
+          'Our generator includes 40 hand-picked block letter fonts in a wide range of sub-styles: classic college / varsity (College Block 2, Freshman, High School USA, Headliner No. 45, Awesome America), baseball / sports (Baseball Club, Baseball Club Solid, Jersey M54, Superstar M54), grunge / distressed (Head Capital Bold Grunge, Sketch Chalk, Wood Carving), pixel / 8-bit (Gome Pixel, Digital Fingerprint), gothic and outlined (Black Goth, Glory of Justice, Ravenda), and chunky display (Chunky Puffly, Reason Loves, Farenheight).',
+      },
+      {
+        q: 'Can I customize the color and outline of my block letters?',
+        a:
+          'Yes. You can pick any fill color and any outline color independently with the color pickers, and adjust the outline width from 0 to 16 pixels with a slider. Setting outline width to 0 gives a clean, single-color block letter; increasing it produces bold double-color letters perfect for posters, jersey numbers and sports graphics.',
+      },
+      {
+        q: 'What format is the download and is it transparent?',
+        a:
+          'Every download is a high-resolution PNG with a fully transparent background, so you can drop your block letters straight onto any background — solid color, photo, gradient, or video — in design tools like Canva, Photoshop, Figma, Capcut, or Google Slides. There are no watermarks and the resolution scales with your chosen font size.',
+      },
+      {
+        q: 'Is the block letter generator free?',
+        a:
+          'Yes, completely free. No account, no email, no watermarks, no usage limits. You can generate and download as many block letter graphics as you like for both personal and commercial projects (the bundled fonts are licensed for free personal and commercial use as included by their authors).',
+      },
+      {
+        q: 'Can I adjust the font size and use multiple lines?',
+        a:
+          'Yes. The size slider goes from 24px up to 240px, which is large enough for poster-sized output. You can press Enter inside the text box to create multiple lines, and each line is rendered with proper spacing in the selected block font. The canvas auto-resizes to fit your text, so very long phrases are never cut off.',
+      },
+      {
+        q: 'How are block letters different from bubble letters and graffiti letters?',
+        a:
+          'Block letters are bold, geometric and upright — every stroke has roughly the same thickness and the letters have square or slightly rounded corners. Bubble letters are rounded, inflated and three-dimensional like soap bubbles. Graffiti letters are stylized and overlapping, often with drips, arrows or 3D effects from spray-paint culture. Block letters look formal and authoritative; bubble letters look playful and friendly; graffiti letters look rebellious and street-style. Use this generator for the block style; use the matching MakerSilo bubble letters and graffiti letters generators for the others.',
+      },
+      {
+        q: 'Can I use this generator as a printable block letter template?',
+        a:
+          'Yes. Type the letters or word you need, choose any block font, set the size and outline, and download the transparent PNG. Drop it into a Word, Google Docs or Canva document at the size you want, then print it. Many teachers and parents use the outlined-only setup (transparent fill + thick outline) as a coloring page or DIY block-letter craft template.',
+      },
+    ],
+    longContent: `The Block Letters Generator transforms ordinary text into bold, professional-looking block letter art using 40 unique block fonts. Whether you are designing a poster, building a YouTube thumbnail, lettering a varsity jacket mock-up, creating school project headings, or printing block letter templates for a craft session, this free online tool gives you instant, high-quality results — no design software, no sign-up, no watermark.
+
+Block lettering is one of the most universally recognizable styles of typography. The thick, uniform strokes and upright forms make every character read clearly from a distance, which is why block letters dominate sports jerseys, school logos, military insignia, action movie posters, comic book sound effects, and traditional sign-painting. The style has roots in 19th-century slab-serif and grotesque type designs cut for newspaper headlines and circus posters, where readability at large sizes was critical. Modern digital block fonts inherit that legacy but expand into countless sub-genres — varsity, baseball, college, military stencil, blackletter, pixel, grunge, chrome, and more.
+
+This generator was built with breadth in mind. Our 40-font library covers the full spectrum of block lettering styles. The college / varsity group (College Block 2, Freshman, Awesome America, Headliner No. 45, High School USA, Bruce Forever, American Captain Patrius) gives you the classic American collegiate look perfect for sports team graphics, school spirit posters, and Greek-letter-style designs. The baseball / athletic group (Baseball Club, Baseball Club Solid, Jersey M54, Superstar M54, Pine Quest, Star Shield 2) leans into the outlined, slab-shadow aesthetic of jerseys, baseball caps and stadium signage. The grunge group (Head Capital Bold Grunge, Sketch Chalk, Wood Carving, Spiky Chain, Scribble Box) adds rough, distressed textures perfect for rock band posters, horror designs and rebel-style branding. The pixel group (Gome Pixel, Digital Fingerprint, Ro Twimch, Unitblock) recreates the 8-bit / 16-bit retro game look. The gothic / decorative group (Black Goth, Glory of Justice, Ravenda) introduces ornate medieval and dark-fantasy block forms. And the chunky display group (Chunky Puffly, Reason Loves, Farenheight, Sangyo, Wolfalcon) provides bold, attention-grabbing letterforms for everything from logo concepts to poster headlines.
+
+Customization is total. Pick any fill color from the picker for the inside of every letter, then any outline color and an outline width from 0 to 16 pixels. Setting the outline to 0 gives you clean, solid block letters in a single color. Setting it to 4–8 pixels gives you the classic two-color jersey or comic book look — bold inner color with a contrasting border that makes the text pop on any background. Setting it very high (12–16 pixels) produces a stencil-style heavy outline that is great for graffiti hybrids and stamp-effect graphics. Every change updates the live canvas preview instantly, so you can iterate visually until the design feels exactly right.
+
+Every download is a transparent PNG. That means there is no white box behind the letters — they sit cleanly on whatever background you drop them onto. Designers love this for layering block headlines over photographs, gradients, or pattern backgrounds. Content creators use it for thumbnails where the block-letter title overlaps a face, a screenshot or a product shot. Teachers and parents print transparent outlined block letters at large sizes for classroom decorations, bulletin boards, birthday party banners, and DIY craft projects (the kids fill in the colors). Streamers and gamers use them in OBS overlays, Discord server branding, and esports team graphics where bold readability is non-negotiable.
+
+The font preview panel below the controls shows the complete A–Z, a–z and 0–9 set in your currently selected font, so you can see exactly how every letter is shaped — including punctuation, ampersands, and numbers — before you commit to a design. This is especially useful for picking the right font for sports jerseys (where numbers matter), monograms (where uppercase letterforms matter), or pixel designs (where lowercase availability varies between fonts).
+
+Block letters are surprisingly versatile in real-world use. Sports teams use them for jersey numbers, banners and stadium signage. YouTubers use them for thumbnail titles where every pixel of attention counts. Graphic designers use them for logo wordmarks where authority and readability are required. Marketers use them for poster headlines and product packaging. Educators use them for classroom decorations, achievement certificates and worksheet headings. Wedding stationery designers use elegant block fonts for save-the-dates and table numbers. Streetwear brands lean on grunge block fonts for skate decks, t-shirts and zines. Printable block letter templates are also a staple of children's crafts, scrapbooking, and bullet journaling.
+
+Performance matters when serving 40 fonts. Our generator loads each font on demand using the browser's native FontFace API — when you select a font, only that file is fetched, so the page itself stays fast and you don't pay the bandwidth cost of fonts you never use. Once a font is loaded it stays in memory for the rest of your session, so flipping back and forth to compare options is instant. The canvas preview is rendered with the standard HTML5 canvas API, which means the output PNG is pixel-perfect, anti-aliased and ready for both screen and high-DPI print use.
+
+To get started, type your word or phrase in the Your Text box, pick a font from the searchable list on the left (you can type "baseball", "college", "pixel" or "grunge" into the search box to filter), choose your fill and outline colors, set the size, and click Download PNG. That's it — your block letter graphic is ready to drop into any project. If you want to compare styles quickly, just click through several fonts in a row; the live preview keeps the same text and colors so you can see at a glance which font fits your design best.`,
+  },
 };
 
 // Symbols configuration
