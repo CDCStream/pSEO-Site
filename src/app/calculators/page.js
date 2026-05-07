@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -49,6 +49,14 @@ const calculatorTools = [
     icon: Sigma,
     color: 'from-cyan-500 to-blue-400',
     tags: ['Statistics', 'Hypothesis Testing', 'Z-test', 'T-test'],
+  },
+  {
+    name: 'Limit Calculator',
+    description: 'Solve limits step-by-step: at a point, at infinity, and one-sided. Includes symbolic answer, numerical verification table, and an interactive graph.',
+    href: '/calculators/limit-calculator/',
+    icon: InfinityIcon,
+    color: 'from-blue-500 to-cyan-400',
+    tags: ['Calculus', 'L\u2019Hôpital', 'Step-by-Step', 'Graph'],
   },
 ];
 

@@ -226,6 +226,7 @@ const navItems = [
       { label: 'Investment Calculator', href: '/calculators/investment-calculator/' },
       { label: 'Grade Calculator', href: '/calculators/grade-calculator/' },
       { label: 'P-value Calculator', href: '/calculators/p-value-calculator/' },
+      { label: 'Limit Calculator', href: '/calculators/limit-calculator/' },
     ],
   },
   {
