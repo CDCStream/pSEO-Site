@@ -143,6 +143,7 @@ export default function YouTubeToWavClient() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url }),
+        cache: 'no-store',
       });
 
       if (!res.ok) {
@@ -164,7 +165,9 @@ export default function YouTubeToWavClient() {
       // hit Vercel's ~30 s HTTP-proxy timeout, regardless of clip length.
       const meta = await res.json().catch(() => null);
       if (!meta || !meta.link || !meta.sig) {
-        throw new Error('Server returned an unusable response.');
+        throw new Error(
+          'Server returned an unusable response. Your browser may be running an older cached version of this page — please hard-refresh (Ctrl+F5) and try again.'
+        );
       }
       const decodedTitle = meta.title || 'YouTube Audio';
       const durationHeader = meta.duration || null;
