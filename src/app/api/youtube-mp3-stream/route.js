@@ -249,16 +249,25 @@ export async function POST(request) {
   }
 
   // Stage 2: MP4 host adaptive audio fallback.
+  //
+  // Crucial difference from Stage 1: googlevideo.com (YouTube's own media CDN
+  // that the MP4 host returns) responds with permissive CORS headers, so we
+  // hand the link back to the browser as JSON and let it fetch directly. If
+  // we proxied that body through this Vercel function the way we do for the
+  // MP3 host, large files would chew through the function's timeout budget
+  // (Vercel's HTTP-level proxy hangs up at ~30 s) and produce 504 errors.
   if (!upstream) {
     try {
-      const tmpInfo = await getAudioFromMp4Host(videoId, apiKey);
-      const candidate = await tryStream(tmpInfo.link);
-      if (candidate) {
-        upstream = candidate;
-        info = tmpInfo;
-      } else if (!firstError) {
-        firstError = new Error('Adaptive audio CDN miss');
-      }
+      const mp4Info = await getAudioFromMp4Host(videoId, apiKey);
+      return Response.json({
+        direct: true,
+        link: mp4Info.link,
+        title: mp4Info.title,
+        duration: mp4Info.duration,
+        contentType: mp4Info.contentType,
+        via: mp4Info.via,
+        videoId,
+      });
     } catch (err) {
       if (!firstError) firstError = err;
     }
@@ -285,8 +294,10 @@ export async function POST(request) {
     );
   }
 
-  // Stream the audio bytes back to the browser as same-origin so that
-  // AudioContext.decodeAudioData() works without a CORS preflight.
+  // MP3 host succeeded — stream the bytes back to the browser as same-origin
+  // audio/mpeg so that AudioContext.decodeAudioData() works without a CORS
+  // preflight. youtube-mp36's CDNs do NOT send permissive CORS headers, so
+  // proxying is the only option for that source.
   const headers = new Headers();
   const upstreamCt = upstream.headers.get('content-type');
   headers.set('Content-Type', upstreamCt || info.contentType || 'audio/mpeg');

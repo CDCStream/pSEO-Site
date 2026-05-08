@@ -158,34 +158,81 @@ export default function YouTubeToWavClient() {
         return;
       }
 
-      const titleHeader = res.headers.get('X-Video-Title');
-      const durationHeader = res.headers.get('X-Video-Duration');
-      const decodedTitle = titleHeader ? decodeURIComponent(titleHeader) : null;
+      // Two response shapes possible:
+      //   - audio/* binary body: stream-proxy mode (MP3 host, CORS-restricted)
+      //   - application/json: direct-fetch mode (MP4 host fallback whose
+      //     googlevideo.com CDN allows CORS, so we fetch it ourselves to
+      //     avoid Vercel's proxy timeout chewing through the function budget)
+      const responseCt = (res.headers.get('Content-Type') || '').toLowerCase();
+      let mp3Buffer;
+      let decodedTitle = null;
+      let durationHeader = null;
 
-      // 2) Read the MP3 bytes with progress tracking.
-      setStage('fetching');
-      setProgress(0);
-      const totalLen = parseInt(res.headers.get('Content-Length') || '0', 10);
-      const reader = res.body.getReader();
-      const chunks = [];
-      let received = 0;
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        chunks.push(value);
-        received += value.length;
-        if (totalLen > 0) setProgress(received / totalLen);
-      }
+      if (responseCt.includes('application/json')) {
+        // 2a) Direct-fetch path. The server hands us the audio link plus
+        //     metadata; we fetch the bytes from googlevideo.com ourselves.
+        const directInfo = await res.json().catch(() => null);
+        if (!directInfo?.direct || !directInfo.link) {
+          throw new Error('Server returned an unusable response.');
+        }
+        decodedTitle = directInfo.title || null;
+        durationHeader = directInfo.duration || null;
 
-      // Concatenate chunks into a single contiguous ArrayBuffer that we can
-      // hand straight to decodeAudioData() — avoids a redundant copy via
-      // .slice(0) that the previous version did.
-      const mp3Buffer = new ArrayBuffer(received);
-      const mp3Bytes = new Uint8Array(mp3Buffer);
-      let offset = 0;
-      for (const c of chunks) {
-        mp3Bytes.set(c, offset);
-        offset += c.length;
+        setStage('fetching');
+        setProgress(0);
+        let directRes;
+        try {
+          directRes = await fetch(directInfo.link);
+        } catch (netErr) {
+          throw new Error('Could not reach the audio CDN. ' + (netErr?.message || 'Network error.'));
+        }
+        if (!directRes.ok || !directRes.body) {
+          throw new Error(`Audio CDN returned HTTP ${directRes.status}. Please retry.`);
+        }
+        const directLen = parseInt(directRes.headers.get('Content-Length') || '0', 10);
+        const reader = directRes.body.getReader();
+        const chunks = [];
+        let received = 0;
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          received += value.length;
+          if (directLen > 0) setProgress(received / directLen);
+        }
+        mp3Buffer = new ArrayBuffer(received);
+        const bytes = new Uint8Array(mp3Buffer);
+        let offset = 0;
+        for (const c of chunks) {
+          bytes.set(c, offset);
+          offset += c.length;
+        }
+      } else {
+        // 2b) Stream-proxy path (MP3 host). Body is audio/* directly.
+        const titleHeader = res.headers.get('X-Video-Title');
+        durationHeader = res.headers.get('X-Video-Duration');
+        decodedTitle = titleHeader ? decodeURIComponent(titleHeader) : null;
+
+        setStage('fetching');
+        setProgress(0);
+        const totalLen = parseInt(res.headers.get('Content-Length') || '0', 10);
+        const reader = res.body.getReader();
+        const chunks = [];
+        let received = 0;
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          received += value.length;
+          if (totalLen > 0) setProgress(received / totalLen);
+        }
+        mp3Buffer = new ArrayBuffer(received);
+        const bytes = new Uint8Array(mp3Buffer);
+        let offset = 0;
+        for (const c of chunks) {
+          bytes.set(c, offset);
+          offset += c.length;
+        }
       }
 
       // 3) Decode the MP3 into a PCM AudioBuffer.
