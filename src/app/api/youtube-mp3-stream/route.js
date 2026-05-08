@@ -2,19 +2,26 @@
  * Server-side helper for the YouTube → WAV converter.
  *
  * Why this exists:
- *   The /api/youtube-mp3 endpoint returns a *third-party* CDN URL pointing
- *   at the converted MP3 (typically *.amazonaws.com or rapidapi-managed
- *   CDN). For the client-side AudioContext-based WAV transcoding we need
- *   to pull those bytes into the page; doing that with a direct fetch from
- *   the browser fails against most of the CDNs because they don't send
- *   permissive `Access-Control-Allow-Origin` headers. Bouncing the bytes
- *   through this same-origin route sidesteps the CORS check cleanly.
+ *   Both upstream sources we use (youtube-mp36 RapidAPI host and the
+ *   ytstream MP4 host's audio-only adaptive streams) are CORS-restricted,
+ *   so the browser can't fetch them directly. We act as a same-origin
+ *   range proxy.
  *
- * Flow:
- *   POST { url } → 1) extracts videoId 2) calls the same RapidAPI MP3 host
- *   the existing route uses 3) streams the MP3 body straight back to the
- *   client with `audio/mpeg` and a few `X-…` metadata headers (title,
- *   duration, channel) the WAV client can read for display.
+ * Why range chunking:
+ *   Streaming the full body through a single Vercel function invocation
+ *   was hitting Vercel's ~30-second HTTP-proxy timeout for longer clips
+ *   (504 Gateway Timeout). Splitting the file into 1-2 MB ranges keeps
+ *   each function call short.
+ *
+ * Two endpoints, one route:
+ *   POST { url }     → JSON metadata { link, sig, size, contentType,
+ *                      title, duration, via, videoId }. Picks MP3 host
+ *                      first, falls through to MP4 audio if the MP3
+ *                      CDN serves 404. HMAC-signs the link.
+ *   GET ?link=…&sig=…&start=N&end=M
+ *                    → Verifies the HMAC, fetches the requested byte
+ *                      range from upstream, streams it back. The sig
+ *                      check makes sure this isn't an open proxy.
  */
 
 const MP3_HOST = process.env.RAPIDAPI_MP3_HOST || 'youtube-mp36.p.rapidapi.com';
@@ -95,13 +102,6 @@ async function getMp3DownloadUrl(videoId, apiKey) {
   throw e;
 }
 
-// Strip non-ASCII characters before stuffing into a HTTP header (some upstream
-// titles contain emoji/CJK characters which break header serialization).
-function safeHeader(str) {
-  if (!str) return '';
-  return String(str).replace(/[^\x20-\x7E]/g, '').slice(0, 200);
-}
-
 /**
  * Fallback path: when the MP3 host's CDN serves a 404 for the converted file,
  * pull the audio out of the MP4 extraction host instead. YouTube's adaptive
@@ -175,9 +175,105 @@ async function tryStream(link) {
   return null;
 }
 
+// HMAC-sign the upstream link so the GET range-proxy below is not an open
+// proxy. Only links our own POST handler produced can be replayed back to us.
+async function signLink(link) {
+  const secret = process.env.LINK_SIGNING_SECRET || process.env.RAPIDAPI_KEY || 'dev-fallback-secret';
+  const enc = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    'raw',
+    enc.encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+  const buf = await crypto.subtle.sign('HMAC', key, enc.encode(link));
+  return Array.from(new Uint8Array(buf))
+    .slice(0, 8)
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+// Try to read the file size of an upstream URL without downloading the body.
+// googlevideo.com URLs include a `clen=` parameter that reports the exact
+// length, which is by far the cheapest way to learn it. For other CDNs we
+// fall back to a HEAD request, then to a Range "0-0" probe (some CDNs reject
+// HEAD).
+async function probeSize(link) {
+  try {
+    const u = new URL(link);
+    const clen = u.searchParams.get('clen');
+    if (clen && /^\d+$/.test(clen)) return parseInt(clen, 10);
+  } catch { /* ignore */ }
+  try {
+    const headRes = await fetch(link, { method: 'HEAD' });
+    if (headRes.ok) {
+      const cl = headRes.headers.get('content-length');
+      if (cl && /^\d+$/.test(cl)) return parseInt(cl, 10);
+    }
+  } catch { /* ignore */ }
+  try {
+    const probeRes = await fetch(link, { headers: { Range: 'bytes=0-0' } });
+    if (probeRes.ok || probeRes.status === 206) {
+      const cr = probeRes.headers.get('content-range');
+      const m = cr && cr.match(/\/(\d+)\s*$/);
+      try { await probeRes.body?.cancel(); } catch { /* ignore */ }
+      if (m) return parseInt(m[1], 10);
+    }
+  } catch { /* ignore */ }
+  return 0;
+}
+
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
+
+// Range proxy. The client splits the audio file into 1-2 MB chunks and asks
+// us for each one in turn. This keeps any single function invocation well
+// under Vercel's 30-second HTTP-proxy timeout, regardless of the upstream
+// file size.
+export async function GET(request) {
+  const url = new URL(request.url);
+  const link = url.searchParams.get('link');
+  const sig = url.searchParams.get('sig');
+  const startStr = url.searchParams.get('start');
+  const endStr = url.searchParams.get('end');
+
+  if (!link || !sig) {
+    return Response.json({ error: 'Missing link or signature.' }, { status: 400 });
+  }
+  const expectedSig = await signLink(link);
+  if (sig !== expectedSig) {
+    return Response.json({ error: 'Bad signature.' }, { status: 403 });
+  }
+
+  const reqHeaders = {};
+  if (startStr || endStr) {
+    reqHeaders.Range = `bytes=${startStr || 0}-${endStr || ''}`;
+  }
+
+  let upstream;
+  try {
+    upstream = await fetch(link, { headers: reqHeaders });
+  } catch (err) {
+    return Response.json({ error: `CDN unreachable: ${err.message}` }, { status: 502 });
+  }
+  if (!upstream.ok && upstream.status !== 206) {
+    try { await upstream.body?.cancel(); } catch { /* ignore */ }
+    return Response.json({ error: `CDN returned ${upstream.status}` }, { status: 502 });
+  }
+
+  const respHeaders = new Headers();
+  respHeaders.set('Content-Type', upstream.headers.get('content-type') || 'application/octet-stream');
+  const cl = upstream.headers.get('content-length');
+  if (cl) respHeaders.set('Content-Length', cl);
+  const cr = upstream.headers.get('content-range');
+  if (cr) respHeaders.set('Content-Range', cr);
+  respHeaders.set('Cache-Control', 'private, no-store');
+  respHeaders.set('Access-Control-Expose-Headers', 'Content-Range, Content-Length');
+
+  return new Response(upstream.body, { status: upstream.status, headers: respHeaders });
+}
 
 export async function POST(request) {
   let body;
@@ -209,71 +305,49 @@ export async function POST(request) {
   }
 
   // ---------------------------------------------------------------------
-  // Two-stage fallback. We want to deliver audio bytes whenever possible:
-  //   1. youtube-mp36 (MP3 host) — fastest, lowest bandwidth, normal path
-  //   2. ytstream MP4 host's audio-only adaptive stream (m4a / AAC) — saves
-  //      us when youtube-mp36 hands back a stale/dead CDN link, common on
-  //      YouTube Music videos accessed via "&list=RD…" radio links
-  // Retrying the SAME RapidAPI MP3 endpoint after a CDN miss is pointless
-  // because the upstream serves the same cached link for several minutes,
-  // so we skip straight to the MP4 fallback.
+  // Two-stage fallback. The POST handler ALWAYS returns JSON metadata; the
+  // client then pulls the audio bytes through the GET range-proxy in small
+  // chunks. We never stream the full body from this function, which means
+  // we can never trip Vercel's ~30 s HTTP-proxy timeout (the cause of the
+  // 504s users were seeing on long YouTube Music tracks).
+  //
+  //   1. youtube-mp36 (MP3 host) — fast, small files
+  //   2. ytstream MP4 host's audio-only adaptive stream (m4a / AAC) —
+  //      saves us when youtube-mp36 hands back a stale/dead CDN link
   // ---------------------------------------------------------------------
 
   let info = null;
-  let upstream = null;
   let firstError = null;
   let mp3Worked = false;
 
-  // Stage 1: MP3 host.
+  // Stage 1: MP3 host. We still call tryStream() here because youtube-mp36
+  // happily returns "ready" status for links whose CDN returns 404; this
+  // way we detect the CDN miss server-side and fall through to MP4 before
+  // bothering the client with a chunked download that would just 404.
   try {
     const tmpInfo = await getMp3DownloadUrl(videoId, apiKey);
     mp3Worked = true;
-    upstream = await tryStream(tmpInfo.link);
-    if (upstream) {
+    const probe = await tryStream(tmpInfo.link);
+    if (probe) {
+      try { await probe.body?.cancel(); } catch { /* ignore */ }
       info = { ...tmpInfo, contentType: 'audio/mpeg', via: 'mp3-host' };
     } else {
-      // RapidAPI happily returned a "ready" link but the CDN serves 404.
-      // Record this so we can surface it if the fallback also fails.
       firstError = new Error('MP3 CDN miss');
     }
   } catch (err) {
     firstError = err;
-    const status = err?.status || 502;
-    const isProcessing = status === 202 || /preparing|processing/i.test(err?.message || '');
-    // "Still processing" means the MP3 host is mid-encode. The MP4 host
-    // doesn't share that state, but it usually has the audio ready
-    // immediately, so it's still worth trying as a fallback.
-    if (isProcessing) {
-      // Don't return early — fall through to the MP4 host attempt.
-    }
   }
 
   // Stage 2: MP4 host adaptive audio fallback.
-  //
-  // Crucial difference from Stage 1: googlevideo.com (YouTube's own media CDN
-  // that the MP4 host returns) responds with permissive CORS headers, so we
-  // hand the link back to the browser as JSON and let it fetch directly. If
-  // we proxied that body through this Vercel function the way we do for the
-  // MP3 host, large files would chew through the function's timeout budget
-  // (Vercel's HTTP-level proxy hangs up at ~30 s) and produce 504 errors.
-  if (!upstream) {
+  if (!info) {
     try {
-      const mp4Info = await getAudioFromMp4Host(videoId, apiKey);
-      return Response.json({
-        direct: true,
-        link: mp4Info.link,
-        title: mp4Info.title,
-        duration: mp4Info.duration,
-        contentType: mp4Info.contentType,
-        via: mp4Info.via,
-        videoId,
-      });
+      info = await getAudioFromMp4Host(videoId, apiKey);
     } catch (err) {
       if (!firstError) firstError = err;
     }
   }
 
-  if (!upstream) {
+  if (!info) {
     const err = firstError || new Error('All upstream audio sources returned errors.');
     const status = err.status || 502;
     const isBlocked = status === 429 || status === 403 || /block|rate|limit/i.test(err.message || '');
@@ -294,22 +368,20 @@ export async function POST(request) {
     );
   }
 
-  // MP3 host succeeded — stream the bytes back to the browser as same-origin
-  // audio/mpeg so that AudioContext.decodeAudioData() works without a CORS
-  // preflight. youtube-mp36's CDNs do NOT send permissive CORS headers, so
-  // proxying is the only option for that source.
-  const headers = new Headers();
-  const upstreamCt = upstream.headers.get('content-type');
-  headers.set('Content-Type', upstreamCt || info.contentType || 'audio/mpeg');
-  const len = upstream.headers.get('content-length');
-  if (len) headers.set('Content-Length', len);
-  headers.set('Cache-Control', 'private, no-store');
-  headers.set('X-Video-Id', videoId);
-  if (info.title) headers.set('X-Video-Title', encodeURIComponent(info.title));
-  if (info.duration) headers.set('X-Video-Duration', safeHeader(String(info.duration)));
-  if (info.via) headers.set('X-Audio-Source', info.via);
-  // Allow the client to read these custom headers
-  headers.set('Access-Control-Expose-Headers', 'X-Video-Id, X-Video-Title, X-Video-Duration, X-Audio-Source');
+  // Probe the file size so the client knows how to chunk. If we can't learn
+  // it (size = 0), the client falls back to a single un-ranged GET which is
+  // fine for small files.
+  const size = await probeSize(info.link);
+  const sig = await signLink(info.link);
 
-  return new Response(upstream.body, { status: 200, headers });
+  return Response.json({
+    link: info.link,
+    sig,
+    size,
+    contentType: info.contentType || 'audio/mpeg',
+    title: info.title || 'YouTube Audio',
+    duration: info.duration || null,
+    via: info.via || 'mp3-host',
+    videoId,
+  });
 }

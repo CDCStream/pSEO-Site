@@ -158,47 +158,53 @@ export default function YouTubeToWavClient() {
         return;
       }
 
-      // Two response shapes possible:
-      //   - audio/* binary body: stream-proxy mode (MP3 host, CORS-restricted)
-      //   - application/json: direct-fetch mode (MP4 host fallback whose
-      //     googlevideo.com CDN allows CORS, so we fetch it ourselves to
-      //     avoid Vercel's proxy timeout chewing through the function budget)
-      const responseCt = (res.headers.get('Content-Type') || '').toLowerCase();
+      // The POST handler returns JSON metadata; the actual audio bytes come
+      // from a separate range-proxy GET endpoint. We download the file in
+      // 1.5 MB chunks so no single function invocation runs long enough to
+      // hit Vercel's ~30 s HTTP-proxy timeout, regardless of clip length.
+      const meta = await res.json().catch(() => null);
+      if (!meta || !meta.link || !meta.sig) {
+        throw new Error('Server returned an unusable response.');
+      }
+      const decodedTitle = meta.title || 'YouTube Audio';
+      const durationHeader = meta.duration || null;
+
+      setStage('fetching');
+      setProgress(0);
+
       let mp3Buffer;
-      let decodedTitle = null;
-      let durationHeader = null;
+      const total = Number.isFinite(meta.size) && meta.size > 0 ? meta.size : 0;
+      const CHUNK = 1_500_000; // 1.5 MB per range request
 
-      if (responseCt.includes('application/json')) {
-        // 2a) Direct-fetch path. The server hands us the audio link plus
-        //     metadata; we fetch the bytes from googlevideo.com ourselves.
-        const directInfo = await res.json().catch(() => null);
-        if (!directInfo?.direct || !directInfo.link) {
-          throw new Error('Server returned an unusable response.');
-        }
-        decodedTitle = directInfo.title || null;
-        durationHeader = directInfo.duration || null;
-
-        setStage('fetching');
-        setProgress(0);
-        let directRes;
-        try {
-          directRes = await fetch(directInfo.link);
-        } catch (netErr) {
-          throw new Error('Could not reach the audio CDN. ' + (netErr?.message || 'Network error.'));
-        }
-        if (!directRes.ok || !directRes.body) {
-          throw new Error(`Audio CDN returned HTTP ${directRes.status}. Please retry.`);
-        }
-        const directLen = parseInt(directRes.headers.get('Content-Length') || '0', 10);
-        const reader = directRes.body.getReader();
+      if (total > 0) {
         const chunks = [];
         let received = 0;
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          chunks.push(value);
-          received += value.length;
-          if (directLen > 0) setProgress(received / directLen);
+        for (let start = 0; start < total; start += CHUNK) {
+          const end = Math.min(start + CHUNK - 1, total - 1);
+          const params = new URLSearchParams({
+            link: meta.link,
+            sig: meta.sig,
+            start: String(start),
+            end: String(end),
+          });
+          let chunkRes;
+          try {
+            chunkRes = await fetch(`/api/youtube-mp3-stream?${params}`);
+          } catch (netErr) {
+            throw new Error(`Network error while downloading audio chunk: ${netErr?.message || 'unknown'}`);
+          }
+          if (!chunkRes.ok && chunkRes.status !== 206) {
+            let errMsg = `Chunk request failed at byte ${start} (HTTP ${chunkRes.status}).`;
+            try {
+              const errJson = await chunkRes.json();
+              if (errJson?.error) errMsg = errJson.error;
+            } catch { /* not JSON */ }
+            throw new Error(errMsg);
+          }
+          const chunkBuf = await chunkRes.arrayBuffer();
+          chunks.push(new Uint8Array(chunkBuf));
+          received += chunkBuf.byteLength;
+          setProgress(received / total);
         }
         mp3Buffer = new ArrayBuffer(received);
         const bytes = new Uint8Array(mp3Buffer);
@@ -208,15 +214,13 @@ export default function YouTubeToWavClient() {
           offset += c.length;
         }
       } else {
-        // 2b) Stream-proxy path (MP3 host). Body is audio/* directly.
-        const titleHeader = res.headers.get('X-Video-Title');
-        durationHeader = res.headers.get('X-Video-Duration');
-        decodedTitle = titleHeader ? decodeURIComponent(titleHeader) : null;
-
-        setStage('fetching');
-        setProgress(0);
-        const totalLen = parseInt(res.headers.get('Content-Length') || '0', 10);
-        const reader = res.body.getReader();
+        // Size unknown — single un-ranged GET. Works fine for small clips.
+        const params = new URLSearchParams({ link: meta.link, sig: meta.sig });
+        const streamRes = await fetch(`/api/youtube-mp3-stream?${params}`);
+        if (!streamRes.ok || !streamRes.body) {
+          throw new Error(`Stream fetch failed (HTTP ${streamRes.status}).`);
+        }
+        const reader = streamRes.body.getReader();
         const chunks = [];
         let received = 0;
         while (true) {
@@ -224,7 +228,6 @@ export default function YouTubeToWavClient() {
           if (done) break;
           chunks.push(value);
           received += value.length;
-          if (totalLen > 0) setProgress(received / totalLen);
         }
         mp3Buffer = new ArrayBuffer(received);
         const bytes = new Uint8Array(mp3Buffer);
