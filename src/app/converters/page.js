@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Languages, ArrowRight, ShieldCheck, Music, Film } from 'lucide-react';
+import { Languages, ArrowRight, ShieldCheck, Music, Film, Image as ImageIcon } from 'lucide-react';
 
 const converterTools = [
   {
@@ -33,6 +33,14 @@ const converterTools = [
     icon: Film,
     color: 'from-orange-500 to-red-400',
     tags: ['YouTube', 'MP4', 'Video', '1080p HD'],
+  },
+  {
+    name: 'HEIC to JPG Converter',
+    description: 'Convert iPhone HEIC / HEIF photos to JPG. Batch supported, quality slider, ZIP download. 100% client-side \u2014 no upload, no signup.',
+    href: '/converters/heic-to-jpg/',
+    icon: ImageIcon,
+    color: 'from-rose-500 to-fuchsia-400',
+    tags: ['HEIC', 'JPG', 'iPhone', 'Private'],
   },
 ];
 
