@@ -25,7 +25,14 @@
  */
 
 const MP3_HOST = process.env.RAPIDAPI_MP3_HOST || 'youtube-mp36.p.rapidapi.com';
-const MP3_ALT_HOST = process.env.RAPIDAPI_MP3_ALT_HOST || 'youtube-mp3-download1.p.rapidapi.com';
+// Optional secondary MP3 source. Set to one of the RapidAPI YouTube-MP3
+// services to enable tier-2 fallback (skipped silently when unset).
+// Recommended hosts (subscribe on RapidAPI before setting):
+//   - youtube-mp310.p.rapidapi.com           (elisbushaj2)
+//   - youtube-to-mp315.p.rapidapi.com        (marcocollatina)
+//   - youtube-mp3-download3.p.rapidapi.com   (api-verse)
+//   - youtube-to-mp34.p.rapidapi.com         (manpreet_firewall)
+const MP3_ALT_HOST = process.env.RAPIDAPI_MP3_ALT_HOST || '';
 const MP4_HOST = process.env.RAPIDAPI_MP4_HOST || 'ytstream-download-youtube-videos.p.rapidapi.com';
 
 // Send these headers to YouTube's CDN. Without a sane User-Agent and
@@ -122,9 +129,15 @@ async function getMp3DownloadUrl(videoId, apiKey) {
  * skip this source silently and continue to tier 3.
  */
 async function getMp3FromAltHost(videoId, apiKey) {
-  // The /dl?id= shape is used by youtube-mp3-download1, t-one-yt-mp3-download,
-  // ytmp3-yt2mate, and several other RapidAPI MP3 services, so this same
-  // function works as a drop-in for whatever the user is subscribed to.
+  if (!MP3_ALT_HOST) {
+    const e = new Error('Alternate MP3 host not configured.');
+    e.skip = true;
+    throw e;
+  }
+  // The /dl?id= shape is shared by most RapidAPI YouTube-MP3 services
+  // (youtube-mp310, youtube-to-mp315, youtube-mp3-download3, youtube-to-mp34,
+  // t-one-yt-mp3-download, ytmp3-yt2mate, ...) so this same function works
+  // as a drop-in regardless of which one the user subscribed to.
   const res = await fetch(`https://${MP3_ALT_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
     method: 'GET',
     headers: { 'X-RapidAPI-Key': apiKey, 'X-RapidAPI-Host': MP3_ALT_HOST },
