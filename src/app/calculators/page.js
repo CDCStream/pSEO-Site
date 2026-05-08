@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -25,6 +25,14 @@ const calculatorTools = [
     icon: Box,
     color: 'from-orange-500 to-amber-400',
     tags: ['Volume', 'Construction', 'Shipping', 'Unit Conversion'],
+  },
+  {
+    name: 'Pythagorean Theorem Calculator',
+    description: 'Solve a² + b² = c² for any side of a right triangle. Includes step-by-step working, area, perimeter, and both acute angles.',
+    href: '/calculators/pythagorean-theorem-calculator/',
+    icon: Triangle,
+    color: 'from-cyan-500 to-blue-400',
+    tags: ['Geometry', 'Right Triangle', 'Step-by-Step', 'Hypotenuse'],
   },
   {
     name: 'Investment Calculator',
