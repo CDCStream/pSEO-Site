@@ -4406,6 +4406,70 @@ The emotional connection people feel with Labubu is what drives the demand for L
 
 All 25 wallpapers are available as high-resolution PNG files optimized for modern devices. The download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect Labubu wallpaper to add cuteness and character to your screen.`,
   },
+  'peppa-pig-house-wallpaper': {
+    category: 'wallpapers',
+    name: 'Peppa Pig House Wallpaper',
+    keyword: 'Peppa Pig House Wallpaper',
+    title: 'Free Peppa Pig House Wallpapers HD - 28 Cute Red House Phone Backgrounds',
+    description: 'Download 28 free Peppa Pig house wallpapers in HD. Cute phone backgrounds featuring the iconic red house on the hill. No watermark, instant download.',
+    h1: 'Free Peppa Pig House HD Wallpapers',
+    subtitle: 'Browse and download 28 charming Peppa Pig house wallpapers — the iconic red house on top of the green hill, plus interior scenes from Peppa\u2019s family home. Perfect for kids\u2019 phones, tablets, and lock screens.',
+    icon: 'heart',
+    generatorType: 'peppaPigHouseGallery',
+    faq: [
+      {
+        q: 'How many Peppa Pig house wallpapers are available?',
+        a: 'Our collection features 28 high-quality Peppa Pig house wallpapers. The set covers the famous red house on the green hill from many different angles and seasons, the cosy interiors (Peppa\u2019s pink bedroom, the family kitchen, Daddy Pig\u2019s office), and night-time and storybook-style versions of the house. Each image is in 9:16 portrait so it fits phone lock screens and home screens without cropping.',
+      },
+      {
+        q: 'Are the Peppa Pig house wallpapers free to download?',
+        a: 'Yes — completely free. No sign-up, no email, no credit card, and no watermarks. Tap any wallpaper to open the full-size preview, then hit the pink Download HD button to save the PNG straight to your phone or computer. The collection is 100% free for personal use.',
+      },
+      {
+        q: 'What colour is Peppa Pig\u2019s house?',
+        a: 'Peppa Pig\u2019s house is bright red with a darker red roof and a yellow front door framed by a small porch. It sits on top of a single rounded green hill against a clear blue sky, with three matching small windows and one round attic window. The signature red-on-green palette is one of the most recognisable houses in children\u2019s television and is exactly what every wallpaper in this collection captures.',
+      },
+      {
+        q: 'Where is Peppa Pig\u2019s house?',
+        a: 'In the show, the Pig family\u2019s house sits on top of a tall, perfectly rounded green hill on the outskirts of the fictional town. The hill is so tall that you can see it from almost anywhere in the show — Granny and Grandpa Pig\u2019s house, Miss Rabbit\u2019s shop, the playgroup, and Mr Bull\u2019s roadworks all reference the hill in the distance. That instantly recognisable red-house-on-the-hill silhouette is what makes the location iconic.',
+      },
+      {
+        q: 'What rooms are inside Peppa Pig\u2019s house?',
+        a: 'The house has a kitchen with a round dining table where the family eats together, a comfy living room with the famous yellow sofa, Daddy Pig\u2019s office where he works on the computer, Peppa\u2019s pink bedroom decorated with teddy and stars, George\u2019s blue bedroom with Mr Dinosaur on the shelf, the parents\u2019 main bedroom, a bathroom with a big bubble bath, and the muddy puddle-friendly back garden. Several wallpapers in this set feature these interior scenes.',
+      },
+      {
+        q: 'What resolution and file format are the wallpapers?',
+        a: 'Every wallpaper is a portrait PNG at 9:16 aspect ratio (816 x 1456 pixels) — large enough to look crisp on any modern smartphone lock screen, small enough that the file downloads in a second on mobile data. The PNGs are colour-optimised for fast loading without losing the bright Peppa Pig palette, so the gallery scores well on Core Web Vitals and does not eat your phone storage.',
+      },
+      {
+        q: 'Are these wallpapers safe and appropriate for children?',
+        a: 'Yes. Every wallpaper in this collection is fan art-style and 100% kid-friendly: bright colours, cheerful scenes, no scary imagery, and no text overlays. They make great lock screens and home screens for children\u2019s tablets, school iPads, kids\u2019 phones, and shared family devices. The download flow has no popups and no third-party redirects.',
+      },
+      {
+        q: 'What devices do the Peppa Pig house wallpapers work on?',
+        a: 'The portrait orientation is designed for phones and tablets, but the wallpapers work everywhere. They look great on iPhone (every model from iPhone X onwards), Android phones (Samsung Galaxy, Google Pixel, Xiaomi, OnePlus), iPad and Android tablets (in portrait mode), Kindle Fire kids\u2019 tablets, and even as desktop wallpapers if you set them to fit-to-height. There is no DRM and no app required.',
+      },
+      {
+        q: 'Why is Peppa Pig\u2019s house such a popular wallpaper choice?',
+        a: 'The red house on the green hill is one of the most recognisable images in modern children\u2019s television — Peppa Pig airs in more than 180 countries and is one of the highest-grossing kids\u2019 franchises in the world. Children love seeing the familiar house every time they unlock the screen, and parents love that the imagery is wholesome, calming, and visually simple compared with the busy graphics on most kids\u2019 wallpapers.',
+      },
+    ],
+    longContent: `Peppa Pig\u2019s house is one of the most recognisable buildings in modern children\u2019s television. A bright red two-storey cottage with a darker red roof, a sunny yellow door, and three matching square windows, perched on top of a perfectly rounded green hill against a cloudless blue sky — the silhouette is so simple and so distinctive that children all over the world can identify it from a single frame. This collection brings together 28 free HD wallpapers of that iconic house, plus the rooms inside it and the muddy garden behind it, ready to download and set as the lock screen on any phone or tablet.
+
+Peppa Pig has been one of the most successful animated series for pre-schoolers since the show first aired on Channel 5 in 2004. Created by Neville Astley and Mark Baker, it is now broadcast in more than 180 countries and dubbed into more than 40 languages. The franchise is owned by Hasbro through its 2019 acquisition of Entertainment One, and the Peppa Pig World theme park in Hampshire, England, draws hundreds of thousands of visitors a year — many of whom go specifically to see a life-sized version of the famous house on the hill. That cultural footprint is why \u201cPeppa Pig house wallpaper\u201d is one of the most-searched kids\u2019 wallpaper queries every single month, year after year.
+
+The classic exterior shot is the centrepiece of the collection. You\u2019ll find it in clear daylight with a bright blue sky and a single fluffy white cloud, in golden sunset tones with the hill cast in long shadows, in night-time renders with the windows lit warm yellow against a navy sky scattered with stars, in winter scenes with snow on the roof and on the hill, in spring with a rainbow stretching above the chimney, and in storybook-style watercolour interpretations. Each version keeps the same instantly recognisable shape — square windows, yellow door, peaked roof — and changes only the lighting, weather, and atmosphere.
+
+The interior scenes are just as charming and just as recognisable. Peppa\u2019s bedroom is rendered in soft pinks with the famous teddy bear on the bed and the small star on the wall above the headboard. George\u2019s bedroom is in cool blues with Mr Dinosaur sitting on the shelf. The kitchen shows the round wooden dining table where Mummy Pig serves spaghetti, the cosy living room features the bright yellow sofa where the family watches television together, and Daddy Pig\u2019s office shows the computer screen and the wall of bookshelves where he writes his important reports. A few of the wallpapers go outside to the back garden, where the famous big muddy puddle waits to be jumped in.
+
+The collection has been built specifically for phone and tablet lock screens. Every image is in a 9:16 portrait aspect ratio — the same proportions as a modern smartphone screen — so the wallpaper fills the display edge to edge without any cropping. The files are PNGs at 816 by 1456 pixels, which keeps them sharp on retina-class displays from iPhone 11 onwards and on every recent Samsung Galaxy, Google Pixel, OnePlus, and Xiaomi flagship. The PNGs have been colour-optimised — palette-quantised down to a 256-colour adaptive palette — so each image is roughly four times smaller than a typical raw PNG export. That means the gallery loads in well under two seconds even on a 4G connection, the page scores green on Google\u2019s Core Web Vitals (LCP, CLS, INP), and downloading every wallpaper in the set still costs less than half the data of a single short video clip.
+
+Setting a Peppa Pig house wallpaper is the same as any other on every modern device. On iPhone, save the PNG to Photos, then go to Settings, Wallpaper, Add New Wallpaper, choose Photos, pick the Peppa Pig image, and apply it to the lock screen, the home screen, or both. On Android, save the PNG to Files (or Photos on Pixel), then long-press the home screen, tap Wallpaper & style, choose My photos, pick the Peppa Pig image, and apply. On iPad and Android tablets the steps are identical and the portrait wallpapers will simply pillarbox slightly when used in landscape mode. Kindle Fire kids\u2019 tablets accept the same PNGs through the Photos app.
+
+The wallpapers in this collection are fan-art interpretations of the Peppa Pig house and are intended strictly for personal use as phone, tablet, or computer wallpapers — they are not licensed merchandise and we do not claim ownership of the Peppa Pig characters, locations, or trademarks, which belong to Hasbro and Entertainment One. The artwork is provided free of charge as a gift to fans of the show, with no advertising injected into the images, no watermarks, no email gates, and no signup. Children and parents can download as many as they like, switch them whenever they want, and use them for a school iPad, a tablet at home, a personal phone, or a shared family device with no concerns.
+
+To download, simply tap any thumbnail above to open the full-size preview, then press the pink Download HD button. The PNG will save instantly to your device\u2019s Downloads folder (or to Photos on iOS). All 28 wallpapers are right here on this page — no infinite-scroll, no pagination, no need to hop between sites. If your favourite is the bright sunny day version of the red house on the hill, the snowy winter scene, the night-time render with the warm yellow windows, or one of the cosy interior shots, it is just one tap away. Pick the one that makes your child smile the most every time they unlock the screen.`,
+  },
 };
 
 // Get all pages for sitemap generation

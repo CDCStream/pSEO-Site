@@ -35,6 +35,7 @@ import DarkGalleryClient from './DarkGalleryClient';
 import KingVonGalleryClient from './KingVonGalleryClient';
 import Y2kGalleryClient from './Y2kGalleryClient';
 import FloralGalleryClient from './FloralGalleryClient';
+import PeppaPigHouseGalleryClient from './PeppaPigHouseGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -295,6 +296,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the download button to save the dark wallpaper as a high-res PNG.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Go to your device settings and set the downloaded image as your wallpaper.' },
   ],
+  peppaPigHouseGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 28 cute Peppa Pig house HD wallpapers \u2014 the iconic red house on the hill, plus interior scenes.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the pink Download button to save the Peppa Pig house wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -404,6 +411,8 @@ export default async function WallpaperPage({ params }) {
               ? <Y2kGalleryClient />
               : config.generatorType === 'floralGallery'
               ? <FloralGalleryClient />
+              : config.generatorType === 'peppaPigHouseGallery'
+              ? <PeppaPigHouseGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
