@@ -129,11 +129,16 @@ export default function YouTubeToWavClient() {
     startTimeRef.current = Date.now();
     setStage('preparing');
 
+    // Track whether we reached the success path so the `finally` knows
+    // whether to leave stage='done' (success) or null it out (any failure).
+    let succeeded = false;
+
     try {
-      // 1) Server hands us back the MP3 bytes as same-origin audio/mpeg.
-      //    The first ~1-3 s on this fetch is server-side: RapidAPI MP3
-      //    conversion + (rarely) "still processing" backoff. Once the
-      //    upstream MP3 is ready, the response body streams the bytes.
+      // 1) Server hands us back the audio bytes as same-origin audio/*.
+      //    The first ~1-3 s on this fetch is server-side: RapidAPI
+      //    conversion + (rarely) "still processing" backoff or a fall-
+      //    through to the MP4 host's audio-only stream. Once the upstream
+      //    is ready, the response body streams the bytes.
       const res = await fetch('/api/youtube-mp3-stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -223,6 +228,7 @@ export default function YouTubeToWavClient() {
       });
       setStage('done');
       setRetryCount(0);
+      succeeded = true;
       addToast('WAV ready to download!', 'success');
     } catch (e) {
       const msg =
@@ -236,7 +242,15 @@ export default function YouTubeToWavClient() {
         retryable: true,
       });
       addToast('Conversion failed.', 'error');
-      setStage(null);
+    } finally {
+      // Whichever way the conversion left the try block — early `return`
+      // on a server error, decode/encode throw, or success — make sure the
+      // spinner/stage is cleared. Without this, the UI used to be stuck on
+      // "Preparing source on YouTube..." forever after a 502 from the API.
+      if (!succeeded) {
+        setStage(null);
+        setProgress(0);
+      }
     }
   };
 
