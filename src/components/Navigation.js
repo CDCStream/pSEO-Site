@@ -241,6 +241,7 @@ const navItems = [
       { label: 'Plagiarism Checker', href: '/converters/plagiarism-checker/' },
       { label: 'YouTube to MP3', href: '/converters/youtube-to-mp3/' },
       { label: 'YouTube to MP4', href: '/converters/youtube-to-mp4/' },
+      { label: 'YouTube to WAV', href: '/converters/youtube-to-wav/' },
     ],
   },
   {

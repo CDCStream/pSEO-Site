@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Languages, ArrowRight, ShieldCheck, Music, Film } from 'lucide-react';
+import { Languages, ArrowRight, ShieldCheck, Music, Film, AudioWaveform } from 'lucide-react';
 
 const converterTools = [
   {
@@ -33,6 +33,14 @@ const converterTools = [
     icon: Film,
     color: 'from-orange-500 to-red-400',
     tags: ['YouTube', 'MP4', 'Video', '1080p HD'],
+  },
+  {
+    name: 'YouTube to WAV Converter',
+    description: 'Download YouTube audio as a lossless WAV file. 16/24-bit PCM at 44.1 or 48 kHz — perfect for Audacity, Logic, Ableton, FL Studio, and DJ software.',
+    href: '/converters/youtube-to-wav/',
+    icon: AudioWaveform,
+    color: 'from-amber-500 to-rose-400',
+    tags: ['YouTube', 'WAV', 'Lossless', 'PCM'],
   },
 ];
 
