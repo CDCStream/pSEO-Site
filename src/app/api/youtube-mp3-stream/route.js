@@ -149,12 +149,31 @@ async function getAudioFromMp4Host(videoId, apiKey) {
     : null;
 
   return {
-    link: best.url,
+    link: addRateBypass(best.url),
     title: data.title || 'YouTube Audio',
     duration,
     contentType: (best.mimeType || 'audio/mp4').split(';')[0].trim(),
     via: 'mp4-adaptive',
   };
+}
+
+// YouTube's googlevideo.com CDN throttles non-YouTube downloaders to about
+// 50 KB/s, which is what was causing per-chunk 504s. Adding `ratebypass=yes`
+// to the URL sidesteps that throttle on most of YouTube's edges (it's the
+// well-known yt-dlp trick). Safe to add — the parameter is ignored when not
+// recognized, so this is a no-op for non-googlevideo URLs.
+function addRateBypass(rawUrl) {
+  try {
+    const u = new URL(rawUrl);
+    if (/(^|\.)googlevideo\.com$/i.test(u.hostname)) {
+      if (!u.searchParams.has('ratebypass')) {
+        u.searchParams.set('ratebypass', 'yes');
+      }
+    }
+    return u.toString();
+  } catch {
+    return rawUrl;
+  }
 }
 
 /**
@@ -252,12 +271,32 @@ export async function GET(request) {
     reqHeaders.Range = `bytes=${startStr || 0}-${endStr || ''}`;
   }
 
+  // Hard 22-second budget on the upstream fetch so we surface a clean 502
+  // before Vercel's HTTP-proxy decides to shoot us down with an opaque 504.
+  // Vercel's proxy hangs up at ~30 s; leaving a few seconds of headroom for
+  // headers + body forwarding makes our error message reach the client.
+  const ac = new AbortController();
+  const timeout = setTimeout(() => ac.abort(), 22_000);
+
   let upstream;
   try {
-    upstream = await fetch(link, { headers: reqHeaders });
+    upstream = await fetch(link, { headers: reqHeaders, signal: ac.signal });
   } catch (err) {
-    return Response.json({ error: `CDN unreachable: ${err.message}` }, { status: 502 });
+    clearTimeout(timeout);
+    const isAbort = err?.name === 'AbortError';
+    return Response.json(
+      {
+        error: isAbort
+          ? 'CDN took too long to respond (YouTube may be throttling this video). Please retry.'
+          : `CDN unreachable: ${err.message}`,
+      },
+      { status: 502 }
+    );
   }
+  // Headers received — clear the timeout. Letting it stay armed during body
+  // streaming would chop the response in half if upstream is slow, leaving
+  // the client with a truncated chunk that then fails decode.
+  clearTimeout(timeout);
   if (!upstream.ok && upstream.status !== 206) {
     try { await upstream.body?.cancel(); } catch { /* ignore */ }
     return Response.json({ error: `CDN returned ${upstream.status}` }, { status: 502 });

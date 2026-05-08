@@ -177,36 +177,53 @@ export default function YouTubeToWavClient() {
 
       let mp3Buffer;
       const total = Number.isFinite(meta.size) && meta.size > 0 ? meta.size : 0;
-      const CHUNK = 1_500_000; // 1.5 MB per range request
+      // 512 KB chunks: even at YouTube's 50 KB/s throttle each request takes
+      // ~10 s, comfortably under Vercel's HTTP-proxy timeout. With the
+      // `ratebypass=yes` parameter applied server-side we usually see full
+      // speed and each chunk completes in a fraction of a second.
+      const CHUNK = 512 * 1024;
+      const MAX_RETRIES_PER_CHUNK = 2;
+
+      const fetchChunk = async (start, end) => {
+        const params = new URLSearchParams({
+          link: meta.link,
+          sig: meta.sig,
+          start: String(start),
+          end: String(end),
+        });
+        let lastErr = null;
+        for (let attempt = 0; attempt <= MAX_RETRIES_PER_CHUNK; attempt++) {
+          try {
+            const chunkRes = await fetch(`/api/youtube-mp3-stream?${params}`, { cache: 'no-store' });
+            if (chunkRes.ok || chunkRes.status === 206) {
+              return new Uint8Array(await chunkRes.arrayBuffer());
+            }
+            let errMsg = `HTTP ${chunkRes.status}`;
+            try {
+              const errJson = await chunkRes.json();
+              if (errJson?.error) errMsg = errJson.error;
+            } catch { /* not JSON */ }
+            lastErr = errMsg;
+          } catch (netErr) {
+            lastErr = netErr?.message || 'network error';
+          }
+          // Brief backoff before retrying so a transient throttle has a
+          // chance to lift before we hammer it again.
+          if (attempt < MAX_RETRIES_PER_CHUNK) {
+            await new Promise((r) => setTimeout(r, 600 * (attempt + 1)));
+          }
+        }
+        throw new Error(`Audio chunk at byte ${start} failed after ${MAX_RETRIES_PER_CHUNK + 1} attempts: ${lastErr}`);
+      };
 
       if (total > 0) {
         const chunks = [];
         let received = 0;
         for (let start = 0; start < total; start += CHUNK) {
           const end = Math.min(start + CHUNK - 1, total - 1);
-          const params = new URLSearchParams({
-            link: meta.link,
-            sig: meta.sig,
-            start: String(start),
-            end: String(end),
-          });
-          let chunkRes;
-          try {
-            chunkRes = await fetch(`/api/youtube-mp3-stream?${params}`);
-          } catch (netErr) {
-            throw new Error(`Network error while downloading audio chunk: ${netErr?.message || 'unknown'}`);
-          }
-          if (!chunkRes.ok && chunkRes.status !== 206) {
-            let errMsg = `Chunk request failed at byte ${start} (HTTP ${chunkRes.status}).`;
-            try {
-              const errJson = await chunkRes.json();
-              if (errJson?.error) errMsg = errJson.error;
-            } catch { /* not JSON */ }
-            throw new Error(errMsg);
-          }
-          const chunkBuf = await chunkRes.arrayBuffer();
-          chunks.push(new Uint8Array(chunkBuf));
-          received += chunkBuf.byteLength;
+          const piece = await fetchChunk(start, end);
+          chunks.push(piece);
+          received += piece.byteLength;
           setProgress(received / total);
         }
         mp3Buffer = new ArrayBuffer(received);
