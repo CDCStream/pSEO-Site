@@ -134,26 +134,113 @@ async function getMp3FromAltHost(videoId, apiKey) {
     e.skip = true;
     throw e;
   }
-  // The /dl?id= shape is shared by most RapidAPI YouTube-MP3 services
-  // (youtube-mp310, youtube-to-mp315, youtube-mp3-download3, youtube-to-mp34,
-  // t-one-yt-mp3-download, ytmp3-yt2mate, ...) so this same function works
-  // as a drop-in regardless of which one the user subscribed to.
-  const res = await fetch(`https://${MP3_ALT_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
+
+  // Two-step flow used by youtube-to-mp315 / youtube-to-mp34 and most other
+  // job-based RapidAPI MP3 services:
+  //   1. POST /download { url } -> { id }
+  //   2. GET /status/<id>       -> poll until { status: 'ok'|'finished',
+  //                                              link: '...' }
+  // We try this shape first, then fall back to the simpler one-shot
+  // /dl?id= shape used by youtube-mp36 / youtube-mp310 if step 1 doesn't
+  // look like a job creation response.
+
+  const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+  const headers = {
+    'Content-Type': 'application/json',
+    'X-RapidAPI-Key': apiKey,
+    'X-RapidAPI-Host': MP3_ALT_HOST,
+  };
+
+  // ---- Try the job-based shape first ----
+  let initRes;
+  try {
+    initRes = await fetch(`https://${MP3_ALT_HOST}/download`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ url: youtubeUrl }),
+    });
+  } catch (err) {
+    initRes = null;
+    void err;
+  }
+
+  if (initRes) {
+    if (initRes.status === 401 || initRes.status === 403) {
+      const e = new Error('Not subscribed to alternate MP3 host');
+      e.skip = true;
+      throw e;
+    }
+    if (initRes.ok) {
+      const initData = await initRes.json().catch(() => ({}));
+      const jobId = initData.id || initData.jobId || initData.taskId || initData.task_id;
+
+      // If the response already contains a download link, we're done.
+      const directLink = initData.link || initData.url || initData.dlink || initData.downloadUrl;
+      if (directLink) {
+        return {
+          link: directLink,
+          title: initData.title || 'YouTube Audio',
+          duration: initData.duration || initData.length || null,
+          contentType: 'audio/mpeg',
+          via: 'mp3-alt-host',
+        };
+      }
+
+      if (jobId) {
+        // Poll the status endpoint. Tight budget: ~6 seconds total. The
+        // user's "Try Again" button kicks off a fresh round if this isn't
+        // enough — better than blocking the whole conversion for 30+ s.
+        const POLL_BACKOFF = [600, 900, 1300, 1800, 2200];
+        for (let attempt = 0; attempt < POLL_BACKOFF.length; attempt++) {
+          await sleep(POLL_BACKOFF[attempt]);
+          const statusRes = await fetch(
+            `https://${MP3_ALT_HOST}/status/${encodeURIComponent(jobId)}`,
+            { method: 'GET', headers }
+          );
+          if (!statusRes.ok) continue;
+          const statusData = await statusRes.json().catch(() => ({}));
+          const link =
+            statusData.link || statusData.url || statusData.dlink || statusData.downloadUrl;
+          const status = (statusData.status || '').toLowerCase();
+          if (link && (status === 'ok' || status === 'success' || status === 'finished' || status === 'done' || status === 'completed' || !status)) {
+            return {
+              link,
+              title: statusData.title || initData.title || 'YouTube Audio',
+              duration: statusData.duration || statusData.length || null,
+              contentType: 'audio/mpeg',
+              via: 'mp3-alt-host',
+            };
+          }
+          if (status === 'error' || status === 'failed' || statusData.error) {
+            throw new Error(statusData.error || statusData.message || 'Alt MP3 host conversion failed.');
+          }
+        }
+        const e = new Error('Alternate MP3 host is still preparing — please click "Try Again".');
+        e.status = 202;
+        throw e;
+      }
+    }
+    // POST failed with non-2xx but not 401/403 — fall through to the
+    // one-shot shape in case the host uses that instead.
+  }
+
+  // ---- Fall back to the one-shot /dl?id= shape ----
+  // Used by youtube-mp36 / youtube-mp310 / similar.
+  const oneShot = await fetch(`https://${MP3_ALT_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
     method: 'GET',
     headers: { 'X-RapidAPI-Key': apiKey, 'X-RapidAPI-Host': MP3_ALT_HOST },
   });
-  if (res.status === 401 || res.status === 403) {
+  if (oneShot.status === 401 || oneShot.status === 403) {
     const e = new Error('Not subscribed to alternate MP3 host');
     e.skip = true;
     throw e;
   }
-  if (!res.ok) {
-    const e = new Error(`Alt MP3 host returned ${res.status}`);
-    e.status = res.status;
+  if (!oneShot.ok) {
+    const e = new Error(`Alt MP3 host returned ${oneShot.status}`);
+    e.status = oneShot.status;
     throw e;
   }
-  const data = await res.json().catch(() => ({}));
-  // Different services use slightly different field names. Try them all.
+  const data = await oneShot.json().catch(() => ({}));
   const link = data.link || data.url || data.dlink || data.downloadUrl;
   if (!link) {
     if (data.status === 'processing' || data.progress !== undefined) {
