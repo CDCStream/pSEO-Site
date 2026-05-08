@@ -25,7 +25,18 @@
  */
 
 const MP3_HOST = process.env.RAPIDAPI_MP3_HOST || 'youtube-mp36.p.rapidapi.com';
+const MP3_ALT_HOST = process.env.RAPIDAPI_MP3_ALT_HOST || 'youtube-mp3-download1.p.rapidapi.com';
 const MP4_HOST = process.env.RAPIDAPI_MP4_HOST || 'ytstream-download-youtube-videos.p.rapidapi.com';
+
+// Send these headers to YouTube's CDN. Without a sane User-Agent and
+// Referer, googlevideo.com refuses the range request with HTTP 403 —
+// especially for music videos accessed via YouTube Music radio links.
+const CDN_REQUEST_HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Referer': 'https://www.youtube.com/',
+  'Origin': 'https://www.youtube.com',
+};
 
 const VIDEO_ID_REGEX = /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
 const SHORTS_REGEX = /youtube\.com\/shorts\/([A-Za-z0-9_-]{11})/;
@@ -103,12 +114,58 @@ async function getMp3DownloadUrl(videoId, apiKey) {
 }
 
 /**
- * Fallback path: when the MP3 host's CDN serves a 404 for the converted file,
- * pull the audio out of the MP4 extraction host instead. YouTube's adaptive
- * formats include audio-only streams (AAC in m4a, or Opus in WebM) that the
- * browser's AudioContext.decodeAudioData() accepts without modification. This
- * is what saves us when youtube-mp36 returns a stale/dead link — common on
- * music videos accessed via "&list=RD…" YouTube Music radio links.
+ * Tier-2 MP3 source. Tried when youtube-mp36 returns a dead CDN link.
+ * youtube-mp3-download1 has its own conversion CDN that's not affected by
+ * youtube-mp36's caching glitches, and crucially it doesn't go through
+ * googlevideo.com so we don't have to worry about YouTube's per-connection
+ * throttle. If the user isn't subscribed (401/403 from the host), we just
+ * skip this source silently and continue to tier 3.
+ */
+async function getMp3FromAltHost(videoId, apiKey) {
+  // The /dl?id= shape is used by youtube-mp3-download1, t-one-yt-mp3-download,
+  // ytmp3-yt2mate, and several other RapidAPI MP3 services, so this same
+  // function works as a drop-in for whatever the user is subscribed to.
+  const res = await fetch(`https://${MP3_ALT_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
+    method: 'GET',
+    headers: { 'X-RapidAPI-Key': apiKey, 'X-RapidAPI-Host': MP3_ALT_HOST },
+  });
+  if (res.status === 401 || res.status === 403) {
+    const e = new Error('Not subscribed to alternate MP3 host');
+    e.skip = true;
+    throw e;
+  }
+  if (!res.ok) {
+    const e = new Error(`Alt MP3 host returned ${res.status}`);
+    e.status = res.status;
+    throw e;
+  }
+  const data = await res.json().catch(() => ({}));
+  // Different services use slightly different field names. Try them all.
+  const link = data.link || data.url || data.dlink || data.downloadUrl;
+  if (!link) {
+    if (data.status === 'processing' || data.progress !== undefined) {
+      const e = new Error('Alternate MP3 host is still preparing this video.');
+      e.status = 202;
+      throw e;
+    }
+    throw new Error(data.msg || data.error || 'Alt MP3 host returned no download link.');
+  }
+  return {
+    link,
+    title: data.title || 'YouTube Audio',
+    duration: data.duration || data.length || null,
+    contentType: 'audio/mpeg',
+    via: 'mp3-alt-host',
+  };
+}
+
+/**
+ * Tier-3 fallback: when both MP3 hosts strike out, pull the audio out of the
+ * MP4 extraction host instead. YouTube's adaptive formats include audio-only
+ * streams (AAC in m4a, or Opus in WebM) that the browser's
+ * AudioContext.decodeAudioData() accepts without modification. The
+ * googlevideo.com CDN is throttled and sometimes 403s for music tracks, so
+ * we keep this as a last resort behind the two MP3 sources.
  */
 async function getAudioFromMp4Host(videoId, apiKey) {
   const res = await fetch(`https://${MP4_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
@@ -164,7 +221,7 @@ async function getAudioFromMp4Host(videoId, apiKey) {
 async function tryStream(link) {
   let upstream;
   try {
-    upstream = await fetch(link);
+    upstream = await fetch(link, { headers: CDN_REQUEST_HEADERS });
   } catch {
     return null;
   }
@@ -206,14 +263,16 @@ async function probeSize(link) {
     if (clen && /^\d+$/.test(clen)) return parseInt(clen, 10);
   } catch { /* ignore */ }
   try {
-    const headRes = await fetch(link, { method: 'HEAD' });
+    const headRes = await fetch(link, { method: 'HEAD', headers: CDN_REQUEST_HEADERS });
     if (headRes.ok) {
       const cl = headRes.headers.get('content-length');
       if (cl && /^\d+$/.test(cl)) return parseInt(cl, 10);
     }
   } catch { /* ignore */ }
   try {
-    const probeRes = await fetch(link, { headers: { Range: 'bytes=0-0' } });
+    const probeRes = await fetch(link, {
+      headers: { ...CDN_REQUEST_HEADERS, Range: 'bytes=0-0' },
+    });
     if (probeRes.ok || probeRes.status === 206) {
       const cr = probeRes.headers.get('content-range');
       const m = cr && cr.match(/\/(\d+)\s*$/);
@@ -247,7 +306,7 @@ export async function GET(request) {
     return Response.json({ error: 'Bad signature.' }, { status: 403 });
   }
 
-  const reqHeaders = {};
+  const reqHeaders = { ...CDN_REQUEST_HEADERS };
   if (startStr || endStr) {
     reqHeaders.Range = `bytes=${startStr || 0}-${endStr || ''}`;
   }
@@ -325,25 +384,28 @@ export async function POST(request) {
   }
 
   // ---------------------------------------------------------------------
-  // Two-stage fallback. The POST handler ALWAYS returns JSON metadata; the
+  // Three-tier fallback. The POST handler ALWAYS returns JSON metadata; the
   // client then pulls the audio bytes through the GET range-proxy in small
-  // chunks. We never stream the full body from this function, which means
-  // we can never trip Vercel's ~30 s HTTP-proxy timeout (the cause of the
-  // 504s users were seeing on long YouTube Music tracks).
+  // parallel chunks. We never stream the full body from this function, so
+  // we can never trip Vercel's ~30 s HTTP-proxy timeout.
   //
-  //   1. youtube-mp36 (MP3 host) — fast, small files
-  //   2. ytstream MP4 host's audio-only adaptive stream (m4a / AAC) —
-  //      saves us when youtube-mp36 hands back a stale/dead CDN link
+  //   1. youtube-mp36 (primary MP3 host) — fast, own CDN, no throttle
+  //   2. youtube-mp3-download1 (alternate MP3 host) — different CDN, kicks
+  //      in when tier 1 returns a dead link. Skipped silently if the user
+  //      isn't subscribed to it on RapidAPI.
+  //   3. ytstream MP4 host's audio-only adaptive stream — last resort,
+  //      uses googlevideo.com which YouTube throttles and occasionally
+  //      403s for music tracks
   // ---------------------------------------------------------------------
 
   let info = null;
   let firstError = null;
   let mp3Worked = false;
 
-  // Stage 1: MP3 host. We still call tryStream() here because youtube-mp36
-  // happily returns "ready" status for links whose CDN returns 404; this
-  // way we detect the CDN miss server-side and fall through to MP4 before
-  // bothering the client with a chunked download that would just 404.
+  // Tier 1: youtube-mp36. We call tryStream() here because the host happily
+  // returns "ready" status for links whose CDN serves 404; we detect the
+  // CDN miss server-side and fall through to tier 2 before the client
+  // wastes time on a doomed chunked download.
   try {
     const tmpInfo = await getMp3DownloadUrl(videoId, apiKey);
     mp3Worked = true;
@@ -358,7 +420,27 @@ export async function POST(request) {
     firstError = err;
   }
 
-  // Stage 2: MP4 host adaptive audio fallback.
+  // Tier 2: alternate MP3 host. Most users will eventually subscribe to
+  // this on RapidAPI; if they haven't yet, the host returns 401/403 and we
+  // skip it transparently.
+  if (!info) {
+    try {
+      const altInfo = await getMp3FromAltHost(videoId, apiKey);
+      const probe = await tryStream(altInfo.link);
+      if (probe) {
+        try { await probe.body?.cancel(); } catch { /* ignore */ }
+        info = altInfo;
+      } else if (!firstError) {
+        firstError = new Error('Alternate MP3 CDN miss');
+      }
+    } catch (err) {
+      // Skipped sources are not interesting errors — only record other
+      // failures so the user gets the most relevant error message later.
+      if (!err.skip && !firstError) firstError = err;
+    }
+  }
+
+  // Tier 3: MP4 host adaptive audio.
   if (!info) {
     try {
       info = await getAudioFromMp4Host(videoId, apiKey);
@@ -379,7 +461,7 @@ export async function POST(request) {
           : isProcessing
           ? err.message
           : mp3Worked
-          ? 'The MP3 service handed back a dead CDN link, and the audio fallback also failed. Please try a different video or retry in a minute.'
+          ? 'No working audio source for this video right now. Try a different video, or retry in a minute — the MP3 services rotate caches frequently.'
           : `Audio could not be retrieved for this video (${err.message || 'CDN miss'}). Please try a different video or retry.`,
         retryable: true,
         processing: isProcessing,
