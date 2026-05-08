@@ -178,10 +178,12 @@ export default function YouTubeToWavClient() {
       let mp3Buffer;
       const total = Number.isFinite(meta.size) && meta.size > 0 ? meta.size : 0;
       // 512 KB chunks: even at YouTube's 50 KB/s throttle each request takes
-      // ~10 s, comfortably under Vercel's HTTP-proxy timeout. With the
-      // `ratebypass=yes` parameter applied server-side we usually see full
-      // speed and each chunk completes in a fraction of a second.
+      // ~10 s, comfortably under Vercel's HTTP-proxy timeout. The throttle
+      // is per-connection, so running 4 chunk requests in parallel typically
+      // gives ~4x effective throughput — what would be a ~100 s sequential
+      // download finishes in ~25 s.
       const CHUNK = 512 * 1024;
+      const PARALLEL = 4;
       const MAX_RETRIES_PER_CHUNK = 2;
 
       const fetchChunk = async (start, end) => {
@@ -207,8 +209,6 @@ export default function YouTubeToWavClient() {
           } catch (netErr) {
             lastErr = netErr?.message || 'network error';
           }
-          // Brief backoff before retrying so a transient throttle has a
-          // chance to lift before we hammer it again.
           if (attempt < MAX_RETRIES_PER_CHUNK) {
             await new Promise((r) => setTimeout(r, 600 * (attempt + 1)));
           }
@@ -217,19 +217,35 @@ export default function YouTubeToWavClient() {
       };
 
       if (total > 0) {
-        const chunks = [];
-        let received = 0;
+        // Build the full list of (start, end) chunks, then run them through
+        // a small bounded worker pool so PARALLEL of them are in flight at
+        // once. We accumulate the parts in their original index slot and
+        // assemble the final buffer in one pass at the end.
+        const ranges = [];
         for (let start = 0; start < total; start += CHUNK) {
-          const end = Math.min(start + CHUNK - 1, total - 1);
-          const piece = await fetchChunk(start, end);
-          chunks.push(piece);
-          received += piece.byteLength;
-          setProgress(received / total);
+          ranges.push([start, Math.min(start + CHUNK - 1, total - 1)]);
         }
+        const parts = new Array(ranges.length);
+        let received = 0;
+        let next = 0;
+
+        const worker = async () => {
+          while (true) {
+            const idx = next++;
+            if (idx >= ranges.length) return;
+            const [s, e] = ranges[idx];
+            const piece = await fetchChunk(s, e);
+            parts[idx] = piece;
+            received += piece.byteLength;
+            setProgress(received / total);
+          }
+        };
+        await Promise.all(Array.from({ length: Math.min(PARALLEL, ranges.length) }, worker));
+
         mp3Buffer = new ArrayBuffer(received);
         const bytes = new Uint8Array(mp3Buffer);
         let offset = 0;
-        for (const c of chunks) {
+        for (const c of parts) {
           bytes.set(c, offset);
           offset += c.length;
         }

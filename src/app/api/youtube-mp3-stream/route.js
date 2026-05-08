@@ -149,31 +149,12 @@ async function getAudioFromMp4Host(videoId, apiKey) {
     : null;
 
   return {
-    link: addRateBypass(best.url),
+    link: best.url,
     title: data.title || 'YouTube Audio',
     duration,
     contentType: (best.mimeType || 'audio/mp4').split(';')[0].trim(),
     via: 'mp4-adaptive',
   };
-}
-
-// YouTube's googlevideo.com CDN throttles non-YouTube downloaders to about
-// 50 KB/s, which is what was causing per-chunk 504s. Adding `ratebypass=yes`
-// to the URL sidesteps that throttle on most of YouTube's edges (it's the
-// well-known yt-dlp trick). Safe to add — the parameter is ignored when not
-// recognized, so this is a no-op for non-googlevideo URLs.
-function addRateBypass(rawUrl) {
-  try {
-    const u = new URL(rawUrl);
-    if (/(^|\.)googlevideo\.com$/i.test(u.hostname)) {
-      if (!u.searchParams.has('ratebypass')) {
-        u.searchParams.set('ratebypass', 'yes');
-      }
-    }
-    return u.toString();
-  } catch {
-    return rawUrl;
-  }
 }
 
 /**
