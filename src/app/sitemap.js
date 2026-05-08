@@ -139,12 +139,6 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/converters/youtube-to-wav/`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/blog/`,
       lastModified: new Date(),
       changeFrequency: 'daily',
