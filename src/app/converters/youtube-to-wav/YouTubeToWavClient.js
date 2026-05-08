@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { useToast } from '@/components/Toast';
-import { encodeWav, resampleBuffer, estimateWavSize } from '@/lib/wav-encoder';
+import { encodeWav, resampleBuffer } from '@/lib/wav-encoder';
 
 const VIDEO_ID_REGEX = /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
 
@@ -22,17 +22,20 @@ const WAV_QUALITIES = [
   { value: '24-48000', label: '24-bit', sub: '48 kHz · Studio HD' },
 ];
 
-// Estimated CPU cost relative to source duration. Real timings on a typical
-// laptop hover around 1-3 % of the source's playtime (i.e. a 5-min track
-// transcodes in roughly 10-20 seconds), but slow phones can be markedly
-// slower so we present a soft expectation in the UI.
 const STAGES = {
-  fetching: 'Fetching MP3 stream from YouTube…',
-  decoding: 'Decoding audio…',
-  resampling: 'Resampling to target rate…',
-  encoding: 'Encoding WAV file…',
+  preparing: 'Preparing source on YouTube\u2026',
+  fetching: 'Downloading MP3 stream\u2026',
+  decoding: 'Decoding audio to PCM\u2026',
+  resampling: 'Resampling to target rate\u2026',
+  encoding: 'Encoding WAV file\u2026',
   done: 'Ready to download',
 };
+
+function fmtElapsed(ms) {
+  const s = Math.floor(ms / 1000);
+  if (s < 60) return `${s}s`;
+  return `${Math.floor(s / 60)}m ${String(s % 60).padStart(2, '0')}s`;
+}
 
 function downloadBlob(blob, filename) {
   const url = URL.createObjectURL(blob);
@@ -53,12 +56,40 @@ export default function YouTubeToWavClient() {
   const [url, setUrl] = useState('');
   const [quality, setQuality] = useState('16-44100');
   const [stage, setStage] = useState(null); // null | one of STAGES keys
-  const [progress, setProgress] = useState(0); // 0..1 download progress
+  const [progress, setProgress] = useState(0); // 0..1 within the current stage
+  const [elapsed, setElapsed] = useState(0); // ms since conversion started
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [retryCount, setRetryCount] = useState(0);
   const audioCtxRef = useRef(null);
+  const startTimeRef = useRef(0);
+  const tickRef = useRef(null);
   const { addToast } = useToast();
+
+  // Drive the elapsed-time counter while a conversion is in flight. Without
+  // this, a slow upstream (10+ s of "preparing" on RapidAPI) feels frozen
+  // because every individual stage hides behind a single blocking await.
+  useEffect(() => {
+    const isWorking = stage && stage !== 'done';
+    if (!isWorking) {
+      if (tickRef.current) {
+        clearInterval(tickRef.current);
+        tickRef.current = null;
+      }
+      return;
+    }
+    if (!tickRef.current) {
+      tickRef.current = setInterval(() => {
+        setElapsed(Date.now() - startTimeRef.current);
+      }, 250);
+    }
+    return () => {
+      if (tickRef.current) {
+        clearInterval(tickRef.current);
+        tickRef.current = null;
+      }
+    };
+  }, [stage]);
 
   const videoId = useMemo(() => extractVideoId(url), [url]);
   const isValidUrl = !!videoId;
@@ -87,16 +118,22 @@ export default function YouTubeToWavClient() {
     setRetryCount(0);
     setStage(null);
     setProgress(0);
+    setElapsed(0);
   };
 
   const performConversion = async () => {
     setError(null);
     setResult(null);
     setProgress(0);
-    setStage('fetching');
+    setElapsed(0);
+    startTimeRef.current = Date.now();
+    setStage('preparing');
 
     try {
       // 1) Server hands us back the MP3 bytes as same-origin audio/mpeg.
+      //    The first ~1-3 s on this fetch is server-side: RapidAPI MP3
+      //    conversion + (rarely) "still processing" backoff. Once the
+      //    upstream MP3 is ready, the response body streams the bytes.
       const res = await fetch('/api/youtube-mp3-stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -110,6 +147,7 @@ export default function YouTubeToWavClient() {
           message: errBody?.error || `Conversion failed (HTTP ${res.status}).`,
           retryable: errBody?.retryable !== false,
           configError: errBody?.configError === true,
+          processing: errBody?.processing === true,
         });
         addToast(errBody?.error || 'Conversion failed.', 'error');
         return;
@@ -120,6 +158,8 @@ export default function YouTubeToWavClient() {
       const decodedTitle = titleHeader ? decodeURIComponent(titleHeader) : null;
 
       // 2) Read the MP3 bytes with progress tracking.
+      setStage('fetching');
+      setProgress(0);
       const totalLen = parseInt(res.headers.get('Content-Length') || '0', 10);
       const reader = res.body.getReader();
       const chunks = [];
@@ -131,9 +171,17 @@ export default function YouTubeToWavClient() {
         received += value.length;
         if (totalLen > 0) setProgress(received / totalLen);
       }
-      const mp3Bytes = new Uint8Array(received);
+
+      // Concatenate chunks into a single contiguous ArrayBuffer that we can
+      // hand straight to decodeAudioData() — avoids a redundant copy via
+      // .slice(0) that the previous version did.
+      const mp3Buffer = new ArrayBuffer(received);
+      const mp3Bytes = new Uint8Array(mp3Buffer);
       let offset = 0;
-      for (const c of chunks) { mp3Bytes.set(c, offset); offset += c.length; }
+      for (const c of chunks) {
+        mp3Bytes.set(c, offset);
+        offset += c.length;
+      }
 
       // 3) Decode the MP3 into a PCM AudioBuffer.
       setStage('decoding');
@@ -142,17 +190,22 @@ export default function YouTubeToWavClient() {
       if (!Ctx) throw new Error('Your browser does not support the Web Audio API. Please use a recent Chrome, Safari, Firefox, or Edge.');
       if (!audioCtxRef.current) audioCtxRef.current = new Ctx();
       const ctx = audioCtxRef.current;
-      // decodeAudioData accepts a transferable; pass the underlying ArrayBuffer.
-      const buffer = await ctx.decodeAudioData(mp3Bytes.buffer.slice(0));
+      const buffer = await ctx.decodeAudioData(mp3Buffer);
 
-      // 4) Resample if the target sample rate differs from the source.
-      setStage('resampling');
+      // 4) Resample only when needed.
       const channels = Math.min(2, buffer.numberOfChannels);
-      const finalBuffer = await resampleBuffer(buffer, sampleRate, channels);
+      let finalBuffer = buffer;
+      if (buffer.sampleRate !== sampleRate || buffer.numberOfChannels !== channels) {
+        setStage('resampling');
+        setProgress(0);
+        finalBuffer = await resampleBuffer(buffer, sampleRate, channels);
+      }
 
-      // 5) Encode WAV.
+      // 5) Encode WAV (chunked, with progress, yielding to the UI thread
+      //    so the progress bar can paint and the page stays interactive).
       setStage('encoding');
-      const wavBytes = encodeWav(finalBuffer, bitDepth);
+      setProgress(0);
+      const wavBytes = await encodeWav(finalBuffer, bitDepth, (p) => setProgress(p));
 
       const blob = new Blob([wavBytes], { type: 'audio/wav' });
       const sizeMB = (blob.size / 1024 / 1024).toFixed(1);
@@ -166,6 +219,7 @@ export default function YouTubeToWavClient() {
         sizeMB,
         blob,
         thumbnail: previewThumbnail,
+        elapsedMs: Date.now() - startTimeRef.current,
       });
       setStage('done');
       setRetryCount(0);
@@ -182,9 +236,7 @@ export default function YouTubeToWavClient() {
         retryable: true,
       });
       addToast('Conversion failed.', 'error');
-    } finally {
-      // Stay in the final stage so the user sees what happened; reset only
-      // on next conversion or clear.
+      setStage(null);
     }
   };
 
@@ -343,9 +395,18 @@ export default function YouTubeToWavClient() {
         <div className="bg-white/5 rounded-2xl border border-white/10 p-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-8 border-2 border-rose-500/30 border-t-rose-500 rounded-full animate-spin shrink-0" />
-            <p className="text-gray-200 text-sm font-medium">{STAGES[stage]}</p>
+            <div className="flex-1 min-w-0">
+              <p className="text-gray-200 text-sm font-medium">{STAGES[stage]}</p>
+              <p className="text-gray-500 text-[11px] mt-0.5 font-mono">
+                elapsed {fmtElapsed(elapsed)}
+                {(stage === 'fetching' || stage === 'encoding') && progress > 0 && (
+                  <> · {Math.round(progress * 100)}%</>
+                )}
+              </p>
+            </div>
           </div>
-          {stage === 'fetching' && progress > 0 && (
+
+          {(stage === 'fetching' || stage === 'encoding') && progress > 0 && (
             <div className="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-rose-500 to-red-500 transition-all"
@@ -353,9 +414,24 @@ export default function YouTubeToWavClient() {
               />
             </div>
           )}
+
+          {stage === 'preparing' && elapsed > 5000 && (
+            <p className="text-amber-300/80 text-xs mt-3">
+              YouTube is still preparing the source audio for this video — that\u2019s normal on first
+              conversion of a video. If this is the first time anyone has converted this clip,
+              the upstream service caches it in 5-15 seconds.
+            </p>
+          )}
+          {stage === 'encoding' && elapsed > 20000 && (
+            <p className="text-amber-300/80 text-xs mt-3">
+              Long tracks take more time to encode in the browser. For 1-hour+ audio, picking
+              16-bit / 44.1 kHz roughly halves the encode time.
+            </p>
+          )}
+
           <p className="text-gray-500 text-xs mt-3">
-            All conversion happens in your browser — your audio never passes through a third-party
-            service after the MP3 fetch. Slow devices may need 15-30 seconds for long tracks.
+            Conversion happens in your browser — your audio is never stored on a server.
+            Most clips finish in 5-20 seconds.
           </p>
         </div>
       )}
@@ -451,6 +527,7 @@ export default function YouTubeToWavClient() {
               </button>
               <p className="text-[11px] text-gray-500 mt-2">
                 File generated locally in your browser — never uploaded anywhere.
+                {result.elapsedMs ? <> · Converted in {fmtElapsed(result.elapsedMs)}.</> : null}
               </p>
             </div>
           </div>

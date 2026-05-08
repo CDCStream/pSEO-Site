@@ -35,15 +35,22 @@ function extractVideoId(url) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getMp3DownloadUrl(videoId, apiKey) {
-  for (let attempt = 0; attempt < 4; attempt++) {
+  // Tight retry budget — total wall-clock max ~5 s before we surface a
+  // retryable error to the client. The user's "Try Again" button kicks off
+  // a fresh round, so a long server-side retry loop only makes the UI feel
+  // frozen with no progress feedback.
+  const NETWORK_BACKOFF = [600, 1200];   // 429 / 5xx
+  const PROCESSING_BACKOFF = [1500, 2000]; // upstream still encoding
+
+  for (let attempt = 0; attempt < 3; attempt++) {
     const res = await fetch(`https://${MP3_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
       method: 'GET',
       headers: { 'X-RapidAPI-Key': apiKey, 'X-RapidAPI-Host': MP3_HOST },
     });
 
     if (!res.ok) {
-      if (res.status === 429 || res.status === 403 || res.status >= 500) {
-        await sleep(700 * (attempt + 1));
+      if ((res.status === 429 || res.status === 403 || res.status >= 500) && NETWORK_BACKOFF[attempt] != null) {
+        await sleep(NETWORK_BACKOFF[attempt]);
         continue;
       }
       const err = new Error(`Upstream ${res.status}`);
@@ -58,8 +65,15 @@ async function getMp3DownloadUrl(videoId, apiKey) {
     }
 
     if (data.status === 'processing' || (!data.link && data.progress !== undefined)) {
-      // Still being prepared on the upstream — short backoff and retry.
-      await sleep(1500 * (attempt + 1));
+      if (PROCESSING_BACKOFF[attempt] == null) {
+        // Out of budget — bail with a clean retryable error so the client
+        // can show "Try Again" instead of leaving the user staring at a
+        // spinner for another 10+ seconds.
+        const e = new Error('YouTube source is still preparing. Please click "Try Again" in a few seconds.');
+        e.status = 202;
+        throw e;
+      }
+      await sleep(PROCESSING_BACKOFF[attempt]);
       continue;
     }
 
@@ -74,7 +88,10 @@ async function getMp3DownloadUrl(videoId, apiKey) {
       filesize: data.filesize || null,
     };
   }
-  throw new Error('Conversion is still preparing on the source server. Please retry in a few seconds.');
+
+  const e = new Error('YouTube source is still preparing. Please click "Try Again" in a few seconds.');
+  e.status = 202;
+  throw e;
 }
 
 // Strip non-ASCII characters before stuffing into a HTTP header (some upstream
@@ -123,14 +140,16 @@ export async function POST(request) {
   } catch (err) {
     const status = err?.status || 502;
     const isBlocked = status === 429 || status === 403 || /block|rate|limit/i.test(err?.message || '');
+    const isProcessing = status === 202 || /preparing|processing/i.test(err?.message || '');
     return Response.json(
       {
         error: isBlocked
           ? 'YouTube briefly blocked this request. Please click "Try Again" in a few seconds.'
           : err?.message || 'Conversion failed.',
         retryable: true,
+        processing: isProcessing,
       },
-      { status: isBlocked ? 429 : status }
+      { status: isBlocked ? 429 : isProcessing ? 202 : status }
     );
   }
 
