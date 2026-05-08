@@ -18,6 +18,7 @@
  */
 
 const MP3_HOST = process.env.RAPIDAPI_MP3_HOST || 'youtube-mp36.p.rapidapi.com';
+const MP4_HOST = process.env.RAPIDAPI_MP4_HOST || 'ytstream-download-youtube-videos.p.rapidapi.com';
 
 const VIDEO_ID_REGEX = /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
 const SHORTS_REGEX = /youtube\.com\/shorts\/([A-Za-z0-9_-]{11})/;
@@ -101,6 +102,79 @@ function safeHeader(str) {
   return String(str).replace(/[^\x20-\x7E]/g, '').slice(0, 200);
 }
 
+/**
+ * Fallback path: when the MP3 host's CDN serves a 404 for the converted file,
+ * pull the audio out of the MP4 extraction host instead. YouTube's adaptive
+ * formats include audio-only streams (AAC in m4a, or Opus in WebM) that the
+ * browser's AudioContext.decodeAudioData() accepts without modification. This
+ * is what saves us when youtube-mp36 returns a stale/dead link — common on
+ * music videos accessed via "&list=RD…" YouTube Music radio links.
+ */
+async function getAudioFromMp4Host(videoId, apiKey) {
+  const res = await fetch(`https://${MP4_HOST}/dl?id=${encodeURIComponent(videoId)}`, {
+    method: 'GET',
+    headers: { 'X-RapidAPI-Key': apiKey, 'X-RapidAPI-Host': MP4_HOST },
+  });
+  if (!res.ok) {
+    const e = new Error(`MP4 host returned ${res.status}`);
+    e.status = res.status;
+    throw e;
+  }
+  const data = await res.json().catch(() => ({}));
+  if (data.status === 'fail' || data.errorId) {
+    throw new Error(data.reason || data.msg || 'Video is not available for download.');
+  }
+
+  const adaptive = Array.isArray(data.adaptiveFormats) ? data.adaptiveFormats : [];
+  // Pick all audio-only adaptive streams (mimeType starts with "audio/").
+  const audioOnly = adaptive.filter(
+    (f) => f && f.url && (f.mimeType || '').toLowerCase().startsWith('audio/')
+  );
+  if (audioOnly.length === 0) {
+    throw new Error('No audio-only stream available for this video.');
+  }
+  // Prefer the highest bitrate; AAC (audio/mp4) generally decodes more
+  // reliably across browsers than Opus, so use it as a tiebreaker.
+  audioOnly.sort((a, b) => {
+    const aac = (m) => /audio\/mp4/i.test(m || '') ? 1 : 0;
+    const bitDiff = (b.bitrate || 0) - (a.bitrate || 0);
+    if (bitDiff !== 0) return bitDiff;
+    return aac(b.mimeType) - aac(a.mimeType);
+  });
+  const best = audioOnly[0];
+
+  const seconds = parseInt(data.lengthSeconds, 10);
+  const duration = Number.isFinite(seconds)
+    ? `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
+    : null;
+
+  return {
+    link: best.url,
+    title: data.title || 'YouTube Audio',
+    duration,
+    contentType: (best.mimeType || 'audio/mp4').split(';')[0].trim(),
+    via: 'mp4-adaptive',
+  };
+}
+
+/**
+ * Try once at the given upstream link. Returns the upstream Response on 200,
+ * null on a CDN miss (404/410), throws on anything else worth surfacing.
+ */
+async function tryStream(link) {
+  let upstream;
+  try {
+    upstream = await fetch(link);
+  } catch {
+    return null;
+  }
+  if (upstream.ok && upstream.body) return upstream;
+  if (upstream.status === 404 || upstream.status === 410) return null;
+  // Any other status (5xx, etc.) — drain and treat as a miss.
+  try { await upstream.body?.cancel(); } catch { /* ignore */ }
+  return null;
+}
+
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -134,18 +208,76 @@ export async function POST(request) {
     );
   }
 
-  let info;
+  // ---------------------------------------------------------------------
+  // Two-stage fallback. We want to deliver audio bytes whenever possible:
+  //   1. youtube-mp36 (MP3 host) — fastest, lowest bandwidth, normal path
+  //   2. ytstream MP4 host's audio-only adaptive stream (m4a / AAC) — saves
+  //      us when youtube-mp36 hands back a stale/dead CDN link, common on
+  //      YouTube Music videos accessed via "&list=RD…" radio links
+  // Retrying the SAME RapidAPI MP3 endpoint after a CDN miss is pointless
+  // because the upstream serves the same cached link for several minutes,
+  // so we skip straight to the MP4 fallback.
+  // ---------------------------------------------------------------------
+
+  let info = null;
+  let upstream = null;
+  let firstError = null;
+  let mp3Worked = false;
+
+  // Stage 1: MP3 host.
   try {
-    info = await getMp3DownloadUrl(videoId, apiKey);
+    const tmpInfo = await getMp3DownloadUrl(videoId, apiKey);
+    mp3Worked = true;
+    upstream = await tryStream(tmpInfo.link);
+    if (upstream) {
+      info = { ...tmpInfo, contentType: 'audio/mpeg', via: 'mp3-host' };
+    } else {
+      // RapidAPI happily returned a "ready" link but the CDN serves 404.
+      // Record this so we can surface it if the fallback also fails.
+      firstError = new Error('MP3 CDN miss');
+    }
   } catch (err) {
+    firstError = err;
     const status = err?.status || 502;
-    const isBlocked = status === 429 || status === 403 || /block|rate|limit/i.test(err?.message || '');
     const isProcessing = status === 202 || /preparing|processing/i.test(err?.message || '');
+    // "Still processing" means the MP3 host is mid-encode. The MP4 host
+    // doesn't share that state, but it usually has the audio ready
+    // immediately, so it's still worth trying as a fallback.
+    if (isProcessing) {
+      // Don't return early — fall through to the MP4 host attempt.
+    }
+  }
+
+  // Stage 2: MP4 host adaptive audio fallback.
+  if (!upstream) {
+    try {
+      const tmpInfo = await getAudioFromMp4Host(videoId, apiKey);
+      const candidate = await tryStream(tmpInfo.link);
+      if (candidate) {
+        upstream = candidate;
+        info = tmpInfo;
+      } else if (!firstError) {
+        firstError = new Error('Adaptive audio CDN miss');
+      }
+    } catch (err) {
+      if (!firstError) firstError = err;
+    }
+  }
+
+  if (!upstream) {
+    const err = firstError || new Error('All upstream audio sources returned errors.');
+    const status = err.status || 502;
+    const isBlocked = status === 429 || status === 403 || /block|rate|limit/i.test(err.message || '');
+    const isProcessing = status === 202 || /preparing|processing/i.test(err.message || '');
     return Response.json(
       {
         error: isBlocked
           ? 'YouTube briefly blocked this request. Please click "Try Again" in a few seconds.'
-          : err?.message || 'Conversion failed.',
+          : isProcessing
+          ? err.message
+          : mp3Worked
+          ? 'The MP3 service handed back a dead CDN link, and the audio fallback also failed. Please try a different video or retry in a minute.'
+          : `Audio could not be retrieved for this video (${err.message || 'CDN miss'}). Please try a different video or retry.`,
         retryable: true,
         processing: isProcessing,
       },
@@ -153,28 +285,20 @@ export async function POST(request) {
     );
   }
 
-  // Stream the MP3 bytes back to the browser as same-origin audio/mpeg so
-  // that AudioContext.decodeAudioData() works without a CORS preflight.
-  let upstream;
-  try {
-    upstream = await fetch(info.link);
-  } catch (err) {
-    return Response.json({ error: 'Failed to fetch the converted MP3 from CDN.', retryable: true }, { status: 502 });
-  }
-  if (!upstream.ok || !upstream.body) {
-    return Response.json({ error: `MP3 CDN returned ${upstream.status}. Please retry.`, retryable: true }, { status: 502 });
-  }
-
+  // Stream the audio bytes back to the browser as same-origin so that
+  // AudioContext.decodeAudioData() works without a CORS preflight.
   const headers = new Headers();
-  headers.set('Content-Type', upstream.headers.get('content-type') || 'audio/mpeg');
+  const upstreamCt = upstream.headers.get('content-type');
+  headers.set('Content-Type', upstreamCt || info.contentType || 'audio/mpeg');
   const len = upstream.headers.get('content-length');
   if (len) headers.set('Content-Length', len);
   headers.set('Cache-Control', 'private, no-store');
   headers.set('X-Video-Id', videoId);
   if (info.title) headers.set('X-Video-Title', encodeURIComponent(info.title));
   if (info.duration) headers.set('X-Video-Duration', safeHeader(String(info.duration)));
+  if (info.via) headers.set('X-Audio-Source', info.via);
   // Allow the client to read these custom headers
-  headers.set('Access-Control-Expose-Headers', 'X-Video-Id, X-Video-Title, X-Video-Duration');
+  headers.set('Access-Control-Expose-Headers', 'X-Video-Id, X-Video-Title, X-Video-Duration, X-Audio-Source');
 
   return new Response(upstream.body, { status: 200, headers });
 }

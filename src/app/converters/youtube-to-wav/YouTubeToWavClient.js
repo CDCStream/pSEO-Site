@@ -24,7 +24,7 @@ const WAV_QUALITIES = [
 
 const STAGES = {
   preparing: 'Preparing source on YouTube\u2026',
-  fetching: 'Downloading MP3 stream\u2026',
+  fetching: 'Downloading audio stream\u2026',
   decoding: 'Decoding audio to PCM\u2026',
   resampling: 'Resampling to target rate\u2026',
   encoding: 'Encoding WAV file\u2026',
@@ -417,7 +417,7 @@ export default function YouTubeToWavClient() {
 
           {stage === 'preparing' && elapsed > 5000 && (
             <p className="text-amber-300/80 text-xs mt-3">
-              YouTube is still preparing the source audio for this video — that\u2019s normal on first
+              YouTube is still preparing the source audio for this video — that&apos;s normal on first
               conversion of a video. If this is the first time anyone has converted this clip,
               the upstream service caches it in 5-15 seconds.
             </p>
