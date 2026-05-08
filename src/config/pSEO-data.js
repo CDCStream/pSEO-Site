@@ -4470,6 +4470,70 @@ The wallpapers in this collection are fan-art interpretations of the Peppa Pig h
 
 To download, simply tap any thumbnail above to open the full-size preview, then press the pink Download HD button. The PNG will save instantly to your device\u2019s Downloads folder (or to Photos on iOS). All 28 wallpapers are right here on this page — no infinite-scroll, no pagination, no need to hop between sites. If your favourite is the bright sunny day version of the red house on the hill, the snowy winter scene, the night-time render with the warm yellow windows, or one of the cosy interior shots, it is just one tap away. Pick the one that makes your child smile the most every time they unlock the screen.`,
   },
+  'kpop-demon-hunters-wallpaper': {
+    category: 'wallpapers',
+    name: 'KPop Demon Hunters Wallpaper',
+    keyword: 'KPop Demon Hunters Wallpaper',
+    title: 'Free KPop Demon Hunters Wallpapers HD - 32 HUNTR/X & Saja Boys Backgrounds',
+    description: 'Download 32 free KPop Demon Hunters wallpapers in HD. Featuring HUNTR/X (Rumi, Mira, Zoey) and the Saja Boys. No watermark, instant download.',
+    h1: 'Free KPop Demon Hunters HD Wallpapers',
+    subtitle: 'Browse and download 32 striking KPop Demon Hunters wallpapers \u2014 HUNTR/X (Rumi, Mira, Zoey) and the Saja Boys (Jinu, Abby, Romance, Mystery, Baby) from the hit Netflix animated film. Perfect for phone lock screens and home screens.',
+    icon: 'star',
+    generatorType: 'kpopDemonHuntersGallery',
+    faq: [
+      {
+        q: 'How many KPop Demon Hunters wallpapers are available?',
+        a: 'Our collection features 32 high-quality KPop Demon Hunters wallpapers covering both groups from the film. You will find solo and group shots of HUNTR/X members Rumi, Mira, and Zoey in their stage outfits and demon-hunting gear, plus the rival demon boy group the Saja Boys (Jinu, Abby, Romance, Mystery, and Baby Saja) in their iconic looks. The set also includes neon stage lighting renders, action poses with weapons, soft pastel aesthetic edits, and dramatic dark fantasy compositions.',
+      },
+      {
+        q: 'Are the KPop Demon Hunters wallpapers free?',
+        a: 'Yes, completely free. No sign-up, no email, no credit card, and no watermarks added to any image. Tap any thumbnail to open the full-size preview, then click the magenta Download HD button to save the PNG straight to your phone or computer. The collection is 100% free for personal use as a phone, tablet, or desktop wallpaper.',
+      },
+      {
+        q: 'What is KPop Demon Hunters about?',
+        a: 'KPop Demon Hunters is a Sony Pictures Animation film released on Netflix in June 2025, directed by Maggie Kang and Chris Appelhans. The story follows HUNTR/X, a wildly popular K-pop girl group whose three members \u2014 Rumi, Mira, and Zoey \u2014 secretly use their voices to fight demons that prey on humans. When a rival demon boy group called the Saja Boys debuts and starts stealing their fans, the trio must defeat the demons before they reach the top of the charts. The film became one of the most-watched animated movies in Netflix history, with over 158 million views in its first months.',
+      },
+      {
+        q: 'Who are HUNTR/X (Huntrix) members Rumi, Mira, and Zoey?',
+        a: 'HUNTR/X is the K-pop girl group at the centre of the film, made up of three demon hunters. Rumi is the leader and main vocalist with violet hair, the heart of the group and the carrier of the secret that drives the story. Mira is the visual and main rapper with electric blue hair and the most flamboyant stage style. Zoey is the maknae (youngest member), the dancer and producer with bright pink hair and a high-energy stage presence. Their breakout song from the film, "Golden", became a viral hit on TikTok and the Billboard charts.',
+      },
+      {
+        q: 'Who are the Saja Boys?',
+        a: 'The Saja Boys are the demon boy group antagonists of KPop Demon Hunters. Saja means "lion" in Korean, and the group is fronted by Jinu, the brooding, dangerously charismatic leader who becomes the central love interest and rival to HUNTR/X. The other four members \u2014 Abby Saja, Romance Saja, Mystery Saja, and Baby Saja \u2014 each play to a different K-pop boy-group archetype turned dark. Their hit song "Soda Pop" became a fan favourite alongside HUNTR/X "Golden". Several wallpapers in this set feature the Saja Boys both individually and as a group.',
+      },
+      {
+        q: 'Where can I watch KPop Demon Hunters?',
+        a: 'KPop Demon Hunters is streaming exclusively on Netflix worldwide. It dropped on 20 June 2025 and is available in every country where Netflix operates, with dubs and subtitles in more than 30 languages including Korean, English, Spanish, Portuguese, Japanese, French, German, Hindi, and Indonesian. The film is rated PG and runs about 95 minutes. The original soundtrack is also available on Spotify, Apple Music, and YouTube Music.',
+      },
+      {
+        q: 'What resolution and format are the wallpapers?',
+        a: 'Every wallpaper is a portrait PNG at 9:16 aspect ratio (816 x 1456 pixels) \u2014 the right shape and resolution to fill a modern smartphone lock screen edge to edge with no cropping. The PNGs have been colour-optimised so each image is roughly three times smaller than a typical raw export, which keeps the gallery loading fast on mobile data and keeps the page green on Google Core Web Vitals (LCP under 2.5s on 4G, no layout shift).',
+      },
+      {
+        q: 'What devices do the wallpapers work on?',
+        a: 'The 9:16 portrait format is designed for phones and tablets and works on every modern device: iPhone (every model from iPhone X onwards), Samsung Galaxy, Google Pixel, Xiaomi, OnePlus, OPPO, Vivo, every Android tablet, iPad in portrait mode, and Kindle Fire tablets. Desktop and laptop users can set them as wallpapers too \u2014 most desktop OSes will fit the portrait image to the height of the screen and frame it with a colour bar.',
+      },
+      {
+        q: 'Why are KPop Demon Hunters wallpapers so popular?',
+        a: 'KPop Demon Hunters is one of the biggest crossover hits of the 2020s. The film blends two enormously popular global subcultures \u2014 K-pop and anime-style supernatural action \u2014 and the soundtrack songs "Golden" and "Soda Pop" went viral on TikTok with billions of views combined. Fans want their phones to reflect their fandom, so demand for KPop Demon Hunters wallpapers, especially of Rumi and Jinu, spiked into the top trending wallpaper queries on Google globally within days of the film release.',
+      },
+    ],
+    longContent: `KPop Demon Hunters became a global cultural moment the day it dropped on Netflix in June 2025. Sony Pictures Animation's feature film, directed by Maggie Kang and Chris Appelhans, hit the streamer's top 10 in more than 90 countries within 24 hours and went on to become one of the most-watched animated films in Netflix's entire history, racking up more than 158 million views in its opening months and minting a soundtrack \u2014 led by HUNTR/X "Golden" and the Saja Boys "Soda Pop" \u2014 that climbed Billboard, Spotify, and Apple Music charts in the United States, the United Kingdom, the Philippines, Indonesia, India, Brazil, Mexico, and right across Southeast Asia and Latin America. This collection brings together 32 free HD wallpapers featuring HUNTR/X, the Saja Boys, and the neon-soaked world of the film, ready to set as a phone, tablet, or desktop background in seconds.
+
+The story turns on a simple but irresistible premise: HUNTR/X, a chart-topping K-pop girl group made up of Rumi, Mira, and Zoey, is secretly a trio of demon hunters who channel the power of their fans' voices to fight off otherworldly threats. When a rival boy group called the Saja Boys debuts at the top of the charts, the three friends realise the new idols are demons in disguise \u2014 servants of the demon king Gwi-Ma \u2014 and that beating them on stage is the only way to save the world. It is exactly the kind of high-concept K-pop-meets-anime-action setup that the global Gen Z audience had been waiting for, and the film delivers on it with a soundtrack of original songs that genuinely sound like real K-pop hits, choreographed and performed in a style that nods to BLACKPINK, TWICE, NewJeans, BTS, ATEEZ, and Stray Kids.
+
+This collection covers every fan-favourite character and the most memorable scenes from the film. Rumi, the violet-haired leader of HUNTR/X, appears in solo portrait shots, in stage costume during the "Golden" performance, and in dramatic moments with her demon-hunting weapons. Mira, the electric blue-haired rapper and visual of the group, gets stage shots and high-action poses, and Zoey, the bright pink-haired maknae and producer, is featured in her trademark playful poses and in full HUNTR/X group formation shots. The Saja Boys are equally well-represented: Jinu, the silver-haired brooding leader and Rumi rival-turned-something-more, in solo close-ups and as the front of the group, plus Abby Saja, Romance Saja, Mystery Saja, and Baby Saja each in their distinctive looks. Several of the wallpapers feature both groups together, which has been one of the most-requested edits across TikTok, Twitter, and Pinterest since the film dropped.
+
+The visual style of the film translates beautifully to phone wallpapers. Sony Pictures Animation \u2014 the same studio behind Spider-Man: Across the Spider-Verse and The Mitchells vs. The Machines \u2014 leaned into bold neon colour palettes, cel-shaded character art, and dynamic motion-blur poses that look like comic-book splash panels. Every shot is framed for impact, with the kind of dense colour saturation, glowing rim-lights, and energetic composition that makes the screen feel alive every time you unlock it. The collection includes both the high-energy stage-light renders and the quieter character-portrait moments, so you can pick a wallpaper that matches the mood you want \u2014 fierce and dramatic for the lock screen, soft and aesthetic for the home screen.
+
+Every wallpaper in the collection is a 9:16 portrait PNG at 816 by 1456 pixels, which is the right resolution to look crisp on any modern phone display and the right aspect ratio to fill the screen edge to edge without cropping. The PNGs have been colour-optimised \u2014 palette-quantised down to a 256-colour adaptive palette by an automated build script \u2014 so each image is roughly three times smaller than a typical raw export. That cuts the gallery total page weight from 60+ MB down to about 21 MB, keeping the Largest Contentful Paint metric well under 2.5 seconds on 4G and the page in the green on Google Core Web Vitals. In practical terms: the gallery loads instantly on a phone, the wallpapers download in under a second each, and they barely touch your device storage.
+
+Setting a KPop Demon Hunters wallpaper is simple on every modern device. On iPhone, save the PNG to Photos, then go to Settings, Wallpaper, Add New Wallpaper, choose Photos, pick the image, and apply it to the lock screen, the home screen, or both. On Android, save the PNG to Files or Photos, long-press the home screen, tap Wallpaper & style, choose My photos, pick the image, and apply. iPads and Android tablets work the same way; the portrait wallpapers will look great in portrait mode and pillarbox elegantly in landscape. Kindle Fire tablets accept the same PNGs through the Photos app. Desktop users on Windows, macOS, and Linux can set the portrait images as desktop wallpapers fit-to-height for a stylish striped look or use them as lock-screen backgrounds.
+
+A note on rights and intent: the wallpapers in this collection are fan-art-style interpretations of the characters and scenes of KPop Demon Hunters, intended strictly for personal use as phone, tablet, and desktop backgrounds. We do not own and do not claim to own KPop Demon Hunters, HUNTR/X, the Saja Boys, or any of the characters, names, designs, or trademarks, which are the property of Sony Pictures Animation and Netflix. The artwork is provided free of charge as a gift to fans of the film, with no advertising injected into the images, no watermarks, no email gates, and no signup. If you love the film, please support the official soundtrack on Spotify, Apple Music, and YouTube Music, and stream the film on Netflix.
+
+To download, tap any thumbnail above to open the full-size preview, then press the magenta Download HD button. The PNG saves instantly to your device. All 32 wallpapers are right here on this page \u2014 no pagination, no infinite scroll, no need to hop between sites. Whether your favourite is a fierce solo shot of Rumi, a Jinu close-up, a HUNTR/X group formation, the Saja Boys on stage, a soft pastel edit, or a high-action moment from the climactic concert battle, it is one tap away. Pick the one that makes your phone feel like it belongs to a real demon hunter and unlock to a piece of the most exciting K-pop crossover of the decade every time you check the time.`,
+  },
 };
 
 // Get all pages for sitemap generation

@@ -36,6 +36,7 @@ import KingVonGalleryClient from './KingVonGalleryClient';
 import Y2kGalleryClient from './Y2kGalleryClient';
 import FloralGalleryClient from './FloralGalleryClient';
 import PeppaPigHouseGalleryClient from './PeppaPigHouseGalleryClient';
+import KpopDemonHuntersGalleryClient from './KpopDemonHuntersGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -302,6 +303,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the pink Download button to save the Peppa Pig house wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  kpopDemonHuntersGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 striking KPop Demon Hunters HD wallpapers featuring HUNTR/X (Rumi, Mira, Zoey) and the Saja Boys.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the magenta Download button to save the KPop Demon Hunters wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -413,6 +420,8 @@ export default async function WallpaperPage({ params }) {
               ? <FloralGalleryClient />
               : config.generatorType === 'peppaPigHouseGallery'
               ? <PeppaPigHouseGalleryClient />
+              : config.generatorType === 'kpopDemonHuntersGallery'
+              ? <KpopDemonHuntersGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
