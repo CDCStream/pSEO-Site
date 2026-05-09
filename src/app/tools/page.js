@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight, Quote } from 'lucide-react';
+import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight, Quote, Sparkles } from 'lucide-react';
 import { toolsConfig } from '@/config/pSEO-data';
 
 const featuredTools = [
@@ -10,6 +10,14 @@ const featuredTools = [
     Icon: Quote,
     accent: 'from-blue-500 to-cyan-500',
     badge: 'AMA 11',
+  },
+  {
+    href: '/tools/tiktok-emoji-codes/',
+    name: 'TikTok Emoji Codes',
+    subtitle: 'All 46 secret TikTok bracket emojis with PNG previews. Search, filter by mood, one-click copy [smile]-style codes, single-PNG and bulk ZIP downloads.',
+    Icon: Sparkles,
+    accent: 'from-pink-500 via-fuchsia-500 to-cyan-400',
+    badge: '46 emojis',
   },
 ];
 

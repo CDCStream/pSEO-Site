@@ -58,6 +58,7 @@ const navItems = [
       { label: 'WiFi QR Generator', href: '/tools/wifi-qr-code-generator/' },
       { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator/' },
       { label: 'AMA Citation Generator', href: '/tools/ama-citation-generator/' },
+      { label: 'TikTok Emoji Codes', href: '/tools/tiktok-emoji-codes/' },
     ],
   },
   {
