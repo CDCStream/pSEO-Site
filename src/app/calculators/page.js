@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -65,6 +65,14 @@ const calculatorTools = [
     icon: InfinityIcon,
     color: 'from-blue-500 to-cyan-400',
     tags: ['Calculus', 'L\u2019Hôpital', 'Step-by-Step', 'Graph'],
+  },
+  {
+    name: 'Palworld Breeding Calculator',
+    description: 'Pick any two parent Pals and instantly see the child. Same-species rule, special combos, and BreedingPower math all handled across 200+ Pals.',
+    href: '/calculators/palworld-breeding-calculator/',
+    icon: PawPrint,
+    color: 'from-emerald-500 via-amber-400 to-yellow-300',
+    tags: ['Palworld', 'Breeding', 'Pal Combos', 'Game Tool'],
   },
 ];
 
