@@ -55,6 +55,7 @@ const navItems = [
       { label: 'Upside Down Text', href: '/tools/upside-down-text-generator/' },
       { label: 'Italics Generator', href: '/tools/italics-generator/' },
       { label: 'QR Code Generator', href: '/tools/qr-code-generator/' },
+      { label: 'Adobe QR Code Generator', href: '/tools/adobe-qr-code-generator/' },
       { label: 'WiFi QR Generator', href: '/tools/wifi-qr-code-generator/' },
       { label: 'Glitch Text Generator', href: '/tools/glitch-text-generator/' },
       { label: 'AMA Citation Generator', href: '/tools/ama-citation-generator/' },

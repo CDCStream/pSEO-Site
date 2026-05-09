@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight, Quote, Sparkles } from 'lucide-react';
+import { Type, Zap, Minimize2, Strikethrough, Radio, Binary, Crown, Circle, Gamepad2, ArrowRight, Quote, Sparkles, QrCode } from 'lucide-react';
 import { toolsConfig } from '@/config/pSEO-data';
 
 const featuredTools = [
@@ -18,6 +18,14 @@ const featuredTools = [
     Icon: Sparkles,
     accent: 'from-pink-500 via-fuchsia-500 to-cyan-400',
     badge: '46 emojis',
+  },
+  {
+    href: '/tools/adobe-qr-code-generator/',
+    name: 'Adobe QR Code Generator',
+    subtitle: 'QR codes with Adobe brand color presets, SVG vector export for Illustrator and InDesign, transparent PNG for Photoshop, and centered logo overlay. Free, no signup.',
+    Icon: QrCode,
+    accent: 'from-[#FA0F00] to-[#FF9A00]',
+    badge: 'SVG + PNG',
   },
 ];
 
