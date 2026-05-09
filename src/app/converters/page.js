@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Languages, ArrowRight, ShieldCheck, Music, Film, Image as ImageIcon } from 'lucide-react';
+import { Languages, ArrowRight, ShieldCheck, Music, Film, Image as ImageIcon, Instagram } from 'lucide-react';
 
 const converterTools = [
   {
@@ -41,6 +41,14 @@ const converterTools = [
     icon: ImageIcon,
     color: 'from-rose-500 to-fuchsia-400',
     tags: ['HEIC', 'JPG', 'iPhone', 'Private'],
+  },
+  {
+    name: 'Instagram Highlights Viewer',
+    description: 'View and download any public profile\u2019s Instagram Highlights anonymously. Story-style player, original quality, no login or trace.',
+    href: '/converters/instagram-highlights-viewer/',
+    icon: Instagram,
+    color: 'from-pink-500 via-fuchsia-500 to-purple-500',
+    tags: ['Instagram', 'Highlights', 'Anonymous', 'Downloader'],
   },
 ];
 
