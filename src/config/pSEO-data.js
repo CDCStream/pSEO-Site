@@ -4534,6 +4534,74 @@ A note on rights and intent: the wallpapers in this collection are fan-art-style
 
 To download, tap any thumbnail above to open the full-size preview, then press the magenta Download HD button. The PNG saves instantly to your device. All 32 wallpapers are right here on this page \u2014 no pagination, no infinite scroll, no need to hop between sites. Whether your favourite is a fierce solo shot of Rumi, a Jinu close-up, a HUNTR/X group formation, the Saja Boys on stage, a soft pastel edit, or a high-action moment from the climactic concert battle, it is one tap away. Pick the one that makes your phone feel like it belongs to a real demon hunter and unlock to a piece of the most exciting K-pop crossover of the decade every time you check the time.`,
   },
+  'stranger-things-wallpaper': {
+    category: 'wallpapers',
+    name: 'Stranger Things Wallpaper',
+    keyword: 'Stranger Things Wallpaper',
+    title: 'Free Stranger Things Wallpapers HD - 32 Eleven, Vecna & Hawkins Backgrounds',
+    description: 'Download 32 free Stranger Things wallpapers in HD. Eleven, Vecna, the Upside Down, the Hawkins crew, and 80s-aesthetic backgrounds. No watermark, instant download.',
+    h1: 'Free Stranger Things HD Wallpapers',
+    subtitle: 'Browse and download 32 striking Stranger Things wallpapers \u2014 Eleven, Vecna, the Upside Down, Hawkins lab, the Demogorgon, and the whole Party (Mike, Will, Dustin, Lucas, Max, Steve, Robin, Eddie, Nancy, Jonathan, Hopper, Joyce). Perfect for phone lock screens and home screens.',
+    icon: 'star',
+    generatorType: 'strangerThingsGallery',
+    faq: [
+      {
+        q: 'How many Stranger Things wallpapers are available?',
+        a: 'Our collection features 32 high-quality Stranger Things wallpapers. You will find solo and group portraits of Eleven, Vecna, Steve, Eddie Munson, Dustin, Lucas, Mike, Will, Max, Robin, Nancy, Jonathan, Hopper, and Joyce, alongside iconic location shots of the Hawkins lab, the Starcourt Mall, the Byers house, the Creel House, the Upside Down vines, the Demogorgon, the Mind Flayer, and the famous neon-lit "STRANGER THINGS" title card. The set includes both bright 80s-aesthetic edits and dark, dread-soaked horror compositions.',
+      },
+      {
+        q: 'Are the Stranger Things wallpapers free?',
+        a: 'Yes, completely free. No sign-up, no email gate, no credit card, and no watermarks added to any image. Tap any thumbnail to open the full-size preview, then click the red Download HD button to save the PNG straight to your phone or computer. The collection is 100% free for personal use as a phone, tablet, or desktop wallpaper.',
+      },
+      {
+        q: 'What is Stranger Things about?',
+        a: 'Stranger Things is a Netflix supernatural horror-thriller created by the Duffer Brothers (Matt and Ross), set in the fictional town of Hawkins, Indiana, in the 1980s. The story follows a group of kids \u2014 Mike, Will, Dustin, Lucas, and the telekinetic Eleven \u2014 plus their families and friends, as they confront monsters, government conspiracies, and an alternate dimension called the Upside Down. Across five seasons (2016 to 2025) the show grew from a Spielberg-and-Stephen-King throwback into one of the most-watched English-language Netflix series of all time, with the final season releasing in 2025.',
+      },
+      {
+        q: 'Who is Eleven (El) in Stranger Things?',
+        a: 'Eleven, or El, is the heart of the show. Played by Millie Bobby Brown, she is a young girl raised in a secret government experiment at the Hawkins National Laboratory who escapes with extraordinary telekinetic and psychic abilities. Her shaved head and bloody nose became one of the most iconic visual signatures of 2010s pop culture. Several wallpapers in this collection feature Eleven \u2014 in her early Eleven look, in her later seasons with longer hair, using her powers, and in pastel-aesthetic edits for fans who want a softer Eleven home screen.',
+      },
+      {
+        q: 'Who is Vecna and what is the Upside Down?',
+        a: 'Vecna is the primary antagonist introduced in Stranger Things 4. He is a powerful inter-dimensional sorcerer who hunts his victims from the Upside Down, a dark mirror dimension that bleeds into Hawkins through cracks in reality. The Upside Down looks like Hawkins covered in vines, ash, and red lightning, with the Mind Flayer storm churning in the sky. This collection includes several Vecna close-ups and Upside Down landscape shots for fans who prefer the show\u2019s horror side over the 80s nostalgia side. Vecna is played by Jamie Campbell Bower.',
+      },
+      {
+        q: 'Where can I watch Stranger Things?',
+        a: 'Stranger Things streams exclusively on Netflix worldwide. Seasons 1 through 5 are all available with subtitles and dubs in more than 30 languages, including English, Spanish, Portuguese, French, German, Italian, Korean, Japanese, Hindi, Indonesian, Arabic, and Turkish. The show is rated TV-14 for the early seasons and TV-MA for season 4 and the final season, which lean harder into horror.',
+      },
+      {
+        q: 'What resolution and format are the wallpapers?',
+        a: 'Every wallpaper is a portrait PNG at 9:16 aspect ratio (816 x 1456 pixels) \u2014 the right shape and resolution to fill a modern smartphone lock screen edge to edge with no cropping. The PNGs have been colour-optimised so each image is roughly three times smaller than a typical raw export, which keeps the gallery loading fast on mobile data and keeps the page green on Google Core Web Vitals (LCP under 2.5s on 4G, no layout shift).',
+      },
+      {
+        q: 'What devices do the wallpapers work on?',
+        a: 'The 9:16 portrait format is designed for phones and tablets and works on every modern device: iPhone (every model from iPhone X onwards including iPhone 17 and iPhone Air), Samsung Galaxy, Google Pixel, Xiaomi, OnePlus, OPPO, Vivo, every Android tablet, iPad in portrait mode, and Kindle Fire tablets. Desktop and laptop users can set them as wallpapers too \u2014 most desktop OSes will fit the portrait image to the height of the screen and frame it with a colour bar.',
+      },
+      {
+        q: 'Are these official Stranger Things or Netflix wallpapers?',
+        a: 'No. The wallpapers are fan-art-style interpretations of the characters, locations, and aesthetic of Stranger Things, intended strictly for personal use as phone, tablet, and desktop backgrounds. Stranger Things, Netflix, the Demogorgon, Vecna, the Upside Down, and all character names and designs are the property of Netflix and 21 Laps Entertainment. We do not own them, we are not affiliated with Netflix, and we make no claim of ownership. The artwork is provided free of charge as a gift to fans of the show.',
+      },
+      {
+        q: 'Why are Stranger Things wallpapers so popular?',
+        a: 'Stranger Things sits at the intersection of three of the biggest 2020s pop-culture currents: 80s nostalgia, horror, and Netflix prestige TV. The show launched in 2016 and finished its run in 2025 as one of the most-watched English-language Netflix originals ever made, with the final season releasing in 2025 to enormous global anticipation. Fans want their phones to reflect their fandom, and queries for "Stranger Things wallpaper", "Eleven wallpaper", "Vecna wallpaper", "Eddie Munson wallpaper", and "Hawkins wallpaper" all consistently top Google trends every time a new season drops or a season-finale episode airs.',
+      },
+    ],
+    longContent: `Stranger Things became a defining piece of 2010s and 2020s pop culture the moment Netflix released the first season in July 2016. Created by Matt and Ross Duffer, set in the fictional small town of Hawkins, Indiana, in the early 1980s, the show fused E.T. and Goonies-style coming-of-age adventure with Stephen King horror and a synthwave Tangerine Dream-style score, and it landed on a global audience that was hungry for exactly that combination. Across five seasons \u2014 the final one releasing on Netflix in 2025 \u2014 Stranger Things grew into one of the streamer\u2019s most-watched English-language originals ever, with billions of cumulative hours streamed and a soundtrack that pushed Kate Bush\u2019s "Running Up That Hill", Metallica\u2019s "Master of Puppets", and Journey\u2019s "Don\u2019t Stop Believin\'" back to the top of the Billboard charts forty years after their original release. This collection brings together 32 free HD wallpapers covering every fan-favourite character and location, ready to set as a phone, tablet, or desktop background in seconds.
+ 
+The story turns on a simple but irresistible premise. In the autumn of 1983, a young boy named Will Byers vanishes from Hawkins on his way home from a Dungeons & Dragons night with his three best friends \u2014 Mike Wheeler, Dustin Henderson, and Lucas Sinclair. The kids set out to find him and along the way they meet Eleven, a telekinetic girl in a hospital gown who has just escaped a secret government laboratory at Hawkins National. Eleven\u2019s powers are the key to a hidden world: a parallel dimension called the Upside Down, where Will is being hunted by an interdimensional creature the kids dub the Demogorgon. From that opening, the show expands across five seasons through ever-larger threats \u2014 the Mind Flayer, the Russian conspiracy under Starcourt Mall, the Creel House and Vecna, and the final-season showdown in Hawkins itself \u2014 while keeping the same core ensemble of friends, family, and small-town misfits who carry the emotional centre.
+ 
+This collection covers every fan-favourite character and the most photographed scenes from the show. Eleven, played by Millie Bobby Brown, appears in solo portrait shots from her early shaved-head debut through her later seasons looks, in moments of full-power telekinesis with the famous bloody nose, and in soft pastel aesthetic edits for fans who want a gentler home screen. Vecna, played by Jamie Campbell Bower and introduced in season four, gets his own dread-soaked close-ups with the famous five-eye Mind Flayer aesthetic and the vines of the Upside Down twisting around his frame. Eddie Munson, the Hellfire Club D&D-master sweetheart of season four played by Joseph Quinn, appears in his battle-vest-and-Metallica setup with his guitar in hand. The whole Party is here \u2014 Mike, Dustin, Lucas, Will, Max \u2014 plus Steve "the Hair" Harrington, Robin Buckley, Nancy Wheeler, Jonathan Byers, the unstoppable duo of Hopper and Joyce, and the Hawkins iconography that the show built into a fan-favourite visual language: the neon-red title card, the Christmas-light alphabet wall, the Demogorgon, the Hawkins lab, Starcourt Mall, the Creel House, and the Upside Down\u2019s ash-grey skies streaked with red lightning.
+ 
+The visual style of Stranger Things translates beautifully to phone wallpapers. The show\u2019s production design leans hard into 1980s analogue warmth: warm lamp light through wood-panelled living rooms, neon arcade glow, fluorescent mall sterility, the deep magenta-and-cyan colour grading of the synthwave dream sequences. Its horror palette is the opposite \u2014 desaturated greys, eerie reds, blacks heavy enough to swallow detail. The collection includes both ends of the spectrum, plus everything in between: bright Hawkins summer scenes, dark Vecna and Upside Down compositions, character close-ups, ensemble shots from the famous "Running Up That Hill" sequence, the Hellfire Club gathered around the D&D table, the Russian-base reveal under Starcourt, the season-four climactic battle, and a few minimalist "STRANGER THINGS" title-card edits for fans who prefer a typographic background to a character one.
+ 
+Every wallpaper in the collection is a 9:16 portrait PNG at 816 by 1456 pixels, which is the right resolution to look crisp on any modern phone display and the right aspect ratio to fill the screen edge to edge without cropping. The PNGs have been colour-optimised \u2014 palette-quantised down to a 256-colour adaptive palette by an automated build script \u2014 so each image is roughly three times smaller than a typical raw export. That cuts the gallery total page weight from over 60 MB down to about 21 MB, keeping the Largest Contentful Paint metric well under 2.5 seconds on 4G and the page in the green on Google Core Web Vitals. In practical terms: the gallery loads instantly on a phone, the wallpapers download in under a second each, and they barely touch your device storage.
+ 
+Setting a Stranger Things wallpaper is simple on every modern device. On iPhone, save the PNG to Photos, then go to Settings, Wallpaper, Add New Wallpaper, choose Photos, pick the image, and apply it to the lock screen, the home screen, or both. On Android, save the PNG to Files or Photos, long-press the home screen, tap Wallpaper & style, choose My photos, pick the image, and apply. iPads and Android tablets work the same way; the portrait wallpapers will look great in portrait mode and pillarbox elegantly in landscape. Kindle Fire tablets accept the same PNGs through the Photos app. Desktop users on Windows, macOS, and Linux can set the portrait images as desktop wallpapers fit-to-height for a stylish striped look or use them as lock-screen backgrounds.
+ 
+A note on rights and intent: the wallpapers in this collection are fan-art-style interpretations of the characters, creatures, and locations of Stranger Things, intended strictly for personal use as phone, tablet, and desktop backgrounds. We do not own and do not claim to own Stranger Things, the Demogorgon, Vecna, the Upside Down, the Mind Flayer, the Hellfire Club, or any of the characters, names, designs, or trademarks, which are the property of Netflix and 21 Laps Entertainment. The artwork is provided free of charge as a gift to fans of the show, with no advertising injected into the images, no watermarks, no email gates, and no signup. If you love the show, please support it by streaming on Netflix and by buying the soundtrack on Spotify, Apple Music, or YouTube Music.
+ 
+To download, tap any thumbnail above to open the full-size preview, then press the red Download HD button. The PNG saves instantly to your device. All 32 wallpapers are right here on this page \u2014 no pagination, no infinite scroll, no need to hop between sites. Whether your favourite is a soft pastel Eleven edit, a Vecna horror close-up, an Eddie Munson Hellfire Club shot, the whole Party gathered for a campaign, the neon-red "STRANGER THINGS" title card, or one of the Upside Down landscape compositions, it is one tap away. Pick the one that makes your phone feel like it belongs in Hawkins and unlock to the world of the most influential 80s-throwback show of the streaming era every time you check the time.`,
+  },
 };
 
 // Get all pages for sitemap generation

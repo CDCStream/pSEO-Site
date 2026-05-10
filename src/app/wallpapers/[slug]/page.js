@@ -37,6 +37,7 @@ import Y2kGalleryClient from './Y2kGalleryClient';
 import FloralGalleryClient from './FloralGalleryClient';
 import PeppaPigHouseGalleryClient from './PeppaPigHouseGalleryClient';
 import KpopDemonHuntersGalleryClient from './KpopDemonHuntersGalleryClient';
+import StrangerThingsGalleryClient from './StrangerThingsGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -309,6 +310,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the magenta Download button to save the KPop Demon Hunters wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  strangerThingsGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 striking Stranger Things HD wallpapers \u2014 Eleven, Vecna, the Upside Down, Eddie Munson, and the whole Hawkins crew.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the red Download button to save the Stranger Things wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -422,6 +429,8 @@ export default async function WallpaperPage({ params }) {
               ? <PeppaPigHouseGalleryClient />
               : config.generatorType === 'kpopDemonHuntersGallery'
               ? <KpopDemonHuntersGalleryClient />
+              : config.generatorType === 'strangerThingsGallery'
+              ? <StrangerThingsGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
