@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint, Activity } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -73,6 +73,14 @@ const calculatorTools = [
     icon: PawPrint,
     color: 'from-emerald-500 via-amber-400 to-yellow-300',
     tags: ['Palworld', 'Breeding', 'Pal Combos', 'Game Tool'],
+  },
+  {
+    name: 'A1C Calculator',
+    description: 'Convert A1C (%) to estimated Average Glucose (mg/dL or mmol/L) and back. Uses the ADA ADAG-study formula with diagnostic interpretation.',
+    href: '/calculators/a1c-calculator/',
+    icon: Activity,
+    color: 'from-rose-500 to-red-400',
+    tags: ['Diabetes', 'A1C to eAG', 'mg/dL', 'mmol/L'],
   },
 ];
 

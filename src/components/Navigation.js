@@ -233,6 +233,7 @@ const navItems = [
       { label: 'Limit Calculator', href: '/calculators/limit-calculator/' },
       { label: 'Pythagorean Theorem Calculator', href: '/calculators/pythagorean-theorem-calculator/' },
       { label: 'Palworld Breeding Calculator', href: '/calculators/palworld-breeding-calculator/' },
+      { label: 'A1C Calculator', href: '/calculators/a1c-calculator/' },
     ],
   },
   {
