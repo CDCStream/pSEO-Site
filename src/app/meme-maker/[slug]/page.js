@@ -8,6 +8,7 @@ import SybauMemeClient from './SybauMemeClient';
 import WantedPosterClient from './WantedPosterClient';
 import JdVanceMemeClient from './JdVanceMemeClient';
 import DogMemeClient from './DogMemeClient';
+import QuandaleDingleMemeClient from './QuandaleDingleMemeClient';
 import CryingMemeGalleryClient from './CryingMemeGalleryClient';
 import SideEyeMemeGalleryClient from './SideEyeMemeGalleryClient';
 import GetALoadMemeClient from './GetALoadMemeClient';
@@ -237,6 +238,29 @@ const dogMemeSteps = [
     icon: Share2,
     title: 'Share Everywhere',
     description: 'Post it on Instagram, Twitter, TikTok, Reddit, or send it in group chats.',
+  },
+];
+
+const quandaleDingleMemeSteps = [
+  {
+    icon: Type,
+    title: 'Click to Place Text',
+    description: 'Click anywhere on the Quandale Dingle template to drop a caption at that exact spot. Add as many text boxes as you want.',
+  },
+  {
+    icon: Palette,
+    title: 'Customize Each Caption',
+    description: 'Tweak font, size, color, stroke, and uppercase per text box. Drag to reposition. Press Enter inside the editor for line breaks.',
+  },
+  {
+    icon: Download,
+    title: 'Download PNG',
+    description: 'Download your Quandale Dingle meme as a high-quality PNG image. No watermark, no signup, no upload to a server.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Post it on TikTok, Twitter / X, Instagram, Reddit, Discord, or drop it in any group chat. \u201cHello everyone, my name is Quandale Dingle and I...\u201d',
   },
 ];
 
@@ -1191,6 +1215,8 @@ export default async function MemePage({ params }) {
               <JdVanceMemeClient />
             ) : slug === 'dog-meme' ? (
               <DogMemeClient />
+            ) : slug === 'quandale-dingle-meme' ? (
+              <QuandaleDingleMemeClient />
             ) : slug === 'crying-meme' ? (
               <CryingMemeGalleryClient />
             ) : slug === 'side-eye-meme' ? (
@@ -1273,7 +1299,7 @@ export default async function MemePage({ params }) {
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : slug === 'trump-meme' ? trumpMemeSteps : slug === 'hand-on-shoulder-meme' ? handOnShoulderSteps : slug === 'crying-cat-meme' ? cryingCatMemeSteps : slug === 'laughing-meme' ? laughingMemeSteps : slug === '41-meme' ? fortyOneMemeSteps : slug === 'jon-hamm-dancing-meme' ? jonHammDancingSteps : slug === 'knee-surgery-meme' ? kneeSurgeryMemeSteps : slug === '67-kid-meme' ? sixtySevenKidMemeSteps : slug === 'alpha-wolf-meme' ? alphaWolfMemeSteps : slug === 'chicken-stars-meme' ? chickenStarsMemeSteps : slug === 'willem-dafoe-meme' ? willemDafoeMemeSteps : slug === 'megamind-meme' ? megamindMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'quandale-dingle-meme' ? quandaleDingleMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : slug === 'trump-meme' ? trumpMemeSteps : slug === 'hand-on-shoulder-meme' ? handOnShoulderSteps : slug === 'crying-cat-meme' ? cryingCatMemeSteps : slug === 'laughing-meme' ? laughingMemeSteps : slug === '41-meme' ? fortyOneMemeSteps : slug === 'jon-hamm-dancing-meme' ? jonHammDancingSteps : slug === 'knee-surgery-meme' ? kneeSurgeryMemeSteps : slug === '67-kid-meme' ? sixtySevenKidMemeSteps : slug === 'alpha-wolf-meme' ? alphaWolfMemeSteps : slug === 'chicken-stars-meme' ? chickenStarsMemeSteps : slug === 'willem-dafoe-meme' ? willemDafoeMemeSteps : slug === 'megamind-meme' ? megamindMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 
