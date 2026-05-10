@@ -38,6 +38,7 @@ import FloralGalleryClient from './FloralGalleryClient';
 import PeppaPigHouseGalleryClient from './PeppaPigHouseGalleryClient';
 import KpopDemonHuntersGalleryClient from './KpopDemonHuntersGalleryClient';
 import StrangerThingsGalleryClient from './StrangerThingsGalleryClient';
+import NarutoGalleryClient from './NarutoGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -316,6 +317,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the red Download button to save the Stranger Things wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  narutoGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 striking Naruto HD wallpapers \u2014 Naruto, Sasuke, Kakashi, Itachi, Akatsuki, and the Hidden Leaf crew.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the orange Download button to save the Naruto wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -431,6 +438,8 @@ export default async function WallpaperPage({ params }) {
               ? <KpopDemonHuntersGalleryClient />
               : config.generatorType === 'strangerThingsGallery'
               ? <StrangerThingsGalleryClient />
+              : config.generatorType === 'narutoGallery'
+              ? <NarutoGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
