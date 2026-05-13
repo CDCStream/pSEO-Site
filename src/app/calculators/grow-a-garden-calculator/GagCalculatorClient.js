@@ -123,11 +123,11 @@ export default function GagCalculatorClient() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-[1fr_340px] gap-0 xl:gap-0">
+      <div className="flex flex-col xl:flex-row">
         {/* Left: Inputs + Mutations */}
-        <div className="p-6 border-b xl:border-b-0 xl:border-r border-white/10">
+        <div className="flex-1 min-w-0 p-6 border-b xl:border-b-0 xl:border-r border-white/10">
           {/* Inputs Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div>
               <label className="block text-xs font-medium text-gray-400 mb-1.5">Base Crop Value ($)</label>
               <input
@@ -288,7 +288,7 @@ export default function GagCalculatorClient() {
         </div>
 
         {/* Right: Results Panel */}
-        <div className="p-6 bg-white/[0.02]">
+        <div className="w-full xl:w-[340px] shrink-0 p-6 bg-white/[0.02]">
           <div className="sticky top-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
