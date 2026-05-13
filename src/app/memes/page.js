@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MessageCircleQuestion, ArrowRight, Download, Play } from 'lucide-react';
+import { MessageCircleQuestion, Flame, ArrowRight, Download, Play } from 'lucide-react';
 
 export const metadata = {
   title: 'Free Meme GIF Galleries - Download Reaction GIFs | MakerSilo',
@@ -27,6 +27,15 @@ const galleries = [
     color: 'from-purple-500 to-fuchsia-500',
     href: '/memes/what-meme/',
     count: 8,
+  },
+  {
+    slug: 'sheesh-meme',
+    name: 'Sheesh Meme GIFs',
+    subtitle: 'The TikTok-era "sheesh!" hype reaction \u2014 14 animated loops for flex replies, group chats, and stream moments.',
+    icon: Flame,
+    color: 'from-amber-500 to-orange-500',
+    href: '/memes/sheesh-meme/',
+    count: 14,
   },
 ];
 

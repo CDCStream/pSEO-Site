@@ -152,6 +152,7 @@ const navItems = [
     color: 'from-purple-500 to-fuchsia-500',
     items: [
       { label: 'What Meme GIFs', href: '/memes/what-meme/' },
+      { label: 'Sheesh Meme GIFs', href: '/memes/sheesh-meme/' },
     ],
   },
   {
