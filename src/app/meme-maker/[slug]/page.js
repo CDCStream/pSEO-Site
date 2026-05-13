@@ -48,6 +48,9 @@ import AlphaWolfMemeClient from './AlphaWolfMemeClient';
 import ChickenStarsMemeClient from './ChickenStarsMemeClient';
 import WillemDafoeMemeClient from './WillemDafoeMemeClient';
 import MegamindMemeClient from './MegamindMemeClient';
+import WhatMemeGalleryClient from './WhatMemeGalleryClient';
+import SheeshMemeGalleryClient from './SheeshMemeGalleryClient';
+import AirballMemeGalleryClient from './AirballMemeGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -1161,6 +1164,75 @@ const mikeWazowskiSteps = [
   },
 ];
 
+const whatMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 8 hilarious "what?" reaction GIFs.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any GIF to open a full-size lightbox. All GIFs play automatically.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download any "what" meme as an animated GIF file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats, post on social media, or use as a reaction GIF.',
+  },
+];
+
+const sheeshMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 14 hilarious "sheesh!" reaction GIFs.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any GIF to open a full-size lightbox. All GIFs play automatically.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download any sheesh meme as an animated GIF file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats, post on social media, or use as a reaction GIF.',
+  },
+];
+
+const airballMemeSteps = [
+  {
+    icon: Search,
+    title: 'Browse Collection',
+    description: 'Scroll through 15 hilarious airball reaction GIFs.',
+  },
+  {
+    icon: Image,
+    title: 'Preview',
+    description: 'Click any GIF to open a full-size lightbox. All GIFs play automatically.',
+  },
+  {
+    icon: Download,
+    title: 'Download',
+    description: 'Download any airball meme as an animated GIF file.',
+  },
+  {
+    icon: Share2,
+    title: 'Share Everywhere',
+    description: 'Send it in group chats, post on social media, or use as a reaction GIF.',
+  },
+];
+
 export default async function MemePage({ params }) {
   const { slug } = await params;
   const config = memeMakerConfig[slug];
@@ -1295,11 +1367,17 @@ export default async function MemePage({ params }) {
               <WillemDafoeMemeClient />
             ) : slug === 'megamind-meme' ? (
               <MegamindMemeClient />
+            ) : slug === 'what-meme' ? (
+              <WhatMemeGalleryClient />
+            ) : slug === 'sheesh-meme' ? (
+              <SheeshMemeGalleryClient />
+            ) : slug === 'airball-meme' ? (
+              <AirballMemeGalleryClient />
             ) : (
               <MemeClient config={config} slug={slug} />
             )}
 
-            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'quandale-dingle-meme' ? quandaleDingleMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : slug === 'trump-meme' ? trumpMemeSteps : slug === 'hand-on-shoulder-meme' ? handOnShoulderSteps : slug === 'crying-cat-meme' ? cryingCatMemeSteps : slug === 'laughing-meme' ? laughingMemeSteps : slug === '41-meme' ? fortyOneMemeSteps : slug === 'jon-hamm-dancing-meme' ? jonHammDancingSteps : slug === 'knee-surgery-meme' ? kneeSurgeryMemeSteps : slug === '67-kid-meme' ? sixtySevenKidMemeSteps : slug === 'alpha-wolf-meme' ? alphaWolfMemeSteps : slug === 'chicken-stars-meme' ? chickenStarsMemeSteps : slug === 'willem-dafoe-meme' ? willemDafoeMemeSteps : slug === 'megamind-meme' ? megamindMemeSteps : memeSteps} />
+            <HowToUse keyword={config.keyword} steps={slug === 'uno-reverse-card' ? unoSteps : slug === 'hyperpigmentation-meme' ? hyperpigmentationSteps : slug === 'sybau-meme' ? sybauSteps : slug === 'wanted-poster' ? wantedPosterSteps : slug === 'jd-vance-meme' ? jdVanceSteps : slug === 'dog-meme' ? dogMemeSteps : slug === 'quandale-dingle-meme' ? quandaleDingleMemeSteps : slug === 'crying-meme' ? cryingMemeSteps : slug === 'side-eye-meme' ? sideEyeSteps : slug === 'get-a-load-of-this-guy-meme' ? getALoadSteps : slug === 'hamster-meme' ? hamsterMemeSteps : slug === 'mike-wazowski-meme' ? mikeWazowskiSteps : slug === 'spiderman-meme' ? spidermanMemeSteps : slug === 'chill-guy-meme' ? chillGuyMemeSteps : slug === 'monkey-thinking-meme' ? monkeyThinkingSteps : slug === 'biden-meme' ? bidenMemeSteps : slug === 'low-taper-fade-meme' ? lowTaperFadeSteps : slug === 'job-application-meme' ? jobApplicationMemeSteps : slug === 'no-meme' ? noMemeSteps : slug === 'shocked-meme' ? shockedMemeSteps : slug === 'thursday-meme' ? thursdayMemeSteps : slug === 'chad-meme' ? chadMemeSteps : slug === 'sad-meme' ? sadMemeSteps : slug === 'monday-meme' ? mondayMemeSteps : slug === 'anthony-mackie-meme' ? anthonyMackieSteps : slug === 'always-has-been-meme' ? alwaysHasBeenSteps : slug === 'shrek-meme' ? shrekMemeSteps : slug === 'thumbs-up-meme' ? thumbsUpMemeSteps : slug === 'good-morning-meme' ? goodMorningMemeSteps : slug === 'confused-meme' ? confusedMemeSteps : slug === 'lizard-meme' ? lizardMemeSteps : slug === 'chicken-jockey-meme' ? chickenJockeySteps : slug === 'charlie-kirk-meme' ? charlieKirkSteps : slug === 'thank-you-thank-you-thank-you-meme' ? thankYouMemeSteps : slug === 'trump-meme' ? trumpMemeSteps : slug === 'hand-on-shoulder-meme' ? handOnShoulderSteps : slug === 'crying-cat-meme' ? cryingCatMemeSteps : slug === 'laughing-meme' ? laughingMemeSteps : slug === '41-meme' ? fortyOneMemeSteps : slug === 'jon-hamm-dancing-meme' ? jonHammDancingSteps : slug === 'knee-surgery-meme' ? kneeSurgeryMemeSteps : slug === '67-kid-meme' ? sixtySevenKidMemeSteps : slug === 'alpha-wolf-meme' ? alphaWolfMemeSteps : slug === 'chicken-stars-meme' ? chickenStarsMemeSteps : slug === 'willem-dafoe-meme' ? willemDafoeMemeSteps : slug === 'megamind-meme' ? megamindMemeSteps : slug === 'what-meme' ? whatMemeSteps : slug === 'sheesh-meme' ? sheeshMemeSteps : slug === 'airball-meme' ? airballMemeSteps : memeSteps} />
             <FAQSection faqs={config.faq} keyword={config.keyword} />
             <LongContent content={config.longContent} keyword={config.keyword} />
 

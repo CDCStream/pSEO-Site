@@ -143,17 +143,9 @@ const navItems = [
       { label: 'Chicken Stars Meme', href: '/meme-maker/chicken-stars-meme/' },
       { label: 'Willem Dafoe Meme', href: '/meme-maker/willem-dafoe-meme/' },
       { label: 'Megamind Meme', href: '/meme-maker/megamind-meme/' },
-    ],
-  },
-  {
-    label: 'Meme GIFs',
-    href: '/memes/',
-    icon: ImageIcon,
-    color: 'from-purple-500 to-fuchsia-500',
-    items: [
-      { label: 'What Meme GIFs', href: '/memes/what-meme/' },
-      { label: 'Sheesh Meme GIFs', href: '/memes/sheesh-meme/' },
-      { label: 'Airball Meme GIFs', href: '/memes/airball-meme/' },
+      { label: 'What Meme GIFs', href: '/meme-maker/what-meme/' },
+      { label: 'Sheesh Meme GIFs', href: '/meme-maker/sheesh-meme/' },
+      { label: 'Airball Meme GIFs', href: '/meme-maker/airball-meme/' },
     ],
   },
   {

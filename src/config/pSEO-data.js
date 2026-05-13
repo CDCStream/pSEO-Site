@@ -2705,6 +2705,87 @@ The thank you meme format is also incredibly versatile across platforms and cont
 
 All 33 GIFs are optimized for fast loading while preserving smooth animation quality. Download is instant and completely free — no accounts, no emails, no watermarks. Browse our collection and find the perfect way to say thank you with style, humor, and dramatic flair.`,
   },
+  'what-meme': {
+    category: 'meme-maker',
+    name: 'What Meme GIFs',
+    keyword: 'What Meme',
+    title: 'What Meme GIFs - 8 Free "What?!" Reaction GIFs (HD Download) | MakerSilo',
+    description: 'Free "what?" meme GIF pack: 8 animated "what" reaction GIFs you can download in one click. Perfect for chat replies, comments, and stitches. No watermark, no signup.',
+    h1: 'What Meme GIFs \u2014 "What?!"',
+    subtitle: 'The classic "what?" reaction GIF pack \u2014 8 free animated loops that play instantly on this page and download in one tap. Perfect for chat replies, comments, stitches, and stream reactions. No watermark, no signup.',
+    icon: 'image',
+    generatorType: 'whatMemeGallery',
+    faq: [
+      { q: 'What is the "what?" meme?', a: 'The "what?" meme is one of the oldest and most universal reaction-meme formats on the internet. It is a short animated loop of someone reacting to something confusing or absurd, used to express disbelief in a chat or comment thread. The format has been a staple of meme culture since the early 2000s and remains one of the highest-volume reactions on Giphy, Tenor, and Reddit.' },
+      { q: 'Are these "what" meme GIFs free to download?', a: 'Yes. Every GIF on this page is free to download as a standard animated .gif file. There is no watermark, no signup, no email-gate, and no paywall. Click the Download GIF button and the file saves straight to your device.' },
+      { q: 'Can I send these GIFs in WhatsApp, iMessage, Discord, and Instagram?', a: 'Yes. The downloaded GIFs are standard animated .gif files, which every major messaging and social app supports natively.' },
+      { q: 'Do these GIFs play automatically without me pressing a button?', a: 'Yes \u2014 every GIF auto-plays as soon as it enters the viewport. Animated .gif is the only major image format that loops on its own without JavaScript or a click-to-play tap.' },
+      { q: 'Can I use these "what" GIFs on YouTube, TikTok, or Twitch?', a: 'Personal and casual creator use is welcome. You can drop the GIF into a TikTok comment, a YouTube community post, a Twitch chat, or a livestream overlay.' },
+    ],
+    longContent: `The "what?" meme is one of the oldest and most universally understood reaction formats in internet culture. It is a short animated loop of a person or character reacting with confusion, disbelief, or shock. Even though the meme reads the same in any language and culture, it has been the dominant disbelief reaction on Western internet platforms since the early 2000s and remains one of the most-searched reaction GIFs on Giphy, Tenor, and Reddit. This page collects eight of the most useful "what?" reaction GIFs, hosts them at small file sizes, and lets you download any of them as a standard animated .gif in one tap \u2014 no watermark, no signup, no email gate, no ad pre-roll.
+
+Why animated GIFs in 2026? Because the .gif format is the only image format that auto-loops in every browser, every chat app, and every social-media feed without JavaScript or a click-to-play tap. The universal compatibility of .gif still wins for reaction loops in chat threads.
+
+How to use a reaction GIF: download it, then attach it. In WhatsApp tap the paperclip icon, in iMessage drag the GIF into the message field, in Discord paste from clipboard, on X attach in the composer, and on TikTok upload as a sticker overlay. Every platform supports animated .gif natively.
+
+The strongest reaction GIFs share three properties: they loop cleanly, they read in under a second, and they centre the face. The eight GIFs on this page were chosen specifically for those properties. Each one isolates a confused or surprised reaction, none has burned-in caption text, and the average loop length is the sweet spot for chat reactions.
+
+These GIFs work universally across languages because the reaction is carried by the face and body language, not by the word "what" itself. In Spanish it reads as "\u00bfQu\u00e9?", in French "Quoi?", in German "Was?", in Japanese "\u306f\uff1f", in Korean "\ub6f8?", in Mandarin "\u4ec0\u4e48?", in Hindi "Kya?", and in Arabic "\u0625\u064a\u0647\u061f" \u2014 all with the same disbelieving tone.`,
+  },
+  'sheesh-meme': {
+    category: 'meme-maker',
+    name: 'Sheesh Meme GIFs',
+    keyword: 'Sheesh Meme',
+    title: 'Sheesh Meme GIFs - 14 Free "Sheesh!" Reaction GIFs (HD Download) | MakerSilo',
+    description: 'Free "sheesh" meme GIF pack: 14 animated "sheesh!" reaction GIFs you can download in one click. Perfect for TikTok comments, group chats, and stream reactions. No watermark, no signup.',
+    h1: 'Sheesh Meme GIFs \u2014 "Sheesh!"',
+    subtitle: 'The TikTok-era "sheesh!" reaction GIF pack \u2014 14 free animated loops that play instantly on this page and download in one tap. Perfect for hype reactions, flex replies, group chats, and stream moments. No watermark, no signup.',
+    icon: 'image',
+    generatorType: 'sheeshMemeGallery',
+    faq: [
+      { q: 'What is the "sheesh" meme?', a: 'The "sheesh" meme is a reaction format that exploded on TikTok in early 2021, built around the elongated exclamation "sheeeesh!" \u2014 typically paired with the "ice in my veins" arm pose. It is used as a hype or flex reaction meaning "that\u2019s impressive" or "that\u2019s fire".' },
+      { q: 'Are these "sheesh" meme GIFs free to download?', a: 'Yes. Every GIF on this page is free to download as a standard animated .gif file. There is no watermark, no signup, no email-gate, and no paywall.' },
+      { q: 'Where did the "sheesh" TikTok trend come from?', a: 'The TikTok "sheesh" trend is most commonly traced to a viral March 2021 video by user @meetjulio, who filmed a frog on his porch and dubbed in an elongated "sheeeeesh!" sound.' },
+      { q: 'Can I send these GIFs in WhatsApp, iMessage, Discord, and Telegram?', a: 'Yes. The downloaded GIFs are standard animated .gif files, which every major messaging and social app supports natively.' },
+      { q: 'Do these GIFs play automatically without pressing a button?', a: 'Yes \u2014 every GIF auto-plays as soon as it enters the viewport. Animated .gif auto-loops natively in every browser.' },
+    ],
+    longContent: `The "sheesh" meme is one of the defining reaction formats of the TikTok era. While the word "sheesh" has existed in informal American English since at least the 1950s, the TikTok version stretches the vowel to absurd length ("sheeeeeeesh!"), raises the pitch to a near-falsetto, and is delivered as a hype reaction for anything impressive, surprising, flexworthy, or absurd. The format started as a sound clip, merged with the "ice in my veins" arm pose, and became one of the most-used reaction GIFs on every major platform.
+
+The viral moment most commonly cited as the catalyst is a March 2021 video by TikTok user @meetjulio, who filmed a frog sitting on his porch and overlaid the elongated "sheeeeesh!" sound. Within two weeks the sheesh sound was being used in everything from car reveals to cooking clips to pet videos, and NBA players and music artists began using it in their own social content.
+
+What makes "sheesh" different from other reaction words is its versatility. The same GIF can mean "that\u2019s impressive", "that\u2019s absurd", "I\u2019m jealous", "I\u2019m embarrassed for you", or simply "wow". The elongated vowel and the facial expression carry the emotional nuance. This makes sheesh GIFs one of the highest-utility reactions in a collection.
+
+The "ice in my veins" connection: the sheesh meme is visually inseparable from the arm pose \u2014 touching two fingers to the inner forearm as if checking a pulse, a gesture NBA guard D\u2019Angelo Russell made famous. TikTok creators adopted the pose as a visual punctuation mark for the sheesh sound.
+
+"Sheesh" crossed into global internet culture essentially untranslated. In Turkish the closest equivalent is "\u00e7\u00fc\u015f!", in Japanese "\u3084\u3070\u3044!" (yabai), in Korean "\ub300\ubc15!" (daebak), in Mandarin "\u725b!" (ni\u00fa), and in Arabic "\u064a\u0627 \u0633\u0644\u0627\u0645!" (ya salam).`,
+  },
+  'airball-meme': {
+    category: 'meme-maker',
+    name: 'Airball Meme GIFs',
+    keyword: 'Airball Meme',
+    title: 'Airball Meme GIFs - 15 Free Basketball Airball Reaction GIFs (HD) | MakerSilo',
+    description: 'Free airball meme GIF pack: 15 animated basketball airball reaction GIFs you can download in one click. Perfect for roasting missed shots in group chats. No watermark, no signup.',
+    h1: 'Airball Meme GIFs \u2014 "AIR-BALL!"',
+    subtitle: 'The basketball airball reaction GIF pack \u2014 15 free animated loops that play instantly on this page and download in one tap. Perfect for roasting missed shots, bad takes, and swing-and-a-miss moments. No watermark, no signup.',
+    icon: 'image',
+    generatorType: 'airballMemeGallery',
+    faq: [
+      { q: 'What is the "airball" meme?', a: 'The "airball" meme is a reaction format built around the basketball term for a shot that misses the rim, backboard, and net entirely. In internet culture it has become the go-to reaction for any spectacularly bad attempt at anything.' },
+      { q: 'Are these airball meme GIFs free to download?', a: 'Yes. Every GIF on this page is free to download as a standard animated .gif file. No watermark, no signup, no email-gate, and no paywall.' },
+      { q: 'Where did the airball chant come from?', a: 'The "AIR-BALL! AIR-BALL!" crowd chant originated in college basketball arenas in the United States, where student sections would chant in unison every time an opposing player\u2019s shot failed to touch rim or backboard.' },
+      { q: 'Can I send these GIFs in WhatsApp, iMessage, Discord, and Telegram?', a: 'Yes. The downloaded GIFs are standard animated .gif files, which every major messaging and social app supports natively.' },
+      { q: 'Is the airball meme popular outside the United States?', a: 'Yes. It is most culturally native to countries where basketball is a major sport: the US, Canada, Philippines, Spain, Lithuania, Greece, Serbia, Turkey, Australia, and China.' },
+    ],
+    longContent: `The airball meme is one of the most vivid and universally understood reaction formats in sports internet culture. An "airball" in basketball is a shot that misses everything entirely \u2014 the ball sails through nothing but air. In NBA and college arenas, opposing crowds greet an airball with the signature chant: "AIR-BALL! AIR-BALL!" On the internet the meme extends far beyond basketball to become the go-to reaction for any spectacularly bad attempt at anything.
+
+The airball chant goes back decades, most commonly associated with college basketball student sections in the NCAA. Duke University\u2019s Cameron Crazies, the Kansas Jayhawks, and Indiana Hoosiers fans are all famous for their airball chants. It crossed over to the NBA in the 1990s and 2000s.
+
+What makes the airball meme work as a universal reaction is the specificity of the visual: the ball sailing past the entire hoop without touching anything. It implies total miscalibration, not just bad luck. A bad joke that gets zero laughs is an airball because it didn\u2019t even graze the conversational equivalent of the rim.
+
+The airball vs. brick distinction matters: a brick hits the rim hard and bounces away; an airball misses everything. In meme terms, use a brick GIF when someone\u2019s attempt was close but clumsy; use an airball GIF when someone was so far off the mark it is hilariously wrong.
+
+The airball meme is most culturally native to the US, Canada, and the Philippines (the most basketball-obsessed nation per capita on Earth), plus China, Spain, Turkey, Greece, Lithuania, Serbia, and Australia. The visual of a ball sailing past an untouched hoop reads the same in every language.`,
+  },
 };
 
 // Generators (Name Generators) configuration
