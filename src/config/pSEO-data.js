@@ -4863,6 +4863,76 @@ Setting a Bluey wallpaper is simple on every device. On iPhone, save the PNG to 
 
 A note on rights: the wallpapers in this collection are fan-art-style interpretations intended strictly for personal use as phone and tablet backgrounds. Bluey, Bingo, Bandit, Chilli, and all related characters and designs are the property of Ludo Studio and the Australian Broadcasting Corporation. We do not own and do not claim ownership of the Bluey intellectual property. The artwork is provided free of charge with no advertising injected, no watermarks, and no signup required. If you love the show, please support it by streaming on Disney+ or ABC iview, buying official Bluey merchandise, or visiting Bluey\u2019s World live experience.`,
   },
+  'beach-wallpaper': {
+    category: 'wallpapers',
+    name: 'Beach Wallpaper',
+    keyword: 'Beach Wallpaper',
+    title: 'Free Beach Wallpapers HD - 24 Tropical Ocean Phone Backgrounds | MakerSilo',
+    description: 'Download 24 free beach wallpapers in HD. Stunning tropical ocean, sunset, and palm tree phone backgrounds for iPhone and Android. No watermark, instant download.',
+    h1: 'Free Beach HD Wallpapers',
+    subtitle: 'Browse and download 24 stunning beach wallpapers \u2014 crystal-clear turquoise waters, golden sandy shores, palm trees, and breathtaking ocean sunsets. Perfect for phone lock screens and home screens.',
+    icon: 'image',
+    generatorType: 'beachGallery',
+    faq: [
+      {
+        q: 'How many beach wallpapers are available?',
+        a: 'Our collection features 24 high-quality beach wallpapers. The set covers tropical beaches, ocean sunsets, palm-lined shores, crystal-clear turquoise water, aerial ocean views, and serene coastal landscapes. Each image is in 9:16 portrait orientation to fit phone lock screens and home screens without cropping.',
+      },
+      {
+        q: 'Are the beach wallpapers free to download?',
+        a: 'Yes \u2014 completely free. No sign-up, no email, no credit card, and no watermarks. Tap any wallpaper to open the full-size preview, then hit the Download HD button to save the PNG straight to your phone or computer.',
+      },
+      {
+        q: 'What types of beach scenes are included?',
+        a: 'The collection includes tropical paradise beaches with turquoise water and white sand, dramatic ocean sunset and sunrise shots with pink and orange skies, aerial and drone-style views of coastlines, palm tree silhouettes against colourful skies, calm wave close-ups, rocky coastal cliffs, and peaceful lagoon scenes. There is a beach vibe for every mood.',
+      },
+      {
+        q: 'What resolution are the beach wallpapers?',
+        a: 'Every wallpaper is a portrait PNG at 9:16 aspect ratio (816 \u00d7 1456 pixels) \u2014 large enough to look crisp on any modern smartphone, optimised for fast loading. The PNGs use palette quantisation to keep file sizes small without losing the vibrant tropical colours.',
+      },
+      {
+        q: 'Do these wallpapers work on iPhone and Android?',
+        a: 'Yes! The 9:16 portrait format works perfectly on all iPhones (X and newer), Samsung Galaxy, Google Pixel, OnePlus, Xiaomi, and any Android device. They also look great on iPads and tablets in portrait mode.',
+      },
+      {
+        q: 'Why are beach wallpapers so popular?',
+        a: 'Beach wallpapers are consistently among the most-searched wallpaper categories worldwide. The combination of calming blue water, warm golden sand, and vibrant sunset colours creates a sense of relaxation and escape every time you unlock your phone. Studies show that looking at nature imagery, especially ocean and beach scenes, reduces stress and improves mood.',
+      },
+      {
+        q: 'Can I use these as desktop wallpapers?',
+        a: 'Yes. While designed in portrait orientation for phones, you can use them as desktop wallpapers by setting them to fit-to-height (centred with colour bars on sides) or as lock screen backgrounds on Windows, macOS, and Linux. They look especially nice on vertically-oriented monitors.',
+      },
+      {
+        q: 'What colours dominate these beach wallpapers?',
+        a: 'The palette features turquoise and deep blue ocean tones, golden and white sandy beach colours, vibrant orange, pink, and purple sunset hues, lush green palm tree foliage, and soft pastel sky gradients. These colours look stunning on both OLED and LCD phone displays.',
+      },
+      {
+        q: 'Are these real photos or digital art?',
+        a: 'The collection includes a mix of photo-realistic renders and digitally enhanced beach imagery. All images are designed to capture the beauty of tropical beaches with vivid, saturated colours that pop on phone screens while maintaining a natural, serene aesthetic.',
+      },
+      {
+        q: 'Which beaches inspired these wallpapers?',
+        a: 'The wallpapers draw inspiration from famous beaches around the world \u2014 the Maldives\u2019 overwater clarity, Thailand\u2019s limestone karst coastlines, Hawaii\u2019s volcanic shores, the Caribbean\u2019s white sand and palm trees, Australia\u2019s Whitsunday Islands, Bali\u2019s sunset beaches, Greece\u2019s Navagio shipwreck beach, and Brazil\u2019s tropical coastline. The collection brings a global beach vacation to your phone screen.',
+      },
+    ],
+    longContent: `Beach wallpapers are one of the most universally beloved phone background categories in the world. There is something deeply calming about unlocking your phone to see turquoise water lapping against white sand, a golden sunset melting into the ocean horizon, or palm trees swaying against a pastel sky. This collection of 24 free HD beach wallpapers captures that feeling in every image \u2014 ready to download and set as your lock screen or home screen in seconds.
+
+The appeal of beach imagery is rooted in psychology. Research in environmental psychology and neuroaesthetics has consistently shown that exposure to blue space \u2014 views of water, ocean, and coastal environments \u2014 triggers measurable reductions in cortisol levels, heart rate, and perceived stress. Even brief exposure to images of natural water environments activates the brain\u2019s default mode network and promotes a state of soft fascination that psychologists associate with mental restoration. In practical terms, every time you glance at your phone and see a beach wallpaper, your brain gets a micro-dose of calm.
+
+The colour palette of beach imagery is uniquely suited to phone displays. Modern OLED screens render deep blues, vibrant turquoises, and warm sunset oranges with extraordinary richness and contrast. The naturally high colour saturation of tropical ocean scenes \u2014 the electric blue of shallow water over white sand, the gradient from teal to navy as the ocean deepens, the explosion of pink and gold at golden hour \u2014 means beach wallpapers look stunning on every flagship phone without needing artificial enhancement.
+
+This collection covers the full spectrum of beach aesthetics. You will find classic tropical paradise shots with crystal-clear turquoise lagoons and overwater bungalows, dramatic sunset panoramas where the sky ignites in bands of orange, magenta, and violet, aerial drone-style perspectives showing the fractal patterns of waves meeting shore, intimate close-ups of gentle waves rolling over smooth sand, silhouetted palm trees against twilight skies, rugged coastal cliff scenes with crashing surf, and peaceful morning beach scenes with soft mist and calm water.
+
+Beach wallpapers have universal appeal across cultures and geographies. Whether you live in a landlocked city dreaming of your next holiday, on a tropical coast wanting to celebrate your home, or somewhere with cold winters needing a visual escape, a beach wallpaper speaks the same emotional language. The keyword \u201cbeach wallpaper\u201d is consistently one of the highest-volume wallpaper searches globally \u2014 popular year-round but especially during winter months in the Northern Hemisphere when people crave warmth and sunshine.
+
+The beaches that inspired this collection span the globe. The Maldives contribute their signature overwater clarity where you can see every grain of sand through metres of transparent water. Thailand\u2019s Andaman Sea provides dramatic limestone karst backdrops rising from emerald waters. Hawaii offers volcanic black and golden sand contrasts with powerful surf. The Caribbean islands bring quintessential white sand and leaning coconut palms. Australia\u2019s Whitsunday Islands contribute some of the world\u2019s most pristine aerial views of swirling sand and turquoise water. Bali delivers legendary sunset scenes. The Greek islands add Mediterranean blues. Brazil contributes vibrant tropical energy. Each wallpaper distils the essence of these iconic coastlines into a single image.
+
+Every wallpaper in this collection is optimised for mobile performance. The images are 816 by 1456 pixels in 9:16 portrait aspect ratio \u2014 perfectly matching modern smartphone screens from iPhone X onwards and all recent Android flagships. The PNG files have been palette-quantised to reduce file sizes by over 85% while preserving the rich colour gradients that make beach imagery beautiful. The total gallery weight is under 6 MB, meaning the page loads in under two seconds on 4G, scores green on Google Core Web Vitals, and downloading every wallpaper costs less data than a single short video.
+
+Setting a beach wallpaper is simple on any device. On iPhone, save the PNG to Photos, then go to Settings, Wallpaper, Add New Wallpaper, choose Photos, select the beach image, and apply to lock screen, home screen, or both. On Android, save to Files or Photos, long-press the home screen, tap Wallpaper & style, choose My photos, select the image, and apply. iPads, Samsung tablets, and Kindle Fire all work the same way. No app, no DRM, no account needed.
+
+To download, tap any thumbnail above to open the full-size preview, then press the Download HD button. The PNG saves instantly to your device. All 24 wallpapers are right here on this page \u2014 no pagination, no infinite scroll, no hopping between sites. Whether you want a calm turquoise lagoon, a fiery sunset, an aerial coastline, or a palm tree paradise, your perfect beach escape is one tap away.`,
+  },
 };
 
 // Get all pages for sitemap generation

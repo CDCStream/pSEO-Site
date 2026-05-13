@@ -40,6 +40,7 @@ import KpopDemonHuntersGalleryClient from './KpopDemonHuntersGalleryClient';
 import StrangerThingsGalleryClient from './StrangerThingsGalleryClient';
 import NarutoGalleryClient from './NarutoGalleryClient';
 import BlueyGalleryClient from './BlueyGalleryClient';
+import BeachGalleryClient from './BeachGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -330,6 +331,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the blue Download button to save the Bluey wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  beachGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 24 stunning beach HD wallpapers \u2014 tropical oceans, sunsets, palm trees, and crystal-clear waters.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the cyan Download button to save the beach wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -449,6 +456,8 @@ export default async function WallpaperPage({ params }) {
               ? <NarutoGalleryClient />
               : config.generatorType === 'blueyGallery'
               ? <BlueyGalleryClient />
+              : config.generatorType === 'beachGallery'
+              ? <BeachGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 

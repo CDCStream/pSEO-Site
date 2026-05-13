@@ -192,6 +192,7 @@ const navItems = [
       { label: 'Y2K Wallpaper', href: '/wallpapers/y2k-wallpaper/' },
       { label: 'Floral Wallpaper', href: '/wallpapers/floral-wallpaper/' },
       { label: 'Bluey Wallpaper', href: '/wallpapers/bluey-wallpaper/' },
+      { label: 'Beach Wallpaper', href: '/wallpapers/beach-wallpaper/' },
     ],
   },
   {
