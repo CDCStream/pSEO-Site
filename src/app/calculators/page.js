@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint, Activity } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint, Activity, Home } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -81,6 +81,14 @@ const calculatorTools = [
     icon: Activity,
     color: 'from-rose-500 to-red-400',
     tags: ['Diabetes', 'A1C to eAG', 'mg/dL', 'mmol/L'],
+  },
+  {
+    name: 'Mortgage Calculator',
+    description: 'Estimate your full monthly mortgage payment with taxes, insurance, PMI, and HOA. Includes amortization schedule, bi-weekly comparison, and balance chart.',
+    href: '/calculators/mortgage-calculator/',
+    icon: Home,
+    color: 'from-emerald-500 to-cyan-400',
+    tags: ['Mortgage', 'PITI', 'Amortization', 'Home Loan'],
   },
 ];
 
