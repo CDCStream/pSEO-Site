@@ -123,9 +123,9 @@ export default function GagCalculatorClient() {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row">
+      <div className="flex flex-col lg:flex-row">
         {/* Left: Inputs + Mutations */}
-        <div className="flex-1 min-w-0 p-6 border-b xl:border-b-0 xl:border-r border-white/10">
+        <div className="flex-1 min-w-0 overflow-hidden p-6 border-b lg:border-b-0 lg:border-r border-white/10">
           {/* Inputs Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div>
@@ -288,7 +288,7 @@ export default function GagCalculatorClient() {
         </div>
 
         {/* Right: Results Panel */}
-        <div className="w-full xl:w-[340px] shrink-0 p-6 bg-white/[0.02]">
+        <div className="w-full lg:w-[320px] lg:shrink-0 p-6 bg-white/[0.02]">
           <div className="sticky top-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
