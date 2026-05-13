@@ -153,6 +153,7 @@ const navItems = [
     items: [
       { label: 'What Meme GIFs', href: '/memes/what-meme/' },
       { label: 'Sheesh Meme GIFs', href: '/memes/sheesh-meme/' },
+      { label: 'Airball Meme GIFs', href: '/memes/airball-meme/' },
     ],
   },
   {
