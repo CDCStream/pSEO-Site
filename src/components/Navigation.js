@@ -238,6 +238,7 @@ const navItems = [
       { label: 'Palworld Breeding Calculator', href: '/calculators/palworld-breeding-calculator/' },
       { label: 'A1C Calculator', href: '/calculators/a1c-calculator/' },
       { label: 'Mortgage Calculator', href: '/calculators/mortgage-calculator/' },
+      { label: 'Grow a Garden Calculator', href: '/calculators/grow-a-garden-calculator/' },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint, Activity, Home } from 'lucide-react';
+import { Snowflake, Calculator, ArrowRight, Calendar, Box, TrendingUp, BookOpen, Sigma, Infinity as InfinityIcon, Triangle, PawPrint, Activity, Home, Leaf } from 'lucide-react';
 
 const calculatorTools = [
   {
@@ -89,6 +89,14 @@ const calculatorTools = [
     icon: Home,
     color: 'from-emerald-500 to-cyan-400',
     tags: ['Mortgage', 'PITI', 'Amortization', 'Home Loan'],
+  },
+  {
+    name: 'Grow a Garden Calculator',
+    description: 'Calculate crop mutation values for Roblox Grow a Garden. Select from 100+ mutations, set quality and friend boost, see total sheckle value.',
+    href: '/calculators/grow-a-garden-calculator/',
+    icon: Leaf,
+    color: 'from-green-500 to-emerald-400',
+    tags: ['Roblox', 'Mutations', 'Crop Value', 'GAG'],
   },
 ];
 
