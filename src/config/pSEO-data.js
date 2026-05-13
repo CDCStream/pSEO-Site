@@ -4795,6 +4795,74 @@ A note on rights and intent: the wallpapers in this collection are fan-art-style
  
 To download, tap any thumbnail above to open the full-size preview, then press the orange Download HD button. The PNG saves instantly to your device. All 32 wallpapers are right here on this page \u2014 no pagination, no infinite scroll, no need to hop between sites. Whether your favourite is a Sage Mode Naruto, a Sharingan-glow Sasuke, an Itachi-and-crows Akatsuki shot, a Kakashi unmasked moment, a Madara silhouette, the Konoha leaf symbol on a clean background, or a full Akatsuki group portrait, it is one tap away. Pick the one that makes your phone feel like it belongs in the Hidden Leaf Village and unlock to a piece of one of the greatest shounen anime ever made every time you check the time.`,
   },
+  'bluey-wallpaper': {
+    category: 'wallpapers',
+    name: 'Bluey Wallpaper',
+    keyword: 'Bluey Wallpaper',
+    title: 'Free Bluey Wallpapers HD - 28 Cute Phone Backgrounds for Kids | MakerSilo',
+    description: 'Download 28 free Bluey wallpapers in HD. Adorable phone backgrounds featuring Bluey, Bingo, Bandit, and Chilli. Perfect for iPhone and Android. No watermark, instant download.',
+    h1: 'Free Bluey HD Wallpapers',
+    subtitle: 'Browse and download 28 charming Bluey wallpapers \u2014 featuring the Heeler family in colorful adventures. Perfect for kids\u2019 phones, tablets, and lock screens. Free, no watermark.',
+    icon: 'heart',
+    generatorType: 'blueyGallery',
+    faq: [
+      {
+        q: 'How many Bluey wallpapers are available?',
+        a: 'Our collection features 28 high-quality Bluey wallpapers. The set covers scenes with Bluey, Bingo, Bandit (Dad), and Chilli (Mum) in various adventures, plus character portraits, backyard scenes, and iconic moments from the show. Each image is in 9:16 portrait so it fits phone lock screens and home screens without cropping.',
+      },
+      {
+        q: 'Are the Bluey wallpapers free to download?',
+        a: 'Yes \u2014 completely free. No sign-up, no email, no credit card, and no watermarks. Tap any wallpaper to open the full-size preview, then hit the Download HD button to save the PNG straight to your phone or computer. The collection is 100% free for personal use.',
+      },
+      {
+        q: 'What is Bluey?',
+        a: 'Bluey is an award-winning Australian animated television series created by Joe Brumm for ABC Kids. It follows Bluey, a six-year-old Blue Heeler puppy, and her family \u2014 younger sister Bingo, dad Bandit, and mum Chilli \u2014 as they navigate everyday adventures through imaginative play. The show has become a worldwide phenomenon, airing in over 60 countries and winning multiple International Emmy Kids Awards, a BAFTA, and a Logie Award.',
+      },
+      {
+        q: 'What resolution are the Bluey wallpapers?',
+        a: 'Every wallpaper is a portrait PNG at 9:16 aspect ratio (816 \u00d7 1456 pixels) \u2014 large enough to look crisp on any modern smartphone, small enough that each file downloads in under a second on mobile data. The PNGs are colour-optimised for fast loading without losing the vibrant Bluey colour palette.',
+      },
+      {
+        q: 'Do these wallpapers work on iPhone and Android?',
+        a: 'Yes! The 9:16 portrait format works perfectly on all iPhones (X and newer), Samsung Galaxy phones, Google Pixel, OnePlus, Xiaomi, and any other Android device. They also look great on iPads and Android tablets in portrait mode.',
+      },
+      {
+        q: 'Are these wallpapers safe for children?',
+        a: 'Absolutely. Every wallpaper in this collection is family-friendly and appropriate for all ages: bright colours, cheerful characters, no scary imagery, and no text overlays. They make perfect lock screens for kids\u2019 phones, tablets, school iPads, and family devices.',
+      },
+      {
+        q: 'Who are the main characters in Bluey?',
+        a: 'The Heeler family consists of Bluey (a six-year-old Blue Heeler puppy and the main character), Bingo (her four-year-old Red Heeler sister), Bandit (their dad, an archaeologist), and Chilli (their mum, who works in airport security). The show also features their extended family including Stripe, Trixie, Muffin, Socks, Nana, and Bob, plus school friends like Mackenzie, Judo, Chloe, and Jean-Luc.',
+      },
+      {
+        q: 'Why is Bluey so popular as a wallpaper choice?',
+        a: 'Bluey is one of the most-watched children\u2019s shows globally, with over 2 billion streams worldwide. Its vibrant colour palette (distinctive blues, oranges, greens, and yellows), charming character designs, and heartwarming family themes make it a perfect source for cheerful phone wallpapers that both kids and parents love.',
+      },
+      {
+        q: 'Where is Bluey set?',
+        a: 'Bluey is set in Brisbane, Queensland, Australia. The show features many real Brisbane landmarks including the Story Bridge, Mount Coot-tha, and the Brisbane River. The Heeler family home is inspired by a typical Queenslander house with a large backyard, trampoline, and veranda \u2014 many of which appear in our wallpaper collection.',
+      },
+      {
+        q: 'Can I use these wallpapers on my desktop computer?',
+        a: 'Yes. While they are designed in portrait orientation for phones, you can use them as desktop wallpapers by setting them to fit-to-height (they will appear centred with colour bars on the sides) or as lock screen backgrounds on Windows, macOS, and Linux. They look especially nice on vertically-oriented monitors.',
+      },
+    ],
+    longContent: `Bluey is not just a children\u2019s television show \u2014 it is a global cultural phenomenon. Created by Joe Brumm and produced by Ludo Studio for the Australian Broadcasting Corporation, Bluey debuted in 2018 and has since become one of the most-watched and most-loved animated series in the world. It has won International Emmy Kids Awards, a BAFTA, an AACTA Award, and multiple Logie Awards. With over 2 billion streams worldwide, the show about a six-year-old Blue Heeler puppy and her family has resonated with children and adults alike across more than 60 countries. This collection brings together 28 free HD wallpapers celebrating the Heeler family and their colourful Brisbane world.
+
+The show\u2019s visual identity is unmistakable. Bluey uses a vibrant, warm colour palette dominated by sky blues, sunshine yellows, eucalyptus greens, and terracotta oranges \u2014 the colours of the Australian landscape filtered through a child\u2019s imagination. The character designs are simple enough to be instantly recognisable (Bluey\u2019s blue fur and darker blue nose, Bingo\u2019s red-orange coat and white spots, Bandit\u2019s grey-blue adult colouring, Chilli\u2019s warm red) yet detailed enough to convey deep emotion through subtle facial expressions and body language. These design choices make Bluey artwork exceptionally well-suited for phone wallpapers \u2014 the bold colours pop on OLED screens, the simple shapes remain legible at any size, and the cheerful aesthetic makes every phone unlock feel like a warm welcome.
+
+The Heeler family home is one of the most recognisable houses in modern animation. A classic Queenslander \u2014 elevated on stilts, with a wide wraparound veranda, corrugated iron roof, and a sprawling backyard complete with a trampoline, a creek, and a big jacaranda tree \u2014 the house is as much a character in the show as Bluey herself. The backyard is where magic happens: it becomes a hospital, a spaceship, an obstacle course, a market, a fairy kingdom, and a hundred other imaginary worlds, all powered by the children\u2019s creative play. Our wallpaper collection captures both the house exterior and the backyard in multiple styles and lighting conditions.
+
+Bluey\u2019s global reach is extraordinary. Originally produced for Australian audiences, the show quickly crossed over to Disney+ and Disney Junior internationally. It is now one of the most-streamed shows on Disney+ worldwide, regularly topping charts in the United States, United Kingdom, Canada, New Zealand, Germany, France, and Japan. The show\u2019s universal themes \u2014 the power of imaginative play, the beauty of ordinary family moments, the bittersweet reality of children growing up \u2014 resonate across cultures and languages. Parents worldwide have described Bluey as \u201cthe show that makes me a better parent,\u201d and episodes like \u201cSleepytime,\u201d \u201cBaby Race,\u201d and \u201cThe Sign\u201d have made grown adults cry.
+
+For young fans, a Bluey wallpaper is a daily connection to their favourite characters. Every time they pick up the phone or tablet, they see Bluey and Bingo mid-adventure, Bandit being his goofy, devoted dad self, or Chilli sharing a quiet moment with the girls. For parents, it is a gentle, beautiful image that replaces the default factory wallpaper with something meaningful \u2014 a reminder of the show they watch together as a family.
+
+The 28 wallpapers in this collection have been colour-optimised using palette quantisation so that each file is well under 300 KB while preserving the full vibrancy of the Bluey colour palette. The total gallery weight is under 6 MB, which means the page loads in under two seconds on a 4G connection, scores green on Google Core Web Vitals (LCP, CLS, INP), and downloading even the full set barely touches your device storage.
+
+Setting a Bluey wallpaper is simple on every device. On iPhone, save the PNG to Photos, go to Settings, Wallpaper, Add New Wallpaper, choose Photos, select the Bluey image, and apply to lock screen, home screen, or both. On Android, save to Files or Photos, long-press the home screen, tap Wallpaper & style, choose My photos, select the image, and apply. iPads, Samsung tablets, and Kindle Fire kids\u2019 tablets all work the same way. No app required, no DRM, no account needed.
+
+A note on rights: the wallpapers in this collection are fan-art-style interpretations intended strictly for personal use as phone and tablet backgrounds. Bluey, Bingo, Bandit, Chilli, and all related characters and designs are the property of Ludo Studio and the Australian Broadcasting Corporation. We do not own and do not claim ownership of the Bluey intellectual property. The artwork is provided free of charge with no advertising injected, no watermarks, and no signup required. If you love the show, please support it by streaming on Disney+ or ABC iview, buying official Bluey merchandise, or visiting Bluey\u2019s World live experience.`,
+  },
 };
 
 // Get all pages for sitemap generation

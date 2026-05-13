@@ -191,6 +191,7 @@ const navItems = [
       { label: 'King Von Wallpaper', href: '/wallpapers/king-von-wallpaper/' },
       { label: 'Y2K Wallpaper', href: '/wallpapers/y2k-wallpaper/' },
       { label: 'Floral Wallpaper', href: '/wallpapers/floral-wallpaper/' },
+      { label: 'Bluey Wallpaper', href: '/wallpapers/bluey-wallpaper/' },
     ],
   },
   {
