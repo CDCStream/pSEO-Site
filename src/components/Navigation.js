@@ -146,6 +146,15 @@ const navItems = [
     ],
   },
   {
+    label: 'Meme GIFs',
+    href: '/memes/',
+    icon: ImageIcon,
+    color: 'from-purple-500 to-fuchsia-500',
+    items: [
+      { label: 'What Meme GIFs', href: '/memes/what-meme/' },
+    ],
+  },
+  {
     label: 'Wallpapers',
     href: '/wallpapers/',
     icon: PaletteIcon,
