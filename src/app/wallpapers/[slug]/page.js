@@ -44,6 +44,7 @@ import BeachGalleryClient from './BeachGalleryClient';
 import JuiceWrldGalleryClient from './JuiceWrldGalleryClient';
 import DisneyGalleryClient from './DisneyGalleryClient';
 import TyreekHillGalleryClient from './TyreekHillGalleryClient';
+import OnePieceGalleryClient from './OnePieceGalleryClient';
 import AdSlot from '@/components/AdSlot';
 import FAQSection from '@/components/SEO/FAQSection';
 import HowToUse from '@/components/SEO/HowToUse';
@@ -358,6 +359,12 @@ const gallerySteps = {
     { icon: Download, title: 'Download', description: 'Tap the orange Download button to save the Tyreek Hill wallpaper as a high-res PNG. No watermark, no signup.' },
     { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
   ],
+  onePieceGallery: [
+    { icon: Search, title: 'Browse Gallery', description: 'Scroll through 32 epic One Piece HD wallpapers \u2014 Luffy Gear 5, Straw Hat Pirates, Zoro, and legendary Grand Line scenes.' },
+    { icon: Monitor, title: 'Preview', description: 'Click any wallpaper to open a full-size lightbox preview.' },
+    { icon: Download, title: 'Download', description: 'Tap the red Download button to save the One Piece wallpaper as a high-res PNG. No watermark, no signup.' },
+    { icon: Smartphone, title: 'Set as Wallpaper', description: 'Open your device settings and set the downloaded image as your lock screen or home screen wallpaper.' },
+  ],
 };
 
 export default async function WallpaperPage({ params }) {
@@ -485,6 +492,8 @@ export default async function WallpaperPage({ params }) {
               ? <DisneyGalleryClient />
               : config.generatorType === 'tyreekHillGallery'
               ? <TyreekHillGalleryClient />
+              : config.generatorType === 'onePieceGallery'
+              ? <OnePieceGalleryClient />
               : <WallpaperClient config={config} slug={slug} />
             }
 
