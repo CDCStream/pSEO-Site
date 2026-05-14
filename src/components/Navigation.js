@@ -194,6 +194,7 @@ const navItems = [
       { label: 'Bluey Wallpaper', href: '/wallpapers/bluey-wallpaper/' },
       { label: 'Beach Wallpaper', href: '/wallpapers/beach-wallpaper/' },
       { label: 'Juice WRLD Wallpaper', href: '/wallpapers/juice-wrld-wallpaper/' },
+      { label: 'Disney Wallpaper', href: '/wallpapers/disney-wallpaper/' },
     ],
   },
   {
