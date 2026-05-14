@@ -195,6 +195,7 @@ const navItems = [
       { label: 'Beach Wallpaper', href: '/wallpapers/beach-wallpaper/' },
       { label: 'Juice WRLD Wallpaper', href: '/wallpapers/juice-wrld-wallpaper/' },
       { label: 'Disney Wallpaper', href: '/wallpapers/disney-wallpaper/' },
+      { label: 'Tyreek Hill Wallpaper', href: '/wallpapers/tyreek-hill-wallpaper/' },
     ],
   },
   {
